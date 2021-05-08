@@ -227,10 +227,6 @@ Header Styles
    margin: 0px 150px;
 }
 
-/* .logo {
-   padding-right: 250px;
-} */
-
 .btnStyles {
    margin: 5px;
    background-color: var(--btnColor) !important;
@@ -341,6 +337,73 @@ Welcome banner Styles
    margin-bottom: 60px;
 }
 
-/* .banner-btn {
-   margin-top: 30px;
-} */
+/* =========================================
+Home page about us Styles
+========================================= */
+
+.about-area {
+   margin-top: 100px;
+}
+
+.about-img {
+   position: absolute;
+   left: -110px;
+   width: 660px;
+   height: 630px;
+   background-color: #0cb8b6;
+   z-index: -1
+}
+
+.about-content {
+   margin-left: 25px;
+}
+
+.heading {
+   font-size: 40px;
+   margin-top: 20px;
+   margin-left: -2px;
+}
+
+.topic-text {
+   line-height: 25px;
+   margin-top: 20px;
+}
+
+.vaccine-list {
+   line-height: 40px;
+   list-style-type: none;
+   margin-left: -30px;
+   margin-bottom: 40px;
+   font-weight: 500;
+}
+
+.flaticon-tick {
+   margin-right: 10px;
+   color: var(--btnColor) !important;
+   background-color: #efefef;
+   padding: 5px;
+   padding-top: 0;
+   border-radius: 50%;
+   /* margin-right: 0%; */
+}
+
+/* =========================================
+Home page our mission Styles
+========================================= */
+
+.mission-content {
+   margin-left: -20px;
+}
+
+.mission-img {
+   margin-left: -1px;
+   width: 660px;
+   height: 580px;
+   background-color: #0cb8b6;
+}
+
+.mission-icon {
+   margin-right: 0;
+   padding-left: 0%;
+   padding-right: 0%;
+}
