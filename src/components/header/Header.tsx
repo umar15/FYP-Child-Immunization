@@ -2,7 +2,7 @@ import { logDOM } from "@testing-library/dom";
 import React, { useState } from "react";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Button, NavbarText } from "reactstrap";
 import "../../index.css";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);

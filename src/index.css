@@ -384,7 +384,11 @@ Home page about us Styles
    padding: 5px;
    padding-top: 0;
    border-radius: 50%;
-   /* margin-right: 0%; */
+}
+
+.flaticon-tick:hover {
+   background-color: var(--btnColor) !important;
+   color: #ffffff !important;
 }
 
 /* =========================================
@@ -406,4 +410,288 @@ Home page our mission Styles
    margin-right: 0;
    padding-left: 0%;
    padding-right: 0%;
+}
+
+/* =========================================
+Home page vaccination schedule Styles
+========================================= */
+
+.doctor-vaccination-area {
+   text-align: center;
+}
+
+.section-title {
+   width: 60%;
+   margin: auto;
+}
+
+.schedule-heading {
+   font-size: 40px;
+   margin-top: 10px;
+}
+
+.schedule-text {
+   margin-bottom: 50px;
+}
+
+.doctor-vaccination-table {
+   background-color: #fff;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05)
+}
+
+.doctor-vaccination-table table {
+   margin-bottom: 0
+}
+
+.doctor-vaccination-table table thead tr th {
+   vertical-align: middle;
+   text-align: center;
+   white-space: nowrap;
+   font-size: 16px;
+   font-weight: 500;
+   padding: 30px 10px;
+   border-bottom: 1px solid #eee;
+   border-left: 1px solid #eee
+}
+
+.doctor-vaccination-table table thead tr th:first-child {
+   border-left: none
+}
+
+.doctor-vaccination-table table tbody tr td {
+   vertical-align: middle;
+   text-align: center;
+   border: 1px solid #eee;
+   border-top: none;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   white-space: nowrap;
+   padding: 25px
+}
+
+.doctor-vaccination-table table tbody tr td:first-child {
+   border-left: none
+}
+
+.doctor-vaccination-table table tbody tr td:last-child {
+   border-right: none
+}
+
+.doctor-vaccination-table table tbody tr td h3 {
+   margin-bottom: 0;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   font-size: 16px;
+   font-weight: 600
+}
+
+.doctor-vaccination-table table tbody tr td span {
+   display: block;
+   color: #525252;
+   font-size: 14.5px;
+   margin-top: 5px;
+   -webkit-transition: all .5s;
+   transition: all .5s
+}
+
+.doctor-vaccination-table table tbody tr td span.time {
+   display: inline-block;
+   background-color: #fff;
+   color: #0cb8b6;
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   line-height: 65px;
+   -webkit-transition: all .5s;
+   transition: all .5s;
+   font-weight: 500;
+   font-size: 16px
+}
+
+.doctor-vaccination-table table tbody tr td:hover {
+   background-color: #0cb8b6;
+   border-color: #0cb8b6
+}
+
+.doctor-vaccination-table table tbody tr td:hover h3 {
+   color: #fff
+}
+
+.doctor-vaccination-table table tbody tr td:hover span {
+   color: #fff
+}
+
+.doctor-vaccination-table table tbody tr td:hover span.time {
+   background-color: #fff;
+   color: #0cb8b6
+}
+
+.doctor-vaccination-table table tbody tr:last-child td {
+   border-bottom: none
+}
+
+.tb-color-2 {
+   background-color: #fdec8c
+}
+
+.tb-color-3 {
+   background-color: #fc9ffc
+}
+
+.tb-color-4 {
+   background-color: #fcce98
+}
+
+.tb-color-5 {
+   background-color: #ccfc86
+}
+
+.tb-color-6 {
+   background-color: #acb0fe
+}
+
+.tb-color-7 {
+   background-color: #fca68e
+}
+
+.tb-color-8 {
+   background-color: #e6cda4
+}
+
+.tb-color-9 {
+   background-color: #87edfc
+}
+
+.tb-color-10 {
+   background-color: #df92fc
+}
+
+/* =========================================
+Home page our doctor Styles
+========================================= */
+
+.doctors-area {
+   margin-top: 80px;
+   background-color: var(--defaultBg);
+}
+
+.doctors-content {
+   padding: 50px 0;
+   height: 600px;
+}
+
+.doctor-heading {
+   font-size: 40px;
+   margin-top: 20px;
+}
+
+.doctors-img {
+   width: 660px;
+   height: 600px;
+   margin-left: -15px;
+}
+
+.tick {
+   background-color: #fff;
+}
+
+/* =========================================
+Home page footer Styles
+========================================= */
+
+.footer-top-area {
+   height: 500px;
+   padding-top: 100px;
+   background: url("./assets//images/footer-bg.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #fff;
+}
+
+.social-area ul {
+   list-style-type: none;
+   display: flex;
+   flex-direction: row;
+   margin-left: -50px;
+}
+
+.social-area ul li {
+   margin: 7px;
+}
+
+.social-area ul li a i:first-child {
+   height: 30px !important;
+   padding: 7px;
+   padding-top: 4px;
+   color: var(--btnColor) !important;
+   background-color: #fff;
+   border-radius: 50%;
+}
+
+.single-widget ul {
+   list-style-type: none;
+   line-height: 35px;
+}
+
+.single-widget h3 {
+   margin-left: 37px;
+   margin-bottom: 20px;
+   color: var(--btnColor);
+}
+
+.single-widget.open-time li {
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+   border-bottom: 1px solid #0cb8b6
+}
+
+.single-widget.open-time li .right {
+   float: right
+}
+
+.single-widget.open-time li:last-child {
+   padding-bottom: 0;
+   border-bottom: none
+}
+
+.contact a {
+   color: #fff;
+}
+
+.bxa:first-child {
+   color: var(--btnColor) !important;
+   margin-right: 10px;
+   height: 20px !important;
+   width: 20px !important;
+}
+
+.contact-us {
+   margin-left: 30px;
+}
+
+/* =========================================
+Home page footer bottom area Styles
+========================================= */
+
+.footer-bottom-area {
+   background-color: #05224c;
+   padding: 20px 0
+}
+
+.footer-bottom-area .copy-right {
+   text-align: center
+}
+
+.footer-bottom-area .copy-right p {
+   text-transform: capitalize;
+   margin-bottom: 0;
+   color: #fff
+}
+
+.footer-bottom-area .copy-right p a {
+   color: #0cb8b6
+}
+
+.footer-bottom-area .copy-right p a:hover {
+   text-decoration: underline
 }

@@ -5,9 +5,9 @@ const VaccinationTable = () => {
 		<div className="about-area doctor-vaccination-area ptb-100 pt-0">
 			<div className="container">
 				<div className="section-title">
-					<span className="top-title">Our Doctors Vaccination</span>
-					<h2>Vaccination schedule for Children and Adolescents</h2>
-					<p>
+					<span className="topic">Our Doctors Vaccination</span>
+					<h2 className="main-heading schedule-heading">Vaccination schedule for Children and Adolescents</h2>
+					<p className="topic-text schedule-text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua. Quis ipsum suspendisse
 					</p>
