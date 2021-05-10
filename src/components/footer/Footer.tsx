@@ -5,7 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiLocationPlus } from "react-icons/bi";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo-two.png";
 
 const Footer = () => {
 	return (
