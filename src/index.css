@@ -139,6 +139,10 @@ th {
    text-align: inherit
 }
 
+thead {
+   background-color: #f2f9fc;
+}
+
 label {
    display: inline-block;
    margin-bottom: .5rem
@@ -311,7 +315,8 @@ Welcome banner Styles
    text-align: center;
    overflow: hidden;
    z-index: 1;
-   background-color: var(--btnColor)
+   background-color: var(--btnColor);
+   border: none;
 }
 
 .default-btn:hover {
@@ -633,6 +638,10 @@ Home page footer Styles
    line-height: 35px;
 }
 
+.single-widget p {
+   margin-top: 12px;
+}
+
 .single-widget h3 {
    margin-left: 37px;
    margin-bottom: 20px;
@@ -694,4 +703,144 @@ Home page footer bottom area Styles
 
 .footer-bottom-area .copy-right p a:hover {
    text-decoration: underline
+}
+
+/* =========================================
+SIgn up form styles
+========================================= */
+
+.signup-area {
+   margin: 50px 100px;
+}
+
+.section-title {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.signup-form {
+   height: 775px;
+   width: 540px;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+.form-group input, .form-group select, .form-group input[type=password] {
+   background-color: #f2f9fc;
+}
+
+.form-group input[type=text], .form-group select, .form-group input[type=password], .form-group input[type=date], .form-group input[type=number] {
+   height: 50px;
+   margin: 10px 0;
+}
+
+.form-group input[type=email] {
+   height: 50px;
+   margin: 10px 0;
+}
+
+.agree-label input[type=select] {
+   padding-right: 10px;
+}
+
+.agree-label, .account-desc {
+   font-weight: 600;
+   position: relative;
+   color: var(--gray-dark);
+}
+
+.agree-label input[type=checkbox] {
+   position: absolute;
+   background-color: #f2f9fc;
+   top: 6px
+}
+
+.agree-label label, .account-desc {
+   margin-left: 20px;
+}
+
+.agree-label a, .account-desc a, .forget {
+   color: var(--btnColor);
+}
+
+.agree-label a:hover, .account-desc a:hover, .forget:hover {
+   text-decoration: none;
+   color: var(--primary);
+}
+
+.signup-btn {
+   padding: 10px 50px;
+   margin: 20px 30%;
+}
+
+.account-desc {
+   margin-left: 0%;
+}
+
+.signup-img img {
+   height: 775px;
+   width: 540px;
+}
+
+/* =========================================
+Log in form styles
+========================================= */
+
+.login-form {
+   height: 455px;
+   width: 540px;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+.login-img img {
+   height: 455px;
+   width: 540px;
+}
+
+.forget {
+   float: right;
+   font-weight: 600;
+}
+
+/* =========================================
+Add child form form styles
+========================================= */
+
+.add-child-form {
+   width: 50%;
+   margin: auto;
+   box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
+   padding: 50px;
+}
+
+/* =========================================
+Add stock form form styles
+========================================= */
+
+.add-stock-btn {
+   margin-left: 35%;
+   margin-top: 20px;
+   /* width: 70%; */
+}
+
+/* =========================================
+display table styles
+========================================= */
+
+.display-table {
+   padding: 50px;
+   text-align: center;
+}
+
+.table-heading {
+   margin-bottom: 30px;
+}
+
+.editIcon {
+   color: var(--btnColor);
+}
+
+.deleteIcon {
+   color: var(--danger);
 }

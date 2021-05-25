@@ -1,4 +1,5 @@
 import React from "react";
+import AddChild from "./components/child/AddChild";
 import Footer from "./components/footer/Footer";
 import FooterBottom from "./components/footer/FooterBottom";
 import Header from "./components/header/Header";
@@ -6,17 +7,28 @@ import AboutUs from "./components/homepage/AboutUs";
 import OurDoctors from "./components/homepage/OurDoctors";
 import OurMission from "./components/homepage/OurMission";
 import VaccinationTable from "./components/homepage/VaccinationTable";
-import Welcome from "./components/welcome/Welcome";
+import Welcome from "./components/homepage/Welcome";
+import Login from "./components/login/login";
+import Signup from "./components/signup/Signup";
+import AddVaccineStock from "./components/vaccineStock/AddVaccineStock";
+import AddCampaign from "./components/campaigns/AddCampaign";
+import ViewChildren from "./components/child/ViewChildren";
 
 function App() {
 	return (
 		<div>
 			<Header />
-			<Welcome />
+			{/* <Welcome />
 			<AboutUs />
 			<OurMission />
 			<VaccinationTable />
-			<OurDoctors />
+			<OurDoctors /> */}
+			{/* <Signup /> */}
+			{/* <Login /> */}
+			{/* <AddChild /> */}
+			{/* <AddVaccineStock /> */}
+			{/* <AddCampaign /> */}
+			<ViewChildren />
 			<Footer />
 			<FooterBottom />
 		</div>
