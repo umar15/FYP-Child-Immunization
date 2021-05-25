@@ -25,6 +25,7 @@
    --btnColor: #0Cb8B6;
    --defaultBg: #e6f7fc;
    --textColor: #212529;
+   --input-bg: #f2f9fc;
    --breakpoint-xs: 0;
    --breakpoint-sm: 576px;
    --breakpoint-md: 768px;
@@ -829,7 +830,8 @@ display table styles
 ========================================= */
 
 .display-table {
-   padding: 50px;
+   height: 100%;
+   padding: 20px 0;
    text-align: center;
 }
 
@@ -843,4 +845,62 @@ display table styles
 
 .deleteIcon {
    color: var(--danger);
+}
+
+/* =========================================
+dashboard styles
+========================================= */
+
+.vc-header {
+   background-color: #001027;
+   color: #fff;
+   margin-left: -150px;
+}
+
+.hospital-dashboard {
+   margin: 0% !important;
+   padding: 0%;
+}
+
+.hospital-container {
+   margin: 0px !important;
+}
+
+.sidebar {
+   height: 600px;
+   background-color: #001027;
+}
+
+.sidebar ul {
+   list-style: none;
+   margin-top: 20%;
+   font-size: 17px;
+   font-weight: 600;
+}
+
+.sidebar li {
+   padding: 10px;
+   margin: 10px 0;
+   margin-left: -35px;
+   background-color: var(--input-bg);
+   border-radius: 5px;
+}
+
+.sidebar li:hover {
+   background-color: var(--btnColor);
+   color: var(--white);
+}
+
+.sidebar-icon {
+   color: var(--btnColor);
+   width: 50px;
+   margin-top: -3px;
+}
+
+.sidebar-icon:hover {
+   color: var(--input-bg);
+}
+
+.data-table {
+   margin: 0%;
 }

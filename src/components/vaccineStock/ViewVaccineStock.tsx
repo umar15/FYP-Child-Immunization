@@ -16,6 +16,8 @@ const ViewVaccineStock = () => {
 							<th>Remaining Quantity</th>
 							<th>Manufacturer</th>
 							<th>Expiry Date</th>
+							<th>Edit</th>
+							<th>Delete</th>
 						</tr>
 					</thead>
 					<tbody>

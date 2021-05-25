@@ -13,11 +13,19 @@ import Signup from "./components/signup/Signup";
 import AddVaccineStock from "./components/vaccineStock/AddVaccineStock";
 import AddCampaign from "./components/campaigns/AddCampaign";
 import ViewChildren from "./components/child/ViewChildren";
+import VaccineCenterHeader from "./components/header/VaccineCenterHeader";
+import HospitalHeader from "./components/header/HospitalHeader";
+import HospitalDashboard from "./components/dashboard/HospitalDashboard";
+import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
 
 function App() {
 	return (
 		<div>
-			<Header />
+			{/* <Header /> */}
+			<VaccineCenterHeader />
+			{/* <HospitalHeader /> */}
+			{/* <HospitalDashboard /> */}
+			<VaccineCenterDashboard />
 			{/* <Welcome />
 			<AboutUs />
 			<OurMission />
@@ -28,7 +36,7 @@ function App() {
 			{/* <AddChild /> */}
 			{/* <AddVaccineStock /> */}
 			{/* <AddCampaign /> */}
-			<ViewChildren />
+			{/* <ViewChildren /> */}
 			<Footer />
 			<FooterBottom />
 		</div>
