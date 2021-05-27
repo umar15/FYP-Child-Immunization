@@ -3,16 +3,17 @@ const Schema = mongoose.Schema;
 
 const childSchema = new Schema(
 	{
-		childID: { type: String, required: true },
-		parentName: { type: String, required: true },
-		parentCNIC: { type: String, required: true },
-		contactNo: { type: String, required: true },
-		address: { type: String, required: true },
-		dateOfBirth: { type: Date, required: true },
-		gender: { type: String, required: true },
-		birthPlace: { type: String, required: true },
-		siblingNo: { type: Number, required: true },
-		hospitalName: { type: String, required: true },
+		childID: { type: String, required: true, default: "" },
+		parentName: { type: String, required: true, default: "" },
+		parentCNIC: { type: String, required: true, default: "" },
+		contactNo: { type: String, required: true, default: "" },
+		address: { type: String, required: true, default: "" },
+		dateOfBirth: { type: Date, required: true, default: "" },
+		gender: { type: String, required: true, default: "" },
+		birthPlace: { type: String, required: true, default: "" },
+		siblingNo: { type: Number, required: true, default: "" },
+		hospitalName: { type: String, required: true, default: "" },
+		vaccinationInfo: { type: String, default: "" },
 	},
 	{
 		timestamps: true,
