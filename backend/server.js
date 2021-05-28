@@ -22,6 +22,17 @@ const connection = mongoose.connection;
 connection.once("open", () => {
 	console.log(`Mongodb connected successfully`);
 });
+
+// routers
+const childRouter = require("./routes/children");
+const vaccineRouter = require("./routes/vaccines");
+const campaignRouter = require("./routes/campaigns");
+
+app.use("/children", childRouter);
+app.use("/vaccines", vaccineRouter);
+app.use("/campaigns", campaignRouter);
+
+// start server
 app.listen(PORT, () => {
 	console.log(`Server is running at ${PORT}`);
 });
