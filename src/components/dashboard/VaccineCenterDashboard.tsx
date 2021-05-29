@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Col, Row } from "reactstrap";
 import { IoMdAddCircle } from "react-icons/io";
 import { GiLoveInjection } from "react-icons/gi";
@@ -21,26 +22,36 @@ const VaccineCenterDashboard = () => {
 					<Col lg="3" className="sidebar">
 						<ul>
 							<li>
-								<FaUserEdit size={iconSize} className="sidebar-icon" />
-								Update Child Vaccine
+								<Link className="link" to="/vaccinecenter">
+									<FaUserEdit size={iconSize} className="sidebar-icon" />
+									Update Child Vaccine
+								</Link>
 							</li>
 							<li>
 								<a>
-									<SiCampaignmonitor size={iconSize} className="sidebar-icon" />
-									View Campaigns
+									<Link className="link" to="/vaccinecenter/campaigns">
+										<SiCampaignmonitor size={iconSize} className="sidebar-icon" />
+										View Campaigns
+									</Link>
 								</a>
 							</li>
 							<li>
-								<AiFillFolderAdd size={iconSize} className="sidebar-icon" />
-								Add Campaign
+								<Link className="link" to="/vaccinecenter/campaigns/add">
+									<AiFillFolderAdd size={iconSize} className="sidebar-icon" />
+									Add Campaign
+								</Link>
 							</li>
 							<li>
-								<GiLoveInjection size={iconSize} className="sidebar-icon" />
-								Vaccine Stock
+								<Link className="link" to="/vaccinecenter/vaccines">
+									<GiLoveInjection size={iconSize} className="sidebar-icon" />
+									Vaccine Stock
+								</Link>
 							</li>
 							<li>
-								<IoMdAddCircle size={iconSize} className="sidebar-icon" />
-								Add Vaccine Stock
+								<Link className="link" to="/vaccinecenter/vaccines/add">
+									<IoMdAddCircle size={iconSize} className="sidebar-icon" />
+									Add Vaccine Stock
+								</Link>
 							</li>
 						</ul>
 					</Col>

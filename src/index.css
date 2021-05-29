@@ -879,6 +879,8 @@ dashboard styles
 }
 
 .sidebar li {
+   list-style-type: none;
+   color: black;
    padding: 10px;
    margin: 10px 0;
    margin-left: -35px;
@@ -886,9 +888,14 @@ dashboard styles
    border-radius: 5px;
 }
 
-.sidebar li:hover {
+.sidebar li:hover, .link:hover {
    background-color: var(--btnColor);
-   color: var(--white);
+   color: var(--white) !important;
+}
+
+.link {
+   text-decoration: none !important;
+   color: black !important;
 }
 
 .sidebar-icon {
@@ -919,4 +926,21 @@ add form styles
 .add-campaign {
    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
    padding: 30px;
+}
+
+/* =========================================
+search styles styles
+========================================= */
+
+.search-field {
+   display: flex;
+   flex-direction: row;
+}
+
+.search-field button {
+   background-color: var(--btnColor);
+   border: none;
+   width: 100px;
+   height: 50px;
+   margin-top: 10px;
 }

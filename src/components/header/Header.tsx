@@ -39,10 +39,10 @@ const Header = () => {
 						</NavItem> */}
 					</Nav>
 					<NavbarText>
-						<a className="default-btn" href="/appointment">
+						<a className="default-btn" href="/signup">
 							Join Us
 						</a>
-						<a className="default-btn" href="/appointment">
+						<a className="default-btn" href="/login">
 							Log in
 						</a>
 					</NavbarText>

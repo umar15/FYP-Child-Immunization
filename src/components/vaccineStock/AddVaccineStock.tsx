@@ -4,14 +4,14 @@ import "../../index.css";
 
 const AddVaccineStock = () => {
 	return (
-		<div className="signup-area">
+		<div className="add-form">
 			<Container>
 				<div className="section-title">
 					<h2>Add Vaccine Stock</h2>
 				</div>
 				<Row>
 					<Col>
-						<div className="add-child-form">
+						<div className="add-campaign">
 							<form method="post">
 								<Row>
 									<Col md="12" sm="12">

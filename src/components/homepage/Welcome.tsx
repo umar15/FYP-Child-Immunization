@@ -19,7 +19,7 @@ const Welcome = () => {
 								labore et dolore magna aliqua gravida. Risus commodo.
 							</p>
 							<div className="banner-btn ">
-								<a className="default-btn" href="/appointment">
+								<a className="default-btn" href="/signup">
 									Join Us
 								</a>
 							</div>

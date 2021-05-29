@@ -4,14 +4,14 @@ import "../../index.css";
 
 const AddChild = () => {
 	return (
-		<div className="signup-area">
+		<div className="add-form">
 			<Container>
 				<div className="section-title">
 					<h2>Add Child Details</h2>
 				</div>
 				<Row>
 					<Col>
-						<div className="add-child-form">
+						<div className="add-campaign">
 							<form method="post">
 								<Row>
 									<Col md="12" sm="12">

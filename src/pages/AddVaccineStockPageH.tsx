@@ -1,62 +1,60 @@
 import React from "react";
 import { Container, Col, Row } from "reactstrap";
+import { BsPeopleFill } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
+import { IoPersonAdd } from "react-icons/io5";
 import { GiLoveInjection } from "react-icons/gi";
 import { FaUserEdit } from "react-icons/fa";
-import { SiCampaignmonitor } from "react-icons/si";
-import { AiFillFolderAdd } from "react-icons/ai";
 import "../index.css";
 import VaccineCenterHeader from ".././components/header/VaccineCenterHeader";
 import Footer from ".././components/footer/Footer";
 import FooterBottom from ".././components/footer/FooterBottom";
-import ViewCampaigns from "../components/campaigns/ViewCampaigns";
+import AddVaccineStock from "../components/vaccineStock/AddVaccineStock";
 import { Link } from "react-router-dom";
 
-const CampaignsPage = () => {
+const AddVaccineStockPageH = () => {
 	const iconSize = 20;
 	return (
 		<div className="hospital-dashboard">
 			<VaccineCenterHeader />
 			<Container className="hospital-container">
 				<Row>
-					<Col lg="3" style={{ height: "700px" }} className="sidebar">
+					<Col lg="3" className="sidebar">
 						<ul>
 							<li>
-								<Link className="link" to="/vaccinecenter">
-									<FaUserEdit size={iconSize} className="sidebar-icon" />
-									Update Child Vaccine
+								<Link className="link" to="/hospital/children">
+									<BsPeopleFill size={iconSize} className="sidebar-icon" />
+									View Children
 								</Link>
 							</li>
 							<li>
-								<a>
-									<Link className="link" to="/vaccinecenter/campaigns">
-										<SiCampaignmonitor size={iconSize} className="sidebar-icon" />
-										View Campaigns
-									</Link>
-								</a>
-							</li>
-							<li>
-								<Link className="link" to="/vaccinecenter/campaigns/add">
-									<AiFillFolderAdd size={iconSize} className="sidebar-icon" />
-									Add Campaign
+								<Link className="link" to="/hospital/children/add">
+									<IoPersonAdd size={iconSize} className="sidebar-icon" />
+									Add child
 								</Link>
 							</li>
 							<li>
-								<Link className="link" to="/vaccinecenter/vaccines">
+								<Link className="link" to="/hospital/vaccines">
 									<GiLoveInjection size={iconSize} className="sidebar-icon" />
 									Vaccine Stock
 								</Link>
 							</li>
 							<li>
-								<Link className="link" to="/vaccinecenter/vaccines/add">
+								<Link className="link" to="/hospital/vaccines/add">
 									<IoMdAddCircle size={iconSize} className="sidebar-icon" />
-									Add Vaccine Stock
+									Add vaccine stock
+								</Link>
+							</li>
+							<li>
+								<Link className="link" to="/hospital">
+									<FaUserEdit size={iconSize} className="sidebar-icon" />
+									Update Child Vaccine
 								</Link>
 							</li>
 						</ul>
 					</Col>
 					<Col lg="9" className="data-table">
-						<ViewCampaigns />
+						<AddVaccineStock />
 					</Col>
 				</Row>
 			</Container>
@@ -66,4 +64,4 @@ const CampaignsPage = () => {
 	);
 };
 
-export default CampaignsPage;
+export default AddVaccineStockPageH;

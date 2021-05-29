@@ -5,9 +5,15 @@ import { AiFillDelete } from "react-icons/ai";
 
 const ViewVaccineStock = () => {
 	return (
-		<div className="display-table">
+		<div style={{ marginLeft: "15%" }} className="display-table">
 			<Container>
 				<h2 className="table-heading">Vaccine Stock Details</h2>
+				<div className="form-group search-field">
+					<input type="text" className="form-control" name="area" placeholder="Search vaccines" />
+					<button type="button" className="btn btn-primary">
+						Search
+					</button>
+				</div>
 				<Table hover>
 					<thead>
 						<tr>

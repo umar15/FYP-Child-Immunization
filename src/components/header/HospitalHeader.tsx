@@ -41,7 +41,7 @@ const HospitalHeader = () => {
 						{/* <a className="default-btn" href="/appointment">
 							Join Us
 						</a> */}
-						<a className="default-btn" href="/appointment">
+						<a className="default-btn" href="/login">
 							Log out
 						</a>
 					</NavbarText>

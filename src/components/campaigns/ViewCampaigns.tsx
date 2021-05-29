@@ -1,16 +1,19 @@
 import React from "react";
 import { Container, Row, Col, Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
-import { AiFillDelete } from "react-icons/ai";
-import VaccineCenterHeader from "../header/VaccineCenterHeader";
-import Footer from "../footer/Footer";
-import FooterBottom from "../footer/FooterBottom";
+import { AiFillDelete, AiOutlineSearch } from "react-icons/ai";
 
 const ViewCampaigns = () => {
 	return (
 		<div style={{ marginLeft: "15%" }} className="display-table">
 			<Container>
 				<h2 className="table-heading">Campaigns Details</h2>
+				<div className="form-group search-field">
+					<input type="text" className="form-control" name="area" placeholder="Search campaigns" />
+					<button type="button" className="btn btn-primary">
+						Search
+					</button>
+				</div>
 				<Table hover>
 					<thead>
 						<tr>
