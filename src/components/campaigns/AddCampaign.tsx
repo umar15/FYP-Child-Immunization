@@ -4,17 +4,17 @@ import "../../index.css";
 
 const AddCampaign = () => {
 	return (
-		<div className="signup-area">
+		<div className="add-form">
 			<Container>
 				<div className="section-title">
 					<h2>Add Campaign</h2>
 				</div>
 				<Row>
 					<Col>
-						<div className="add-child-form">
+						<div className="add-campaign">
 							<form method="post">
 								<Row>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<select className="form-control">
 												<option value="0">Campaign Status</option>
@@ -23,12 +23,12 @@ const AddCampaign = () => {
 											</select>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<input type="text" className="form-control" name="area" placeholder="Campaign Area" />
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<input
 												type="number"
@@ -38,7 +38,7 @@ const AddCampaign = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<input
 												type="number"
@@ -48,7 +48,7 @@ const AddCampaign = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<input
 												type="date"
@@ -58,7 +58,7 @@ const AddCampaign = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<div className="form-group">
 											<input
 												type="date"
@@ -69,7 +69,7 @@ const AddCampaign = () => {
 										</div>
 									</Col>
 
-									<Col md="12" sm="12">
+									<Col lg="12">
 										<button className="default-btn add-stock-btn" type="submit">
 											Add Campaign
 										</button>

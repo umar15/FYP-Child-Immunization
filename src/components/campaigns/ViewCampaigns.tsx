@@ -2,12 +2,15 @@ import React from "react";
 import { Container, Row, Col, Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
+import VaccineCenterHeader from "../header/VaccineCenterHeader";
+import Footer from "../footer/Footer";
+import FooterBottom from "../footer/FooterBottom";
 
 const ViewCampaigns = () => {
 	return (
-		<div className="display-table">
+		<div style={{ marginLeft: "15%" }} className="display-table">
 			<Container>
-				<h2 className="table-heading">Vaccine Stock Details</h2>
+				<h2 className="table-heading">Campaigns Details</h2>
 				<Table hover>
 					<thead>
 						<tr>
@@ -18,6 +21,8 @@ const ViewCampaigns = () => {
 							<th>Vaccine quantity allotted</th>
 							<th>Start Date</th>
 							<th>End Date</th>
+							<th>Edit</th>
+							<th>Delete</th>
 						</tr>
 					</thead>
 					<tbody>
