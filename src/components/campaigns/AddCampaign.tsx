@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../index.css";
 
-const AddVaccineStock = () => {
+const AddCampaign = () => {
 	return (
 		<div className="signup-area">
 			<Container>
@@ -84,4 +84,4 @@ const AddVaccineStock = () => {
 	);
 };
 
-export default AddVaccineStock;
+export default AddCampaign;
