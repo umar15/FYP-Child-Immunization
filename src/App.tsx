@@ -1,45 +1,23 @@
 import React from "react";
-import AddChild from "./components/child/AddChild";
-import Footer from "./components/footer/Footer";
-import FooterBottom from "./components/footer/FooterBottom";
-import Header from "./components/header/Header";
-import AboutUs from "./components/homepage/AboutUs";
-import OurDoctors from "./components/homepage/OurDoctors";
-import OurMission from "./components/homepage/OurMission";
-import VaccinationTable from "./components/homepage/VaccinationTable";
-import Welcome from "./components/homepage/Welcome";
-import Login from "./components/login/login";
-import Signup from "./components/signup/Signup";
-import AddVaccineStock from "./components/vaccineStock/AddVaccineStock";
-import AddCampaign from "./components/campaigns/AddCampaign";
-import ViewChildren from "./components/child/ViewChildren";
-import VaccineCenterHeader from "./components/header/VaccineCenterHeader";
-import HospitalHeader from "./components/header/HospitalHeader";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import HospitalDashboard from "./components/dashboard/HospitalDashboard";
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
+import Homepage from "./pages/Homepage";
+// const BrowserRouter = require("react-router-dom");
 
 function App() {
 	return (
-		<div>
-			{/* <Header /> */}
-			<VaccineCenterHeader />
-			{/* <HospitalHeader /> */}
+		<>
+			{/* <Route path="/" exact component={Homepage} />
+			<Route path="/hospital" exact component={HospitalDashboard} />
+			<Route path="/vaccinecenter" exact component={VaccineCenterDashboard} />
+			<Route path="/" exact component={Homepage} /> */}
+			<Homepage />
+			{/* <HospitalDashboardPage /> */}
 			{/* <HospitalDashboard /> */}
-			<VaccineCenterDashboard />
-			{/* <Welcome />
-			<AboutUs />
-			<OurMission />
-			<VaccinationTable />
-			<OurDoctors /> */}
-			{/* <Signup /> */}
-			{/* <Login /> */}
-			{/* <AddChild /> */}
-			{/* <AddVaccineStock /> */}
-			{/* <AddCampaign /> */}
-			{/* <ViewChildren /> */}
-			<Footer />
-			<FooterBottom />
-		</div>
+			{/* <VaccineCenterDashboard /> */}
+		</>
 	);
 }
 

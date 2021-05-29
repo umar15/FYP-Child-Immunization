@@ -6,11 +6,16 @@ import { FaUserEdit } from "react-icons/fa";
 import { SiCampaignmonitor } from "react-icons/si";
 import { AiFillFolderAdd } from "react-icons/ai";
 import ViewVaccineStock from "../vaccineStock/ViewVaccineStock";
+import "../../index.css";
+import VaccineCenterHeader from "../header/VaccineCenterHeader";
+import Footer from "../footer/Footer";
+import FooterBottom from "../footer/FooterBottom";
 
 const VaccineCenterDashboard = () => {
 	const iconSize = 20;
 	return (
 		<div className="hospital-dashboard">
+			<VaccineCenterHeader />
 			<Container className="hospital-container">
 				<Row>
 					<Col lg="3" className="sidebar">
@@ -44,6 +49,8 @@ const VaccineCenterDashboard = () => {
 					</Col>
 				</Row>
 			</Container>
+			<Footer />
+			<FooterBottom />
 		</div>
 	);
 };

@@ -19,10 +19,10 @@ const Header = () => {
 					<Nav className="mr-auto" navbar>
 						<NavItem>
 							<NavLink className="nav-link" href="/">
-								<h6>Home</h6>
+								<h6>Child Immunization</h6>
 							</NavLink>
 						</NavItem>
-						<NavItem>
+						{/* <NavItem>
 							<NavLink className="nav-link" href="/">
 								<h6>About</h6>
 							</NavLink>
@@ -36,7 +36,7 @@ const Header = () => {
 							<NavLink className="nav-link" href="/">
 								<h6>Services</h6>
 							</NavLink>
-						</NavItem>
+						</NavItem> */}
 					</Nav>
 					<NavbarText>
 						<a className="default-btn" href="/appointment">

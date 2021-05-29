@@ -6,11 +6,16 @@ import { IoMdAddCircle } from "react-icons/io";
 import { IoPersonAdd } from "react-icons/io5";
 import { GiLoveInjection } from "react-icons/gi";
 import { FaUserEdit } from "react-icons/fa";
+import "../../index.css";
+import HospitalHeader from "../header/HospitalHeader";
+import Footer from "../footer/Footer";
+import FooterBottom from "../footer/FooterBottom";
 
 const HospitalDashboard = () => {
 	const iconSize = 20;
 	return (
 		<div className="hospital-dashboard">
+			<HospitalHeader />
 			<Container className="hospital-container">
 				<Row>
 					<Col lg="3" className="sidebar">
@@ -44,6 +49,8 @@ const HospitalDashboard = () => {
 					</Col>
 				</Row>
 			</Container>
+			<Footer />
+			<FooterBottom />
 		</div>
 	);
 };
