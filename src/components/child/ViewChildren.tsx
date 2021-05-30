@@ -1,9 +1,37 @@
-import React from "react";
-import { Container, Row, Col, Table } from "reactstrap";
+import React, { useEffect, useState } from "react";
+import { Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
+import { getChildren, deleteChild } from "../../services/childrenService";
 
 const ViewChildren = () => {
+	const [children, setChildren] = useState([]);
+
+	async function getAllChildren() {
+		const allChildren = await getChildren();
+		console.log("All children ", children);
+		setChildren(allChildren.data);
+		console.log(children);
+	}
+
+	const handleDelete = (id: any) => {
+		deleteChild(id);
+		setChildren(
+			children.filter((child) => {
+				const { _id } = child;
+				return _id !== id;
+			})
+		);
+	};
+
+	const handleEdit = () => {
+		console.log("Edit");
+	};
+
+	useEffect(() => {
+		getAllChildren();
+	}, []);
+
 	return (
 		<div style={{ marginLeft: "15%" }} className="display-table">
 			<h2 className="table-heading">Children Details</h2>
@@ -16,7 +44,7 @@ const ViewChildren = () => {
 			<Table hover>
 				<thead>
 					<tr>
-						<th>#</th>
+						<th>ID</th>
 						<th>Gender</th>
 						<th>Date of Birth</th>
 						<th>Parent Name</th>
@@ -28,81 +56,32 @@ const ViewChildren = () => {
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Male</td>
-						<td>1/2/2021</td>
-						<td>abc</td>
-						<td>123654789</td>
-						<td>islamabad</td>
-						<td>123456789</td>
-						<td>
-							<BiEdit className="editIcon" />
-						</td>
-						<td>
-							<AiFillDelete className="deleteIcon" />
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Male</td>
-						<td>1/2/2021</td>
-						<td>abc</td>
-						<td>123654789</td>
-						<td>islamabad</td>
-						<td>123456789</td>
-						<td>
-							<BiEdit className="editIcon" />
-						</td>
-						<td>
-							<AiFillDelete className="deleteIcon" />
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>Male</td>
-						<td>1/2/2021</td>
-						<td>abc</td>
-						<td>123654789</td>
-						<td>islamabad</td>
-						<td>123456789</td>
-						<td>
-							<BiEdit className="editIcon" />
-						</td>
-						<td>
-							<AiFillDelete className="deleteIcon" />
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">4</th>
-						<td>Male</td>
-						<td>1/2/2021</td>
-						<td>abc</td>
-						<td>123654789</td>
-						<td>islamabad</td>
-						<td>123456789</td>
-						<td>
-							<BiEdit className="editIcon" />
-						</td>
-						<td>
-							<AiFillDelete className="deleteIcon" />
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">5</th>
-						<td>Male</td>
-						<td>1/2/2021</td>
-						<td>abc</td>
-						<td>123654789</td>
-						<td>islamabad</td>
-						<td>123456789</td>
-						<td>
-							<BiEdit className="editIcon" />
-						</td>
-						<td>
-							<AiFillDelete className="deleteIcon" />
-						</td>
-					</tr>
+					{children &&
+						children.map((child) => {
+							// console.log(child);
+							const { _id, childID, gender, dateOfBirth, parentName, parentCNIC, address, contactNo } = child;
+							return (
+								<tr key={childID}>
+									<td>{childID}</td>
+									<td>{gender}</td>
+									<td>{dateOfBirth}</td>
+									<td>{parentName}</td>
+									<td>{parentCNIC}</td>
+									<td>{address}</td>
+									<td>{contactNo}</td>
+									<td>
+										<a style={{ cursor: "pointer" }} onClick={handleEdit}>
+											<BiEdit className="editIcon" />
+										</a>
+									</td>
+									<td>
+										<a style={{ cursor: "pointer" }} onClick={() => handleDelete(_id)}>
+											<AiFillDelete className="deleteIcon" />
+										</a>
+									</td>
+								</tr>
+							);
+						})}
 				</tbody>
 			</Table>
 		</div>

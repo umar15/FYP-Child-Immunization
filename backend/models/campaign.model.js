@@ -6,7 +6,7 @@ const campaignSchema = new Schema(
 		campaignID: { type: String, default: "", required: true },
 		status: { type: String, default: "active", required: true, enum: ["active", "inactive"] },
 		area: { type: String, default: "", required: true },
-		noOfWorkers: { type: Number, default: 5, required: true },
+		noOfWorkers: { type: String, default: "5", required: true },
 		startDate: { type: Date, default: Date.now },
 		endDate: { type: Date, default: Date.now },
 	},

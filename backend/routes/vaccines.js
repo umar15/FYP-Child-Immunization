@@ -27,7 +27,7 @@ router.route("/add").post((req, res) => {
 	const vaccineID = req.body.vaccineID;
 	const name = req.body.name;
 	const manufacturer = req.body.manufacturer;
-	const quantity = Number(req.body.quantity);
+	const quantity = req.body.quantity;
 	const expiryDate = Date.parse(req.body.expiryDate);
 
 	const newVaccine = new Vaccine({
@@ -51,7 +51,7 @@ router.route("/update/:id").post((req, res) => {
 			vaccine.vaccineID = req.body.vaccineID;
 			vaccine.name = req.body.name;
 			vaccine.manufacturer = req.body.manufacturer;
-			vaccine.quantity = Number(req.body.quantity);
+			vaccine.quantity = req.body.quantity;
 			vaccine.expiryDate = Date.parse(req.body.expiryDate);
 
 			vaccine

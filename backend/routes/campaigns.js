@@ -27,7 +27,7 @@ router.route("/add").post((req, res) => {
 	const campaignID = req.body.campaignID;
 	const status = req.body.status;
 	const area = req.body.area;
-	const noOfWorkers = Number(req.body.noOfWorkers);
+	const noOfWorkers = req.body.noOfWorkers;
 	const startDate = Date.parse(req.body.startDate);
 	const endDate = Date.parse(req.body.endDate);
 
@@ -53,7 +53,7 @@ router.route("/update/:id").post((req, res) => {
 			campaign.campaignID = req.body.campaignID;
 			campaign.status = req.body.status;
 			campaign.area = req.body.area;
-			campaign.noOfWorkers = Number(req.body.noOfWorkers);
+			campaign.noOfWorkers = req.body.noOfWorkers;
 			campaign.startDate = Date.parse(req.body.startDate);
 			campaign.endDate = Date.parse(req.body.endDate);
 

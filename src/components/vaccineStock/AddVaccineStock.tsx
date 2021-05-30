@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "../../index.css";
+import { addVaccine } from "../../services/vaccinesService";
 
 const AddVaccineStock = () => {
+	const makeVaccineID = () => {
+		let vaccineID = "VC-";
+		const possible = "ABCDEFGHIJKLMNPQRSTUVWXYZ123456789";
+		for (let i = 0; i <= 5; i++) vaccineID += possible.charAt(Math.floor(Math.random() * possible.length));
+		return vaccineID;
+	};
+
+	const [vaccineID, setVaccineID] = useState(makeVaccineID());
+	const [name, setName] = useState("");
+	const [manufacturer, setManufacturer] = useState("");
+	const [quantity, setQuantity] = useState("50");
+	const [expiryDate, setExpiryDate] = useState(new Date());
+
+	const handleDateChange = (date: any) => {
+		setExpiryDate(date);
+	};
+
+	const handleFormSubmit = async (e: any) => {
+		e.preventDefault();
+		const newVaccine = {
+			vaccineID,
+			name,
+			manufacturer,
+			quantity,
+			expiryDate,
+		};
+
+		try {
+			await addVaccine(newVaccine);
+			alert("Vaccine Added");
+		} catch (err) {
+			alert(err);
+		}
+		window.location.href = "/vaccinecenter/vaccines";
+	};
+
 	return (
 		<div className="add-form">
 			<Container>
@@ -12,18 +51,22 @@ const AddVaccineStock = () => {
 				<Row>
 					<Col>
 						<div className="add-campaign">
-							<form method="post">
+							<form method="post" onSubmit={handleFormSubmit}>
 								<Row>
 									<Col md="12" sm="12">
 										<div className="form-group">
-											<select className="form-control">
+											<select
+												value={name}
+												onChange={(e) => setName(e.target.value)}
+												className="form-control"
+											>
 												<option value="0">Vaccine Name</option>
-												<option value="1">Hapititus A</option>
-												<option value="2">Polio</option>
-												<option value="0">Measles</option>
-												<option value="1">Influenze</option>
-												<option value="2">Homophiles</option>
-												<option value="2">Hapititus B</option>
+												<option value="hapititus A">Hapititus A</option>
+												<option value="polio">Polio</option>
+												<option value="measles">Measles</option>
+												<option value="influenza">Influenze</option>
+												<option value="homophiles">Homophiles</option>
+												<option value="hapititus B">Hapititus B</option>
 											</select>
 										</div>
 									</Col>
@@ -34,22 +77,30 @@ const AddVaccineStock = () => {
 												className="form-control"
 												name="manufacturer"
 												placeholder="Manufacturer"
+												value={manufacturer}
+												onChange={(e) => setManufacturer(e.target.value)}
 											/>
 										</div>
 									</Col>
 									<Col md="12" sm="12">
 										<div className="form-group">
-											<input type="number" className="form-control" name="quantity" placeholder="Quantity" />
+											<input
+												type="number"
+												className="form-control"
+												name="quantity"
+												value={quantity}
+												onChange={(e) => setQuantity(e.target.value)}
+												placeholder="Quantity"
+											/>
 										</div>
 									</Col>
 									<Col md="12" sm="12">
 										<div className="form-group">
-											<input
-												type="date"
-												// onFocus={type="date"}
+											<DatePicker
 												className="form-control"
-												name="expiry"
-												placeholder="Expiry Date"
+												// value={endDate}
+												selected={expiryDate}
+												onChange={handleDateChange}
 											/>
 										</div>
 									</Col>

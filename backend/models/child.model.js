@@ -11,7 +11,7 @@ const childSchema = new Schema(
 		dateOfBirth: { type: Date, required: true, default: "" },
 		gender: { type: String, required: true, default: "" },
 		birthPlace: { type: String, required: true, default: "" },
-		siblingNo: { type: Number, required: true, default: "" },
+		siblingNo: { type: String, required: true, default: "" },
 		hospitalName: { type: String, required: true, default: "" },
 		vaccinationInfo: { type: String, default: "" },
 	},

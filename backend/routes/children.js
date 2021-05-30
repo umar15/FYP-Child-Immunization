@@ -32,7 +32,7 @@ router.route("/add").post((req, res) => {
 	const dateOfBirth = Date.parse(req.body.dateOfBirth);
 	const gender = req.body.gender;
 	const birthPlace = req.body.birthPlace;
-	const siblingNo = Number(req.body.siblingNo);
+	const siblingNo = req.body.siblingNo;
 	const hospitalName = req.body.hospitalName;
 	const vaccinationInfo = req.body.vaccinationInfo;
 
@@ -69,7 +69,7 @@ router.route("/update/:id").post((req, res) => {
 			child.dateOfBirth = Date.parse(req.body.dateOfBirth);
 			child.gender = req.body.gender;
 			child.birthPlace = req.body.birthPlace;
-			child.siblingNo = Number(req.body.siblingNo);
+			child.siblingNo = req.body.siblingNo;
 			child.hospitalName = req.body.hospitalName;
 			child.vaccinationInfo = req.body.vaccinationInfo;
 
