@@ -19,7 +19,7 @@ const AddChildPage = () => {
 			<HospitalHeader />
 			<Container className="hospital-container">
 				<Row>
-					<Col lg="3" style={{ height: "750px" }} className="sidebar">
+					<Col lg="3" style={{ height: "1200px" }} className="sidebar">
 						<ul>
 							<li>
 								<Link className="link" to="/hospital/children">

@@ -730,6 +730,10 @@ SIgn up form styles
    background-color: #f2f9fc;
 }
 
+.form-control {
+   width: 570px !important;
+}
+
 .form-group input[type=text], .form-group select, .form-group input[type=password], .form-group input[type=date], .form-group input[type=number] {
    height: 50px;
    margin: 10px 0;
@@ -933,6 +937,7 @@ search styles styles
 ========================================= */
 
 .search-field {
+   margin-left: 70px;
    display: flex;
    flex-direction: row;
 }

@@ -32,7 +32,7 @@ router.route("/add").post((req, res) => {
 	const dateOfBirth = Date.parse(req.body.dateOfBirth);
 	const gender = req.body.gender;
 	const birthPlace = req.body.birthPlace;
-	const siblingNo = Number(req.body.siblingNo);
+	const siblingNo = req.body.siblingNo;
 	const hospitalName = req.body.hospitalName;
 	const vaccinationInfo = req.body.vaccinationInfo;
 

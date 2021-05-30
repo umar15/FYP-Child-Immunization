@@ -6,7 +6,7 @@ const FooterBottom = () => {
 			<div className="container">
 				<div className="copy-right">
 					<p>
-						Copyright @ 2020 Designed by{" "}
+						Copyright @ 2021 Designed by{" "}
 						<a href="https://umarkhalid.tech/" target="blank">
 							Umar Khalid
 						</a>

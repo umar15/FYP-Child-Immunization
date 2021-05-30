@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
-import { AiFillDelete, AiOutlineSearch } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
+import { getCampaigns, deleteCampaign } from "../../services/campaignsService";
 
 const ViewCampaigns = () => {
+	const [campaigns, setCampaigns] = useState([]);
+
+	async function getAllCampaigns() {
+		const allCampaigns = await getCampaigns();
+		console.log("All campaigns ", campaigns);
+		setCampaigns(allCampaigns.data);
+		console.log(campaigns);
+	}
+
+	const handleDelete = (id: any) => {
+		deleteCampaign(id);
+		setCampaigns(
+			campaigns.filter((campaign) => {
+				const { _id } = campaign;
+				return _id !== id;
+			})
+		);
+	};
+
+	const handleEdit = () => {
+		console.log("Edit");
+	};
+
+	useEffect(() => {
+		getAllCampaigns();
+	}, []);
+
 	return (
 		<div style={{ marginLeft: "15%" }} className="display-table">
 			<Container>
@@ -17,11 +45,10 @@ const ViewCampaigns = () => {
 				<Table hover>
 					<thead>
 						<tr>
-							<th>#</th>
+							<th>ID</th>
 							<th>Campaign Status</th>
 							<th>Campaign Area</th>
 							<th># of workers</th>
-							<th>Vaccine quantity allotted</th>
 							<th>Start Date</th>
 							<th>End Date</th>
 							<th>Edit</th>
@@ -29,81 +56,31 @@ const ViewCampaigns = () => {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Active</td>
-							<td>G-6 Islamabad</td>
-							<td>5</td>
-							<td>40</td>
-							<td>1/6/21</td>
-							<td>1/7/21</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Active</td>
-							<td>G-6 Islamabad</td>
-							<td>5</td>
-							<td>40</td>
-							<td>1/6/21</td>
-							<td>1/7/21</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Active</td>
-							<td>G-6 Islamabad</td>
-							<td>5</td>
-							<td>40</td>
-							<td>1/6/21</td>
-							<td>1/7/21</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>Active</td>
-							<td>G-6 Islamabad</td>
-							<td>5</td>
-							<td>40</td>
-							<td>1/6/21</td>
-							<td>1/7/21</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">5</th>
-							<td>Active</td>
-							<td>G-6 Islamabad</td>
-							<td>5</td>
-							<td>40</td>
-							<td>1/6/21</td>
-							<td>1/7/21</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
+						{campaigns &&
+							campaigns.map((campaign) => {
+								// console.log(campaign);
+								const { _id, campaignID, status, area, noOfWorkers, startDate, endDate } = campaign;
+								return (
+									<tr key={campaignID}>
+										<td>{campaignID}</td>
+										<td>{status}</td>
+										<td>{area}</td>
+										<td>{noOfWorkers}</td>
+										<td>{startDate}</td>
+										<td>{endDate}</td>
+										<td>
+											<a style={{ cursor: "pointer" }} onClick={handleEdit}>
+												<BiEdit className="editIcon" />
+											</a>
+										</td>
+										<td>
+											<a style={{ cursor: "pointer" }} onClick={() => handleDelete(_id)}>
+												<AiFillDelete className="deleteIcon" />
+											</a>
+										</td>
+									</tr>
+								);
+							})}
 					</tbody>
 				</Table>
 			</Container>

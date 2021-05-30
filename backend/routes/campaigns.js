@@ -27,7 +27,7 @@ router.route("/add").post((req, res) => {
 	const campaignID = req.body.campaignID;
 	const status = req.body.status;
 	const area = req.body.area;
-	const noOfWorkers = Number(req.body.noOfWorkers);
+	const noOfWorkers = req.body.noOfWorkers;
 	const startDate = Date.parse(req.body.startDate);
 	const endDate = Date.parse(req.body.endDate);
 
