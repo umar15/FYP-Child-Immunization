@@ -3,7 +3,6 @@ import { Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { getChildren, deleteChild } from "../../services/childrenService";
-import { chdir } from "node:process";
 
 const ViewChildren = () => {
 	const [children, setChildren] = useState([]);

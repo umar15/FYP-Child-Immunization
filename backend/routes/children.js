@@ -69,7 +69,7 @@ router.route("/update/:id").post((req, res) => {
 			child.dateOfBirth = Date.parse(req.body.dateOfBirth);
 			child.gender = req.body.gender;
 			child.birthPlace = req.body.birthPlace;
-			child.siblingNo = Number(req.body.siblingNo);
+			child.siblingNo = req.body.siblingNo;
 			child.hospitalName = req.body.hospitalName;
 			child.vaccinationInfo = req.body.vaccinationInfo;
 

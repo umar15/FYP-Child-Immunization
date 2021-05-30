@@ -6,17 +6,17 @@ import { IoPersonAdd } from "react-icons/io5";
 import { GiLoveInjection } from "react-icons/gi";
 import { FaUserEdit } from "react-icons/fa";
 import "../index.css";
-import VaccineCenterHeader from ".././components/header/VaccineCenterHeader";
 import Footer from ".././components/footer/Footer";
 import FooterBottom from ".././components/footer/FooterBottom";
 import AddVaccineStock from "../components/vaccineStock/AddVaccineStock";
 import { Link } from "react-router-dom";
+import HospitalHeader from "../components/header/HospitalHeader";
 
 const AddVaccineStockPageH = () => {
 	const iconSize = 20;
 	return (
 		<div className="hospital-dashboard">
-			<VaccineCenterHeader />
+			<HospitalHeader />
 			<Container className="hospital-container">
 				<Row>
 					<Col lg="3" className="sidebar">

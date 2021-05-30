@@ -53,7 +53,7 @@ router.route("/update/:id").post((req, res) => {
 			campaign.campaignID = req.body.campaignID;
 			campaign.status = req.body.status;
 			campaign.area = req.body.area;
-			campaign.noOfWorkers = Number(req.body.noOfWorkers);
+			campaign.noOfWorkers = req.body.noOfWorkers;
 			campaign.startDate = Date.parse(req.body.startDate);
 			campaign.endDate = Date.parse(req.body.endDate);
 

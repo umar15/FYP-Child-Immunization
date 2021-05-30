@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const vaccineSchema = new Schema(
 	{
 		vaccineID: { type: String, default: "", required: true },
-		name: { type: String, default: "", required: true, enum: ["active", "inactive"] },
+		name: { type: String, default: "", required: true },
 		manufacturer: { type: String, default: "", required: true },
-		quantity: { type: Number, default: 50, required: true },
+		quantity: { type: String, default: "50", required: true },
 		expiryDate: { type: Date, default: Date.now, required: true },
 	},
 	{

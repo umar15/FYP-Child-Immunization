@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table } from "reactstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
+import { getVaccines, deleteVaccine } from "../../services/vaccinesService";
 
 const ViewVaccineStock = () => {
+	const [vaccines, setVaccines] = useState([]);
+
+	async function getAllVaccines() {
+		const allVaccines = await getVaccines();
+		console.log("All vaccines ", vaccines);
+		setVaccines(allVaccines.data);
+		console.log(vaccines);
+	}
+
+	const handleDelete = (id: any) => {
+		deleteVaccine(id);
+		setVaccines(
+			vaccines.filter((vaccine) => {
+				const { _id } = vaccine;
+				return _id !== id;
+			})
+		);
+	};
+
+	const handleEdit = () => {
+		console.log("Edit");
+	};
+
+	useEffect(() => {
+		getAllVaccines();
+	}, []);
+
 	return (
 		<div style={{ marginLeft: "15%" }} className="display-table">
 			<Container>
@@ -17,7 +45,7 @@ const ViewVaccineStock = () => {
 				<Table hover>
 					<thead>
 						<tr>
-							<th>#</th>
+							<th>ID</th>
 							<th>Vaccine Name</th>
 							<th>Remaining Quantity</th>
 							<th>Manufacturer</th>
@@ -27,71 +55,30 @@ const ViewVaccineStock = () => {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Polio</td>
-							<td>20</td>
-							<td>abc</td>
-							<td>2/2/2022</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Polio</td>
-							<td>20</td>
-							<td>abc</td>
-							<td>2/2/2022</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Polio</td>
-							<td>20</td>
-							<td>abc</td>
-							<td>2/2/2022</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>Polio</td>
-							<td>20</td>
-							<td>abc</td>
-							<td>2/2/2022</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">5</th>
-							<td>Polio</td>
-							<td>20</td>
-							<td>abc</td>
-							<td>2/2/2022</td>
-							<td>
-								<BiEdit className="editIcon" />
-							</td>
-							<td>
-								<AiFillDelete className="deleteIcon" />
-							</td>
-						</tr>
+						{vaccines &&
+							vaccines.map((vaccine) => {
+								// console.log(campaign);
+								const { _id, vaccineID, name, manufacturer, quantity, expiryDate } = vaccine;
+								return (
+									<tr key={vaccineID}>
+										<td>{vaccineID}</td>
+										<td>{name}</td>
+										<td>{quantity}</td>
+										<td>{manufacturer}</td>
+										<td>{expiryDate}</td>
+										<td>
+											<a style={{ cursor: "pointer" }} onClick={handleEdit}>
+												<BiEdit className="editIcon" />
+											</a>
+										</td>
+										<td>
+											<a style={{ cursor: "pointer" }} onClick={() => handleDelete(_id)}>
+												<AiFillDelete className="deleteIcon" />
+											</a>
+										</td>
+									</tr>
+								);
+							})}
 					</tbody>
 				</Table>
 			</Container>
