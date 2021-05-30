@@ -39,7 +39,7 @@ const AddVaccineStock = () => {
 		} catch (err) {
 			alert(err);
 		}
-		window.location.href = "/hospital/vaccines";
+		window.location.href = "/vaccinecenter/vaccines";
 	};
 
 	return (

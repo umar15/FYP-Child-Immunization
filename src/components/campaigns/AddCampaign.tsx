@@ -44,7 +44,7 @@ const AddCampaign = () => {
 		} catch (err) {
 			alert(err);
 		}
-		window.location.replace("/campaigns");
+		window.location.href = "/vaccinecenter/campaigns";
 	};
 
 	return (
