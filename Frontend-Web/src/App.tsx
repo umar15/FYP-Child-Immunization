@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import AdminDashboard from "./components/dashboard/AdminDashboard";
 import HospitalDashboard from "./components/dashboard/HospitalDashboard";
+import SubAdminDashboard from "./components/dashboard/SubAdminDashboard";
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
 import Login from "./components/login/login";
 import Signup from "./components/signup/Signup";
@@ -30,6 +32,8 @@ function App() {
 			<Route path="/vaccinecenter/campaigns/add" exact component={AddCampaignPage} />
 			<Route path="/vaccinecenter/vaccines" exact component={VaccineStockPage} />
 			<Route path="/vaccinecenter/vaccines/add" exact component={AddVaccineStockPage} />
+			<Route path="/admin" exact component={AdminDashboard} />
+			<Route path="/subadmin" exact component={SubAdminDashboard} />
 		</Router>
 	);
 }

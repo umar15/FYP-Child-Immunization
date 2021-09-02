@@ -6,8 +6,7 @@ import Footer from "../footer/Footer";
 import FooterBottom from "../footer/FooterBottom";
 import AdminHeader from "../header/AdminHeader";
 
-const AdminDashboard = () => {
-	const iconSize = 20;
+const SubAdminDashboard = () => {
 	return (
 		<div className="hospital-dashboard">
 			<AdminHeader />
@@ -17,12 +16,12 @@ const AdminDashboard = () => {
 						<ul>
 							<li>
 								<Link className="link" to="/hospital/children">
-									Statistics
+									Area Statistics
 								</Link>
 							</li>
 							<li>
 								<Link className="link" to="/hospital/children/add">
-									Sub Admins
+									Children
 								</Link>
 							</li>
 							<li>
@@ -53,4 +52,4 @@ const AdminDashboard = () => {
 	);
 };
 
-export default AdminDashboard;
+export default SubAdminDashboard;
