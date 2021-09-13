@@ -57,7 +57,7 @@ module.exports = function (callback) {
 			},
 			(modelsCb) => {
 				// load all models
-				glob("app/modules/**/*.model.js", (err, files) => {
+				glob("app/**/*.model.js", (err, files) => {
 					if (err) {
 						return modelsCb(err);
 					} else {
