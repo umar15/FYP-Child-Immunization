@@ -1,4 +1,4 @@
-const polioWorkerController = require("./controllers/polioWorker.controller");
+const polioWorkerController = require("./polioWorker.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {

@@ -108,7 +108,7 @@ require("./config/mongooseConnection")((err) => {
 		global.errors = require("./config/errors");
 
 		// Routes
-		let userRoutes = "app/modules/**/*.routes.js";
+		let userRoutes = "app/**/*.routes.js";
 		glob.sync(userRoutes).forEach((file) => {
 			require("./" + file)(app, "");
 			winston.info(file, " file is loade in system.");

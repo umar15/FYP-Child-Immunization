@@ -1,4 +1,4 @@
-const hospitalController = require("./controllers/hospital.controller");
+const hospitalController = require("./hospital.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {

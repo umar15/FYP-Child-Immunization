@@ -1,4 +1,4 @@
-const vaccineCenterController = require("./controllers/vaccineCenter.controller");
+const vaccineCenterController = require("./vaccineCenter.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {

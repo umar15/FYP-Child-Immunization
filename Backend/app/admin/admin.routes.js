@@ -1,4 +1,4 @@
-const adminController = require("./controllers/admin.controller");
+const adminController = require("./admin.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {

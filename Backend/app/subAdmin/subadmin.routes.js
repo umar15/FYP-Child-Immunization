@@ -1,4 +1,4 @@
-const subadminController = require("./controllers/subadmin.controller");
+const subadminController = require("./subadmin.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {

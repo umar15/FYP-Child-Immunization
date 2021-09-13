@@ -1,4 +1,4 @@
-const parentController = require("./controllers/parent.controller");
+const parentController = require("./parent.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {
