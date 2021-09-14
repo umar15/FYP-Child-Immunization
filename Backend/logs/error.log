@@ -569,3 +569,9 @@ ReferenceError: orgVacc is not defined
 [2021-08-23 16:25:13] [31merror[39m:  [object Object] 
 [2021-08-23 16:26:13] [31merror[39m:  User is Not authorized to access this api. 
 [2021-08-23 16:35:36] [31merror[39m:  mongoose connection disconnected 
+[2021-09-13 16:52:26] [31merror[39m:  mongoose connection disconnected 
+[2021-09-14 11:22:57] [31merror[39m:  User Not Found 
+[2021-09-14 11:24:55] [31merror[39m:  User Not Found 
+[2021-09-14 12:25:22] [31merror[39m:  mongoose connection disconnected 
+[2021-09-14 12:35:29] [31merror[39m:  Invalid Password 
+[2021-09-14 12:37:32] [31merror[39m:  Invalid Password 

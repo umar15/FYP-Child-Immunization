@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
 import loginImg from "../../assets/images/login-img.jpg";
 import "../../index.css";
 import Footer from "../footer/Footer";
 import FooterBottom from "../footer/FooterBottom";
 import Header from "../header/Header";
+import { useUserDispatch, loginUser } from "../../context/userContext";
+import { useAlert } from "react-alert";
+import { withRouter, useHistory } from "react-router-dom";
 
 const Login = () => {
 	const [role, setRole] = useState("hospital");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	var userDispatch = useUserDispatch();
+	const alert = useAlert();
+	const history = useHistory();
 
 	const roleOnChange = (e: any) => {
 		setRole(e.target.value);
@@ -50,6 +58,8 @@ const Login = () => {
 													className="form-control"
 													name="email"
 													placeholder="Email Address"
+													value={email}
+													onChange={(e) => setEmail(e.target.value)}
 												/>
 											</div>
 										</Col>
@@ -60,6 +70,8 @@ const Login = () => {
 													className="form-control"
 													name="password"
 													placeholder="Password"
+													value={password}
+													onChange={(e) => setPassword(e.target.value)}
 												/>
 											</div>
 										</Col>
@@ -79,6 +91,7 @@ const Login = () => {
 												href={role == "hospital" ? "/hospital" : "/vaccinecenter"}
 												className="default-btn signup-btn"
 												type="submit"
+												onClick={(e) => loginUser(e, email, password, userDispatch, alert, history)}
 											>
 												Log In
 											</a>

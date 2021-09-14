@@ -44,29 +44,32 @@ function useUserDispatch() {
 	return context;
 }
 
-function loginUser(event, dispatch, history, setIsLoading, setError, alert, setErrorMessage) {
+function loginUser(event, login, password, dispatch, alert, history) {
 	event.preventDefault();
 
-	const login = event.target.username.value,
-		password = event.target.password.value;
-	setError(false);
-	setIsLoading(true);
+	// const login = event.target.username.value,
+	// 	password = event.target.password.value;
+	// setError(false);
+	// setIsLoading(true);
+	console.log("Login function start");
 
 	axios
-		.post("/admin/login", { username: login, password: password })
+		.post("/users/login", { username: login, password: password })
 		.then((res) => {
+			console.log("Login function: ", JSON.stringify(res));
 			localStorage.setItem("user", JSON.stringify(res.data.data.user));
-			setError(null);
-			setErrorMessage("");
-			setIsLoading(false);
+			// setError(null);
+			// setErrorMessage("");
+			// setIsLoading(false);
 			dispatch({ type: "LOGIN_SUCCESS" });
-			history.push("/first");
+			history.push(`/${res.data.data.user.userType}`);
 			alert.show("Login Successful", { type: "success" });
 		})
 		.catch((err) => {
-			setError(true);
-			setErrorMessage(err.response.data.message || "Error");
-			setIsLoading(false);
+			console.log("Error in login function: ", err);
+			// setError(true);
+			// setErrorMessage(err.response.data.message || "Error");
+			// setIsLoading(false);
 			alert.show("Login Failed: " + err.response.data.message || "Error", { type: "error" });
 		});
 }
