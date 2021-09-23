@@ -9,7 +9,7 @@ const mongoose = require("mongoose"),
 let userAccount = new schema({
 	email: { type: String, default: "", required: true },
 	name: { type: String, default: "", required: true },
-	cnic: { type: String, default: "", required: true },
+	cnic: { type: String, default: "" },
 	userType: {
 		type: String,
 		default: "",
@@ -17,13 +17,11 @@ let userAccount = new schema({
 		enum: ["hospital", "vaccine center", "parent", "polio worker", "admin", "sub admin"],
 	},
 	password: { type: String, default: "", required: true },
-	address: [
-		{
-			addr: { type: String, default: "", required: true },
-			area: { type: String, default: "", required: true },
-			city: { type: String, default: "", required: true },
-		},
-	],
+	address: {
+		addr: { type: String, default: "", required: true },
+		area: { type: String, default: "", required: true },
+		city: { type: String, default: "", required: true },
+	},
 });
 
 userAccount.plugin(mongoose_timestamps);

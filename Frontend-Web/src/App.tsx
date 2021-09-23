@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AdminDashboard from "./components/dashboard/AdminDashboard";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 import HospitalDashboard from "./components/dashboard/HospitalDashboard";
 import SubAdminDashboard from "./components/dashboard/SubAdminDashboard";
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
@@ -15,6 +15,9 @@ import ChildrenPage from "./pages/ChildrenPage";
 import Homepage from "./pages/Homepage";
 import VaccineStockPage from "./pages/VaccineStockPage";
 import VaccineStockPageH from "./pages/VaccineStockPageH";
+import SubAdminsPage from "./pages/admin/SubAdminsPage";
+import AddSubadmin from "./pages/admin/AddSubadmin";
+import AddSubadminPage from "./pages/admin/AddSubadminPage";
 
 function App() {
 	return (
@@ -22,7 +25,7 @@ function App() {
 			<Route path="/" exact component={Homepage} />
 			<Route path="/login" exact component={Login} />
 			<Route path="/signup" exact component={Signup} />
-			<Route path="/hospital" exact component={HospitalDashboard} />
+			{/* <Route path="/hospital" exact component={HospitalDashboard} />
 			<Route path="/vaccinecenter" exact component={VaccineCenterDashboard} />
 			<Route path="/hospital/children" exact component={ChildrenPage} />
 			<Route path="/hospital/children/add" exact component={AddChildPage} />
@@ -31,8 +34,10 @@ function App() {
 			<Route path="/vaccinecenter/campaigns" exact component={CampaignsPage} />
 			<Route path="/vaccinecenter/campaigns/add" exact component={AddCampaignPage} />
 			<Route path="/vaccinecenter/vaccines" exact component={VaccineStockPage} />
-			<Route path="/vaccinecenter/vaccines/add" exact component={AddVaccineStockPage} />
+			<Route path="/vaccinecenter/vaccines/add" exact component={AddVaccineStockPage} /> */}
 			<Route path="/admin" exact component={AdminDashboard} />
+			<Route path="/admin/subadmins" exact component={SubAdminsPage} />
+			<Route path="/admin/subadmins/:id" exact component={AddSubadminPage} />
 			<Route path="/subadmin" exact component={SubAdminDashboard} />
 		</Router>
 	);

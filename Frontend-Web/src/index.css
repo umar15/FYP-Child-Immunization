@@ -855,6 +855,11 @@ display table styles
 dashboard styles
 ========================================= */
 
+.admin-container {
+   margin: 0% !important;
+   width: 100% !important;
+}
+
 .vc-header {
    background-color: #001027;
    color: #fff;
@@ -871,13 +876,17 @@ dashboard styles
 }
 
 .sidebar {
-   height: 600px;
+   height: 800px;
+   width: 250px;
    background-color: #001027;
+   padding: 10px;
+   /* position: fixed; */
+   margin-left: -20px;
 }
 
 .sidebar ul {
    list-style: none;
-   margin-top: 20%;
+   margin-top: 10%;
    font-size: 17px;
    font-weight: 600;
 }
@@ -886,7 +895,7 @@ dashboard styles
    list-style-type: none;
    color: black;
    padding: 10px;
-   margin: 10px 0;
+   margin: 10px 5px;
    margin-left: -35px;
    background-color: var(--input-bg);
    border-radius: 5px;
@@ -948,4 +957,50 @@ search styles styles
    width: 100px;
    height: 50px;
    margin-top: 10px;
+}
+
+/* =========================================
+card styles
+========================================= */
+
+.card {
+   height: 120px;
+   width: 200px;
+   margin: 20px 10px;
+   color: white;
+}
+
+.card-sub {
+   color: var(--secondary) !important;
+}
+
+.child-born {
+   background-color: #2417aa !important;
+}
+
+.vaccinated {
+   background-color: var(--green) !important;
+}
+
+.not-vaccinated {
+   background-color: #e24d4d !important;
+}
+
+.vaccines {
+   background-color: #2d8ade !important;
+}
+
+toast-admin {
+   max-width: 1000px;
+}
+
+.subadmin-admin {
+   background-color: var(--input-bg);
+   margin-top: 30px;
+   padding: 5px;
+}
+
+.subadmin-table {
+   margin-top: 30px;
+   padding: 5px;
 }

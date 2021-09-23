@@ -575,3 +575,26 @@ ReferenceError: orgVacc is not defined
 [2021-09-14 12:25:22] [31merror[39m:  mongoose connection disconnected 
 [2021-09-14 12:35:29] [31merror[39m:  Invalid Password 
 [2021-09-14 12:37:32] [31merror[39m:  Invalid Password 
+[2021-09-19 18:27:16] [31merror[39m:  mongoose connection disconnected 
+[2021-09-20 13:09:46] [31merror[39m:  User Not Found 
+[2021-09-20 14:05:58] [31merror[39m:  mongoose connection disconnected 
+[2021-09-22 14:21:59] [31merror[39m:  mongoose connection disconnected 
+[2021-09-23 11:07:21] [31merror[39m:  userAccounts validation failed: cnic: Path `cnic` is required. 
+ValidationError: userAccounts validation failed: cnic: Path `cnic` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-09-23 11:08:53] [31merror[39m:  userAccounts validation failed: cnic: Path `cnic` is required. 
+ValidationError: userAccounts validation failed: cnic: Path `cnic` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-09-23 11:16:16] [31merror[39m:  userAccounts validation failed: cnic: Path `cnic` is required. 
+ValidationError: userAccounts validation failed: cnic: Path `cnic` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-09-23 14:40:18] [31merror[39m:  mongoose connection disconnected 
