@@ -4770,3 +4770,6 @@ SyntaxError: Unexpected token ] in JSON at position 654
     at processTicksAndRejections (internal/process/task_queues.js:82:21)
 [2021-09-25 14:08:27] [31merror[39m:  mongoose connection disconnected 
 [2021-09-25 14:08:38] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-25 16:14:06] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-25 18:29:37] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-25 19:19:35] [31merror[39m:  User is Not authorized to access this api. 

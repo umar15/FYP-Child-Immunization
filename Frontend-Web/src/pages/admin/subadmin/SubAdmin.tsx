@@ -102,7 +102,13 @@ const SubAdmin = () => {
 										<td>{subadmin.email}</td>
 										<td>{subadmin.address.city}</td>
 										<td>
-											<Link to="/">assign</Link>
+											<Link
+												to={{
+													pathname: `/admin/subadmins/assignvaccine/${subadmin._id}`,
+												}}
+											>
+												assign
+											</Link>
 										</td>
 										<td>
 											<Link

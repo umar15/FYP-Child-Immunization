@@ -24,6 +24,7 @@ import AddVaccinePage from "./pages/admin/vaccines/AddVaccinePage";
 import ChildrenPage from "./pages/admin/children/ChildrenPage";
 import ChildData from "./pages/admin/children/ChildData";
 import ChildDataPage from "./pages/admin/children/ChildDataPage";
+import AssignVaccinePage from "./pages/admin/subadmin/AssignVaccinePage";
 
 function App() {
 	return (
@@ -44,6 +45,7 @@ function App() {
 			<Route path="/admin" exact component={AdminDashboard} />
 			<Route path="/admin/subadmins" exact component={SubAdminsPage} />
 			<Route path="/admin/subadmins/:id" exact component={AddSubadminPage} />
+			<Route path="/admin/subadmins/assignvaccine/:id" exact component={AssignVaccinePage} />
 			<Route path="/admin/hospitals" exact component={HospitalPage} />
 			<Route path="/admin/vaccinecenters" exact component={VaccineCenterPage} />
 			<Route path="/admin/vaccines" exact component={VaccinesPage} />
