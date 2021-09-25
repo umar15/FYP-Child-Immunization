@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "../../index.css";
-import axios from "../../config/AxiosOptions";
+import "../../../index.css";
+import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 
@@ -31,10 +31,10 @@ const AddSubadmin = (props) => {
 	console.log("id", subadminID.id);
 
 	React.useEffect(() => {
-		if (subadminID === "add") {
+		if (subadminID.id === "add") {
 			return;
 		} else {
-			subadminID !== "add" &&
+			subadminID.id !== "add" &&
 				setData({
 					email: subadmin ? subadmin.subadmin.email : "",
 					name: subadmin ? subadmin.subadmin.name : "",
@@ -52,7 +52,7 @@ const AddSubadmin = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (subadminID === "add") {
+		if (subadminID.id === "add") {
 			if (data.password === confirmPass) {
 				axios
 					.post("/admin/subadmins/add", data)

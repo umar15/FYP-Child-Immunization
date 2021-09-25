@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminDashboard from "./pages/admin/dashboard/AdminDashboard";
 import HospitalDashboard from "./components/dashboard/HospitalDashboard";
 import SubAdminDashboard from "./components/dashboard/SubAdminDashboard";
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
@@ -11,17 +11,19 @@ import AddChildPage from "./pages/AddChildPage";
 import AddVaccineStockPage from "./pages/AddVaccineStockPage";
 import AddVaccineStockPageH from "./pages/AddVaccineStockPageH";
 import CampaignsPage from "./pages/CampaignsPage";
-import ChildrenPage from "./pages/ChildrenPage";
 import Homepage from "./pages/Homepage";
 import VaccineStockPage from "./pages/VaccineStockPage";
 import VaccineStockPageH from "./pages/VaccineStockPageH";
-import SubAdminsPage from "./pages/admin/SubAdminsPage";
-import AddSubadmin from "./pages/admin/AddSubadmin";
-import AddSubadminPage from "./pages/admin/AddSubadminPage";
+import SubAdminsPage from "./pages/admin/subadmin/SubAdminsPage";
+import AddSubadmin from "./pages/admin/subadmin/AddSubadmin";
+import AddSubadminPage from "./pages/admin/subadmin/AddSubadminPage";
 import HospitalPage from "./pages/admin/hospitals/HospitalPage";
 import VaccineCenterPage from "./pages/admin/vaccine center/VaccineCenterPage";
 import VaccinesPage from "./pages/admin/vaccines/VaccinesPage";
 import AddVaccinePage from "./pages/admin/vaccines/AddVaccinePage";
+import ChildrenPage from "./pages/admin/children/ChildrenPage";
+import ChildData from "./pages/admin/children/ChildData";
+import ChildDataPage from "./pages/admin/children/ChildDataPage";
 
 function App() {
 	return (
@@ -46,6 +48,8 @@ function App() {
 			<Route path="/admin/vaccinecenters" exact component={VaccineCenterPage} />
 			<Route path="/admin/vaccines" exact component={VaccinesPage} />
 			<Route path="/admin/vaccines/:id" exact component={AddVaccinePage} />
+			<Route path="/admin/children" exact component={ChildrenPage} />
+			<Route path="/admin/children/:id" exact component={ChildDataPage} />
 			{/* <Route path="/admin/subadmins/edit" exact component={AddSubadminPage} /> */}
 			<Route path="/subadmin" exact component={SubAdminDashboard} />
 		</Router>

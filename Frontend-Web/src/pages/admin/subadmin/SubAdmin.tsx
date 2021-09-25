@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Table, Spinner, Button } from "reactstrap";
-import axios from "../../config/AxiosOptions";
+import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
-import "../../index.css";
+import "../../../index.css";
 
 const SubAdmin = () => {
 	const [subadmins, setSubadmins] = useState([]);

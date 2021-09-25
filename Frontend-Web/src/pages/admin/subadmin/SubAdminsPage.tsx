@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Col, Row } from "reactstrap";
-import Footer from "../../components/footer/Footer";
-import FooterBottom from "../../components/footer/FooterBottom";
-import AdminHeader from "../../components/header/AdminHeader";
-import "../../index.css";
-import Sidebar from "./Sidebar";
+import Footer from "../../../components/footer/Footer";
+import FooterBottom from "../../../components/footer/FooterBottom";
+import AdminHeader from "../../../components/header/AdminHeader";
+import "../../../index.css";
+import Sidebar from "../Sidebar";
 import SubAdmin from "./SubAdmin";
 
 const SubAdminsPage = () => {

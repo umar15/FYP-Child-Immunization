@@ -81,15 +81,12 @@ let deleteUser = async (req, res, next) => {
 
 let createUser = async (req, res, next) => {
 	try {
-		new userAccountModel(req.body).save((err) => {
-			if (err) {
-				return res.redirect("/error");
-			} else {
-				return res.json({
-					message: "User created successfully.",
-					data: {},
-				});
-			}
+		const newUser = await new userAccountModel(req.body).save();
+		return res.json({
+			message: "New user added successfully.",
+			data: {
+				user: newUser,
+			},
 		});
 	} catch (err) {
 		winston.error(err);

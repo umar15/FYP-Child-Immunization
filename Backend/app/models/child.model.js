@@ -10,13 +10,11 @@ const childrenSchema = new schema({
 	parentName: { type: String, required: true, default: "" },
 	parentCNIC: { type: String, required: true, default: "" },
 	contactNo: { type: String, required: true, default: "" },
-	address: [
-		{
-			addr: { type: String, default: "", required: true },
-			area: { type: String, default: "", required: true },
-			city: { type: String, default: "", required: true },
-		},
-	],
+	// address: {
+	// 	addr: { type: String, default: "", required: true },
+	// 	area: { type: String, default: "", required: true },
+	// 	city: { type: String, default: "", required: true },
+	// },
 	dateOfBirth: { type: Date, required: true, default: Date.now() },
 	gender: { type: String, required: true, default: "" },
 	birthPlace: { type: String, required: true, default: "" },
@@ -24,15 +22,15 @@ const childrenSchema = new schema({
 	hospitalName: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 	vaccination: [
 		{
-			polio: { noOfDoses: Number, default: 0 },
-			diphtheria: { noOfDoses: Number, default: 0 },
-			homophiles: { noOfDoses: Number, default: 0 },
-			rotaVirus: { noOfDoses: Number, default: 0 },
-			measles: { noOfDoses: Number, default: 0 },
-			hepatitisA: { noOfDoses: Number, default: 0 },
-			hepatitisB: { noOfDoses: Number, default: 0 },
-			papillomaVirus: { noOfDoses: Number, default: 0 },
-			influenza: { noOfDoses: Number, default: 0 },
+			polio: { noOfDoses: { type: Number, default: 0 } },
+			diphtheria: { noOfDoses: { type: Number, default: 0 } },
+			homophiles: { noOfDoses: { type: Number, default: 0 } },
+			rotaVirus: { noOfDoses: { type: Number, default: 0 } },
+			measles: { noOfDoses: { type: Number, default: 0 } },
+			hepatitisA: { noOfDoses: { type: Number, default: 0 } },
+			hepatitisB: { noOfDoses: { type: Number, default: 0 } },
+			papillomaVirus: { noOfDoses: { type: Number, default: 0 } },
+			influenza: { noOfDoses: { type: Number, default: 0 } },
 		},
 	],
 });

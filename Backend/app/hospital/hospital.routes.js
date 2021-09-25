@@ -2,6 +2,12 @@ const hospitalController = require("./hospital.controller");
 const passport = require("../../config/passport");
 
 module.exports = (app, version) => {
+	app.post(
+		version + "/hospital/children/add",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.addChild
+	);
 	app.get(
 		version + "/hospital",
 		passport.isAuthenticated,
@@ -13,12 +19,6 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.viewChildren
-	);
-	app.post(
-		version + "/hospital/children/add",
-		passport.isAuthenticated,
-		passport.isAuthorized("hospital"),
-		hospitalController.addChild
 	);
 	app.get(
 		version + "/hospital/children/:id",

@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../index.css";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
 	return (
-		<div className="sidebar">
+		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
 			<ul>
 				<li>
 					<Link className="link" to="/admin">

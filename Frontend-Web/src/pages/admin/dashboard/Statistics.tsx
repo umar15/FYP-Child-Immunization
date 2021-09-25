@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Col, Row, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import "../../index.css";
+import "../../../index.css";
 import Graph from "./Graph";
 
 const Statistics = () => {
