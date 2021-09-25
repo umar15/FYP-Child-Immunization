@@ -18,6 +18,10 @@ import VaccineStockPageH from "./pages/VaccineStockPageH";
 import SubAdminsPage from "./pages/admin/SubAdminsPage";
 import AddSubadmin from "./pages/admin/AddSubadmin";
 import AddSubadminPage from "./pages/admin/AddSubadminPage";
+import HospitalPage from "./pages/admin/hospitals/HospitalPage";
+import VaccineCenterPage from "./pages/admin/vaccine center/VaccineCenterPage";
+import VaccinesPage from "./pages/admin/vaccines/VaccinesPage";
+import AddVaccinePage from "./pages/admin/vaccines/AddVaccinePage";
 
 function App() {
 	return (
@@ -38,6 +42,11 @@ function App() {
 			<Route path="/admin" exact component={AdminDashboard} />
 			<Route path="/admin/subadmins" exact component={SubAdminsPage} />
 			<Route path="/admin/subadmins/:id" exact component={AddSubadminPage} />
+			<Route path="/admin/hospitals" exact component={HospitalPage} />
+			<Route path="/admin/vaccinecenters" exact component={VaccineCenterPage} />
+			<Route path="/admin/vaccines" exact component={VaccinesPage} />
+			<Route path="/admin/vaccines/:id" exact component={AddVaccinePage} />
+			{/* <Route path="/admin/subadmins/edit" exact component={AddSubadminPage} /> */}
 			<Route path="/subadmin" exact component={SubAdminDashboard} />
 		</Router>
 	);

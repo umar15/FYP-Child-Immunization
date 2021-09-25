@@ -73,16 +73,6 @@ const Signup = () => {
 												<input type="text" className="form-control" name="name" placeholder="Address" />
 											</div>
 										</Col>
-										{/* <Col md="12" sm="12">
-										<div className="form-group">
-											<input
-												type="text"
-												className="form-control"
-												name="name"
-												placeholder="Enter your Username"
-											/>
-										</div>
-									</Col> */}
 										<Col md="12" sm="12" className="form-condition">
 											<div style={{ marginBottom: "20px" }} className="agree-label">
 												<input type="checkbox" id="chb1" />

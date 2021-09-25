@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Table, Spinner, Button } from "reactstrap";
-import axios from "../../config/AxiosOptions";
+import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
-import "../../index.css";
+import "../../../index.css";
 
-const SubAdmin = () => {
-	const [subadmins, setSubadmins] = useState([]);
+const Vaccines = () => {
+	const [vaccines, setVaccines] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const alert = useAlert();
 	const history = useHistory();
 
-	const getSubadmins = async () => {
+	const getVaccines = async () => {
 		axios
-			.get("/admin/subadmins")
+			.get("/admin/vaccines")
 			.then((res) => {
 				console.log(res.data.data);
-				setSubadmins(res.data?.data);
+				setVaccines(res.data?.data);
 				setLoading(false);
 			})
 			.catch((err) =>
-				alert.show("Failed to Fetch subadmins", {
+				alert.show("Failed to Fetch vaccines", {
 					type: "error",
 				})
 			);
@@ -30,26 +30,22 @@ const SubAdmin = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`/admin/subadmins/${id}`)
+			.delete(`/admin/vaccines/${id}`)
 			.then((res) => {
-				alert.show("Subadmin deleted successfully!", {
+				alert.show("Vaccine deleted successfully!", {
 					type: "success",
 				});
-				setSubadmins(subadmins.filter((item: any) => item._id !== id));
+				setVaccines(vaccines.filter((item: any) => item._id !== id));
 			})
 			.catch((err) => {
-				alert.show("Failed to delete subadmin. Try again later", {
+				alert.show("Failed to delete vaccine. Try again later", {
 					type: "error",
 				});
 			});
 	};
 
-	const handleEdit = (id) => {
-		history.push(`/admins/subadmins/${id}`);
-	};
-
 	useEffect(() => {
-		getSubadmins();
+		getVaccines();
 	}, []);
 
 	if (loading) {
@@ -64,12 +60,12 @@ const SubAdmin = () => {
 		<Container>
 			<Row className="subadmin-admin">
 				<Col lg="9">
-					<h3>Sub Admins</h3>
+					<h3>Vaccines</h3>
 				</Col>
 				<Col lg="3">
 					<button className="default-btn">
-						<a href="/admin/subadmins/add" style={linkStyles}>
-							Add sub admin
+						<a href="/admin/vaccines/add" style={linkStyles}>
+							Add vaccine
 						</a>
 					</button>
 				</Col>
@@ -86,30 +82,28 @@ const SubAdmin = () => {
 							<tr>
 								<th>#</th>
 								<th>Name</th>
-								<th>Email</th>
-								<th>City</th>
-								<th>Assign vaccine</th>
+								<th>Manufacturer</th>
+								<th>Quantity</th>
+								<th>Expiry Date vaccine</th>
 								<th>Edit</th>
 								<th>Delete</th>
 							</tr>
 						</thead>
 						<tbody>
-							{subadmins &&
-								subadmins.map((subadmin: any, index) => (
-									<tr key={subadmin._id}>
+							{vaccines &&
+								vaccines.map((vaccine: any, index) => (
+									<tr key={vaccine._id}>
 										<th scope="row">{index + 1}</th>
-										<td>{subadmin.name}</td>
-										<td>{subadmin.email}</td>
-										<td>{subadmin.address.city}</td>
-										<td>
-											<Link to="/">assign</Link>
-										</td>
+										<td>{vaccine.name}</td>
+										<td>{vaccine.manufacturer}</td>
+										<td>{vaccine.quantity}</td>
+										<td>{vaccine.expiryDate}</td>
 										<td>
 											<Link
 												to={{
-													pathname: `/admin/subadmins/${subadmin._id}`,
+													pathname: `/admin/vaccines/${vaccine._id}`,
 													state: {
-														subadmin: subadmin,
+														vaccine: vaccine,
 													},
 												}}
 											>
@@ -118,7 +112,7 @@ const SubAdmin = () => {
 										</td>
 										<td>
 											<AiFillDelete
-												onClick={() => handleDelete(subadmin._id)}
+												onClick={() => handleDelete(vaccine._id)}
 												style={deleteStyles}
 												size="20"
 											/>
@@ -151,4 +145,4 @@ const tableStyles = {
 	boxShadow: "0 0px 5px #b0e5fc",
 };
 
-export default SubAdmin;
+export default Vaccines;

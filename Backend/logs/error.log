@@ -598,3 +598,52 @@ ValidationError: userAccounts validation failed: cnic: Path `cnic` is required.
     at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
     at processTicksAndRejections (internal/process/task_queues.js:77:11)
 [2021-09-23 14:40:18] [31merror[39m:  mongoose connection disconnected 
+[2021-09-24 11:58:36] [31merror[39m:  Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts" 
+CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 11:59:17] [31merror[39m:  Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts" 
+CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 12:15:04] [31merror[39m:  Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts" 
+CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 14:18:23] [31merror[39m:  mongoose connection disconnected 
+[2021-09-24 14:22:49] [31merror[39m:  Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts" 
+CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 14:25:43] [31merror[39m:  Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts" 
+CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "userAccounts"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 14:46:45] [31merror[39m:  mongoose connection disconnected 
+[2021-09-24 17:54:22] [31merror[39m:  Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine" 
+CastError: Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 17:57:43] [31merror[39m:  Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine" 
+CastError: Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 18:00:21] [31merror[39m:  Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine" 
+CastError: Cast to ObjectId failed for value "{ _id: 'add' }" (type Object) at path "_id" for model "Vaccine"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-24 21:33:44] [31merror[39m:  mongoose connection disconnected 

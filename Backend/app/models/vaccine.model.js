@@ -6,7 +6,6 @@ const mongoose = require("mongoose"),
 const schema = mongoose.Schema;
 
 const vaccineSchema = new schema({
-	vaccineID: { type: String, default: "", required: true },
 	name: { type: String, default: "", required: true },
 	manufacturer: { type: String, default: "", required: true },
 	quantity: { type: Number, default: 50, required: true },

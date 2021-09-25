@@ -40,6 +40,18 @@ module.exports = (app, version) => {
 		adminController.updateVaccine
 	);
 	app.get(
+		version + "/admin/hospitals",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.viewHospitals
+	);
+	app.get(
+		version + "/admin/vaccinecenters",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.viewVaccineCenters
+	);
+	app.get(
 		version + "/admin/subadmins",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),

@@ -94,6 +94,30 @@ let deleteVaccine = async (req, res, next) => {
 	}
 };
 
+let viewHospitals = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "hospitals",
+			data: await users.find({ userType: "hospital" }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let viewVaccineCenters = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "vaccine centers",
+			data: await users.find({ userType: "vaccine center" }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 let viewSubAdmins = async (req, res, next) => {
 	try {
 		return res.json({
@@ -167,7 +191,7 @@ let assignVaccine = async (req, res, next) => {
 			organization: org,
 			vaccines: [
 				{
-					polio: { remainingQuantity: Vaccine[0].name === "pilio" ? req.body.quantity : 0 },
+					polio: { remainingQuantity: Vaccine[0].name === "polio" ? req.body.quantity : 0 },
 					diphtheria: { remainingQuantity: Vaccine[0].name === "diphteria" ? req.body.quantity : 0 },
 					homophiles: { remainingQuantity: Vaccine[0].name === "homophiles" ? req.body.quantity : 0 },
 					rotaVirus: { remainingQuantity: Vaccine[0].name === "rotaVirus" ? req.body.quantity : 0 },
@@ -248,6 +272,8 @@ module.exports = {
 	addVaccine,
 	updateVaccine,
 	deleteVaccine,
+	viewHospitals,
+	viewVaccineCenters,
 	viewSubAdmins,
 	addSubAdmin,
 	deleteSubAdmin,

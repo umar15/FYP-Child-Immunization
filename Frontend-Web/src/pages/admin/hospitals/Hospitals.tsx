@@ -1,55 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Spinner, Button } from "reactstrap";
-import axios from "../../config/AxiosOptions";
+import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
-import "../../index.css";
+import "../../../index.css";
 
-const SubAdmin = () => {
-	const [subadmins, setSubadmins] = useState([]);
+const Hospitals = () => {
+	const [hospitals, setHospitals] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const alert = useAlert();
 	const history = useHistory();
 
-	const getSubadmins = async () => {
+	const getHospitals = async () => {
 		axios
-			.get("/admin/subadmins")
+			.get("/admin/hospitals")
 			.then((res) => {
 				console.log(res.data.data);
-				setSubadmins(res.data?.data);
+				setHospitals(res.data?.data);
 				setLoading(false);
 			})
 			.catch((err) =>
-				alert.show("Failed to Fetch subadmins", {
+				alert.show("Failed to Fetch hospitals", {
 					type: "error",
 				})
 			);
 	};
 
-	const handleDelete = (id) => {
-		axios
-			.delete(`/admin/subadmins/${id}`)
-			.then((res) => {
-				alert.show("Subadmin deleted successfully!", {
-					type: "success",
-				});
-				setSubadmins(subadmins.filter((item: any) => item._id !== id));
-			})
-			.catch((err) => {
-				alert.show("Failed to delete subadmin. Try again later", {
-					type: "error",
-				});
-			});
-	};
-
-	const handleEdit = (id) => {
-		history.push(`/admins/subadmins/${id}`);
-	};
+	// const handleDelete = (id) => {
+	// 	axios
+	// 		.delete(`/admin/subadmins/${id}`)
+	// 		.then((res) => {
+	// 			alert.show("Subadmin deleted successfully!", {
+	// 				type: "success",
+	// 			});
+	// 			setSubadmins(subadmins.filter((item: any) => item._id !== id));
+	// 		})
+	// 		.catch((err) => {
+	// 			alert.show("Failed to delete subadmin. Try again later", {
+	// 				type: "error",
+	// 			});
+	// 		});
+	// };
 
 	useEffect(() => {
-		getSubadmins();
+		getHospitals();
 	}, []);
 
 	if (loading) {
@@ -63,22 +59,10 @@ const SubAdmin = () => {
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				<Col lg="9">
-					<h3>Sub Admins</h3>
-				</Col>
-				<Col lg="3">
-					<button className="default-btn">
-						<a href="/admin/subadmins/add" style={linkStyles}>
-							Add sub admin
-						</a>
-					</button>
+				<Col lg="12">
+					<h3>Hospitals</h3>
 				</Col>
 			</Row>
-			{/* <Row>
-				<Col>
-					<h3>Sub Admins</h3>
-				</Col>
-			</Row> */}
 			<Row className="subadmin-table">
 				<Col lg="12">
 					<Table style={tableStyles} bordered hover>
@@ -89,27 +73,27 @@ const SubAdmin = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
-								<th>Edit</th>
-								<th>Delete</th>
+								{/* <th>Edit</th>
+								<th>Delete</th> */}
 							</tr>
 						</thead>
 						<tbody>
-							{subadmins &&
-								subadmins.map((subadmin: any, index) => (
-									<tr key={subadmin._id}>
+							{hospitals &&
+								hospitals.map((hospital: any, index) => (
+									<tr key={hospital._id}>
 										<th scope="row">{index + 1}</th>
-										<td>{subadmin.name}</td>
-										<td>{subadmin.email}</td>
-										<td>{subadmin.address.city}</td>
+										<td>{hospital.name}</td>
+										<td>{hospital.email}</td>
+										<td>{hospital.address.city}</td>
 										<td>
 											<Link to="/">assign</Link>
 										</td>
-										<td>
+										{/* <td>
 											<Link
 												to={{
-													pathname: `/admin/subadmins/${subadmin._id}`,
+													pathname: `/admin/hospital/${hospital._id}`,
 													state: {
-														subadmin: subadmin,
+														hospital: hospital,
 													},
 												}}
 											>
@@ -118,11 +102,11 @@ const SubAdmin = () => {
 										</td>
 										<td>
 											<AiFillDelete
-												onClick={() => handleDelete(subadmin._id)}
+												onClick={() => handleDelete(hospital._id)}
 												style={deleteStyles}
 												size="20"
 											/>
-										</td>
+										</td> */}
 									</tr>
 								))}
 						</tbody>
@@ -151,4 +135,4 @@ const tableStyles = {
 	boxShadow: "0 0px 5px #b0e5fc",
 };
 
-export default SubAdmin;
+export default Hospitals;

@@ -3,10 +3,15 @@ import { Container, Row, Col } from "reactstrap";
 import "../../index.css";
 import axios from "../../config/AxiosOptions";
 import { useAlert } from "react-alert";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 
-const AddSubadmin = () => {
-	const [data, setData] = useState({
+const AddSubadmin = (props) => {
+	const subadminID: any = useParams();
+	const alert = useAlert();
+	const history = useHistory();
+	const location: any = useLocation();
+
+	const [data, setData] = useState<any>({
 		email: "",
 		name: "",
 		cnic: "",
@@ -19,44 +24,87 @@ const AddSubadmin = () => {
 		},
 	});
 	const [confirmPass, setConfirmPass] = useState("");
-	const alert = useAlert();
-	const history = useHistory();
+	const subadmin: any = location.state ? location.state : "";
+
+	// const { subadmin } = location.state;
+	console.log("object", subadmin.subadmin);
+	console.log("id", subadminID.id);
+
+	React.useEffect(() => {
+		if (subadminID === "add") {
+			return;
+		} else {
+			subadminID !== "add" &&
+				setData({
+					email: subadmin ? subadmin.subadmin.email : "",
+					name: subadmin ? subadmin.subadmin.name : "",
+					cnic: subadmin ? subadmin.subadmin.cnic : "",
+					userType: "sub admin",
+					password: subadmin ? subadmin.subadmin.password : "",
+					address: {
+						addr: subadmin ? subadmin.subadmin.address.addr : "",
+						area: subadmin ? subadmin.subadmin.address.area : "",
+						city: subadmin ? subadmin.subadmin.address.city : "",
+					},
+				});
+		}
+	}, []);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (data.password === confirmPass) {
+		if (subadminID === "add") {
+			if (data.password === confirmPass) {
+				axios
+					.post("/admin/subadmins/add", data)
+					.then((res) => {
+						console.log(res);
+						alert.show("Subadmin added successfully!", {
+							type: "success",
+						});
+						history.push("/admin/subadmins");
+					})
+					.catch((err) => {
+						console.log(err);
+						alert.show("Failed to add subadmin", {
+							type: "error",
+						});
+					});
+			} else {
+				alert.show("Password donot match with confirm password", {
+					type: "error",
+				});
+			}
+		} else {
 			axios
-				.post("/admin/subadmins/add", data)
+				.put(`/admin/subadmins/${subadminID.id}`, data)
 				.then((res) => {
 					console.log(res);
-					alert.show("Subadmin added successfully!", {
+					alert.show("Subadmin updated successfully!", {
 						type: "success",
 					});
 					history.push("/admin/subadmins");
 				})
 				.catch((err) => {
 					console.log(err);
-					alert.show("Failed to add subadmin", {
+					alert.show("Failed to update subadmin", {
 						type: "error",
 					});
 				});
-		} else {
-			alert.show("Password donot match with confirm password", {
-				type: "error",
-			});
 		}
+
 		console.log(data);
 	};
 
 	return (
 		<Container>
+			{/* {console.log("subadmin", props.location)} */}
 			<Row>
 				<Col>
 					<div className="signup-form" style={formStyles}>
 						<form onSubmit={handleSubmit}>
 							<Row>
 								<Col md="12" sm="12">
-									<h3 style={headerStyles}>Add Subadmin</h3>
+									<h3 style={headerStyles}>{subadminID.id == "add" ? "Add Subadmin" : "Update Subadmin"}</h3>
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
@@ -150,7 +198,7 @@ const AddSubadmin = () => {
 								</Col>
 								<Col md="12" sm="12">
 									<button type="submit" className="default-btn signup-btn">
-										Add
+										{subadminID.id === "add" ? "Add" : "Update"}
 									</button>
 								</Col>
 							</Row>
