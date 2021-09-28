@@ -16,6 +16,8 @@ import SubAdminDashboard from "./pages/subAdmin/dashboard/SubAdminDashboard";
 import SubAdminHospitalPage from "./pages/subAdmin/hospitals/HospitalPage";
 import SubAdminVaccineCenterPage from "./pages/subAdmin/vaccine center/VaccineCenterPage";
 import SubAdminVaccinesPage from "./pages/subAdmin/vaccines/VaccinesPage";
+import SubAdminAssignVaccinePage from "./pages/subAdmin/hospitals/AssignVaccinePage";
+
 // import AddVaccinePage from "./pages/admin/vaccines/AddVaccinePage";
 import SubAdminChildrenPage from "./pages/subAdmin/children/ChildrenPage";
 import SubAdminChildDataPage from "./pages/subAdmin/children/ChildDataPage";
@@ -104,6 +106,7 @@ function App() {
 				<PrivateRoute path="/subadmin" exact component={SubAdminDashboard} />
 				<PrivateRoute path="/subadmin/hospitals" exact component={SubAdminHospitalPage} />
 				<PrivateRoute path="/subadmin/hospitals" exact component={SubAdminHospitalPage} />
+				<PrivateRoute path="/subadmin/assignvaccine/:id" exact component={SubAdminAssignVaccinePage} />
 				<PrivateRoute path="/subadmin/vaccinecenters" exact component={SubAdminVaccineCenterPage} />
 				<PrivateRoute path="/subadmin/vaccines" exact component={SubAdminVaccinesPage} />
 				{/* <PrivateRoute path="/subadmin/vaccines/:id" exact component={AddVaccinePage} /> */}

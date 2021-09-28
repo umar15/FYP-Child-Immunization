@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Table, Spinner, Button } from "reactstrap";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
-import { BiEdit } from "react-icons/bi";
-import { AiFillDelete } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
 import "../../../index.css";
 
@@ -69,8 +67,6 @@ const VaccineCenters = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
-								{/* <th>Edit</th>
-								<th>Delete</th> */}
 							</tr>
 						</thead>
 						<tbody>
@@ -84,7 +80,13 @@ const VaccineCenters = () => {
 												<td>{vc.email}</td>
 												<td>{vc.address.city}</td>
 												<td>
-													<Link to="/">assign</Link>
+													<Link
+														to={{
+															pathname: `/subadmin/assignvaccine/${vc._id}`,
+														}}
+													>
+														assign
+													</Link>
 												</td>
 											</tr>
 										);

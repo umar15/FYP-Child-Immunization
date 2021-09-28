@@ -44,9 +44,10 @@ let viewChild = async (req, res, next) => {
 
 let viewVaccines = async (req, res, next) => {
 	try {
+		const subadminVaccines = await orgVaccines.find({ organization: req.user._id });
 		return res.json({
 			message: "Subadmin Vaccines",
-			data: await orgVaccines.find({}),
+			data: subadminVaccines,
 		});
 	} catch (err) {
 		winston.error(err);

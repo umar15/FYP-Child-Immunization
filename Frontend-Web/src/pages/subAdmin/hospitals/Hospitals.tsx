@@ -84,7 +84,13 @@ const Hospitals = () => {
 												<td>{hospital.email}</td>
 												<td>{hospital.address.city}</td>
 												<td>
-													<Link to="/">assign</Link>
+													<Link
+														to={{
+															pathname: `/subadmin/assignvaccine/${hospital._id}`,
+														}}
+													>
+														assign
+													</Link>
 												</td>
 											</tr>
 										);

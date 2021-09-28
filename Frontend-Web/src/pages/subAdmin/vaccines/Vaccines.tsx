@@ -18,8 +18,8 @@ const Vaccines = () => {
 		axios
 			.get("/subadmin/vaccines")
 			.then((res) => {
-				console.log(res.data.data);
-				setVaccines(res.data?.data);
+				console.log(res.data.data[0].vaccines);
+				setVaccines(res.data?.data[0].vaccines);
 				setLoading(false);
 			})
 			.catch((err) =>
@@ -71,29 +71,10 @@ const Vaccines = () => {
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				{vaccines.map((vaccine) => {
-					console.log("org id: ", vaccine.organization);
-					console.log("user id: ", user._id);
-					if (vaccine.organization == user._id) {
-						console.log(vaccine.organization);
-					}
-				})}
 				<Col lg="9">
 					<h3>Vaccines</h3>
 				</Col>
-				{/* <Col lg="3">
-					<button className="default-btn">
-						<a href="/admin/vaccines/add" style={linkStyles}>
-							Add vaccine
-						</a>
-					</button>
-				</Col> */}
 			</Row>
-			{/* <Row>
-				<Col>
-					<h3>Sub Admins</h3>
-				</Col>
-			</Row> */}
 			<Row className="subadmin-table">
 				<Col lg="12">
 					<Table style={tableStyles} bordered hover>
@@ -101,43 +82,17 @@ const Vaccines = () => {
 							<tr>
 								<th>#</th>
 								<th>Name</th>
-								<th>Manufacturer</th>
 								<th>Quantity</th>
-								<th>Expiry Date vaccine</th>
-								<th>Edit</th>
-								<th>Delete</th>
 							</tr>
 						</thead>
 						<tbody>
-							{vaccines &&
-								vaccines.map((vaccine: any, index) => (
-									<tr key={vaccine._id}>
-										<th scope="row">{index + 1}</th>
-										<td>{vaccine.name}</td>
-										<td>{vaccine.manufacturer}</td>
-										<td>{vaccine.quantity}</td>
-										<td>{vaccine.expiryDate}</td>
-										<td>
-											<Link
-												to={{
-													pathname: `/admin/vaccines/${vaccine._id}`,
-													state: {
-														vaccine: vaccine,
-													},
-												}}
-											>
-												<BiEdit style={editStyles} size="20" />
-											</Link>
-										</td>
-										<td>
-											<AiFillDelete
-												onClick={() => handleDelete(vaccine._id)}
-												style={deleteStyles}
-												size="20"
-											/>
-										</td>
-									</tr>
-								))}
+							{Object.keys(vaccines).map((vc, i) => (
+								<tr key={i}>
+									<td>{i + 1}</td>
+									<td>{vc}</td>
+									<td>{vaccines[vc].quantity}</td>
+								</tr>
+							))}
 						</tbody>
 					</Table>
 				</Col>

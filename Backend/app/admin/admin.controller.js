@@ -187,10 +187,12 @@ let assignVaccine = async (req, res, next) => {
 		if (!Vaccine) {
 			throw "No vaccine available with this name.";
 		}
-		// console.log(Vaccine);
+		console.log(Vaccine);
 
 		const organizationVacc = await orgVaccines.findOne({ organization: org._id });
 		console.log("Organization vaccines: ", organizationVacc);
+
+		console.log("type of quantity: ", typeof req.body.quantity);
 
 		const orgVacc = {
 			organization: org,
@@ -198,60 +200,60 @@ let assignVaccine = async (req, res, next) => {
 				polio: {
 					quantity:
 						Vaccine[0].name === "polio"
-							? req.body.quantity + organizationVacc.vaccines.polio.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.polio.quantity
 							: organizationVacc.vaccines.polio.quantity,
 				},
 				diphtheria: {
 					quantity:
 						Vaccine[0].name === "diphteria"
-							? req.body.quantity + organizationVacc.vaccines.diphtheria.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.diphtheria.quantity
 							: organizationVacc.vaccines.diphtheria.quantity,
 				},
 				homophiles: {
 					quantity:
 						Vaccine[0].name === "homophiles"
-							? req.body.quantity + organizationVacc.vaccines.homophiles.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.homophiles.quantity
 							: organizationVacc.vaccines.homophiles.quantity,
 				},
 				rotaVirus: {
 					quantity:
 						Vaccine[0].name === "rotaVirus"
-							? req.body.quantity + organizationVacc.vaccines.rotaVirus.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.rotaVirus.quantity
 							: organizationVacc.vaccines.rotaVirus.quantity,
 				},
 				measles: {
 					quantity:
 						Vaccine[0].name === "measles"
-							? req.body.quantity + organizationVacc.vaccines.measles.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.measles.quantity
 							: organizationVacc.vaccines.measles.quantity,
 				},
 				hepatitisA: {
 					quantity:
 						Vaccine[0].name === "hepatitusA"
-							? req.body.quantity + organizationVacc.vaccines.hepatitisA.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisA.quantity
 							: organizationVacc.vaccines.hepatitisA.quantity,
 				},
 				hepatitisB: {
 					quantity:
 						Vaccine[0].name === "hepatitusB"
-							? req.body.quantity + organizationVacc.vaccines.hepatitisB.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisB.quantity
 							: organizationVacc.vaccines.hepatitisB.quantity,
 				},
 				papillomaVirus: {
 					quantity:
 						Vaccine[0].name === "papillomaVirus"
-							? req.body.quantity + organizationVacc.vaccines.papillomaVirus.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.papillomaVirus.quantity
 							: organizationVacc.vaccines.papillomaVirus.quantity,
 				},
 				influenza: {
 					quantity:
 						Vaccine[0].name === "influenza"
-							? req.body.quantity + organizationVacc.vaccines.influenza.quantity
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.influenza.quantity
 							: organizationVacc.vaccines.influenza.quantity,
 				},
 			},
 		};
-		// console.log("Org vacc: ", orgVacc);
+		console.log("Org vacc: ", orgVacc);
 
 		if (Vaccine[0].quantity > 0) {
 			const assignedVaccine = await new assignVaccineTo({

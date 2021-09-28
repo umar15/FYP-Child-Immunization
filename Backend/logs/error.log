@@ -778,3 +778,12 @@ CastError: Cast to Number failed for value "NaN" (type number) at path "vaccines
     at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
 [2021-09-27 23:10:54] [31merror[39m:  mongoose connection disconnected 
+[2021-09-28 10:50:12] [31merror[39m:  [object Object] 
+[2021-09-28 10:51:35] [31merror[39m:  [object Object] 
+[2021-09-28 10:52:12] [31merror[39m:  [object Object] 
+[2021-09-28 10:53:12] [31merror[39m:  [object Object] 
+[2021-09-28 10:54:54] [31merror[39m:  [object Object] 
+[2021-09-28 10:56:23] [31merror[39m:  [object Object] 
+[2021-09-28 11:10:44] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-28 11:40:19] [31merror[39m:  mongoose connection disconnected 
+[2021-09-28 13:41:26] [31merror[39m:  mongoose connection disconnected 
