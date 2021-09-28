@@ -4773,3 +4773,1185 @@ SyntaxError: Unexpected token ] in JSON at position 654
 [2021-09-25 16:14:06] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
 [2021-09-25 18:29:37] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
 [2021-09-25 19:19:35] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-25 21:23:52] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 10:41:27] [32minfo[39m:  .env files are loading... 
+[2021-09-26 10:41:32] [32minfo[39m:  [object Object] 
+[2021-09-26 10:41:32] [32minfo[39m:  Loaded config file: development 
+[2021-09-26 10:41:32] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 10:41:35] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 10:41:35] [32minfo[39m:  models are loading ... 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/child.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/users/user.model.js 
+[2021-09-26 10:41:36] [32minfo[39m:  error messages are loading ... 
+[2021-09-26 10:41:36] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-26 10:41:36] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-26 15:04:20] [31merror[39m:  mongoose connection disconnected 
+[2021-09-26 15:04:37] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 15:12:45] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 19:11:26] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 19:11:59] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 19:26:29] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-26 21:29:00] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 10:45:01] [32minfo[39m:  .env files are loading... 
+[2021-09-27 10:45:28] [32minfo[39m:  [object Object] 
+[2021-09-27 10:45:28] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 10:45:28] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 10:45:31] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 10:45:31] [32minfo[39m:  models are loading ... 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 10:45:31] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 10:45:32] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 10:45:32] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 10:45:32] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 10:56:29] [31merror[39m:  Invalid Password 
+[2021-09-27 10:56:37] [31merror[39m:  Invalid Password 
+[2021-09-27 11:04:21] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 11:04:52] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:08:15] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:14:12] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:00] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:29] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:34] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:39] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:45] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:22:45] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:24:17] [32minfo[39m:  .env files are loading... 
+[2021-09-27 11:24:20] [32minfo[39m:  [object Object] 
+[2021-09-27 11:24:20] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 11:24:20] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:24:25] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:24:25] [32minfo[39m:  models are loading ... 
+[2021-09-27 11:26:19] [32minfo[39m:  .env files are loading... 
+[2021-09-27 11:26:21] [32minfo[39m:  [object Object] 
+[2021-09-27 11:26:21] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 11:26:21] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:26:24] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:26:24] [32minfo[39m:  models are loading ... 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 11:26:24] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 11:26:24] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 11:26:24] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 11:26:25] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 11:26:25] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 11:31:47] [32minfo[39m:  .env files are loading... 
+[2021-09-27 11:31:47] [32minfo[39m:  [object Object] 
+[2021-09-27 11:31:47] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 11:31:47] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:31:51] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:31:51] [32minfo[39m:  models are loading ... 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 11:31:51] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 11:31:52] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 11:31:52] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 11:31:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 11:33:43] [32minfo[39m:  .env files are loading... 
+[2021-09-27 11:33:43] [32minfo[39m:  [object Object] 
+[2021-09-27 11:33:43] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 11:33:43] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:33:46] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:33:46] [32minfo[39m:  models are loading ... 
+[2021-09-27 11:33:46] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 11:33:46] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 11:33:47] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 11:33:47] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 11:33:47] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 11:35:10] [32minfo[39m:  .env files are loading... 
+[2021-09-27 11:35:11] [32minfo[39m:  [object Object] 
+[2021-09-27 11:35:11] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 11:35:11] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:35:14] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 11:35:14] [32minfo[39m:  models are loading ... 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 11:35:14] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 11:35:14] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 11:35:14] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 11:37:31] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:37:37] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:38:31] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:39:21] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 12:16:08] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 12:16:19] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 15:47:23] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 17:48:09] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 17:51:56] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 17:53:13] [32minfo[39m:  .env files are loading... 
+[2021-09-27 17:53:15] [32minfo[39m:  [object Object] 
+[2021-09-27 17:53:15] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 17:53:15] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 17:53:19] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 17:53:19] [32minfo[39m:  models are loading ... 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 17:53:19] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 17:53:19] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 17:53:19] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:10:07] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:10:08] [32minfo[39m:  [object Object] 
+[2021-09-27 18:10:08] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:10:08] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:10:11] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:10:11] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:10:11] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:10:11] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:10:11] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:11:34] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:11:35] [32minfo[39m:  [object Object] 
+[2021-09-27 18:11:35] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:11:35] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:11:38] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:11:38] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:11:38] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:11:38] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:11:38] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:14:04] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:14:04] [32minfo[39m:  [object Object] 
+[2021-09-27 18:14:04] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:14:04] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:14:08] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:14:08] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:14:08] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:14:08] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:14:08] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:16:38] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:16:38] [32minfo[39m:  [object Object] 
+[2021-09-27 18:16:38] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:16:38] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:16:41] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:16:42] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:16:42] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:16:42] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:16:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:20:45] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:20:46] [32minfo[39m:  [object Object] 
+[2021-09-27 18:20:46] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:20:46] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:20:49] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:20:49] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:20:49] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:20:49] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:20:49] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:31:11] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:31:12] [32minfo[39m:  [object Object] 
+[2021-09-27 18:31:12] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:31:12] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:31:15] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:31:15] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:31:15] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:31:15] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:31:15] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:31:56] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:31:57] [32minfo[39m:  [object Object] 
+[2021-09-27 18:31:57] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:31:57] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:32:00] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:32:00] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:32:00] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:32:00] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:32:00] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:33:43] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:33:43] [32minfo[39m:  [object Object] 
+[2021-09-27 18:33:43] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:33:43] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:33:51] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:33:51] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:33:51] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:33:52] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:33:52] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:33:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:34:41] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:34:41] [32minfo[39m:  [object Object] 
+[2021-09-27 18:34:41] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:34:41] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:34:55] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:34:55] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:34:55] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:34:55] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:34:55] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:37:57] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:37:57] [32minfo[39m:  [object Object] 
+[2021-09-27 18:37:57] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:37:57] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:01] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:01] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:38:01] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:38:02] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:38:02] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:38:02] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:38:05] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:38:05] [32minfo[39m:  [object Object] 
+[2021-09-27 18:38:05] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:38:05] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:11] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:11] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:38:11] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:38:11] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:38:11] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:38:55] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:38:56] [32minfo[39m:  [object Object] 
+[2021-09-27 18:38:56] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:38:56] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:59] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:38:59] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:38:59] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:38:59] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:38:59] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:40:19] [31merror[39m:  Cannot read property 'polio' of undefined 
+TypeError: Cannot read property 'polio' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 18:44:15] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:44:15] [32minfo[39m:  [object Object] 
+[2021-09-27 18:44:15] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:44:15] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:44:19] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:44:19] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:44:19] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:44:19] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:44:19] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:44:25] [31merror[39m:  Cannot read property 'polio' of undefined 
+TypeError: Cannot read property 'polio' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 18:46:36] [32minfo[39m:  .env files are loading... 
+[2021-09-27 18:46:36] [32minfo[39m:  [object Object] 
+[2021-09-27 18:46:36] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 18:46:36] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:46:39] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 18:46:40] [32minfo[39m:  models are loading ... 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 18:46:40] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 18:46:40] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 18:46:40] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 18:50:49] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 18:54:50] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:56:30] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:57:54] [32minfo[39m:  .env files are loading... 
+[2021-09-27 19:57:55] [32minfo[39m:  [object Object] 
+[2021-09-27 19:57:55] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 19:57:55] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:58:03] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:58:03] [32minfo[39m:  models are loading ... 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 19:58:03] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 19:58:03] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 19:58:03] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 19:59:24] [32minfo[39m:  .env files are loading... 
+[2021-09-27 19:59:24] [32minfo[39m:  [object Object] 
+[2021-09-27 19:59:24] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 19:59:24] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:59:28] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 19:59:28] [32minfo[39m:  models are loading ... 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 19:59:28] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 19:59:28] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 19:59:28] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:00:36] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:00:37] [32minfo[39m:  [object Object] 
+[2021-09-27 20:00:37] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:00:37] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:00:40] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:00:40] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:00:40] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:00:40] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:00:40] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:20:59] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:20:59] [32minfo[39m:  [object Object] 
+[2021-09-27 20:20:59] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:20:59] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:21:02] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:21:03] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:22:20] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:22:21] [32minfo[39m:  [object Object] 
+[2021-09-27 20:22:21] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:22:21] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:22:24] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:22:24] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:22:44] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:22:45] [32minfo[39m:  [object Object] 
+[2021-09-27 20:22:45] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:22:45] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:22:48] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:22:48] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:22:48] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:22:48] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:22:48] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:27:35] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:27:35] [32minfo[39m:  [object Object] 
+[2021-09-27 20:27:35] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:27:35] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:27:38] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:27:38] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:27:39] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:27:39] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:27:39] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:28:42] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:28:43] [32minfo[39m:  [object Object] 
+[2021-09-27 20:28:43] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:28:43] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:28:47] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:28:47] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:28:47] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:28:47] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:28:47] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:28:48] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:28:49] [32minfo[39m:  [object Object] 
+[2021-09-27 20:28:49] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:28:49] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:28:52] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:28:52] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:28:52] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:28:52] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:28:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:32:25] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:32:26] [32minfo[39m:  [object Object] 
+[2021-09-27 20:32:26] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:32:26] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:32:29] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:32:29] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:32:29] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:32:29] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:32:29] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:34:10] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:34:10] [32minfo[39m:  [object Object] 
+[2021-09-27 20:34:10] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:34:10] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:34:14] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:34:14] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:34:14] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:34:14] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:34:14] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:58:16] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:58:17] [32minfo[39m:  [object Object] 
+[2021-09-27 20:58:17] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:58:17] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:58:21] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:58:21] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:58:21] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:58:21] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:58:21] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:58:31] [31merror[39m:  orgVac is not defined 
+ReferenceError: orgVac is not defined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:144:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 20:59:12] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:59:13] [32minfo[39m:  [object Object] 
+[2021-09-27 20:59:13] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:59:13] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:59:16] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 20:59:16] [32minfo[39m:  models are loading ... 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 20:59:16] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 20:59:17] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 20:59:17] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 20:59:17] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 20:59:23] [31merror[39m:  Assignment to constant variable. 
+TypeError: Assignment to constant variable.
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:137:11)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 20:59:58] [32minfo[39m:  .env files are loading... 
+[2021-09-27 20:59:58] [32minfo[39m:  [object Object] 
+[2021-09-27 20:59:58] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 20:59:58] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:00:01] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:00:02] [32minfo[39m:  models are loading ... 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 21:00:02] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 21:00:02] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 21:00:02] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 21:01:02] [32minfo[39m:  .env files are loading... 
+[2021-09-27 21:01:02] [32minfo[39m:  [object Object] 
+[2021-09-27 21:01:02] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 21:01:02] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:01:08] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:01:08] [32minfo[39m:  models are loading ... 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 21:01:08] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 21:01:08] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 21:01:08] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 21:02:22] [32minfo[39m:  .env files are loading... 
+[2021-09-27 21:02:22] [32minfo[39m:  [object Object] 
+[2021-09-27 21:02:22] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 21:02:22] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:02:27] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:02:27] [32minfo[39m:  models are loading ... 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 21:02:27] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 21:02:27] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 21:02:27] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 21:04:24] [32minfo[39m:  .env files are loading... 
+[2021-09-27 21:04:24] [32minfo[39m:  [object Object] 
+[2021-09-27 21:04:24] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 21:04:24] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:04:32] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:04:32] [32minfo[39m:  models are loading ... 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 21:04:32] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 21:04:32] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 21:04:32] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 21:04:47] [32minfo[39m:  .env files are loading... 
+[2021-09-27 21:04:48] [32minfo[39m:  [object Object] 
+[2021-09-27 21:04:48] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 21:04:48] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:04:52] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 21:04:52] [32minfo[39m:  models are loading ... 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/child.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/users/user.model.js 
+[2021-09-27 21:04:52] [32minfo[39m:  error messages are loading ... 
+[2021-09-27 21:04:52] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-27 21:04:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-27 21:05:04] [31merror[39m:  Cast to Number failed for value "NaN" (type number) at path "vaccines.measles.quantity" 
+CastError: Cast to Number failed for value "NaN" (type number) at path "vaccines.measles.quantity"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 23:10:54] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 23:11:06] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 23:13:08] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-27 23:55:25] [32minfo[39m:  .env files are loading... 
+[2021-09-27 23:55:26] [32minfo[39m:  [object Object] 
+[2021-09-27 23:55:26] [32minfo[39m:  Loaded config file: development 
+[2021-09-27 23:55:26] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:15:09] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:15:09] [32minfo[39m:  [object Object] 
+[2021-09-28 10:15:09] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:15:09] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:15:14] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:15:14] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:15:14] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:15:15] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:15:15] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:15:15] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:16:40] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:16:41] [32minfo[39m:  [object Object] 
+[2021-09-28 10:16:41] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:16:41] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:16:44] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:16:44] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:16:44] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:16:44] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:16:44] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:21:08] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:21:08] [32minfo[39m:  [object Object] 
+[2021-09-28 10:21:08] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:21:08] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:21:11] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:21:12] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:21:12] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:21:12] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:21:12] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:35:35] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:35:35] [32minfo[39m:  [object Object] 
+[2021-09-28 10:35:35] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:35:35] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:35:38] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:35:39] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:35:39] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:35:39] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:35:39] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:36:01] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:36:02] [32minfo[39m:  [object Object] 
+[2021-09-28 10:36:02] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:36:02] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:36:05] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:36:05] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:36:05] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:36:06] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:36:06] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:36:06] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:38:28] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:38:28] [32minfo[39m:  [object Object] 
+[2021-09-28 10:38:28] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:38:28] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:38:32] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:38:32] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:38:32] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:38:32] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:38:32] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:39:55] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:39:56] [32minfo[39m:  [object Object] 
+[2021-09-28 10:39:56] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:39:56] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:40:04] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:40:04] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:40:04] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:40:04] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:40:04] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:42:04] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:42:04] [32minfo[39m:  [object Object] 
+[2021-09-28 10:42:04] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:42:04] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:42:08] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:42:08] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:42:08] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:42:09] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:42:09] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:42:09] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-28 10:43:09] [32minfo[39m:  .env files are loading... 
+[2021-09-28 10:43:10] [32minfo[39m:  [object Object] 
+[2021-09-28 10:43:10] [32minfo[39m:  Loaded config file: development 
+[2021-09-28 10:43:10] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:43:13] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-28 10:43:13] [32minfo[39m:  models are loading ... 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/child.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/users/user.model.js 
+[2021-09-28 10:43:13] [32minfo[39m:  error messages are loading ... 
+[2021-09-28 10:43:13] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-28 10:43:13] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 

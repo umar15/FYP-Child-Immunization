@@ -738,3 +738,43 @@ SyntaxError: Unexpected token ] in JSON at position 654
     at processTicksAndRejections (internal/process/task_queues.js:82:21)
 [2021-09-25 14:08:27] [31merror[39m:  mongoose connection disconnected 
 [2021-09-25 19:19:35] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-26 15:04:20] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 10:56:29] [31merror[39m:  Invalid Password 
+[2021-09-27 10:56:37] [31merror[39m:  Invalid Password 
+[2021-09-27 11:04:21] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 11:14:12] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:00] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:29] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:34] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:39] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:21:45] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:22:45] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:37:31] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:37:37] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:38:31] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 11:39:21] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 12:16:08] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 17:51:56] [31merror[39m:  User is Not authorized to access this api. 
+[2021-09-27 18:40:19] [31merror[39m:  Cannot read property 'polio' of undefined 
+TypeError: Cannot read property 'polio' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 18:44:25] [31merror[39m:  Cannot read property 'polio' of undefined 
+TypeError: Cannot read property 'polio' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 18:50:49] [31merror[39m:  mongoose connection disconnected 
+[2021-09-27 20:58:31] [31merror[39m:  orgVac is not defined 
+ReferenceError: orgVac is not defined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:144:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 20:59:23] [31merror[39m:  Assignment to constant variable. 
+TypeError: Assignment to constant variable.
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:137:11)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 21:05:04] [31merror[39m:  Cast to Number failed for value "NaN" (type number) at path "vaccines.measles.quantity" 
+CastError: Cast to Number failed for value "NaN" (type number) at path "vaccines.measles.quantity"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-09-27 23:10:54] [31merror[39m:  mongoose connection disconnected 

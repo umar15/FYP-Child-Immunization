@@ -7,19 +7,17 @@ const schema = mongoose.Schema;
 
 const organizationVaccinesSchema = new schema({
 	organization: { type: schema.Types.ObjectId, required: true, default: "", ref: "userAccounts" },
-	vaccines: [
-		{
-			polio: { remainingQuantity: Number, default: 0 },
-			diphtheria: { remainingQuantity: Number, default: 0 },
-			homophiles: { remainingQuantity: Number, default: 0 },
-			rotaVirus: { remainingQuantity: Number, default: 0 },
-			measles: { remainingQuantity: Number, default: 0 },
-			hepatitisA: { remainingQuantity: Number, default: 0 },
-			hepatitisB: { remainingQuantity: Number, default: 0 },
-			papillomaVirus: { remainingQuantity: Number, default: 0 },
-			influenza: { remainingQuantity: Number, default: 0 },
-		},
-	],
+	vaccines: {
+		polio: { quantity: Number, default: 0 },
+		diphtheria: { quantity: Number, default: 0 },
+		homophiles: { quantity: Number, default: 0 },
+		rotaVirus: { quantity: Number, default: 0 },
+		measles: { quantity: Number, default: 0 },
+		hepatitisA: { quantity: Number, default: 0 },
+		hepatitisB: { quantity: Number, default: 0 },
+		papillomaVirus: { quantity: Number, default: 0 },
+		influenza: { quantity: Number, default: 0 },
+	},
 });
 
 organizationVaccinesSchema.plugin(mongoose_timestamps);

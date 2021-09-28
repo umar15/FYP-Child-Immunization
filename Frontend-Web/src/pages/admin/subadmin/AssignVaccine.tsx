@@ -17,11 +17,7 @@ const AssignVaccine = () => {
 	});
 	const alert = useAlert();
 	const history = useHistory();
-	const location = useLocation();
 
-	console.log("locato", location.state);
-
-	console.log("subamdin: ", subadminID.id);
 	const getVaccines = () => {
 		axios
 			.get("/admin/vaccines")

@@ -13,7 +13,7 @@ const ChildData = () => {
 
 	const getHospitals = async () => {
 		axios
-			.get("/admin/hospitals")
+			.get("/subadmin/hospitals")
 			.then((res) => {
 				res.data.data.map((item) => setHospitalName(item._id === child.data.hospitalName ? item.name : ""));
 				console.log(res.data.data);

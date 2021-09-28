@@ -45,8 +45,32 @@ let viewChild = async (req, res, next) => {
 let viewVaccines = async (req, res, next) => {
 	try {
 		return res.json({
-			message: "Vaccines",
-			data: await vaccine.find({}),
+			message: "Subadmin Vaccines",
+			data: await orgVaccines.find({}),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let getHospitals = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Hospitals",
+			data: await users.find({ userType: "hospital" }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let getVaccineCenters = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Vaccine center",
+			data: await users.find({ userType: "vaccine center" }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -100,58 +124,146 @@ let assignVaccine = async (req, res, next) => {
 			throw "No organization found with that name.";
 		}
 
-		const Vaccine = await vaccine.find({ _id: req.body.vaccine });
-		if (!Vaccine) {
-			throw "No vaccine available with this name.";
+		const organizationVacc = await orgVaccines.findOne({ organization: org._id });
+		if (!organizationVacc) {
+			throw "No vaccines available for this organization.";
+		}
+
+		const subadminVaccines = await orgVaccines.findOne({ organization: req.user._id });
+		if (!subadminVaccines) {
+			throw "No vaccines available for this subadmin.";
 		}
 
 		const orgVacc = {
 			organization: org,
-			vaccines: [
-				{
-					polio: { remainingQuantity: Vaccine[0].name === "pilio" ? req.body.quantity : 0 },
-					diphtheria: { remainingQuantity: Vaccine[0].name === "diphteria" ? req.body.quantity : 0 },
-					homophiles: { remainingQuantity: Vaccine[0].name === "homophiles" ? req.body.quantity : 0 },
-					rotaVirus: { remainingQuantity: Vaccine[0].name === "rotaVirus" ? req.body.quantity : 0 },
-					measles: { remainingQuantity: Vaccine[0].name === "measles" ? req.body.quantity : 0 },
-					hepatitisA: { remainingQuantity: Vaccine[0].name === "hepatitusA" ? req.body.quantity : 0 },
-					hepatitisB: { remainingQuantity: Vaccine[0].name === "hepatitusB" ? req.body.quantity : 0 },
-					papillomaVirus: { remainingQuantity: Vaccine[0].name === "papillomaVirus" ? req.body.quantity : 0 },
-					influenza: { remainingQuantity: Vaccine[0].name === "Influenza" ? req.body.quantity : 0 },
+			vaccines: {
+				polio: {
+					quantity:
+						req.body.vaccine === "polio"
+							? req.body.quantity + organizationVacc.vaccines.polio.quantity
+							: organizationVacc.vaccines.polio.quantity,
 				},
-			],
+				diphtheria: {
+					quantity:
+						req.body.vaccine === "diphteria"
+							? req.body.quantity + organizationVacc.vaccines.diphtheria.quantity
+							: organizationVacc.vaccines.diphtheria.quantity,
+				},
+				homophiles: {
+					quantity:
+						req.body.vaccine === "homophiles"
+							? req.body.quantity + organizationVacc.vaccines.homophiles.quantity
+							: organizationVacc.vaccines.homophiles.quantity,
+				},
+				rotaVirus: {
+					quantity:
+						req.body.vaccine === "rotaVirus"
+							? req.body.quantity + organizationVacc.vaccines.rotaVirus.quantity
+							: organizationVacc.vaccines.rotaVirus.quantity,
+				},
+				measles: {
+					quantity:
+						req.body.vaccine === "measles"
+							? req.body.quantity + organizationVacc.vaccines.measles.quantity
+							: organizationVacc.vaccines.measles.quantity,
+				},
+				hepatitisA: {
+					quantity:
+						req.body.vaccine === "hepatitusA"
+							? req.body.quantity + organizationVacc.vaccines.hepatitisA.quantity
+							: organizationVacc.vaccines.hepatitisA.quantity,
+				},
+				hepatitisB: {
+					quantity:
+						req.body.vaccine === "hepatitusB"
+							? req.body.quantity + organizationVacc.vaccines.hepatitisB.quantity
+							: organizationVacc.vaccines.hepatitisB.quantity,
+				},
+				papillomaVirus: {
+					quantity:
+						req.body.vaccine === "papillomaVirus"
+							? req.body.quantity + organizationVacc.vaccines.papillomaVirus.quantity
+							: organizationVacc.vaccines.papillomaVirus.quantity,
+				},
+				influenza: {
+					quantity:
+						req.body.vaccine === "influenza"
+							? req.body.quantity + organizationVacc.vaccines.influenza.quantity
+							: organizationVacc.vaccines.influenza.quantity,
+				},
+			},
 		};
 
-		if (Vaccine[0].quantity > 0) {
-			const assignedVaccine = await new assignVaccineTo({
-				vaccine: req.body.vaccine,
-				date: req.body.date,
-				quantity: req.body.quantity,
-				organization: org,
-			}).save();
-
-			const remainingVaccine = Vaccine[0].quantity - req.body.quantity;
-			await vaccine.findOneAndUpdate(
-				{ _id: req.body.vaccine },
-				{ $set: { quantity: remainingVaccine } },
-				{ new: true }
-			);
-
-			await new orgVaccines(orgVacc).save();
-
-			return res.json({
-				message: "vaccine assigned successfully.",
-				data: {
-					assignedVaccine,
-					orgVaccineDetails: orgVacc,
+		const remainingVaccines = {
+			organization: subadminVaccines.organization,
+			vaccines: {
+				polio: {
+					quantity:
+						req.body.vaccine === "polio"
+							? subadminVaccines.vaccines.polio.quantity - req.body.quantity
+							: subadminVaccines.vaccines.polio.quantity,
 				},
-			});
-		} else {
-			return res.json({
-				message: "The vaccine is not available currently.",
-				data: {},
-			});
-		}
+				diphtheria: {
+					quantity:
+						req.body.vaccine === "diphteria"
+							? subadminVaccines.vaccines.diphtheria.quantity - req.body.quantity
+							: subadminVaccines.vaccines.diphtheria.quantity,
+				},
+				homophiles: {
+					quantity:
+						req.body.vaccine === "homophiles"
+							? subadminVaccines.vaccines.homophiles.quantity - req.body.quantity
+							: subadminVaccines.vaccines.homophiles.quantity,
+				},
+				rotaVirus: {
+					quantity:
+						req.body.vaccine === "rotaVirus"
+							? subadminVaccines.vaccines.rotaVirus.quantity - req.body.quantity
+							: subadminVaccines.vaccines.rotaVirus.quantity,
+				},
+				measles: {
+					quantity:
+						req.body.vaccine === "measles"
+							? subadminVaccines.vaccines.measles.quantity - req.body.quantity
+							: subadminVaccines.vaccines.measles.quantity,
+				},
+				hepatitisA: {
+					quantity:
+						req.body.vaccine === "hepatitusA"
+							? subadminVaccines.vaccines.hepatitisA.quantity - req.body.quantity
+							: subadminVaccines.vaccines.hepatitisA.quantity,
+				},
+				hepatitisB: {
+					quantity:
+						req.body.vaccine === "hepatitusB"
+							? subadminVaccines.vaccines.hepatitisB.quantity - req.body.quantity
+							: subadminVaccines.vaccines.hepatitisB.quantity,
+				},
+				papillomaVirus: {
+					quantity:
+						req.body.vaccine === "papillomaVirus"
+							? subadminVaccines.vaccines.papillomaVirus.quantity - req.body.quantity
+							: organizationVacc.vaccines.papillomaVirus.quantity,
+				},
+				influenza: {
+					quantity:
+						req.body.vaccine === "influenza"
+							? subadminVaccines.vaccines.influenza.quantity - req.body.quantity
+							: subadminVaccines.vaccines.influenza.quantity,
+				},
+			},
+		};
+
+		await orgVaccines.findOneAndUpdate({ _id: organizationVacc._id }, orgVacc, { new: true });
+		await orgVaccines.findOneAndUpdate({ _id: subadminVaccines._id }, remainingVaccines, { new: true });
+
+		return res.json({
+			message: "vaccine assigned successfully.",
+			data: {
+				orgVaccineDetails: orgVacc,
+				subadminRemainingVaccines: remainingVaccines,
+			},
+		});
 	} catch (err) {
 		winston.error(err);
 		res.redirect("/error");
@@ -190,6 +302,8 @@ module.exports = {
 	addVaccine,
 	updateVaccine,
 	deleteVaccine,
+	getHospitals,
+	getVaccineCenters,
 	futureCases,
 	futureVaccineNeeds,
 	assignVaccine,

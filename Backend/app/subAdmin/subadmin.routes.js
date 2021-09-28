@@ -51,6 +51,18 @@ module.exports = (app, version) => {
 		subadminController.updateVaccine
 	);
 	app.get(
+		version + "/subadmin/hospitals",
+		passport.isAuthenticated,
+		passport.isAuthorized("sub admin"),
+		subadminController.getHospitals
+	);
+	app.get(
+		version + "/subadmin/vaccinecenters",
+		passport.isAuthenticated,
+		passport.isAuthorized("sub admin"),
+		subadminController.getVaccineCenters
+	);
+	app.get(
 		version + "/subadmin/futurecases",
 		passport.isAuthenticated,
 		passport.isAuthorized("sub admin"),

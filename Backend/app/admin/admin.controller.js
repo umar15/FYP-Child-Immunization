@@ -1,3 +1,5 @@
+const { overArgs } = require("lodash");
+
 const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
 	children = mongoose.model("Children"),
@@ -176,6 +178,7 @@ let deleteSubAdmin = async (req, res, next) => {
 let assignVaccine = async (req, res, next) => {
 	try {
 		const org = await users.findOne({ _id: req.params.id });
+		// console.log("Organization: ", org);
 		if (!org) {
 			throw "No organization found with that name.";
 		}
@@ -184,25 +187,71 @@ let assignVaccine = async (req, res, next) => {
 		if (!Vaccine) {
 			throw "No vaccine available with this name.";
 		}
+		// console.log(Vaccine);
 
-		console.log(Vaccine);
+		const organizationVacc = await orgVaccines.findOne({ organization: org._id });
+		console.log("Organization vaccines: ", organizationVacc);
 
 		const orgVacc = {
 			organization: org,
-			vaccines: [
-				{
-					polio: { remainingQuantity: Vaccine[0].name === "polio" ? req.body.quantity : 0 },
-					diphtheria: { remainingQuantity: Vaccine[0].name === "diphteria" ? req.body.quantity : 0 },
-					homophiles: { remainingQuantity: Vaccine[0].name === "homophiles" ? req.body.quantity : 0 },
-					rotaVirus: { remainingQuantity: Vaccine[0].name === "rotaVirus" ? req.body.quantity : 0 },
-					measles: { remainingQuantity: Vaccine[0].name === "measles" ? req.body.quantity : 0 },
-					hepatitisA: { remainingQuantity: Vaccine[0].name === "hepatitusA" ? req.body.quantity : 0 },
-					hepatitisB: { remainingQuantity: Vaccine[0].name === "hepatitusB" ? req.body.quantity : 0 },
-					papillomaVirus: { remainingQuantity: Vaccine[0].name === "papillomaVirus" ? req.body.quantity : 0 },
-					influenza: { remainingQuantity: Vaccine[0].name === "Influenza" ? req.body.quantity : 0 },
+			vaccines: {
+				polio: {
+					quantity:
+						Vaccine[0].name === "polio"
+							? req.body.quantity + organizationVacc.vaccines.polio.quantity
+							: organizationVacc.vaccines.polio.quantity,
 				},
-			],
+				diphtheria: {
+					quantity:
+						Vaccine[0].name === "diphteria"
+							? req.body.quantity + organizationVacc.vaccines.diphtheria.quantity
+							: organizationVacc.vaccines.diphtheria.quantity,
+				},
+				homophiles: {
+					quantity:
+						Vaccine[0].name === "homophiles"
+							? req.body.quantity + organizationVacc.vaccines.homophiles.quantity
+							: organizationVacc.vaccines.homophiles.quantity,
+				},
+				rotaVirus: {
+					quantity:
+						Vaccine[0].name === "rotaVirus"
+							? req.body.quantity + organizationVacc.vaccines.rotaVirus.quantity
+							: organizationVacc.vaccines.rotaVirus.quantity,
+				},
+				measles: {
+					quantity:
+						Vaccine[0].name === "measles"
+							? req.body.quantity + organizationVacc.vaccines.measles.quantity
+							: organizationVacc.vaccines.measles.quantity,
+				},
+				hepatitisA: {
+					quantity:
+						Vaccine[0].name === "hepatitusA"
+							? req.body.quantity + organizationVacc.vaccines.hepatitisA.quantity
+							: organizationVacc.vaccines.hepatitisA.quantity,
+				},
+				hepatitisB: {
+					quantity:
+						Vaccine[0].name === "hepatitusB"
+							? req.body.quantity + organizationVacc.vaccines.hepatitisB.quantity
+							: organizationVacc.vaccines.hepatitisB.quantity,
+				},
+				papillomaVirus: {
+					quantity:
+						Vaccine[0].name === "papillomaVirus"
+							? req.body.quantity + organizationVacc.vaccines.papillomaVirus.quantity
+							: organizationVacc.vaccines.papillomaVirus.quantity,
+				},
+				influenza: {
+					quantity:
+						Vaccine[0].name === "influenza"
+							? req.body.quantity + organizationVacc.vaccines.influenza.quantity
+							: organizationVacc.vaccines.influenza.quantity,
+				},
+			},
 		};
+		// console.log("Org vacc: ", orgVacc);
 
 		if (Vaccine[0].quantity > 0) {
 			const assignedVaccine = await new assignVaccineTo({
@@ -219,7 +268,7 @@ let assignVaccine = async (req, res, next) => {
 				{ new: true }
 			);
 
-			await new orgVaccines(orgVacc).save();
+			await orgVaccines.findOneAndUpdate({ _id: organizationVacc._id }, orgVacc, { new: true });
 
 			return res.json({
 				message: "vaccine assigned successfully.",

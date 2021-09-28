@@ -1,7 +1,8 @@
 const winston = require("../../config/winston"),
 	passport = require("../../config/passport"),
 	mongoose = require("mongoose"),
-	userAccountModel = mongoose.model("userAccounts");
+	userAccountModel = mongoose.model("userAccounts"),
+	orgVaccines = mongoose.model("organizationVaccines");
 
 let getUsers = async (req, res, next) => {
 	try {
@@ -82,10 +83,26 @@ let deleteUser = async (req, res, next) => {
 let createUser = async (req, res, next) => {
 	try {
 		const newUser = await new userAccountModel(req.body).save();
+		const orgVacc = {
+			organization: newUser._id,
+			vaccines: {
+				polio: { quantity: 0 },
+				diphtheria: { quantity: 0 },
+				homophiles: { quantity: 0 },
+				rotaVirus: { quantity: 0 },
+				measles: { quantity: 0 },
+				hepatitisA: { quantity: 0 },
+				hepatitisB: { quantity: 0 },
+				papillomaVirus: { quantity: 0 },
+				influenza: { quantity: 0 },
+			},
+		};
+		const newVaccines = await new orgVaccines(orgVacc).save();
 		return res.json({
 			message: "New user added successfully.",
 			data: {
 				user: newUser,
+				vaccines: newVaccines,
 			},
 		});
 	} catch (err) {
