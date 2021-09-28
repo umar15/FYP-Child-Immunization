@@ -2,7 +2,8 @@ const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
 	children = mongoose.model("Children"),
 	vaccine = mongoose.model("Vaccine"),
-	campaign = mongoose.model("Campaign");
+	campaign = mongoose.model("Campaign"),
+	orgVaccines = mongoose.model("organizationVaccines");
 
 let vaccineCenter = (req, res, next) => {
 	try {
@@ -59,7 +60,7 @@ let viewVaccines = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "Vaccines data",
-			data: await vaccine.find({}),
+			data: await orgVaccines.find({ organization: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -123,7 +124,7 @@ let viewCampaigns = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "campaigns",
-			data: await campaign.find({}),
+			data: await campaign.find({ vaccineCenter: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);

@@ -7,6 +7,7 @@ const schema = mongoose.Schema;
 
 const campaignSchema = new schema({
 	campaignID: { type: String, default: "", required: true },
+	vaccineCenter: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 	status: { type: String, default: "active", required: true, enum: ["active", "inactive"] },
 	area: { type: String, default: "", required: true },
 	noOfWorkers: { type: String, default: "5", required: true },

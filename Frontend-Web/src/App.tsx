@@ -23,7 +23,10 @@ import SubAdminChildrenPage from "./pages/subAdmin/children/ChildrenPage";
 import SubAdminChildDataPage from "./pages/subAdmin/children/ChildDataPage";
 // import SubAdminAssignVaccinePage from "./pages/subAdmin/subadmin/AssignVaccinePage";
 // Hospital
-import HospitalDashboard from "./components/dashboard/HospitalDashboard";
+import HospitalDashboard from "./pages/hospital/dashboard/HospitalDashboard";
+import HospitalChildrenPage from "./pages/hospital/children/ChildrenPage";
+import HospitalChildDataPage from "./pages/hospital/children/ChildDataPage";
+import HospitalVaccines from "./pages/hospital/vaccines/VaccinesPage";
 // Vaccine Center
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
 // Others
@@ -89,7 +92,7 @@ function App() {
 				{/* <PublicRoute path="/" exact component={Homepage} />
 				<PublicRoute path="/login" exact component={Login} /> */}
 				{/* <PublicRoute path="/signup" exact component={Signup} /> */}
-				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />
+				{/* <PrivateRoute path="/hospital" exact component={HospitalDashboard} /> */}
 				<PrivateRoute path="/vaccinecenter" exact component={VaccineCenterDashboard} />
 				{/* Admin */}
 				<PrivateRoute path="/admin" exact component={AdminDashboard} />
@@ -109,9 +112,13 @@ function App() {
 				<PrivateRoute path="/subadmin/assignvaccine/:id" exact component={SubAdminAssignVaccinePage} />
 				<PrivateRoute path="/subadmin/vaccinecenters" exact component={SubAdminVaccineCenterPage} />
 				<PrivateRoute path="/subadmin/vaccines" exact component={SubAdminVaccinesPage} />
-				{/* <PrivateRoute path="/subadmin/vaccines/:id" exact component={AddVaccinePage} /> */}
 				<PrivateRoute path="/subadmin/children" exact component={SubAdminChildrenPage} />
 				<PrivateRoute path="/subadmin/children/:id" exact component={SubAdminChildDataPage} />
+				{/* Hospital */}
+				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />
+				<PrivateRoute path="/hospital/children" exact component={HospitalChildrenPage} />
+				<PrivateRoute path="/hospital/children/:id" exact component={HospitalChildDataPage} />
+				<PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 			</Switch>
 		</Router>
 	);

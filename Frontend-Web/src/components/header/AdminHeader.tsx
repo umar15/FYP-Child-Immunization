@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Button, NavbarText } from "reactstrap";
 import "../../index.css";
+import { signOut, useUserDispatch } from "../../context/userContext";
+import { withRouter, useHistory } from "react-router-dom";
 import logo from "../../assets/images/logoo.png";
+import { sign } from "crypto";
+import { HiDatabase } from "react-icons/hi";
 
-const AdminHeader = () => {
+const AdminHeader = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
+	const history = useHistory();
+	const userDispatch = useUserDispatch();
 
 	return (
 		<div className="header">
@@ -15,16 +21,18 @@ const AdminHeader = () => {
 				</NavbarBrand>
 				<NavbarToggler onClick={toggle} />
 				<Collapse isOpen={isOpen} navbar>
-					{/* <Nav className="mr-auto" navbar>
+					<Nav className="mr-auto" navbar>
 						<NavItem>
 							<NavLink className="nav-link" href="/">
-								<h6>Child Immunization</h6>
+								<h6>{props.userType || "CHild Immunization"}</h6>
 							</NavLink>
 						</NavItem>
-					</Nav> */}
-					{/* <NavbarText>
-						<h5>Admin Panel</h5>
-					</NavbarText> */}
+					</Nav>
+					<NavbarText>
+						<button className="default-btn" onClick={() => signOut(userDispatch, history)}>
+							Logout
+						</button>
+					</NavbarText>
 				</Collapse>
 			</Navbar>
 		</div>

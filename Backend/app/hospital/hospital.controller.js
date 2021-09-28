@@ -1,7 +1,7 @@
 const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
 	children = mongoose.model("Children"),
-	vaccine = mongoose.model("Vaccine");
+	hospitalVaccines = mongoose.model("organizationVaccines");
 
 let hospital = (req, res, next) => {
 	try {
@@ -19,7 +19,7 @@ let viewChildren = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "View CHildren",
-			data: await children.find({}),
+			data: await children.find({ hospitalName: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -73,7 +73,7 @@ let viewVaccines = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "Vaccines data",
-			data: await vaccine.find({}),
+			data: await hospitalVaccines.find({ organization: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);

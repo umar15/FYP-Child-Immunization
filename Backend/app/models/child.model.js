@@ -10,11 +10,12 @@ const childrenSchema = new schema({
 	parentName: { type: String, required: true, default: "" },
 	parentCNIC: { type: String, required: true, default: "" },
 	contactNo: { type: String, required: true, default: "" },
-	// address: {
-	// 	addr: { type: String, default: "", required: true },
-	// 	area: { type: String, default: "", required: true },
-	// 	city: { type: String, default: "", required: true },
-	// },
+	emergencyContact: { type: String, required: true, default: "" },
+	address: {
+		addr: { type: String, default: "", required: true },
+		area: { type: String, default: "", required: true },
+		city: { type: String, default: "", required: true },
+	},
 	dateOfBirth: { type: Date, required: true, default: Date.now() },
 	gender: { type: String, required: true, default: "" },
 	birthPlace: { type: String, required: true, default: "" },
