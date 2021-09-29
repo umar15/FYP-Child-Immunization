@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import "../../index.css";
+import "../../../index.css";
+import axios from "../../../config/AxiosOptions";
+import { useAlert } from "react-alert";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 
 const AddChild = () => {
 	const makeChildID = () => {
@@ -11,6 +14,12 @@ const AddChild = () => {
 		for (let i = 0; i <= 5; i++) childID += possible.charAt(Math.floor(Math.random() * possible.length));
 		return childID;
 	};
+
+	React.useEffect(() => {
+		getUser();
+	}, []);
+
+	const [user, setUser] = useState<any>([]);
 	const [data, setdata] = useState<any>({
 		childID: makeChildID(),
 		parentName: "",
@@ -22,7 +31,7 @@ const AddChild = () => {
 			area: "",
 			city: "",
 		},
-		dateOfBirth: "",
+		dateOfBirth: new Date(),
 		gender: "",
 		birthPlace: "",
 		siblingNo: "",
@@ -41,6 +50,25 @@ const AddChild = () => {
 			},
 		],
 	});
+	const alert = useAlert();
+	const history = useHistory();
+
+	const getUser = () => {
+		axios
+			.get("/users/current")
+			.then((res) => {
+				setUser(res.data?.data.user);
+				setdata({
+					...data,
+					hospitalName: res.data.data.user._id,
+				});
+			})
+			.catch((err) =>
+				alert.show("Failed to fetch user!", {
+					type: "error",
+				})
+			);
+	};
 
 	const handleDateChange = (date: any) => {
 		setdata({
@@ -52,6 +80,19 @@ const AddChild = () => {
 	const handleFormSubmit = async (e: any) => {
 		e.preventDefault();
 		console.log("data: ", data);
+		axios
+			.post("/hospital/children/add", data)
+			.then((res) => {
+				alert.show("Child added successfull!", {
+					type: "success",
+				});
+				history.push("/hospital/children");
+			})
+			.catch((err) =>
+				alert.show("Failed to add child!", {
+					type: "error",
+				})
+			);
 	};
 
 	return (
@@ -65,7 +106,7 @@ const AddChild = () => {
 						<div className="add-campaign">
 							<form method="post" onSubmit={handleFormSubmit}>
 								<Row>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Gender</label>
 											<select
@@ -79,7 +120,7 @@ const AddChild = () => {
 											</select>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Date of Birth</label>
 											<br />
@@ -117,7 +158,7 @@ const AddChild = () => {
 										</div>
 									</Col>
 
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Contact Number</label>
 											<input
@@ -130,7 +171,7 @@ const AddChild = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Emergency Contact</label>
 											<input
@@ -164,7 +205,7 @@ const AddChild = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Area</label>
 											<input
@@ -185,7 +226,7 @@ const AddChild = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>City</label>
 											<input
@@ -207,8 +248,9 @@ const AddChild = () => {
 										</div>
 									</Col>
 
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
+											<label>Place of Birth</label>
 											<input
 												type="text"
 												className="form-control"
@@ -219,20 +261,9 @@ const AddChild = () => {
 											/>
 										</div>
 									</Col>
-									<Col md="12" sm="12">
+									<Col md="6" sm="12">
 										<div className="form-group">
-											<input
-												type="text"
-												className="form-control"
-												name="name"
-												placeholder="Hospital Name"
-												value={data.hospitalName}
-												onChange={(e) => setdata({ ...data, hospitalName: e.target.value })}
-											/>
-										</div>
-									</Col>
-									<Col md="12" sm="12">
-										<div className="form-group">
+											<label>Sibling No.</label>
 											<input
 												type="number"
 												className="form-control"

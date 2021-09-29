@@ -5,19 +5,19 @@ import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 import "../../../index.css";
 import Sidebar from "../Sidebar";
-import AddChild from "./AddChild";
+import AddSubadmin from "./AddSubadmin";
 
-const AddChildPage = () => {
+const AddSubadminPage = () => {
 	return (
 		<>
-			<AdminHeader userType="Hospital" />
+			<AdminHeader />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar height="1100px" />
+						<Sidebar />
 					</Col>
 					<Col lg="9" style={addSubadminStyles}>
-						<AddChild />
+						<AddSubadmin />
 					</Col>
 				</Row>
 			</Container>
@@ -31,4 +31,4 @@ const addSubadminStyles = {
 	marginTop: "30px",
 };
 
-export default AddChildPage;
+export default AddSubadminPage;

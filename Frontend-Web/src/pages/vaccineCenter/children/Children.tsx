@@ -15,7 +15,7 @@ const Children = () => {
 
 	const getChildren = async () => {
 		axios
-			.get("/hospital/children")
+			.get("/vaccinecenter/children")
 			.then((res) => {
 				console.log(res.data.data);
 				setChildren(res.data?.data);
@@ -69,13 +69,6 @@ const Children = () => {
 				<Col lg="9">
 					<h3>Children</h3>
 				</Col>
-				<Col lg="3">
-					<button className="default-btn">
-						<a href="/hospital/child/add" style={linkStyles}>
-							Add Child
-						</a>
-					</button>
-				</Col>
 			</Row>
 			<Row className="subadmin-table">
 				<Col lg="12">
@@ -104,7 +97,7 @@ const Children = () => {
 										<td>
 											<Link
 												to={{
-													pathname: `/hospital/children/${child._id}`,
+													pathname: `/vaccinecenter/children/${child._id}`,
 													state: {
 														data: child,
 													},

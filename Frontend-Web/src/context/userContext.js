@@ -47,29 +47,17 @@ function useUserDispatch() {
 function loginUser(event, login, password, dispatch, alert, history) {
 	event.preventDefault();
 
-	// const login = event.target.username.value,
-	// 	password = event.target.password.value;
-	// setError(false);
-	// setIsLoading(true);
-	console.log("Login function start");
-
 	axios
 		.post("/users/login", { username: login, password: password })
 		.then((res) => {
-			console.log("Login function: ", JSON.stringify(res));
+			// console.log("Login function: ", JSON.stringify(res));
 			localStorage.setItem("user", JSON.stringify(res.data.data.user));
-			// setError(null);
-			// setErrorMessage("");
-			// setIsLoading(false);
 			dispatch({ type: "LOGIN_SUCCESS" });
 			history.push(`/${res.data.data.user.userType}`);
 			alert.show("Login Successful", { type: "success" });
 		})
 		.catch((err) => {
-			console.log("Error in login function: ", err);
-			// setError(true);
-			// setErrorMessage(err.response.data.message || "Error");
-			// setIsLoading(false);
+			// console.log("Error in login function: ", err);
 			alert.show("Login Failed: " + err.response.data.message || "Error", { type: "error" });
 		});
 }
