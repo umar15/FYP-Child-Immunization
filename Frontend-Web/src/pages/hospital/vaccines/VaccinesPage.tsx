@@ -10,7 +10,7 @@ import Vaccines from "./Vaccines";
 const VaccinesPage = () => {
 	return (
 		<>
-			<AdminHeader />
+			<AdminHeader userType="Hospital" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

@@ -66,8 +66,15 @@ const Children = () => {
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				<Col lg="12">
+				<Col lg="9">
 					<h3>Children</h3>
+				</Col>
+				<Col lg="3">
+					<button className="default-btn">
+						<a href="/hospital/children/add" style={linkStyles}>
+							Add Child
+						</a>
+					</button>
 				</Col>
 			</Row>
 			<Row className="subadmin-table">

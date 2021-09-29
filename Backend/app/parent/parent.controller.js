@@ -14,11 +14,11 @@ let parent = (req, res, next) => {
 	}
 };
 
-let viewChild = (req, res, next) => {
+let viewChild = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "View CHild",
-			data: {},
+			data: await children.find({}),
 		});
 	} catch (err) {
 		winston.error(err);

@@ -24,7 +24,7 @@ const AdminHeader = (props) => {
 					<Nav className="mr-auto" navbar>
 						<NavItem>
 							<NavLink className="nav-link" href="/">
-								<h6>{props.userType || "CHild Immunization"}</h6>
+								<h6>{`${props.userType} Dashboard` || "Child Immunization"}</h6>
 							</NavLink>
 						</NavItem>
 					</Nav>

@@ -78,7 +78,7 @@ const ChildData = () => {
 							</tr>
 							<tr>
 								<th>Hospital where born</th>
-								<td>{hospitalName.user.name}</td>
+								<td>{hospitalName.user?.name}</td>
 							</tr>
 						</thead>
 					</Table>

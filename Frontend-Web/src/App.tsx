@@ -27,6 +27,7 @@ import HospitalDashboard from "./pages/hospital/dashboard/HospitalDashboard";
 import HospitalChildrenPage from "./pages/hospital/children/ChildrenPage";
 import HospitalChildDataPage from "./pages/hospital/children/ChildDataPage";
 import HospitalVaccines from "./pages/hospital/vaccines/VaccinesPage";
+import AddChildPage from "./pages/hospital/children/AddChildPage";
 // Vaccine Center
 import VaccineCenterDashboard from "./components/dashboard/VaccineCenterDashboard";
 // Others
@@ -119,6 +120,7 @@ function App() {
 				<PrivateRoute path="/hospital/children" exact component={HospitalChildrenPage} />
 				<PrivateRoute path="/hospital/children/:id" exact component={HospitalChildDataPage} />
 				<PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
+				{/* <PrivateRoute path="/hospital/children/:id" exact component={AddChildPage} /> */}
 			</Switch>
 		</Router>
 	);
