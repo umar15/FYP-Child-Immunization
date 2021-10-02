@@ -10,7 +10,8 @@ import AddSubadmin from "./AddSubadmin";
 const AddSubadminPage = () => {
 	return (
 		<>
-			<AdminHeader />
+			<AdminHeader userType="Admin" />
+
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

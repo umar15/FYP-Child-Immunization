@@ -187,7 +187,7 @@ let assignVaccine = async (req, res, next) => {
 		if (!Vaccine) {
 			throw "No vaccine available with this name.";
 		}
-		console.log(Vaccine);
+		console.log("Vaccine: ", Vaccine);
 
 		const organizationVacc = await orgVaccines.findOne({ organization: org._id });
 		console.log("Organization vaccines: ", organizationVacc);

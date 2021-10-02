@@ -43,6 +43,7 @@ const AssignVaccine = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log("data: ", data);
+		console.log("subadmin id: ", subadminID);
 		axios
 			.post(`/admin/subadmins/assignvaccine/${subadminID.id}`, data)
 			.then((res) => {

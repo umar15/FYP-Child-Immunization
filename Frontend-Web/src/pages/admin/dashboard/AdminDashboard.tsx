@@ -10,7 +10,8 @@ import Statistics from "./Statistics";
 const AdminDashboard = () => {
 	return (
 		<>
-			<AdminHeader />
+			<AdminHeader userType="Admin" />
+
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

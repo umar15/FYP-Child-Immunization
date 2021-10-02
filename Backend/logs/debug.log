@@ -6533,3 +6533,142 @@ MongoNetworkTimeoutError: connection 1 to 35.175.89.8:27017 timed out
 [2021-09-30 19:15:39] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
 [2021-09-30 19:40:31] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
 [2021-09-30 21:52:02] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 20:16:52] [32minfo[39m:  .env files are loading... 
+[2021-10-02 20:16:57] [32minfo[39m:  [object Object] 
+[2021-10-02 20:16:57] [32minfo[39m:  Loaded config file: development 
+[2021-10-02 20:16:57] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 20:17:00] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 20:17:00] [32minfo[39m:  models are loading ... 
+[2021-10-02 20:17:00] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/campaign.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/child.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/users/user.model.js 
+[2021-10-02 20:17:01] [32minfo[39m:  error messages are loading ... 
+[2021-10-02 20:17:01] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/index/index.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/users/user.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-10-02 20:17:01] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-02 20:34:44] [31merror[39m:  Campaign validation failed: vaccineCenter: Cast to ObjectId failed for value "" (type string) at path "vaccineCenter", campaignID: Path `campaignID` is required. 
+ValidationError: Campaign validation failed: vaccineCenter: Cast to ObjectId failed for value "" (type string) at path "vaccineCenter", campaignID: Path `campaignID` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:137:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-10-02 21:08:50] [31merror[39m:  mongoose connection disconnected 
+[2021-10-02 21:09:03] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:40:24] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:41:53] [32minfo[39m:  .env files are loading... 
+[2021-10-02 21:42:10] [32minfo[39m:  [object Object] 
+[2021-10-02 21:42:10] [32minfo[39m:  Loaded config file: development 
+[2021-10-02 21:42:10] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:42:16] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:42:16] [32minfo[39m:  models are loading ... 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/campaign.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/child.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-10-02 21:42:17] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-10-02 21:42:19] [32minfo[39m:  app/users/user.model.js 
+[2021-10-02 21:42:19] [32minfo[39m:  error messages are loading ... 
+[2021-10-02 21:42:19] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/index/index.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/users/user.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-10-02 21:42:20] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-02 21:45:05] [31merror[39m:  User is Not authorized to access this api. 
+[2021-10-02 21:45:55] [31merror[39m:  Cannot read property 'name' of undefined 
+TypeError: Cannot read property 'name' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:18)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:48:06] [32minfo[39m:  .env files are loading... 
+[2021-10-02 21:48:08] [32minfo[39m:  [object Object] 
+[2021-10-02 21:48:08] [32minfo[39m:  Loaded config file: development 
+[2021-10-02 21:48:08] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:48:15] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:48:15] [32minfo[39m:  models are loading ... 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/campaign.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/child.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/users/user.model.js 
+[2021-10-02 21:48:15] [32minfo[39m:  error messages are loading ... 
+[2021-10-02 21:48:15] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/index/index.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/users/user.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-10-02 21:48:15] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-02 21:49:21] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:49:29] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:53:46] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:58:59] [31merror[39m:  mongoose connection disconnected 
+[2021-10-02 21:59:28] [32minfo[39m:  .env files are loading... 
+[2021-10-02 21:59:34] [32minfo[39m:  [object Object] 
+[2021-10-02 21:59:34] [32minfo[39m:  Loaded config file: development 
+[2021-10-02 21:59:34] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:59:42] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-10-02 21:59:42] [32minfo[39m:  models are loading ... 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/campaign.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/child.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-10-02 21:59:42] [32minfo[39m:  app/users/user.model.js 
+[2021-10-02 21:59:43] [32minfo[39m:  error messages are loading ... 
+[2021-10-02 21:59:43] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-10-02 21:59:43] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-10-02 21:59:43] [32minfo[39m:  app/index/index.routes.js 
+[2021-10-02 21:59:43] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-10-02 21:59:43] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-10-02 21:59:44] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-10-02 21:59:44] [32minfo[39m:  app/users/user.routes.js 
+[2021-10-02 21:59:44] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-10-02 21:59:44] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 

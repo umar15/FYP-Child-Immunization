@@ -54,7 +54,7 @@ logger.token("remote-user", (req, res) => {
 		return "Guest";
 	}
 });
-
+0
 logger.token("clientIP", (req, res) => {
 	var clientIP = (req.headers["x-forwarded-for"] || "").split(",")[0] || req.connection.remoteAddress;
 

@@ -10,7 +10,8 @@ import AssignVaccine from "./AssignVaccine";
 const AssignVaccinePage = () => {
 	return (
 		<>
-			<AdminHeader />
+			<AdminHeader userType="Admin" />
+
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

@@ -842,3 +842,45 @@ MongoNetworkTimeoutError: connection 1 to 35.175.89.8:27017 timed out
 [2021-09-29 15:08:03] [31merror[39m:  mongoose connection disconnected 
 [2021-09-29 20:38:07] [31merror[39m:  User is Not authorized to access this api. 
 [2021-09-30 14:15:33] [31merror[39m:  mongoose connection disconnected 
+[2021-10-02 20:34:44] [31merror[39m:  Campaign validation failed: vaccineCenter: Cast to ObjectId failed for value "" (type string) at path "vaccineCenter", campaignID: Path `campaignID` is required. 
+ValidationError: Campaign validation failed: vaccineCenter: Cast to ObjectId failed for value "" (type string) at path "vaccineCenter", campaignID: Path `campaignID` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:137:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-10-02 21:08:50] [31merror[39m:  mongoose connection disconnected 
+[2021-10-02 21:40:24] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:45:05] [31merror[39m:  User is Not authorized to access this api. 
+[2021-10-02 21:45:55] [31merror[39m:  Cannot read property 'name' of undefined 
+TypeError: Cannot read property 'name' of undefined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:202:18)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:49:21] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:49:29] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:53:46] [31merror[39m:  Cannot read property 'vaccines' of null 
+TypeError: Cannot read property 'vaccines' of null
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:204:27)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-02 21:58:59] [31merror[39m:  mongoose connection disconnected 
