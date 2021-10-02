@@ -6500,3 +6500,36 @@ MongoNetworkTimeoutError: connection 1 to 35.175.89.8:27017 timed out
 [2021-09-29 20:38:07] [31merror[39m:  User is Not authorized to access this api. 
 [2021-09-29 20:53:09] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
 [2021-09-29 22:09:50] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 14:14:23] [32minfo[39m:  .env files are loading... 
+[2021-09-30 14:14:37] [32minfo[39m:  [object Object] 
+[2021-09-30 14:14:37] [32minfo[39m:  Loaded config file: development 
+[2021-09-30 14:14:37] [32minfo[39m:  Try to connect mongodb: mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 14:14:50] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 14:14:50] [32minfo[39m:  models are loading ... 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/assignVaccineTo.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/campaign.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/child.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/childFollowUp.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/dailyConsumption.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/organizationVaccines.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/models/vaccine.model.js 
+[2021-09-30 14:14:50] [32minfo[39m:  app/users/user.model.js 
+[2021-09-30 14:14:51] [32minfo[39m:  error messages are loading ... 
+[2021-09-30 14:14:51] [32minfo[39m:  app/admin/admin.routes.js 
+[2021-09-30 14:14:51] [32minfo[39m:  app/hospital/hospital.routes.js 
+[2021-09-30 14:14:51] [32minfo[39m:  app/index/index.routes.js 
+[2021-09-30 14:14:51] [32minfo[39m:  app/parent/parent.routes.js 
+[2021-09-30 14:14:51] [32minfo[39m:  app/polioWorker/polioWorker.routes.js 
+[2021-09-30 14:14:51] [32minfo[39m:  app/subAdmin/subadmin.routes.js 
+[2021-09-30 14:14:52] [32minfo[39m:  app/users/user.routes.js 
+[2021-09-30 14:14:52] [32minfo[39m:  app/vaccineCenter/vaccineCenter.routes.js 
+[2021-09-30 14:14:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-09-30 14:15:33] [31merror[39m:  mongoose connection disconnected 
+[2021-09-30 14:15:46] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 14:37:57] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 17:40:04] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 17:47:48] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 18:37:15] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 19:15:39] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 19:40:31] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
+[2021-09-30 21:52:02] [32minfo[39m:  mongoose connection open to mongodb+srv://umarAdmin:err0rn0tf0und@cluster0.c4buh.mongodb.net/CVS?retryWrites=true&w=majority 
