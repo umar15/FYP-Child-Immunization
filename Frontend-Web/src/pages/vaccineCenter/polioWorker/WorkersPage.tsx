@@ -4,20 +4,20 @@ import Footer from "../../../components/footer/Footer";
 import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 import "../../../index.css";
-import Sidebar from "../Sidebar";
-import SubAdmin from "./SubAdmin";
+import Sidebar from "./../Sidebar";
+import Workers from "./Workers";
 
-const SubAdminsPage = () => {
+const WorkersPage = () => {
 	return (
 		<>
-			<AdminHeader />
+			<AdminHeader userType="Vaccine Center" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
 						<Sidebar />
 					</Col>
 					<Col lg="9">
-						<SubAdmin />
+						<Workers />
 					</Col>
 				</Row>
 			</Container>
@@ -27,4 +27,4 @@ const SubAdminsPage = () => {
 	);
 };
 
-export default SubAdminsPage;
+export default WorkersPage;

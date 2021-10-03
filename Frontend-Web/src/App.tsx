@@ -28,6 +28,7 @@ import AddChildPage from "./pages/hospital/children/AddChildPage";
 // Vaccine Center
 import VCChildren from "./pages/vaccineCenter/children/ChildrenPage";
 import VCChildData from "./pages/vaccineCenter/children/ChildDataPage";
+import VCVaccines from "./pages/vaccineCenter/vaccines/VaccinesPage";
 // Others
 import Login from "./components/login/login";
 import Signup from "./components/signup/Signup";
@@ -36,6 +37,9 @@ import Homepage from "./pages/Homepage";
 import { useUserState } from "./context/userContext";
 import CampaignsPage from "./pages/vaccineCenter/campaigns/CampaignsPage";
 import AddCampaignPage from "./pages/vaccineCenter/campaigns/AddCampaignPage";
+import WorkersPage from "./pages/vaccineCenter/polioWorker/WorkersPage";
+import AddWorker from "./pages/vaccineCenter/polioWorker/AddWorker";
+import AddWorkerPage from "./pages/vaccineCenter/polioWorker/AddWorkerPage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -125,6 +129,9 @@ function App() {
 				<PrivateRoute path="/vaccinecenter/children/:id" exact component={VCChildData} />
 				<PrivateRoute path="/vaccinecenter/campaigns" exact component={CampaignsPage} />
 				<PrivateRoute path="/vaccinecenter/campaigns/:id" exact component={AddCampaignPage} />
+				<PrivateRoute path="/vaccinecenter/vaccines" exact component={VCVaccines} />
+				<PrivateRoute path="/vaccinecenter/workers" exact component={WorkersPage} />
+				<PrivateRoute path="/vaccinecenter/workers/:id" exact component={AddWorkerPage} />
 				{/* <PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} /> */}
 			</Switch>

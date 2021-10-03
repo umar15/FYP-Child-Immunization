@@ -5,19 +5,20 @@ import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 import "../../../index.css";
 import Sidebar from "../Sidebar";
-import AddVaccine from "./AddVaccine";
+import AddSubadmin from "./AddSubadmin";
+import AddWorker from "./AddWorker";
 
-const AddVaccinePage = () => {
+const AddWorkerPage = () => {
 	return (
 		<>
-			<AdminHeader userType="Hospital" />
+			<AdminHeader userType="Vaccine center" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
 						<Sidebar />
 					</Col>
 					<Col lg="9" style={addSubadminStyles}>
-						<AddVaccine />
+						<AddWorker />
 					</Col>
 				</Row>
 			</Container>
@@ -31,4 +32,4 @@ const addSubadminStyles = {
 	marginTop: "30px",
 };
 
-export default AddVaccinePage;
+export default AddWorkerPage;

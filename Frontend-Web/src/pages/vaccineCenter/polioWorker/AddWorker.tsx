@@ -5,8 +5,8 @@ import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 
-const AddSubadmin = (props) => {
-	const subadminID: any = useParams();
+const AddWorker = (props) => {
+	const workerID: any = useParams();
 	const alert = useAlert();
 	const history = useHistory();
 	const location: any = useLocation();
@@ -15,8 +15,9 @@ const AddSubadmin = (props) => {
 		email: "",
 		name: "",
 		cnic: "",
-		userType: "subadmin",
+		userType: "worker",
 		password: "",
+		parentOrg: "",
 		address: {
 			addr: "",
 			area: "",
@@ -24,27 +25,42 @@ const AddSubadmin = (props) => {
 		},
 	});
 	const [confirmPass, setConfirmPass] = useState("");
-	const subadmin: any = location.state ? location.state : "";
+	const worker: any = location.state ? location.state : "";
+	console.log("Worker a: ", worker);
 
-	// const { subadmin } = location.state;
-	console.log("object", subadmin.subadmin);
-	console.log("id", subadminID.id);
+	const getCurrentUser = () => {
+		axios
+			.get("/users/current")
+			.then((res) => {
+				console.log("user: ", res.data.data.user);
+				setData({
+					...data,
+					parentOrg: res.data.data.user._id,
+				});
+			})
+			.catch((err) => console.log("Error: ", err));
+	};
+
+	// const { worker } = location.state;
+	console.log("id", workerID.id);
 
 	React.useEffect(() => {
-		if (subadminID.id === "add") {
+		getCurrentUser();
+		if (workerID.id === "add") {
 			return;
 		} else {
-			subadminID.id !== "add" &&
+			workerID.id !== "add" &&
 				setData({
-					email: subadmin ? subadmin.subadmin.email : "",
-					name: subadmin ? subadmin.subadmin.name : "",
-					cnic: subadmin ? subadmin.subadmin.cnic : "",
-					userType: "subadmin",
-					password: subadmin ? subadmin.subadmin.password : "",
+					email: worker ? worker.worker.email : "",
+					name: worker ? worker.worker.name : "",
+					cnic: worker ? worker.worker.cnic : "",
+					userType: "worker",
+					parentOrd: worker ? worker.worker.parentOrg : "",
+					password: worker ? worker.worker.password : "",
 					address: {
-						addr: subadmin ? subadmin.subadmin.address.addr : "",
-						area: subadmin ? subadmin.subadmin.address.area : "",
-						city: subadmin ? subadmin.subadmin.address.city : "",
+						addr: worker ? worker.worker.address.addr : "",
+						area: worker ? worker.worker.address.area : "",
+						city: worker ? worker.worker.address.city : "",
 					},
 				});
 		}
@@ -52,20 +68,22 @@ const AddSubadmin = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (subadminID.id === "add") {
+		console.log(data);
+
+		if (workerID.id === "add") {
 			if (data.password === confirmPass) {
 				axios
-					.post("/admin/subadmins/add", data)
+					.post("/vaccinecenter/workers/add", data)
 					.then((res) => {
 						console.log(res);
-						alert.show("Subadmin added successfully!", {
+						alert.show("worker added successfully!", {
 							type: "success",
 						});
-						history.push("/admin/subadmins");
+						history.push("/vaccinecenter/workers");
 					})
 					.catch((err) => {
 						console.log(err);
-						alert.show("Failed to add subadmin", {
+						alert.show("Failed to add worker", {
 							type: "error",
 						});
 					});
@@ -76,35 +94,33 @@ const AddSubadmin = (props) => {
 			}
 		} else {
 			axios
-				.put(`/admin/subadmins/${subadminID.id}`, data)
+				.put(`/vaccinecenter/workers/${workerID.id}`, data)
 				.then((res) => {
 					console.log(res);
-					alert.show("Subadmin updated successfully!", {
+					alert.show("worker updated successfully!", {
 						type: "success",
 					});
-					history.push("/admin/subadmins");
+					history.push("/vaccinecenter/workers");
 				})
 				.catch((err) => {
 					console.log(err);
-					alert.show("Failed to update subadmin", {
+					alert.show("Failed to update worker", {
 						type: "error",
 					});
 				});
 		}
-
-		console.log(data);
 	};
 
 	return (
 		<Container>
-			{/* {console.log("subadmin", props.location)} */}
+			{/* {console.log("worker", props.location)} */}
 			<Row>
 				<Col>
 					<div className="signup-form" style={formStyles}>
 						<form onSubmit={handleSubmit}>
 							<Row>
 								<Col md="12" sm="12">
-									<h3 style={headerStyles}>{subadminID.id == "add" ? "Add Subadmin" : "Update Subadmin"}</h3>
+									<h3 style={headerStyles}>{workerID.id == "add" ? "Add worker" : "Update worker"}</h3>
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
@@ -198,7 +214,7 @@ const AddSubadmin = (props) => {
 								</Col>
 								<Col md="12" sm="12">
 									<button type="submit" className="default-btn signup-btn">
-										{subadminID.id === "add" ? "Add" : "Update"}
+										{workerID.id === "add" ? "Add" : "Update"}
 									</button>
 								</Col>
 							</Row>
@@ -220,4 +236,4 @@ const formStyles = {
 	height: "700px",
 };
 
-export default AddSubadmin;
+export default AddWorker;

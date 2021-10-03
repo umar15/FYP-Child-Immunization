@@ -80,7 +80,7 @@ const Signup = () => {
 												>
 													<option value="">Sign up As</option>
 													<option value="hospital">Hospital</option>
-													<option value="vaccine center">Vaccine center</option>
+													<option value="vaccinecenter">Vaccine center</option>
 												</select>
 											</div>
 										</Col>

@@ -10,11 +10,12 @@ let userAccount = new schema({
 	email: { type: String, default: "", required: true },
 	name: { type: String, default: "", required: true },
 	cnic: { type: String, default: "" },
+	parentOrg: { type: schema.Types.ObjectId, ref: "userAccounts" },
 	userType: {
 		type: String,
 		default: "",
 		required: true,
-		enum: ["hospital", "vaccine center", "parent", "polio worker", "admin", "sub admin"],
+		enum: ["hospital", "vaccinecenter", "parent", "worker", "admin", "subadmin"],
 	},
 	password: { type: String, default: "", required: true },
 	address: {

@@ -16,7 +16,7 @@ const Vaccines = () => {
 
 	const getVaccines = async () => {
 		axios
-			.get("/hospital/vaccines")
+			.get("/vaccinecenter/vaccines")
 			.then((res) => {
 				console.log(res.data.data[0].vaccines);
 				setVaccines(res.data?.data[0].vaccines);

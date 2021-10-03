@@ -7,22 +7,22 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link, useHistory } from "react-router-dom";
 import "../../../index.css";
 
-const SubAdmin = () => {
-	const [subadmins, setSubadmins] = useState([]);
+const Workers = () => {
+	const [workers, setWorkers] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const alert = useAlert();
 	const history = useHistory();
 
-	const getSubadmins = async () => {
+	const getWorkers = async () => {
 		axios
-			.get("/admin/subadmins")
+			.get("/vaccinecenter/workers")
 			.then((res) => {
 				console.log(res.data.data);
-				setSubadmins(res.data?.data);
+				setWorkers(res.data?.data);
 				setLoading(false);
 			})
 			.catch((err) =>
-				alert.show("Failed to Fetch subadmins", {
+				alert.show("Failed to Fetch worker", {
 					type: "error",
 				})
 			);
@@ -30,26 +30,22 @@ const SubAdmin = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`/admin/subadmins/${id}`)
+			.delete(`/vaccinecenter/workers/${id}`)
 			.then((res) => {
-				alert.show("Subadmin deleted successfully!", {
+				alert.show("Worker deleted successfully!", {
 					type: "success",
 				});
-				setSubadmins(subadmins.filter((item: any) => item._id !== id));
+				setWorkers(workers.filter((item: any) => item._id !== id));
 			})
 			.catch((err) => {
-				alert.show("Failed to delete subadmin. Try again later", {
+				alert.show("Failed to delete worker. Try again later", {
 					type: "error",
 				});
 			});
 	};
 
-	const handleEdit = (id) => {
-		history.push(`/admins/subadmins/${id}`);
-	};
-
 	useEffect(() => {
-		getSubadmins();
+		getWorkers();
 	}, []);
 
 	if (loading) {
@@ -64,12 +60,12 @@ const SubAdmin = () => {
 		<Container>
 			<Row className="subadmin-admin">
 				<Col lg="9">
-					<h3>Sub Admins</h3>
+					<h3>Polio Workers</h3>
 				</Col>
 				<Col lg="3">
 					<button className="default-btn">
-						<a href="/admin/subadmins/add" style={linkStyles}>
-							Add sub admin
+						<a href="/vaccinecenter/workers/add" style={linkStyles}>
+							Add polio worker
 						</a>
 					</button>
 				</Col>
@@ -94,17 +90,17 @@ const SubAdmin = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{subadmins &&
-								subadmins.map((subadmin: any, index) => (
-									<tr key={subadmin._id}>
+							{workers &&
+								workers.map((worker: any, index) => (
+									<tr key={worker._id}>
 										<th scope="row">{index + 1}</th>
-										<td>{subadmin.name}</td>
-										<td>{subadmin.email}</td>
-										<td>{subadmin.address.city}</td>
+										<td>{worker.name}</td>
+										<td>{worker.email}</td>
+										<td>{worker.address.city}</td>
 										<td>
 											<Link
 												to={{
-													pathname: `/admin/subadmins/assignvaccine/${subadmin._id}`,
+													pathname: `/vaccinecenter/assignvaccine/${worker._id}`,
 												}}
 											>
 												assign
@@ -113,9 +109,9 @@ const SubAdmin = () => {
 										<td>
 											<Link
 												to={{
-													pathname: `/admin/subadmins/${subadmin._id}`,
+													pathname: `/vaccinecenter/workers/${worker._id}`,
 													state: {
-														subadmin: subadmin,
+														worker,
 													},
 												}}
 											>
@@ -124,7 +120,7 @@ const SubAdmin = () => {
 										</td>
 										<td>
 											<AiFillDelete
-												onClick={() => handleDelete(subadmin._id)}
+												onClick={() => handleDelete(worker._id)}
 												style={deleteStyles}
 												size="20"
 											/>
@@ -157,4 +153,4 @@ const tableStyles = {
 	boxShadow: "0 0px 5px #b0e5fc",
 };
 
-export default SubAdmin;
+export default Workers;

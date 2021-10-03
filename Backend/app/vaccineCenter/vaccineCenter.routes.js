@@ -98,4 +98,29 @@ module.exports = (app, version) => {
 		passport.isAuthorized("vaccine center"),
 		vaccineCenterController.notifyPublic
 	);
+
+	app.get(
+		version + "/vaccinecenter/workers",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccine center"),
+		vaccineCenterController.viewWorkers
+	);
+	app.post(
+		version + "/vaccinecenter/workers/add",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccine center"),
+		vaccineCenterController.addWorker
+	);
+	app.delete(
+		version + "/vaccinecenter/workers/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccine center"),
+		vaccineCenterController.deleteWorker
+	);
+	app.put(
+		version + "/vaccinecenter/workers/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccine center"),
+		vaccineCenterController.updateWorker
+	);
 };

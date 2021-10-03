@@ -82,15 +82,15 @@ const Campaigns = () => {
 							<tr>
 								<th>#</th>
 								<th>Campaign ID</th>
-								<th>Vaccine Center</th>
+								{/* <th>Vaccine Center</th> */}
 								<th>Area</th>
 								<th>No. of Workers</th>
 								<th>Start Date</th>
 								<th>End Date</th>
 								<th>Campaign Status</th>
-								<th>Edit</th>
+								{/* <th>Edit</th>
 								<th>Delete</th>
-								<th>Notify Public</th>
+								<th>Notify Public</th> */}
 							</tr>
 						</thead>
 						<tbody>
@@ -99,13 +99,13 @@ const Campaigns = () => {
 									<tr key={campaign._id}>
 										<th scope="row">{index + 1}</th>
 										<td>{campaign.campaignID}</td>
-										<td>{campaign.vaccineCenter}</td>
+										{/* <td>{campaign.vaccineCenter}</td> */}
 										<td>{campaign.area}</td>
 										<td>{campaign.noOfWorkers}</td>
 										<td>{campaign.startDate}</td>
 										<td>{campaign.endDate}</td>
 										<td>{campaign.status}</td>
-										<td>
+										{/* <td>
 											<Link
 												to={{
 													pathname: `/vaccinecenter/campaigns/${campaign._id}`,
@@ -132,7 +132,7 @@ const Campaigns = () => {
 											>
 												notify
 											</Link>
-										</td>
+										</td> */}
 									</tr>
 								))}
 						</tbody>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
@@ -13,9 +13,16 @@ const AddCampaign = (props) => {
 	const history = useHistory();
 	const location: any = useLocation();
 
+	const makeCampaignID = () => {
+		let campaignID = "CM-";
+		const possible = "ABCDEFGHIJKLMNPQRSTUVWXYZ123456789";
+		for (let i = 0; i <= 5; i++) campaignID += possible.charAt(Math.floor(Math.random() * possible.length));
+		return campaignID;
+	};
+
 	const [data, setData] = useState<any>({
-		campaignID: "",
-		status: "",
+		campaignID: makeCampaignID(),
+		status: "inactive",
 		area: "",
 		noOfWorkers: 5,
 		startDate: new Date(),
@@ -25,21 +32,25 @@ const AddCampaign = (props) => {
 	const campaign: any = location.state ? location.state : "";
 	console.log("Campaign: ", campaign);
 
-	React.useEffect(() => {
-		if (campID.id === "add") {
-			return;
-		} else {
-			campID.id !== "add" &&
+	const getUser = () => {
+		axios
+			.get("/users/current")
+			.then((res) => {
+				console.log("User: ", res.data.data.user);
 				setData({
-					campaignID: "",
-					status: "",
-					area: "",
-					noOfWorkers: 5,
-					startDate: new Date(),
-					endDate: new Date(),
-					vaccineCenter: "",
+					...data,
+					vaccineCenter: res.data.data.user._id,
 				});
-		}
+			})
+			.catch((err) =>
+				alert.show("Failed to fetch user!", {
+					type: "error",
+				})
+			);
+	};
+
+	useEffect(() => {
+		getUser();
 	}, []);
 
 	const handleSubmit = (e) => {
@@ -101,8 +112,12 @@ const AddCampaign = (props) => {
 					<div className="signup-form" style={formStyles}>
 						<form onSubmit={handleSubmit}>
 							<Row>
+								<Col md="12" sm="12">
+									<h3 style={headerStyles}>Add Campaign</h3>
+								</Col>
 								<Col lg="12">
 									<div className="form-group">
+										<label>Campaign Status</label>
 										<select
 											value={data.status}
 											onChange={(e) =>
@@ -113,7 +128,6 @@ const AddCampaign = (props) => {
 											}
 											className="form-control"
 										>
-											<option value="campaign">Campaign Status</option>
 											<option value="active">Active</option>
 											<option value="inactive">Inactive</option>
 										</select>
@@ -121,6 +135,8 @@ const AddCampaign = (props) => {
 								</Col>
 								<Col lg="12">
 									<div className="form-group">
+										<label>Campaign area</label>
+
 										<input
 											type="text"
 											className="form-control"
@@ -138,6 +154,7 @@ const AddCampaign = (props) => {
 								</Col>
 								<Col lg="12">
 									<div className="form-group">
+										<label>Number of workers</label>
 										<input
 											type="number"
 											className="form-control"
@@ -165,8 +182,9 @@ const AddCampaign = (props) => {
 											/>
 										</div>
 									</Col> */}
-								<Col lg="12">
+								<Col lg="6">
 									<div className="form-group">
+										<label>Start date</label>
 										<DatePicker
 											className="form-control"
 											// value={startDate}
@@ -175,8 +193,9 @@ const AddCampaign = (props) => {
 										/>
 									</div>
 								</Col>
-								<Col lg="12">
+								<Col lg="6">
 									<div className="form-group">
+										<label>End Date</label>
 										<DatePicker
 											className="form-control"
 											// value={endDate}
@@ -207,6 +226,7 @@ const headerStyles = {
 
 const formStyles = {
 	marginLeft: "20%",
+	marginTop: "20px",
 	height: "700px",
 };
 

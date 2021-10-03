@@ -22,7 +22,7 @@ const Sidebar = (props) => {
 					</Link>
 				</li>
 				<li>
-					<Link className="link" to="/vaccinecenter/wrokers">
+					<Link className="link" to="/vaccinecenter/workers">
 						Polio Workers
 					</Link>
 				</li>

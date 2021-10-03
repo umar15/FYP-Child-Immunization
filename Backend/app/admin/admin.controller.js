@@ -135,10 +135,26 @@ let viewSubAdmins = async (req, res, next) => {
 let addSubAdmin = async (req, res, next) => {
 	try {
 		const newUser = await new users(req.body).save();
+		const orgVacc = {
+			organization: newUser._id,
+			vaccines: {
+				polio: { quantity: 0 },
+				diphtheria: { quantity: 0 },
+				homophiles: { quantity: 0 },
+				rotaVirus: { quantity: 0 },
+				measles: { quantity: 0 },
+				hepatitisA: { quantity: 0 },
+				hepatitisB: { quantity: 0 },
+				papillomaVirus: { quantity: 0 },
+				influenza: { quantity: 0 },
+			},
+		};
+		const newVaccines = await new orgVaccines(orgVacc).save();
 		return res.json({
-			message: "Sub admin added successfully.",
+			message: "Subadmin added successfully.",
 			data: {
-				user: newUser,
+				subadmin: newUser,
+				vaccines: newVaccines,
 			},
 		});
 	} catch (err) {
@@ -164,7 +180,9 @@ let updateSubAdmin = async (req, res, next) => {
 
 let deleteSubAdmin = async (req, res, next) => {
 	try {
-		await users.findByIdAndDelete({ _id: req.params.id });
+		const user = await users.findByIdAndDelete({ _id: req.params.id });
+		const org = await orgVaccines.findOne({ organization: user._id });
+		await orgVaccines.findByIdAndDelete({ _id: org._id });
 		return res.json({
 			message: "sub admin deleted successfully.",
 			data: {},
@@ -178,12 +196,12 @@ let deleteSubAdmin = async (req, res, next) => {
 let assignVaccine = async (req, res, next) => {
 	try {
 		const org = await users.findOne({ _id: req.params.id });
-		// console.log("Organization: ", org);
+		console.log("Organization: ", org);
 		if (!org) {
 			throw "No organization found with that name.";
 		}
 
-		const Vaccine = await vaccine.find({ _id: req.body.vaccine });
+		const Vaccine = await vaccine.findOne({ _id: req.body.vaccine });
 		if (!Vaccine) {
 			throw "No vaccine available with this name.";
 		}
@@ -199,55 +217,55 @@ let assignVaccine = async (req, res, next) => {
 			vaccines: {
 				polio: {
 					quantity:
-						Vaccine[0].name === "polio"
+						Vaccine.name === "polio"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.polio.quantity
 							: organizationVacc.vaccines.polio.quantity,
 				},
 				diphtheria: {
 					quantity:
-						Vaccine[0].name === "diphteria"
+						Vaccine.name === "diphteria"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.diphtheria.quantity
 							: organizationVacc.vaccines.diphtheria.quantity,
 				},
 				homophiles: {
 					quantity:
-						Vaccine[0].name === "homophiles"
+						Vaccine.name === "homophiles"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.homophiles.quantity
 							: organizationVacc.vaccines.homophiles.quantity,
 				},
 				rotaVirus: {
 					quantity:
-						Vaccine[0].name === "rotaVirus"
+						Vaccine.name === "rotaVirus"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.rotaVirus.quantity
 							: organizationVacc.vaccines.rotaVirus.quantity,
 				},
 				measles: {
 					quantity:
-						Vaccine[0].name === "measles"
+						Vaccine.name === "measles"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.measles.quantity
 							: organizationVacc.vaccines.measles.quantity,
 				},
 				hepatitisA: {
 					quantity:
-						Vaccine[0].name === "hepatitusA"
+						Vaccine.name === "hepatitusA"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisA.quantity
 							: organizationVacc.vaccines.hepatitisA.quantity,
 				},
 				hepatitisB: {
 					quantity:
-						Vaccine[0].name === "hepatitusB"
+						Vaccine.name === "hepatitusB"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisB.quantity
 							: organizationVacc.vaccines.hepatitisB.quantity,
 				},
 				papillomaVirus: {
 					quantity:
-						Vaccine[0].name === "papillomaVirus"
+						Vaccine.name === "papillomaVirus"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.papillomaVirus.quantity
 							: organizationVacc.vaccines.papillomaVirus.quantity,
 				},
 				influenza: {
 					quantity:
-						Vaccine[0].name === "influenza"
+						Vaccine.name === "influenza"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.influenza.quantity
 							: organizationVacc.vaccines.influenza.quantity,
 				},
@@ -255,7 +273,7 @@ let assignVaccine = async (req, res, next) => {
 		};
 		console.log("Org vacc: ", orgVacc);
 
-		if (Vaccine[0].quantity > 0) {
+		if (Vaccine.quantity > 0) {
 			const assignedVaccine = await new assignVaccineTo({
 				vaccine: req.body.vaccine,
 				date: req.body.date,
@@ -263,7 +281,7 @@ let assignVaccine = async (req, res, next) => {
 				organization: org,
 			}).save();
 
-			const remainingVaccine = Vaccine[0].quantity - req.body.quantity;
+			const remainingVaccine = Vaccine.quantity - req.body.quantity;
 			await vaccine.findOneAndUpdate(
 				{ _id: req.body.vaccine },
 				{ $set: { quantity: remainingVaccine } },
