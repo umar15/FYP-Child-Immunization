@@ -25,10 +25,14 @@ import HospitalChildrenPage from "./pages/hospital/children/ChildrenPage";
 import HospitalChildDataPage from "./pages/hospital/children/ChildDataPage";
 import HospitalVaccines from "./pages/hospital/vaccines/VaccinesPage";
 import AddChildPage from "./pages/hospital/children/AddChildPage";
+import HospitalRequestVaccinePage from "./pages/hospital/vaccines/RequestVaccinePage";
+
 // Vaccine Center
 import VCChildren from "./pages/vaccineCenter/children/ChildrenPage";
 import VCChildData from "./pages/vaccineCenter/children/ChildDataPage";
 import VCVaccines from "./pages/vaccineCenter/vaccines/VaccinesPage";
+import VCRequestVaccinePage from "./pages/vaccineCenter/vaccines/RequestVaccinePage";
+
 // Others
 import Login from "./components/login/login";
 import Signup from "./components/signup/Signup";
@@ -40,6 +44,9 @@ import AddCampaignPage from "./pages/vaccineCenter/campaigns/AddCampaignPage";
 import WorkersPage from "./pages/vaccineCenter/polioWorker/WorkersPage";
 import AddWorker from "./pages/vaccineCenter/polioWorker/AddWorker";
 import AddWorkerPage from "./pages/vaccineCenter/polioWorker/AddWorkerPage";
+import VaccineRequestsPage from "./pages/admin/vaccineRequests/VaccineRequestsPage";
+import RequestVaccinePage from "./pages/subAdmin/vaccines/RequestVaccinePage";
+import SAVaccineRequestsPage from "./pages/subAdmin/vaccineRequests/VaccineRequestsPage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -109,6 +116,7 @@ function App() {
 				<PrivateRoute path="/admin/vaccines/:id" exact component={AddVaccinePage} />
 				<PrivateRoute path="/admin/children" exact component={ChildrenPage} />
 				<PrivateRoute path="/admin/children/:id" exact component={ChildDataPage} />
+				<PrivateRoute path="/admin/vaccinesrequests" exact component={VaccineRequestsPage} />
 				{/* Sub admin */}
 				<PrivateRoute path="/subadmin" exact component={SubAdminDashboard} />
 				<PrivateRoute path="/subadmin/hospitals" exact component={SubAdminHospitalPage} />
@@ -118,12 +126,17 @@ function App() {
 				<PrivateRoute path="/subadmin/vaccines" exact component={SubAdminVaccinesPage} />
 				<PrivateRoute path="/subadmin/children" exact component={SubAdminChildrenPage} />
 				<PrivateRoute path="/subadmin/children/:id" exact component={SubAdminChildDataPage} />
+				<PrivateRoute path="/subadmin/requestvaccine" exact component={RequestVaccinePage} />
+				<PrivateRoute path="/subadmin/vaccinerequests" exact component={SAVaccineRequestsPage} />
+
 				{/* Hospital */}
 				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />
 				<PrivateRoute path="/hospital/children" exact component={HospitalChildrenPage} />
 				<PrivateRoute path="/hospital/children/:id" exact component={HospitalChildDataPage} />
 				<PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} />
+				<PrivateRoute path="/hospital/requestvaccine" exact component={HospitalRequestVaccinePage} />
+
 				{/* Vaccine Center */}
 				<PrivateRoute path="/vaccinecenter" exact component={VCChildren} />
 				<PrivateRoute path="/vaccinecenter/children/:id" exact component={VCChildData} />
@@ -132,6 +145,8 @@ function App() {
 				<PrivateRoute path="/vaccinecenter/vaccines" exact component={VCVaccines} />
 				<PrivateRoute path="/vaccinecenter/workers" exact component={WorkersPage} />
 				<PrivateRoute path="/vaccinecenter/workers/:id" exact component={AddWorkerPage} />
+				<PrivateRoute path="/vaccinecenter/requestvaccine" exact component={VCRequestVaccinePage} />
+
 				{/* <PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} /> */}
 			</Switch>

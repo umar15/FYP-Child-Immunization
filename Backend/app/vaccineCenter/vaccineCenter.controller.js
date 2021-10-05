@@ -311,7 +311,6 @@ module.exports = {
 	futureCases,
 	futureVaccineNeeds,
 	notifyPublic,
-	requestVaccineStock,
 	addWorker,
 	deleteWorker,
 	updateWorker,

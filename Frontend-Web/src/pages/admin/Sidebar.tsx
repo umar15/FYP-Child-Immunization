@@ -32,6 +32,11 @@ const Sidebar = (props) => {
 					</Link>
 				</li>
 				<li>
+					<Link className="link" to="/admin/vaccinesrequests">
+						Vaccine Stock Requests
+					</Link>
+				</li>
+				<li>
 					<Link className="link" to="/admin/children">
 						Children
 					</Link>

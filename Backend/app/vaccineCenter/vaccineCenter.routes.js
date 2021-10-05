@@ -120,7 +120,7 @@ module.exports = (app, version) => {
 	app.post(
 		version + "/vaccinecenter/requestvaccinestock",
 		passport.isAuthenticated,
-		passport.isAuthorized("vaccinecenter"),
+		passport.isAuthorized("vaccine center"),
 		vaccineCenterController.requestVaccineStock
 	);
 };

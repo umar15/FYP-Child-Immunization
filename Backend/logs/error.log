@@ -1010,3 +1010,13 @@ ValidationError: userAccounts validation failed: parentOrg: Cast to ObjectId fai
     at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
 [2021-10-03 21:32:57] [31merror[39m:  mongoose connection disconnected 
 [2021-10-04 15:43:12] [31merror[39m:  mongoose connection disconnected 
+[2021-10-05 14:10:40] [31merror[39m:  mongoose connection disconnected 
+[2021-10-05 15:33:39] [31merror[39m:  vaccineRequest validation failed: vaccine: Path `vaccine` is required. 
+ValidationError: vaccineRequest validation failed: vaccine: Path `vaccine` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-10-05 18:39:33] [31merror[39m:  User is Not authorized to access this api. 
+[2021-10-05 18:40:16] [31merror[39m:  User is Not authorized to access this api. 
+[2021-10-05 20:30:37] [31merror[39m:  mongoose connection disconnected 

@@ -1004,3 +1004,20 @@ toast-admin {
    margin-top: 30px;
    padding: 5px;
 }
+
+/* Notifications */
+
+.notification-item:hover {
+   background-color: #efefef;
+   cursor: pointer;
+}
+
+.notification {
+   text-decoration: none;
+   color: black;
+}
+
+.notification:hover {
+   text-decoration: none;
+   color: black;
+}

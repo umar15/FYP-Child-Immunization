@@ -74,6 +74,13 @@ const Vaccines = () => {
 				<Col lg="9">
 					<h3>Vaccines</h3>
 				</Col>
+				<Col lg="3">
+					<button className="default-btn">
+						<a href="/vaccinecenter/requestvaccine" style={linkStyles}>
+							Request Vaccine
+						</a>
+					</button>
+				</Col>
 			</Row>
 			<Row className="subadmin-table">
 				<Col lg="12">
