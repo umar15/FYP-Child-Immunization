@@ -6,7 +6,8 @@ const winston = require("../../config/winston"),
 	vaccine = mongoose.model("Vaccine"),
 	users = mongoose.model("userAccounts"),
 	assignVaccineTo = mongoose.model("assignVaccineTo"),
-	orgVaccines = mongoose.model("organizationVaccines");
+	orgVaccines = mongoose.model("organizationVaccines"),
+	vaccineRequest = mongoose.model("vaccineRequest");
 
 let admin = (req, res, next) => {
 	try {
@@ -333,6 +334,18 @@ let futureVaccineNeeds = (req, res, next) => {
 	}
 };
 
+let vaccineStockRequests = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Vaccine stock requests",
+			data: await vaccineRequest.find({}),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	admin,
 	viewChildren,
@@ -350,4 +363,5 @@ module.exports = {
 	futureCases,
 	futureVaccineNeeds,
 	assignVaccine,
+	vaccineStockRequests,
 };

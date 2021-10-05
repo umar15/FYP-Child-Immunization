@@ -93,4 +93,10 @@ module.exports = (app, version) => {
 		passport.isAuthorized("admin"),
 		adminController.futureVaccineNeeds
 	);
+	app.get(
+		version + "/admin/vaccinerequests",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.vaccineStockRequests
+	);
 };

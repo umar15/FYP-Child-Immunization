@@ -74,4 +74,16 @@ module.exports = (app, version) => {
 		passport.isAuthorized("sub admin"),
 		subadminController.futureVaccineNeeds
 	);
+	app.post(
+		version + "/subadmin/requestvaccinestock",
+		passport.isAuthenticated,
+		passport.isAuthorized("sub admin"),
+		subadminController.requestVaccineStock
+	);
+	app.get(
+		version + "/subadmin/vaccinerequests",
+		passport.isAuthenticated,
+		passport.isAuthorized("sub admin"),
+		subadminController.vaccineRequests
+	);
 };

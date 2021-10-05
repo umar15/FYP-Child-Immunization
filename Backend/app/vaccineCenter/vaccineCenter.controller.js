@@ -4,7 +4,8 @@ const winston = require("../../config/winston"),
 	vaccine = mongoose.model("Vaccine"),
 	campaign = mongoose.model("Campaign"),
 	orgVaccines = mongoose.model("organizationVaccines"),
-	users = mongoose.model("userAccounts");
+	users = mongoose.model("userAccounts"),
+	vaccineRequest = mongoose.model("subadminVaccineRequest");
 
 let vaccineCenter = (req, res, next) => {
 	try {
@@ -101,18 +102,6 @@ let deleteVaccine = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "Vaccine deleted successfully.",
-			data: {},
-		});
-	} catch (err) {
-		winston.error(err);
-		res.redirect("/error");
-	}
-};
-
-let requestVaccineStock = (req, res, next) => {
-	try {
-		return res.json({
-			message: "Delete vaccine",
 			data: {},
 		});
 	} catch (err) {
@@ -285,6 +274,27 @@ let deleteWorker = async (req, res, next) => {
 	}
 };
 
+let requestVaccineStock = async (req, res, next) => {
+	try {
+		const data = {
+			vaccine: req.body.vaccine,
+			quantity: req.body.quantity,
+			orgName: req.user.name,
+			orgCity: req.user.address.city,
+			organization: req.user,
+		};
+		const newRequest = await new vaccineRequest(data).save();
+
+		return res.json({
+			message: "Vaccine stock request sent successfully.",
+			data: { newRequest },
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	vaccineCenter,
 	viewChildren,
@@ -306,4 +316,5 @@ module.exports = {
 	deleteWorker,
 	updateWorker,
 	viewWorkers,
+	requestVaccineStock,
 };

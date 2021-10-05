@@ -77,6 +77,7 @@ const Signup = () => {
 													value={data.userType}
 													onChange={(e) => setData({ ...data, userType: e.target.value })}
 													className="form-control"
+													required
 												>
 													<option value="">Sign up As</option>
 													<option value="hospital">Hospital</option>
@@ -87,19 +88,24 @@ const Signup = () => {
 										<Col md="12" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="text"
 													className="form-control"
 													name="name"
 													placeholder="Name"
 													value={data.name}
 													onChange={(e) => setData({ ...data, name: e.target.value })}
+													pattern="[a-zA-Z]+"
+													title="Enter alphabets only."
 												/>
 											</div>
 										</Col>
 										<Col md="12" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="email"
+													title="i.e abc@mail.com"
 													className="form-control"
 													name="email"
 													placeholder="Email Address"
@@ -111,30 +117,37 @@ const Signup = () => {
 										<Col md="12" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="password"
 													className="form-control"
 													name="password"
 													placeholder="Password"
 													value={data.password}
 													onChange={(e) => setData({ ...data, password: e.target.value })}
+													pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+													title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
 												/>
 											</div>
 										</Col>
 										<Col md="12" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="password"
 													className="form-control"
 													name="password"
 													placeholder="Confirm Password"
 													value={confirmPass}
 													onChange={(e) => setConfirmPass(e.target.value)}
+													pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+													title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
 												/>
 											</div>
 										</Col>
 										<Col md="12" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="text"
 													className="form-control"
 													name="name"
@@ -149,6 +162,7 @@ const Signup = () => {
 										<Col md="6" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="text"
 													className="form-control"
 													name="name"
@@ -163,6 +177,7 @@ const Signup = () => {
 										<Col md="6" sm="12">
 											<div className="form-group">
 												<input
+													required
 													type="text"
 													className="form-control"
 													name="name"
@@ -174,7 +189,7 @@ const Signup = () => {
 												/>
 											</div>
 										</Col>
-										<Col md="12" sm="12" className="form-condition">
+										{/* <Col md="12" sm="12" className="form-condition">
 											<div style={{ marginBottom: "20px" }} className="agree-label">
 												<input type="checkbox" id="chb1" />
 												<label htmlFor="chb1">
@@ -182,7 +197,7 @@ const Signup = () => {
 													<a href="/terms-conditions"> Terms Conditions</a>
 												</label>
 											</div>
-										</Col>
+										</Col> */}
 										<Col md="12" sm="12">
 											<button className="default-btn signup-btn" type="submit">
 												Sign up

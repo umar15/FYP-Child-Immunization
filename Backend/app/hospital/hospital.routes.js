@@ -80,4 +80,10 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.certificates
 	);
+	app.post(
+		version + "/hospital/requestvaccinestock",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.requestVaccineStock
+	);
 };

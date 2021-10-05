@@ -4,7 +4,9 @@ const winston = require("../../config/winston"),
 	vaccine = mongoose.model("Vaccine"),
 	assignVaccineTo = mongoose.model("assignVaccineTo"),
 	orgVaccines = mongoose.model("organizationVaccines"),
-	users = mongoose.model("userAccounts");
+	users = mongoose.model("userAccounts"),
+	vaccineRequest = mongoose.model("vaccineRequest"),
+	subadminVaccineRequest = mongoose.model("subadminVaccineRequest");
 
 let subadmin = (req, res, next) => {
 	try {
@@ -295,6 +297,37 @@ let futureVaccineNeeds = (req, res, next) => {
 	}
 };
 
+let requestVaccineStock = async (req, res, next) => {
+	try {
+		const data = {
+			vaccine: req.body.vaccine,
+			quantity: req.body.quantity,
+			orgName: req.user.name,
+			organization: req.user,
+		};
+		const newRequest = await new vaccineRequest(data).save();
+		return res.json({
+			message: "Vaccine tock request send successfully.",
+			data: { newRequest },
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let vaccineRequests = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Vaccine stock requests",
+			data: await subadminVaccineRequest.find({ orgCity: req.user.address.city }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	subadmin,
 	viewChildren,
@@ -308,4 +341,6 @@ module.exports = {
 	futureCases,
 	futureVaccineNeeds,
 	assignVaccine,
+	requestVaccineStock,
+	vaccineRequests,
 };

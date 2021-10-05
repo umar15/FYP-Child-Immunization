@@ -51,12 +51,6 @@ module.exports = (app, version) => {
 		vaccineCenterController.updateVaccine
 	);
 	app.get(
-		version + "/vaccinecenter/requestvaccinestock",
-		passport.isAuthenticated,
-		passport.isAuthorized("vaccine center"),
-		vaccineCenterController.requestVaccineStock
-	);
-	app.get(
 		version + "/vaccinecenter/campaigns",
 		passport.isAuthenticated,
 		passport.isAuthorized("vaccine center"),
@@ -122,5 +116,11 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("vaccine center"),
 		vaccineCenterController.updateWorker
+	);
+	app.post(
+		version + "/vaccinecenter/requestvaccinestock",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccinecenter"),
+		vaccineCenterController.requestVaccineStock
 	);
 };

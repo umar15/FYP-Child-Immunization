@@ -1,7 +1,8 @@
 const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
 	children = mongoose.model("Children"),
-	hospitalVaccines = mongoose.model("organizationVaccines");
+	hospitalVaccines = mongoose.model("organizationVaccines"),
+	stockRequest = mongoose.model("subadminVaccineRequest");
 
 let hospital = (req, res, next) => {
 	try {
@@ -169,6 +170,27 @@ let certificates = (req, res, next) => {
 	}
 };
 
+let requestVaccineStock = async (req, res, next) => {
+	try {
+		const data = {
+			vaccine: req.body.vaccine,
+			quantity: req.body.quantity,
+			orgName: req.user.name,
+			orgCity: req.user.address.city,
+			organization: req.user,
+		};
+		const newRequest = await new stockRequest(data).save();
+
+		return res.json({
+			message: "Vaccine stock request sent successfully.",
+			data: { newRequest },
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	hospital,
 	viewChildren,
@@ -183,4 +205,5 @@ module.exports = {
 	reminders,
 	vaccineRequirement,
 	certificates,
+	requestVaccineStock,
 };
