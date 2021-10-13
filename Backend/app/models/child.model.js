@@ -23,15 +23,11 @@ const childrenSchema = new schema({
 	hospitalName: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 	vaccination: [
 		{
-			polio: { noOfDoses: { type: Number, default: 0 } },
-			diphtheria: { noOfDoses: { type: Number, default: 0 } },
-			homophiles: { noOfDoses: { type: Number, default: 0 } },
-			rotaVirus: { noOfDoses: { type: Number, default: 0 } },
+			opv: { noOfDoses: { type: Number, default: 0 } }, // polio
 			measles: { noOfDoses: { type: Number, default: 0 } },
-			hepatitisA: { noOfDoses: { type: Number, default: 0 } },
-			hepatitisB: { noOfDoses: { type: Number, default: 0 } },
-			papillomaVirus: { noOfDoses: { type: Number, default: 0 } },
-			influenza: { noOfDoses: { type: Number, default: 0 } },
+			bcg: { noOfDoses: { type: Number, default: 0 } }, // children TB
+			pentavalent: { noOfDoses: { type: Number, default: 0 } },
+			pcv: { noOfDoses: { type: Number, default: 0 } },
 		},
 	],
 });

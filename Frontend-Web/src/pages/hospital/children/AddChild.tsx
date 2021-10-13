@@ -62,6 +62,12 @@ const AddChild = () => {
 					...data,
 					hospitalName: res.data.data.user._id,
 				});
+				// setTimeout(() => {
+				// 	axios
+				// 		.get("/hospital/reminders")
+				// 		.then((res) => console.log("reminder: ", res))
+				// 		.catch((err) => console.log(err));
+				// }, 50000);
 			})
 			.catch((err) =>
 				alert.show("Failed to fetch user!", {

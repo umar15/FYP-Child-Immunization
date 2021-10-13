@@ -8,18 +8,20 @@ import Header from "../header/Header";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import axios from "../../config/AxiosOptions";
+import { isNullishCoalesce } from "typescript";
 
 const Signup = () => {
 	const alert = useAlert();
 	const history = useHistory();
 	const location: any = useLocation();
-
+	const [file, SETfile] = useState<any>(null);
 	const [data, setData] = useState<any>({
 		email: "",
 		name: "",
 		cnic: "",
 		userType: "",
 		password: "",
+		phoneNo: "",
 		address: {
 			addr: "",
 			area: "",
@@ -30,19 +32,28 @@ const Signup = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const formData = new FormData();
+		formData.append("permit", file);
+		console.log("Address: ", JSON.stringify(data.address));
+		Object.keys(data).map((key) => {
+			console.log("key: " + key + "\nData: " + data[key]);
+			formData.append(key, data[key]);
+		});
+		formData.append("address", JSON.stringify(data.address));
+
 		if (data.password === confirmPass) {
 			axios
-				.post("/users/create", data)
+				.post("/users/create", formData)
 				.then((res) => {
 					console.log(res);
-					alert.show("User added successfully!", {
+					alert.show("User request sent successfully!", {
 						type: "success",
 					});
-					history.push("/login");
+					// history.push("/login");
 				})
 				.catch((err) => {
 					console.log(err);
-					alert.show("Failed to signup. please try again!", {
+					alert.show("Failed to send request. please try again!", {
 						type: "error",
 					});
 				});
@@ -52,7 +63,7 @@ const Signup = () => {
 			});
 		}
 
-		console.log(data);
+		console.log(formData);
 	};
 	return (
 		<>
@@ -95,8 +106,8 @@ const Signup = () => {
 													placeholder="Name"
 													value={data.name}
 													onChange={(e) => setData({ ...data, name: e.target.value })}
-													pattern="[a-zA-Z]+"
-													title="Enter alphabets only."
+													// pattern="[a-zA-Z]+"
+													// title="Enter alphabets only."
 												/>
 											</div>
 										</Col>
@@ -114,7 +125,7 @@ const Signup = () => {
 												/>
 											</div>
 										</Col>
-										<Col md="12" sm="12">
+										<Col md="6" sm="12">
 											<div className="form-group">
 												<input
 													required
@@ -129,7 +140,7 @@ const Signup = () => {
 												/>
 											</div>
 										</Col>
-										<Col md="12" sm="12">
+										<Col md="6" sm="12">
 											<div className="form-group">
 												<input
 													required
@@ -141,6 +152,19 @@ const Signup = () => {
 													onChange={(e) => setConfirmPass(e.target.value)}
 													pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 													title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
+												/>
+											</div>
+										</Col>
+										<Col md="12" sm="12">
+											<div className="form-group">
+												<input
+													required
+													type="text"
+													className="form-control"
+													name="phoneNo"
+													placeholder="Phone Number"
+													value={data.phoneNo}
+													onChange={(e) => setData({ ...data, phoneNo: e.target.value })}
 												/>
 											</div>
 										</Col>
@@ -186,6 +210,19 @@ const Signup = () => {
 													onChange={(e) =>
 														setData({ ...data, address: { ...data.address, city: e.target.value } })
 													}
+												/>
+											</div>
+										</Col>
+										<Col md="12" sm="12">
+											<div className="form-group">
+												<input
+													required
+													type="file"
+													className="form-control"
+													name="permit"
+													placeholder="Permit"
+													value={file?.filename}
+													onChange={(e: any) => SETfile(e.target.files[0])}
 												/>
 											</div>
 										</Col>

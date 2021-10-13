@@ -64,8 +64,8 @@ module.exports = function (callback) {
 						winston.info("models are loading ...");
 						files.forEach(function (file) {
 							require(path.join(__dirname, "../", file));
-							winston.info(file, "is loaded");
 						});
+						winston.info("Models loaded");
 						return modelsCb();
 					}
 				});

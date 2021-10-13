@@ -8,15 +8,11 @@ const schema = mongoose.Schema;
 const organizationVaccinesSchema = new schema({
 	organization: { type: schema.Types.ObjectId, required: true, default: "", ref: "userAccounts" },
 	vaccines: {
-		polio: { quantity: Number, default: 0 },
-		diphtheria: { quantity: Number, default: 0 },
-		homophiles: { quantity: Number, default: 0 },
-		rotaVirus: { quantity: Number, default: 0 },
+		opv: { quantity: Number, default: 0 }, // polio
 		measles: { quantity: Number, default: 0 },
-		hepatitisA: { quantity: Number, default: 0 },
-		hepatitisB: { quantity: Number, default: 0 },
-		papillomaVirus: { quantity: Number, default: 0 },
-		influenza: { quantity: Number, default: 0 },
+		bcg: { quantity: Number, default: 0 }, // children TB
+		pentavalent: { quantity: Number, default: 0 },
+		pcv: { quantity: Number, default: 0 },
 	},
 });
 

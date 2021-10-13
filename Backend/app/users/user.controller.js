@@ -2,7 +2,10 @@ const winston = require("../../config/winston"),
 	passport = require("../../config/passport"),
 	mongoose = require("mongoose"),
 	userAccountModel = mongoose.model("userAccounts"),
-	orgVaccines = mongoose.model("organizationVaccines");
+	orgVaccines = mongoose.model("organizationVaccines"),
+	userRequests = mongoose.model("userRequests"),
+	nodemailer = require("nodemailer"),
+	sgTransport = require("nodemailer-sendgrid-transport");
 
 let getUsers = async (req, res, next) => {
 	try {
@@ -82,29 +85,74 @@ let deleteUser = async (req, res, next) => {
 
 let createUser = async (req, res, next) => {
 	try {
-		const newUser = await new userAccountModel(req.body).save();
-		const orgVacc = {
-			organization: newUser._id,
-			vaccines: {
-				polio: { quantity: 0 },
-				diphtheria: { quantity: 0 },
-				homophiles: { quantity: 0 },
-				rotaVirus: { quantity: 0 },
-				measles: { quantity: 0 },
-				hepatitisA: { quantity: 0 },
-				hepatitisB: { quantity: 0 },
-				papillomaVirus: { quantity: 0 },
-				influenza: { quantity: 0 },
-			},
-		};
-		const newVaccines = await new orgVaccines(orgVacc).save();
-		return res.json({
-			message: "New user added successfully.",
-			data: {
-				user: newUser,
-				vaccines: newVaccines,
-			},
-		});
+		if (req.body.userType === "hospital" || req.body.userType === "vaccinecenter") {
+			console.log("Files: ", req.file);
+			const a = JSON.parse(req.body.address[1]);
+			console.log("address: ", a);
+			const newRequest = {
+				...req.body,
+				address: a,
+				permit: "/permit/" + req.file.filename,
+			};
+			// console.log("New Request: ", newRequest);
+
+			console.log("Key: ", process.env.SENDGRID_KEY);
+			// Mail to user
+			var options = {
+				service: "SendGrid",
+				auth: {
+					user: "apikey",
+					pass: process.env.SENDGRID_KEY,
+				},
+			};
+			var transporter = nodemailer.createTransport(options);
+
+			var mailOptions = {
+				from: "sp18-bcs-164@student.comsats.edu.pk",
+				to: req.body.email,
+				subject: "CVS Signup request successfull.",
+				text:
+					"Thank you for choosing us. \n\n" +
+					"Your signup request has been successfully send to your area admin. \n" +
+					"Kindly wait for some time while you request is being reviewed. \n" +
+					"You will be notified when your signup request is accepted or rejected. \n\n" +
+					"Thanks for your patience!",
+			};
+
+			transporter.sendMail(mailOptions, function (error, info) {
+				if (error) {
+					console.log(error);
+				} else {
+					console.log("Email has been sent to: " + info.response);
+				}
+			});
+
+			await new userRequests(newRequest).save();
+			return res.json({
+				message: "Signup request sent successfully. Please wait for approval",
+				data: newRequest,
+			});
+		} else {
+			const newUser = await new userAccountModel(req.body).save();
+			const orgVacc = {
+				organization: newUser._id,
+				vaccines: {
+					opv: { quantity: 0 },
+					measles: { quantity: 0 },
+					bcg: { quantity: 0 },
+					pentavalent: { quantity: 0 },
+					pcv: { quantity: 0 },
+				},
+			};
+			const newVaccines = await new orgVaccines(orgVacc).save();
+			return res.json({
+				message: "New user added successfully.",
+				data: {
+					user: newUser,
+					vaccines: newVaccines,
+				},
+			});
+		}
 	} catch (err) {
 		winston.error(err);
 		res.redirect("/error");

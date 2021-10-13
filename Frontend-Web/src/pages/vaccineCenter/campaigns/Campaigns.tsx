@@ -44,6 +44,22 @@ const Campaigns = () => {
 			});
 	};
 
+	const notifyPublic = (id) => {
+		axios
+			.get(`vaccinecenter/campaigns/notify/${id}`)
+			.then((res: any) => {
+				console.log(res.data);
+				alert.show(res.data.message, {
+					type: "success",
+				});
+			})
+			.catch((err) =>
+				alert.show("Failed to notify public. Try again later", {
+					type: "error",
+				})
+			);
+	};
+
 	useEffect(() => {
 		getCampaigns();
 	}, []);
@@ -88,6 +104,7 @@ const Campaigns = () => {
 								<th>Start Date</th>
 								<th>End Date</th>
 								<th>Campaign Status</th>
+								<th>Notify Public</th>
 								{/* <th>Edit</th>
 								<th>Delete</th>
 								<th>Notify Public</th> */}
@@ -123,16 +140,12 @@ const Campaigns = () => {
 												style={deleteStyles}
 												size="20"
 											/>
-										</td>
-										<td>
-											<Link
-												to={{
-													pathname: `/vaccinecenter/camapigns`,
-												}}
-											>
-												notify
-											</Link>
 										</td> */}
+										<td>
+											<button className="default-btn" onClick={() => notifyPublic(campaign._id)}>
+												notify
+											</button>
+										</td>
 									</tr>
 								))}
 						</tbody>

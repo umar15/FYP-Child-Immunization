@@ -6,12 +6,12 @@ const mongoose = require("mongoose"),
 	SALT_WORK_FACTOR = 10,
 	schema = mongoose.Schema;
 
-let userAccount = new schema({
+let userRequests = new schema({
 	email: { type: String, default: "", required: true, unique: true },
 	name: { type: String, default: "", required: true },
 	cnic: { type: String, default: "" },
 	parentOrg: { type: schema.Types.ObjectId, ref: "userAccounts" },
-	phoneNo: { type: String, default: "" },
+	phoneNo: { type: String, default: "", unique: true },
 	userType: {
 		type: String,
 		default: "",
@@ -28,17 +28,17 @@ let userAccount = new schema({
 	},
 });
 
-userAccount.plugin(mongoose_timestamps);
-userAccount.index({ email: 1 }, { background: true, unique: true, name: "IDX_EMAIL" });
+userRequests.plugin(mongoose_timestamps);
+userRequests.index({ email: 1 }, { background: true, unique: true, name: "IDX_EMAIL" });
 
-userAccount.methods.comparePassword = function (candidatePassword, cb) {
+userRequests.methods.comparePassword = function (candidatePassword, cb) {
 	bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
 		if (err) return cb(err);
 		cb(null, isMatch);
 	});
 };
 
-userAccount.pre("save", async function (next) {
+userRequests.pre("save", async function (next) {
 	try {
 		var user = this;
 		// only hash the password if it has been modified (or is new)
@@ -59,4 +59,4 @@ userAccount.pre("save", async function (next) {
 	}
 });
 
-module.exports = mongoose.model("userAccounts", userAccount);
+module.exports = mongoose.model("userRequests", userRequests);

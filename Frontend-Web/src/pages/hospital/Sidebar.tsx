@@ -7,15 +7,15 @@ const Sidebar = (props) => {
 		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
 			<ul>
 				<li>
-					<Link className="link" to="/hospital">
+					<Link className="link" to="/hospital/children">
 						dashboard
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link className="link" to="/hospital/children">
 						Children
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link className="link" to="/hospital/vaccines">
 						Vaccine Stock

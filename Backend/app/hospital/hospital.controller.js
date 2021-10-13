@@ -43,10 +43,28 @@ let viewChild = async (req, res, next) => {
 let addChild = async (req, res, next) => {
 	try {
 		const newChild = await new children(req.body).save();
-		return res.json({
+		res.json({
 			message: "Child added sussessfully.",
 			data: {
 				child: newChild,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let reminders = async (req, res, next) => {
+	const data = await children.find({ _id: req.params.id });
+	// console.log("Data", data);
+	const mobileNumber = data[0].contactNo;
+	// console.log("Mobile Number: ", mobileNumber);
+	try {
+		res.json({
+			msg: "Message has been sent to parent's mobile number for vaccination reminder.",
+			data: {
+				mobileNumber,
 			},
 		});
 	} catch (err) {
@@ -126,18 +144,6 @@ let requestVaccines = (req, res, next) => {
 	try {
 		return res.json({
 			message: "request vaccines",
-			data: {},
-		});
-	} catch (err) {
-		winston.error(err);
-		res.redirect("/error");
-	}
-};
-
-let reminders = (req, res, next) => {
-	try {
-		return res.json({
-			message: "add sub admin",
 			data: {},
 		});
 	} catch (err) {

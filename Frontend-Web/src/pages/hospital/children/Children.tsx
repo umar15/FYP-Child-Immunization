@@ -20,6 +20,7 @@ const Children = () => {
 				console.log(res.data.data);
 				setChildren(res.data?.data);
 				setLoading(false);
+				Reminders();
 			})
 			.catch((err) =>
 				alert.show("Failed to Fetch children", {
@@ -28,21 +29,25 @@ const Children = () => {
 			);
 	};
 
-	// const handleDelete = (id) => {
-	// 	axios
-	// 		.delete(`/admin/subadmins/${id}`)
-	// 		.then((res) => {
-	// 			alert.show("Subadmin deleted successfully!", {
-	// 				type: "success",
-	// 			});
-	// 			setSubadmins(subadmins.filter((item: any) => item._id !== id));
-	// 		})
-	// 		.catch((err) => {
-	// 			alert.show("Failed to delete subadmin. Try again later", {
-	// 				type: "error",
-	// 			});
-	// 		});
-	// };
+	// 86400000 miliseconds in a day
+	const Reminders = () => {
+		let dob, bt, vd;
+		children?.map((child: any) => {
+			dob = new Date(child.dateOfBirth);
+			bt = new Date();
+			// let six_Week = dob.getTime() + (86400000 * 42);  // 6 weeks reminder
+			// let ten_Week = dob.getTime() + (86400000 * 70);  // 10 weeks reminder
+			// let forteen_Week = dob.getTime() + (86400000 * 98);  // 14 weeks reminder
+			// let nine_months = dob.getTime() + (86400000 * 270);  // 9 months reminder
+			// let fifteen_months = dob.getTime() + (86400000 * 450);  // 15 months reminder
+
+			vd = bt.getTime() + 20000; // 30s reminder
+
+			setInterval(async () => {
+				axios.get(`/hospital/reminders/${child._id}`).then((res: any) => console.log(res));
+			}, vd);
+		});
+	};
 
 	useEffect(() => {
 		getChildren();
@@ -95,6 +100,7 @@ const Children = () => {
 							{children &&
 								children.map((child: any, index) => (
 									<tr key={child._id}>
+										{/* {console.log(child.dateOfBirth.getTime())} */}
 										<th scope="row">{index + 1}</th>
 										<td>{child.childID}</td>
 										<td>{child.parentName}</td>

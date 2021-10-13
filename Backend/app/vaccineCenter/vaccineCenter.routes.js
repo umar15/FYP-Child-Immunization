@@ -87,7 +87,7 @@ module.exports = (app, version) => {
 		vaccineCenterController.futureCases
 	);
 	app.get(
-		version + "/vaccinecenter/notify",
+		version + "/vaccinecenter/campaigns/notify/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("vaccine center"),
 		vaccineCenterController.notifyPublic

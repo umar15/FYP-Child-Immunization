@@ -63,7 +63,7 @@ module.exports = (app, version) => {
 		hospitalController.requestVaccines
 	);
 	app.get(
-		version + "/hospital/reminders",
+		version + "/hospital/reminders/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.reminders

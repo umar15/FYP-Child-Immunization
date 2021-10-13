@@ -6,7 +6,9 @@ const winston = require("../../config/winston"),
 	orgVaccines = mongoose.model("organizationVaccines"),
 	users = mongoose.model("userAccounts"),
 	vaccineRequest = mongoose.model("vaccineRequest"),
-	subadminVaccineRequest = mongoose.model("subadminVaccineRequest");
+	userRequestsModel = mongoose.model("userRequests"),
+	subadminVaccineRequest = mongoose.model("subadminVaccineRequest"),
+	nodemailer = require("nodemailer");
 
 let subadmin = (req, res, next) => {
 	try {
@@ -328,6 +330,56 @@ let vaccineRequests = async (req, res, next) => {
 	}
 };
 
+let userRequests = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "User signup requests",
+			data: await userRequestsModel.find({}),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+let approveRequest = async (req, res, next) => {
+	try {
+		const newRequest = await userRequestsModel.findOne({ _id: req.params.id });
+		console.log("New Request data: ", newRequest);
+		users.insertMany(newRequest).then(async (r) => {
+			const orgVacc = {
+				organization: newRequest._id,
+				vaccines: {
+					opv: { quantity: 0 },
+					measles: { quantity: 0 },
+					bcg: { quantity: 0 },
+					pentavalent: { quantity: 0 },
+					pcv: { quantity: 0 },
+				},
+			};
+			const newVaccines = await new orgVaccines(orgVacc).save();
+			await userRequestsModel.findOneAndDelete({ _id: req.params.id });
+			return res.json({
+				message: "User request accepted successfully!",
+				data: { newRequest, newVaccines },
+			});
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+let rejectRequest = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "User signup requests",
+			data: await userRequestsModel.findOneAndDelete({ _id: req.params.id }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	subadmin,
 	viewChildren,
@@ -343,4 +395,7 @@ module.exports = {
 	assignVaccine,
 	requestVaccineStock,
 	vaccineRequests,
+	userRequests,
+	approveRequest,
+	rejectRequest,
 };

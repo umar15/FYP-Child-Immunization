@@ -10,6 +10,7 @@ const express = require("express"),
 	mongoStore = require("connect-mongo"),
 	expressListeners = require("./config/expressListeners"),
 	winston = require("./config/winston"),
+	dotenv = require("dotenv"),
 	app = express();
 
 winston.info(".env files are loading...");
@@ -54,7 +55,7 @@ logger.token("remote-user", (req, res) => {
 		return "Guest";
 	}
 });
-0
+0;
 logger.token("clientIP", (req, res) => {
 	var clientIP = (req.headers["x-forwarded-for"] || "").split(",")[0] || req.connection.remoteAddress;
 
@@ -128,8 +129,8 @@ require("./config/mongooseConnection")((err) => {
 		let userRoutes = "app/**/*.routes.js";
 		glob.sync(userRoutes).forEach((file) => {
 			require("./" + file)(app, "");
-			winston.info(file, " file is loade in system.");
 		});
+		winston.info("Routes are loaded in system.");
 
 		// Load error if it has message code
 		app.use(async (err, req, res, next) => {

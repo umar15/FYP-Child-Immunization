@@ -177,11 +177,29 @@ let futureCases = (req, res, next) => {
 	}
 };
 
-let notifyPublic = (req, res, next) => {
+let notifyPublic = async (req, res, next) => {
 	try {
+		// const accountSid = process.env.TWILIO_ACCOUNT_SID;
+		// const authToken = process.env.TWILIO_AUTH_TOKEN;
+		// const client = require("twilio")(accountSid, authToken);
+		const publicUsers = await children.find({});
+		const phoneNo = publicUsers.map((user) => user.contactNo);
+		// console.log(phoneNo);
+		// phoneNo.map((num) => {
+		// 	client.messages
+		// 		.create({
+		// 			body: "There will be a vaccination campaign in your area on 12 Oct, 2021. Be at home and help us vaccinate your child. Thanks",
+		// 			from: "+15017122661",
+		// 			to: num,
+		// 		})
+		// 		.then((message) => console.log(message.sid));
+		// });
+
 		return res.json({
-			message: "notify public",
-			data: {},
+			message: "Public has been notified about this campaign.",
+			data: {
+				phoneNo,
+			},
 		});
 	} catch (err) {
 		winston.error(err);
