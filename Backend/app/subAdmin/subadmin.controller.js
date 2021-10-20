@@ -142,59 +142,35 @@ let assignVaccine = async (req, res, next) => {
 		const orgVacc = {
 			organization: org,
 			vaccines: {
-				polio: {
+				opv: {
 					quantity:
-						req.body.vaccine === "polio"
-							? req.body.quantity + organizationVacc.vaccines.polio.quantity
-							: organizationVacc.vaccines.polio.quantity,
-				},
-				diphtheria: {
-					quantity:
-						req.body.vaccine === "diphteria"
-							? req.body.quantity + organizationVacc.vaccines.diphtheria.quantity
-							: organizationVacc.vaccines.diphtheria.quantity,
-				},
-				homophiles: {
-					quantity:
-						req.body.vaccine === "homophiles"
-							? req.body.quantity + organizationVacc.vaccines.homophiles.quantity
-							: organizationVacc.vaccines.homophiles.quantity,
-				},
-				rotaVirus: {
-					quantity:
-						req.body.vaccine === "rotaVirus"
-							? req.body.quantity + organizationVacc.vaccines.rotaVirus.quantity
-							: organizationVacc.vaccines.rotaVirus.quantity,
+						Vaccine.name === "opv"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.opv.quantity
+							: organizationVacc.vaccines.opv.quantity,
 				},
 				measles: {
 					quantity:
-						req.body.vaccine === "measles"
-							? req.body.quantity + organizationVacc.vaccines.measles.quantity
+						Vaccine.name === "measles"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.measles.quantity
 							: organizationVacc.vaccines.measles.quantity,
 				},
-				hepatitisA: {
+				bcg: {
 					quantity:
-						req.body.vaccine === "hepatitusA"
-							? req.body.quantity + organizationVacc.vaccines.hepatitisA.quantity
-							: organizationVacc.vaccines.hepatitisA.quantity,
+						Vaccine.name === "bcg"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.bcg.quantity
+							: organizationVacc.vaccines.bcg.quantity,
 				},
-				hepatitisB: {
+				pentavalent: {
 					quantity:
-						req.body.vaccine === "hepatitusB"
-							? req.body.quantity + organizationVacc.vaccines.hepatitisB.quantity
-							: organizationVacc.vaccines.hepatitisB.quantity,
+						Vaccine.name === "pentavalent"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.pentavalent.quantity
+							: organizationVacc.vaccines.pentavalent.quantity,
 				},
-				papillomaVirus: {
+				pcv: {
 					quantity:
-						req.body.vaccine === "papillomaVirus"
-							? req.body.quantity + organizationVacc.vaccines.papillomaVirus.quantity
-							: organizationVacc.vaccines.papillomaVirus.quantity,
-				},
-				influenza: {
-					quantity:
-						req.body.vaccine === "influenza"
-							? req.body.quantity + organizationVacc.vaccines.influenza.quantity
-							: organizationVacc.vaccines.influenza.quantity,
+						Vaccine.name === "pcv"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.pcv.quantity
+							: organizationVacc.vaccines.pcv.quantity,
 				},
 			},
 		};
@@ -202,29 +178,11 @@ let assignVaccine = async (req, res, next) => {
 		const remainingVaccines = {
 			organization: subadminVaccines.organization,
 			vaccines: {
-				polio: {
+				opv: {
 					quantity:
-						req.body.vaccine === "polio"
-							? subadminVaccines.vaccines.polio.quantity - req.body.quantity
-							: subadminVaccines.vaccines.polio.quantity,
-				},
-				diphtheria: {
-					quantity:
-						req.body.vaccine === "diphteria"
-							? subadminVaccines.vaccines.diphtheria.quantity - req.body.quantity
-							: subadminVaccines.vaccines.diphtheria.quantity,
-				},
-				homophiles: {
-					quantity:
-						req.body.vaccine === "homophiles"
-							? subadminVaccines.vaccines.homophiles.quantity - req.body.quantity
-							: subadminVaccines.vaccines.homophiles.quantity,
-				},
-				rotaVirus: {
-					quantity:
-						req.body.vaccine === "rotaVirus"
-							? subadminVaccines.vaccines.rotaVirus.quantity - req.body.quantity
-							: subadminVaccines.vaccines.rotaVirus.quantity,
+						req.body.vaccine === "opv"
+							? subadminVaccines.vaccines.opv.quantity - req.body.quantity
+							: subadminVaccines.vaccines.opv.quantity,
 				},
 				measles: {
 					quantity:
@@ -232,29 +190,23 @@ let assignVaccine = async (req, res, next) => {
 							? subadminVaccines.vaccines.measles.quantity - req.body.quantity
 							: subadminVaccines.vaccines.measles.quantity,
 				},
-				hepatitisA: {
+				bcg: {
 					quantity:
-						req.body.vaccine === "hepatitusA"
-							? subadminVaccines.vaccines.hepatitisA.quantity - req.body.quantity
-							: subadminVaccines.vaccines.hepatitisA.quantity,
+						req.body.vaccine === "bcg"
+							? subadminVaccines.vaccines.bcg.quantity - req.body.quantity
+							: subadminVaccines.vaccines.bcg.quantity,
 				},
-				hepatitisB: {
+				pentavalent: {
 					quantity:
-						req.body.vaccine === "hepatitusB"
-							? subadminVaccines.vaccines.hepatitisB.quantity - req.body.quantity
-							: subadminVaccines.vaccines.hepatitisB.quantity,
+						req.body.vaccine === "pentavalent"
+							? subadminVaccines.vaccines.pentavalent.quantity - req.body.quantity
+							: subadminVaccines.vaccines.pentavalent.quantity,
 				},
-				papillomaVirus: {
+				pcv: {
 					quantity:
-						req.body.vaccine === "papillomaVirus"
-							? subadminVaccines.vaccines.papillomaVirus.quantity - req.body.quantity
-							: organizationVacc.vaccines.papillomaVirus.quantity,
-				},
-				influenza: {
-					quantity:
-						req.body.vaccine === "influenza"
-							? subadminVaccines.vaccines.influenza.quantity - req.body.quantity
-							: subadminVaccines.vaccines.influenza.quantity,
+						req.body.vaccine === "pcv"
+							? subadminVaccines.vaccines.pcv.quantity - req.body.quantity
+							: subadminVaccines.vaccines.pcv.quantity,
 				},
 			},
 		};

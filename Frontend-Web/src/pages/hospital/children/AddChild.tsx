@@ -38,15 +38,11 @@ const AddChild = () => {
 		hospitalName: "",
 		vaccination: [
 			{
-				polio: { noOfDoses: 0 },
-				diphtheria: { noOfDoses: 0 },
-				homophiles: { noOfDoses: 0 },
-				rotaVirus: { noOfDoses: 0 },
+				opv: { noOfDoses: 0 }, // polio
 				measles: { noOfDoses: 0 },
-				hepatitisA: { noOfDoses: 0 },
-				hepatitisB: { noOfDoses: 0 },
-				papillomaVirus: { noOfDoses: 0 },
-				influenza: { noOfDoses: 0 },
+				bcg: { noOfDoses: 0 }, // children TB
+				pentavalent: { noOfDoses: 0 },
+				pcv: { noOfDoses: 0 },
 			},
 		],
 	});

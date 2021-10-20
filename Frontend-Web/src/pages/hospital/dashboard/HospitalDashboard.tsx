@@ -5,6 +5,7 @@ import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 // import "../../index.css";
 import Sidebar from "../Sidebar";
+import Dashboard from "./Dashboard";
 import Statistics from "./Statistics";
 
 const HospitalDashboard = () => {
@@ -17,7 +18,7 @@ const HospitalDashboard = () => {
 						<Sidebar />
 					</Col>
 					<Col lg="9">
-						<Statistics />
+						<Dashboard />
 					</Col>
 				</Row>
 			</Container>

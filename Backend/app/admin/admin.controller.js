@@ -7,7 +7,8 @@ const winston = require("../../config/winston"),
 	users = mongoose.model("userAccounts"),
 	assignVaccineTo = mongoose.model("assignVaccineTo"),
 	orgVaccines = mongoose.model("organizationVaccines"),
-	vaccineRequest = mongoose.model("vaccineRequest");
+	vaccineRequest = mongoose.model("vaccineRequest"),
+	nodemailer = require("nodemailer");
 
 let admin = (req, res, next) => {
 	try {
@@ -139,18 +140,51 @@ let addSubAdmin = async (req, res, next) => {
 		const orgVacc = {
 			organization: newUser._id,
 			vaccines: {
-				polio: { quantity: 0 },
-				diphtheria: { quantity: 0 },
-				homophiles: { quantity: 0 },
-				rotaVirus: { quantity: 0 },
+				opv: { quantity: 0 }, // polio
 				measles: { quantity: 0 },
-				hepatitisA: { quantity: 0 },
-				hepatitisB: { quantity: 0 },
-				papillomaVirus: { quantity: 0 },
-				influenza: { quantity: 0 },
+				bcg: { quantity: 0 }, // children TB
+				pentavalent: { quantity: 0 },
+				pcv: { quantity: 0 },
 			},
 		};
 		const newVaccines = await new orgVaccines(orgVacc).save();
+
+		// Mail to user
+		var options = {
+			service: "SendGrid",
+			auth: {
+				user: "apikey",
+				pass: process.env.SENDGRID_KEY,
+			},
+		};
+		var transporter = nodemailer.createTransport(options);
+
+		var mailOptions = {
+			from: "sp18-bcs-164@student.comsats.edu.pk",
+			to: req.body.email,
+			subject: "CVS Signup successfull.",
+			text:
+				"Congratulations! \n\n" +
+				"Your have been added as a subadmin in Child Vaccination System. \n" +
+				"Below are the login credentials of your account. Do not give these credentials to someone else. \n" +
+				"EMAIL: " +
+				req.body.email +
+				"\n" +
+				"PASSWORD: " +
+				req.body.password +
+				"\n" +
+				"Login to your account by entering the above credentials/. \n\n" +
+				"Thanks!",
+		};
+
+		transporter.sendMail(mailOptions, function (error, info) {
+			if (error) {
+				console.log(error);
+			} else {
+				console.log("Email has been sent to: " + info.response);
+			}
+		});
+
 		return res.json({
 			message: "Subadmin added successfully.",
 			data: {
@@ -202,7 +236,7 @@ let assignVaccine = async (req, res, next) => {
 			throw "No organization found with that name.";
 		}
 
-		const Vaccine = await vaccine.findOne({ _id: req.body.vaccine });
+		const Vaccine = await vaccine.findOne({ name: req.body.vaccine });
 		if (!Vaccine) {
 			throw "No vaccine available with this name.";
 		}
@@ -216,29 +250,11 @@ let assignVaccine = async (req, res, next) => {
 		const orgVacc = {
 			organization: org,
 			vaccines: {
-				polio: {
+				opv: {
 					quantity:
-						Vaccine.name === "polio"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.polio.quantity
-							: organizationVacc.vaccines.polio.quantity,
-				},
-				diphtheria: {
-					quantity:
-						Vaccine.name === "diphteria"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.diphtheria.quantity
-							: organizationVacc.vaccines.diphtheria.quantity,
-				},
-				homophiles: {
-					quantity:
-						Vaccine.name === "homophiles"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.homophiles.quantity
-							: organizationVacc.vaccines.homophiles.quantity,
-				},
-				rotaVirus: {
-					quantity:
-						Vaccine.name === "rotaVirus"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.rotaVirus.quantity
-							: organizationVacc.vaccines.rotaVirus.quantity,
+						Vaccine.name === "opv"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.opv.quantity
+							: organizationVacc.vaccines.opv.quantity,
 				},
 				measles: {
 					quantity:
@@ -246,29 +262,23 @@ let assignVaccine = async (req, res, next) => {
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.measles.quantity
 							: organizationVacc.vaccines.measles.quantity,
 				},
-				hepatitisA: {
+				bcg: {
 					quantity:
-						Vaccine.name === "hepatitusA"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisA.quantity
-							: organizationVacc.vaccines.hepatitisA.quantity,
+						Vaccine.name === "bcg"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.bcg.quantity
+							: organizationVacc.vaccines.bcg.quantity,
 				},
-				hepatitisB: {
+				pentavalent: {
 					quantity:
-						Vaccine.name === "hepatitusB"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.hepatitisB.quantity
-							: organizationVacc.vaccines.hepatitisB.quantity,
+						Vaccine.name === "pentavalent"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.pentavalent.quantity
+							: organizationVacc.vaccines.pentavalent.quantity,
 				},
-				papillomaVirus: {
+				pcv: {
 					quantity:
-						Vaccine.name === "papillomaVirus"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.papillomaVirus.quantity
-							: organizationVacc.vaccines.papillomaVirus.quantity,
-				},
-				influenza: {
-					quantity:
-						Vaccine.name === "influenza"
-							? parseInt(req.body.quantity) + organizationVacc.vaccines.influenza.quantity
-							: organizationVacc.vaccines.influenza.quantity,
+						Vaccine.name === "pcv"
+							? parseInt(req.body.quantity) + organizationVacc.vaccines.pcv.quantity
+							: organizationVacc.vaccines.pcv.quantity,
 				},
 			},
 		};
@@ -284,7 +294,7 @@ let assignVaccine = async (req, res, next) => {
 
 			const remainingVaccine = Vaccine.quantity - req.body.quantity;
 			await vaccine.findOneAndUpdate(
-				{ _id: req.body.vaccine },
+				{ name: req.body.vaccine },
 				{ $set: { quantity: remainingVaccine } },
 				{ new: true }
 			);

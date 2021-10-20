@@ -86,4 +86,16 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.requestVaccineStock
 	);
+	app.get(
+		version + "/hospital/vaccinatednonvaccinated",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.vaccinatedNonVaccinated
+	);
+	app.get(
+		version + "/hospital/childbornstats",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.childBornStats
+	);
 };

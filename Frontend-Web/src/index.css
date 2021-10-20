@@ -964,30 +964,30 @@ card styles
 ========================================= */
 
 .card {
-   height: 120px;
-   width: 200px;
-   margin: 20px 10px;
-   color: white;
+   height: 100px;
+   width: 165px;
+   margin: 0px -10px 10px -15px;
+   /* color: white; */
 }
 
 .card-sub {
    color: var(--secondary) !important;
 }
 
-.child-born {
-   background-color: #2417aa !important;
+.blue {
+   background-color: #c6c5fd !important;
 }
 
-.vaccinated {
-   background-color: var(--green) !important;
+.green {
+   background-color: #cbffd3 !important;
 }
 
-.not-vaccinated {
-   background-color: #e24d4d !important;
+.red {
+   background-color: #fdd1d1 !important;
 }
 
-.vaccines {
-   background-color: #2d8ade !important;
+.yellow {
+   background-color: #fbffd3 !important;
 }
 
 toast-admin {

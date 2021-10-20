@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
 const schema = mongoose.Schema;
 
 const assignVaccineToSchema = new schema({
-	vaccine: { type: schema.Types.ObjectId, required: true, ref: "Vaccine" },
+	vaccine: { type: String, required: true },
 	date: { type: Date, default: Date.now(), require: true },
 	quantity: { type: Number, default: "" },
 	organization: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },

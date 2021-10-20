@@ -85,6 +85,16 @@ let deleteUser = async (req, res, next) => {
 
 let createUser = async (req, res, next) => {
 	try {
+		// Mail to user
+		var options = {
+			service: "SendGrid",
+			auth: {
+				user: "apikey",
+				pass: process.env.SENDGRID_KEY,
+			},
+		};
+		var transporter = nodemailer.createTransport(options);
+
 		if (req.body.userType === "hospital" || req.body.userType === "vaccinecenter") {
 			console.log("Files: ", req.file);
 			const a = JSON.parse(req.body.address[1]);
@@ -97,15 +107,6 @@ let createUser = async (req, res, next) => {
 			// console.log("New Request: ", newRequest);
 
 			console.log("Key: ", process.env.SENDGRID_KEY);
-			// Mail to user
-			var options = {
-				service: "SendGrid",
-				auth: {
-					user: "apikey",
-					pass: process.env.SENDGRID_KEY,
-				},
-			};
-			var transporter = nodemailer.createTransport(options);
 
 			var mailOptions = {
 				from: "sp18-bcs-164@student.comsats.edu.pk",
@@ -145,6 +146,24 @@ let createUser = async (req, res, next) => {
 				},
 			};
 			const newVaccines = await new orgVaccines(orgVacc).save();
+			var mailOptions = {
+				from: "sp18-bcs-164@student.comsats.edu.pk",
+				to: req.body.email,
+				subject: "CVS Signup successfull.",
+				text:
+					"Thank you for choosing us. \n\n" +
+					"Your account has been created successfully. \n" +
+					"Kindly login with your credentials. \n" +
+					"Thanks for your patience!",
+			};
+
+			transporter.sendMail(mailOptions, function (error, info) {
+				if (error) {
+					console.log(error);
+				} else {
+					console.log("Email has been sent to: " + info.response);
+				}
+			});
 			return res.json({
 				message: "New user added successfully.",
 				data: {

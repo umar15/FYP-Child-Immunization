@@ -130,6 +130,7 @@ function App() {
 				<PrivateRoute path="/subadmin/vaccinerequests" exact component={SAVaccineRequestsPage} />
 
 				{/* Hospital */}
+				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />
 				<PrivateRoute path="/hospital" exact component={HospitalChildrenPage} />
 				<PrivateRoute path="/hospital/children" exact component={HospitalChildrenPage} />
 				<PrivateRoute path="/hospital/children/:id" exact component={HospitalChildDataPage} />

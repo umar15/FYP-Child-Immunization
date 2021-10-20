@@ -197,6 +197,81 @@ let requestVaccineStock = async (req, res, next) => {
 	}
 };
 
+let vaccinatedNonVaccinated = async (req, res, next) => {
+	const childrenData = await children.find({ hospitalName: req.user._id });
+	let vaccinated = 0;
+	let nonVaccinated = 0;
+	childrenData.map((item) => {
+		console.log("VAccine", item.vaccination);
+		if (
+			item.vaccination[0].opv.noOfDoses === 4 &&
+			item.vaccination[0].measles.noOfDoses === 2 &&
+			item.vaccination[0].bcg.noOfDoses === 1 &&
+			item.vaccination[0].pentavalent.noOfDoses === 3 &&
+			item.vaccination[0].pcv.noOfDoses === 3
+		) {
+			vaccinated += 1;
+		} else {
+			nonVaccinated += 1;
+		}
+	});
+	try {
+		return res.json({
+			message: "Vaccinated non vaccinated stats",
+			data: {
+				vaccinated,
+				nonVaccinated,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let childBornStats = async (req, res, next) => {
+	const childrenData = await children.find({ hospitalName: req.user._id });
+	let bornToday = 0;
+	let bornSevenDays = 0;
+	let bornOneMonth = 0;
+	let today = new Date();
+	let sevenDaysInMs = 86400000 * 7;
+	let thirtyDaysInMs = 86400000 * 30;
+	childrenData.map((item) => {
+		let d = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+		let dob = new Date(item.dateOfBirth);
+		let b = dob.getFullYear() + "-" + (dob.getMonth() + 1) + "-" + dob.getDate();
+		console.log("diff: ", today - dob);
+		if (b === d) {
+			bornToday += 1;
+		}
+		dob.setHours(0, 0, 0, 0);
+		today.setHours(0, 0, 0, 0);
+		if (today - dob < sevenDaysInMs) {
+			bornSevenDays += 1;
+		}
+		if (today - dob < thirtyDaysInMs) {
+			bornOneMonth += 1;
+		}
+	});
+
+	console.log("Satts", bornToday);
+
+	try {
+		return res.json({
+			message: "Child daily stats",
+			data: {
+				bornToday,
+				bornSevenDays,
+				bornOneMonth,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	hospital,
 	viewChildren,
@@ -212,4 +287,6 @@ module.exports = {
 	vaccineRequirement,
 	certificates,
 	requestVaccineStock,
+	vaccinatedNonVaccinated,
+	childBornStats,
 };

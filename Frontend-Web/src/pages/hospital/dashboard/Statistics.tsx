@@ -5,7 +5,7 @@ import Graph from "./Graph";
 
 const Statistics = () => {
 	return (
-		<Container>
+		<Container style={dashboardStyles}>
 			<Row>
 				<Col lg="3">
 					<Card className="card child-born">
@@ -55,6 +55,11 @@ const Statistics = () => {
 			</Row>
 		</Container>
 	);
+};
+
+const dashboardStyles = {
+	width: "1000px",
+	marginLeft: "-60px",
 };
 
 export default Statistics;

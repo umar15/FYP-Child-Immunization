@@ -21,7 +21,8 @@ module.exports = function (callback) {
 							return envCb("Error occured while loading the configuration file.");
 						} else {
 							winston.info("Loaded config file: " + env);
-							winston.info("Try to connect mongodb: " + global.config.mongodb.host);
+							// winston.info("Try to connect mongodb." + global.config.mongodb.host);
+							winston.info("Try to connect mongodb.");
 
 							if (!mongoose.connection.readyState) {
 								mongoose.connect(global.config.mongodb.host, {
@@ -32,7 +33,8 @@ module.exports = function (callback) {
 
 								// on connection
 								mongoose.connection.on("connected", function () {
-									winston.info("mongoose connection open to " + global.config.mongodb.host);
+									// winston.info("mongoose connection open." + global.config.mongodb.host);
+									winston.info("mongoose connection open.");
 									// Enabling mongoose debug mode if required
 									mongoose.set("debug", global.config.mongodb.enableMongoDebugging);
 									return envCb();

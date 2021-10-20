@@ -58,7 +58,7 @@ const ChildData = () => {
 							</tr>
 							<tr>
 								<th>Date of Birth</th>
-								<td>{child.data.dateOfBirth}</td>
+								<td>{new Date(child.data.dateOfBirth).toDateString()}</td>
 							</tr>
 							<tr>
 								<th>Gender</th>
@@ -99,40 +99,24 @@ const ChildData = () => {
 								<th>Number of doses</th>
 							</tr>
 							<tr>
-								<th>Diphteria</th>
-								<td>{child.data.vaccination[0].diphtheria.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Polio</th>
-								<td>{child.data.vaccination[0].polio.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Homophiles</th>
-								<td>{child.data.vaccination[0].homophiles.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Rota Virus</th>
-								<td>{child.data.vaccination[0].rotaVirus.noOfDoses}</td>
+								<th>OPV</th>
+								<td>{child.data.vaccination[0].opv.noOfDoses}</td>
 							</tr>
 							<tr>
 								<th>Measles</th>
 								<td>{child.data.vaccination[0].measles.noOfDoses}</td>
 							</tr>
 							<tr>
-								<th>Hepatitus A</th>
-								<td>{child.data.vaccination[0].hepatitisA.noOfDoses}</td>
+								<th>BCG</th>
+								<td>{child.data.vaccination[0].bcg.noOfDoses}</td>
 							</tr>
 							<tr>
-								<th>Hepatitus B</th>
-								<td>{child.data.vaccination[0].hepatitisB.noOfDoses}</td>
+								<th>Pentavalent</th>
+								<td>{child.data.vaccination[0].pentavalent.noOfDoses}</td>
 							</tr>
 							<tr>
-								<th>Papilloma Virus</th>
-								<td>{child.data.vaccination[0].papillomaVirus.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Influenza</th>
-								<td>{child.data.vaccination[0].influenza.noOfDoses}</td>
+								<th>PCV</th>
+								<td>{child.data.vaccination[0].pcv.noOfDoses}</td>
 							</tr>
 						</thead>
 					</Table>
