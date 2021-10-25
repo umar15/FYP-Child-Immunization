@@ -12038,3 +12038,456 @@ ValidationError: Children validation failed: gender: Path `gender` is required.
 [2021-10-20 23:27:56] [32minfo[39m:  [object Object] 
 [2021-10-20 23:27:56] [32minfo[39m:  Loaded config file: development 
 [2021-10-20 23:27:56] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:28:52] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:28:52] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:28:52] [32minfo[39m:  [object Object] 
+[2021-10-23 11:28:52] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:28:52] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:28:55] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:28:55] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:28:56] [32minfo[39m:  Models loaded 
+[2021-10-23 11:28:56] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 11:28:59] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 11:28:59] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 11:30:21] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:30:21] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:30:21] [32minfo[39m:  [object Object] 
+[2021-10-23 11:30:21] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:30:21] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:30:25] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:30:25] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:30:25] [32minfo[39m:  Models loaded 
+[2021-10-23 11:30:25] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 11:30:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 11:30:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 11:31:57] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:31:57] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:31:57] [32minfo[39m:  [object Object] 
+[2021-10-23 11:31:57] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:31:57] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:32:00] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:32:00] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:32:00] [32minfo[39m:  Models loaded 
+[2021-10-23 11:32:00] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 11:32:01] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 11:32:01] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 11:40:45] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:40:45] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:40:46] [32minfo[39m:  [object Object] 
+[2021-10-23 11:40:46] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:40:46] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:40:55] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:40:55] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:40:55] [32minfo[39m:  Models loaded 
+[2021-10-23 11:40:55] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 11:40:56] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 11:40:56] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 11:46:56] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:46:56] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:46:57] [32minfo[39m:  [object Object] 
+[2021-10-23 11:46:57] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:46:57] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:47:00] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:47:00] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:47:00] [32minfo[39m:  Models loaded 
+[2021-10-23 11:47:00] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 11:47:01] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 11:47:01] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 11:47:53] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:47:53] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:47:53] [32minfo[39m:  [object Object] 
+[2021-10-23 11:47:53] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:47:53] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:47:57] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:47:57] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:48:35] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:48:35] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:48:36] [32minfo[39m:  [object Object] 
+[2021-10-23 11:48:36] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:48:36] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:48:39] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:48:39] [32minfo[39m:  models are loading ... 
+[2021-10-23 11:50:29] [32minfo[39m:  .env files are loading... 
+[2021-10-23 11:50:29] [32minfo[39m:  .env is loaded 
+[2021-10-23 11:50:30] [32minfo[39m:  [object Object] 
+[2021-10-23 11:50:30] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 11:50:30] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 11:50:33] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 11:50:33] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:04:15] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:04:15] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:04:16] [32minfo[39m:  [object Object] 
+[2021-10-23 12:04:16] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:04:16] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:04:22] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:04:22] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:04:40] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:04:40] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:04:41] [32minfo[39m:  [object Object] 
+[2021-10-23 12:04:41] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:04:41] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:04:44] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:04:44] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:04:44] [32minfo[39m:  Models loaded 
+[2021-10-23 12:04:44] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:04:45] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:04:45] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:04:50] [31merror[39m:  Children is not defined 
+ReferenceError: Children is not defined
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:81:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-10-23 12:05:22] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:05:22] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:05:22] [32minfo[39m:  [object Object] 
+[2021-10-23 12:05:22] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:05:22] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:05:26] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:05:26] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:05:26] [32minfo[39m:  Models loaded 
+[2021-10-23 12:05:26] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:05:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:05:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:06:11] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:06:11] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:06:12] [32minfo[39m:  [object Object] 
+[2021-10-23 12:06:12] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:06:12] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:06:15] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:06:15] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:06:15] [32minfo[39m:  Models loaded 
+[2021-10-23 12:06:15] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:06:16] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:06:16] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:06:59] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:06:59] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:06:59] [32minfo[39m:  [object Object] 
+[2021-10-23 12:06:59] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:06:59] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:07:03] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:07:03] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:07:03] [32minfo[39m:  Models loaded 
+[2021-10-23 12:07:03] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:07:03] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:07:03] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:07:24] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:07:24] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:07:24] [32minfo[39m:  [object Object] 
+[2021-10-23 12:07:24] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:07:24] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:07:28] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:07:28] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:07:28] [32minfo[39m:  Models loaded 
+[2021-10-23 12:07:29] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:07:29] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:07:29] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:09:33] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:09:33] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:09:33] [32minfo[39m:  [object Object] 
+[2021-10-23 12:09:33] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:09:33] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:09:36] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:09:36] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:09:36] [32minfo[39m:  Models loaded 
+[2021-10-23 12:09:36] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:09:37] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:09:37] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:10:29] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:10:29] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:10:30] [32minfo[39m:  [object Object] 
+[2021-10-23 12:10:30] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:10:30] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:10:33] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:10:33] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:10:33] [32minfo[39m:  Models loaded 
+[2021-10-23 12:10:33] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:10:33] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:10:33] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:14:28] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:14:28] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:14:28] [32minfo[39m:  [object Object] 
+[2021-10-23 12:14:28] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:14:28] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:14:32] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:14:32] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:14:32] [32minfo[39m:  Models loaded 
+[2021-10-23 12:14:32] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:14:32] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:14:32] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:18:38] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:18:38] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:18:39] [32minfo[39m:  [object Object] 
+[2021-10-23 12:18:39] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:18:39] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:18:42] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:18:42] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:18:42] [32minfo[39m:  Models loaded 
+[2021-10-23 12:18:42] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:18:42] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:18:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:23:25] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:23:25] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:23:25] [32minfo[39m:  [object Object] 
+[2021-10-23 12:23:25] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:23:25] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:23:29] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:23:29] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:23:29] [32minfo[39m:  Models loaded 
+[2021-10-23 12:23:29] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:23:29] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:23:29] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:24:23] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:24:23] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:24:23] [32minfo[39m:  [object Object] 
+[2021-10-23 12:24:23] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:24:23] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:24:26] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:24:26] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:24:26] [32minfo[39m:  Models loaded 
+[2021-10-23 12:24:26] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:24:27] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:24:27] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:24:34] [31merror[39m:  Cannot read property 'noOfDoses' of undefined 
+TypeError: Cannot read property 'noOfDoses' of undefined
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:96:46
+    at Array.map (<anonymous>)
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:95:37)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-23 12:24:59] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:24:59] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:24:59] [32minfo[39m:  [object Object] 
+[2021-10-23 12:24:59] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:24:59] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:25:02] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:25:02] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:25:02] [32minfo[39m:  Models loaded 
+[2021-10-23 12:25:02] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:25:03] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:25:03] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:26:44] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:26:44] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:26:44] [32minfo[39m:  [object Object] 
+[2021-10-23 12:26:44] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:26:44] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:26:48] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:26:48] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:26:48] [32minfo[39m:  Models loaded 
+[2021-10-23 12:26:48] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:26:48] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:26:48] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:27:22] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:27:22] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:27:23] [32minfo[39m:  [object Object] 
+[2021-10-23 12:27:23] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:27:23] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:27:26] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:27:26] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:27:26] [32minfo[39m:  Models loaded 
+[2021-10-23 12:27:26] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:27:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:27:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:27:55] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:27:55] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:27:56] [32minfo[39m:  [object Object] 
+[2021-10-23 12:27:56] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:27:56] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:28:00] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:28:00] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:28:00] [32minfo[39m:  Models loaded 
+[2021-10-23 12:28:00] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:28:01] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:28:01] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:29:04] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:29:04] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:29:05] [32minfo[39m:  [object Object] 
+[2021-10-23 12:29:05] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:29:05] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:29:10] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:29:10] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:29:10] [32minfo[39m:  Models loaded 
+[2021-10-23 12:29:10] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:29:11] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:29:11] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:29:25] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:29:25] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:29:25] [32minfo[39m:  [object Object] 
+[2021-10-23 12:29:25] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:29:25] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:29:28] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:29:28] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:29:28] [32minfo[39m:  Models loaded 
+[2021-10-23 12:29:29] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:29:29] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:29:29] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:29:58] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:29:58] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:29:59] [32minfo[39m:  [object Object] 
+[2021-10-23 12:29:59] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:29:59] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:30:05] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:30:05] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:30:05] [32minfo[39m:  Models loaded 
+[2021-10-23 12:30:05] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:30:05] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:30:05] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:30:47] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:30:47] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:30:47] [32minfo[39m:  [object Object] 
+[2021-10-23 12:30:47] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:30:47] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:30:53] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:30:53] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:30:53] [32minfo[39m:  Models loaded 
+[2021-10-23 12:30:53] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:30:53] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:30:53] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:31:13] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:31:13] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:31:13] [32minfo[39m:  [object Object] 
+[2021-10-23 12:31:13] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:31:13] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:31:16] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:31:16] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:31:16] [32minfo[39m:  Models loaded 
+[2021-10-23 12:31:17] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:31:17] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:31:17] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:32:11] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:32:12] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:32:12] [32minfo[39m:  [object Object] 
+[2021-10-23 12:32:12] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:32:12] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:32:21] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:32:21] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:32:22] [32minfo[39m:  Models loaded 
+[2021-10-23 12:32:22] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:32:22] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:32:22] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:32:39] [31merror[39m:  Cannot read property 'noOfDoses' of undefined 
+TypeError: Cannot read property 'noOfDoses' of undefined
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:101:25
+    at Array.map (<anonymous>)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:100:22
+    at CoreDocumentArray.map (<anonymous>)
+    at CoreDocumentArray.map (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\types\documentarray.js:42:27)
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:98:21)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-23 12:33:08] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:33:08] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:33:08] [32minfo[39m:  [object Object] 
+[2021-10-23 12:33:08] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:33:08] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:33:11] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:33:11] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:33:12] [32minfo[39m:  Models loaded 
+[2021-10-23 12:33:12] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:33:12] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:33:12] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:53:01] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:53:01] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:53:01] [32minfo[39m:  [object Object] 
+[2021-10-23 12:53:01] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:53:01] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:53:04] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:53:05] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:53:05] [32minfo[39m:  Models loaded 
+[2021-10-23 12:53:05] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:53:05] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:53:05] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:55:35] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:55:35] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:55:36] [32minfo[39m:  [object Object] 
+[2021-10-23 12:55:36] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:55:36] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:55:40] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:55:40] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:55:40] [32minfo[39m:  Models loaded 
+[2021-10-23 12:55:40] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:55:41] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:55:41] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:56:45] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:56:45] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:56:46] [32minfo[39m:  [object Object] 
+[2021-10-23 12:56:46] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:56:46] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:56:49] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:56:49] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:56:49] [32minfo[39m:  Models loaded 
+[2021-10-23 12:56:49] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:56:49] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:56:49] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 12:56:58] [32minfo[39m:  .env files are loading... 
+[2021-10-23 12:56:58] [32minfo[39m:  .env is loaded 
+[2021-10-23 12:56:59] [32minfo[39m:  [object Object] 
+[2021-10-23 12:56:59] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 12:56:59] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 12:57:02] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 12:57:02] [32minfo[39m:  models are loading ... 
+[2021-10-23 12:57:02] [32minfo[39m:  Models loaded 
+[2021-10-23 12:57:02] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 12:57:02] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 12:57:02] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 14:20:12] [31merror[39m:  mongoose connection disconnected 
+[2021-10-23 14:20:23] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 14:21:11] [32minfo[39m:  .env files are loading... 
+[2021-10-23 14:21:11] [32minfo[39m:  .env is loaded 
+[2021-10-23 14:21:12] [32minfo[39m:  [object Object] 
+[2021-10-23 14:21:12] [32minfo[39m:  Loaded config file: development 
+[2021-10-23 14:21:12] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-23 14:21:16] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 14:21:16] [32minfo[39m:  models are loading ... 
+[2021-10-23 14:21:16] [32minfo[39m:  Models loaded 
+[2021-10-23 14:21:16] [32minfo[39m:  error messages are loading ... 
+[2021-10-23 14:21:16] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-23 14:21:16] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-23 18:55:01] [31merror[39m:  mongoose connection disconnected 
+[2021-10-23 18:55:23] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 20:09:56] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 21:25:43] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 22:25:41] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 23:42:49] [32minfo[39m:  mongoose connection open. 
+[2021-10-23 23:47:38] [32minfo[39m:  mongoose connection open. 
+[2021-10-24 04:52:42] [32minfo[39m:  mongoose connection open. 
+[2021-10-24 04:53:06] [32minfo[39m:  mongoose connection open. 
+[2021-10-24 12:00:36] [32minfo[39m:  mongoose connection open. 
+[2021-10-25 11:26:24] [32minfo[39m:  .env files are loading... 
+[2021-10-25 11:26:24] [32minfo[39m:  .env is loaded 
+[2021-10-25 11:26:30] [32minfo[39m:  [object Object] 
+[2021-10-25 11:26:30] [32minfo[39m:  Loaded config file: development 
+[2021-10-25 11:26:30] [32minfo[39m:  Try to connect mongodb. 
+[2021-10-25 11:26:33] [32minfo[39m:  mongoose connection open. 
+[2021-10-25 11:26:33] [32minfo[39m:  models are loading ... 
+[2021-10-25 11:26:34] [32minfo[39m:  Models loaded 
+[2021-10-25 11:26:34] [32minfo[39m:  error messages are loading ... 
+[2021-10-25 11:26:43] [32minfo[39m:  Routes are loaded in system. 
+[2021-10-25 11:26:43] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-10-25 12:58:14] [31merror[39m:  Performing an update on the path '_id' would modify the immutable field '_id' 
+MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2021-10-25 14:45:07] [31merror[39m:  mongoose connection disconnected 
+[2021-10-25 14:45:19] [32minfo[39m:  mongoose connection open. 
+[2021-10-25 16:13:46] [32minfo[39m:  mongoose connection open. 

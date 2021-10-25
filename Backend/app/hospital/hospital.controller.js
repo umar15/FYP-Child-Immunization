@@ -2,7 +2,9 @@ const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
 	children = mongoose.model("Children"),
 	hospitalVaccines = mongoose.model("organizationVaccines"),
-	stockRequest = mongoose.model("subadminVaccineRequest");
+	stockRequest = mongoose.model("subadminVaccineRequest"),
+	dailyConsumption = mongoose.model("dailyConsumption"),
+	childFollowUp = mongoose.model("childFollowUp");
 
 let hospital = (req, res, next) => {
 	try {
@@ -75,7 +77,50 @@ let reminders = async (req, res, next) => {
 
 let updateChild = async (req, res, next) => {
 	try {
+		const child = await children.findOne({ _id: req.params.id });
 		const newChild = await children.findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true });
+
+		if (child.vaccination[0].opv.noOfDoses !== newChild.vaccination[0].opv.noOfDoses) {
+			await new dailyConsumption({
+				vaccineName: "opv",
+				child: req.params.id,
+				date: new Date(),
+				organization: req.user._id,
+			}).save();
+		}
+		if (child.vaccination[0].measles.noOfDoses !== newChild.vaccination[0].measles.noOfDoses) {
+			await new dailyConsumption({
+				vaccineName: "measles",
+				child: req.params.id,
+				date: new Date(),
+				organization: req.user._id,
+			}).save();
+		}
+		if (child.vaccination[0].bcg.noOfDoses !== newChild.vaccination[0].bcg.noOfDoses) {
+			await new dailyConsumption({
+				vaccineName: "bcg",
+				child: req.params.id,
+				date: new Date(),
+				organization: req.user._id,
+			}).save();
+		}
+		if (child.vaccination[0].pentavalent.noOfDoses !== newChild.vaccination[0].pentavalent.noOfDoses) {
+			await new dailyConsumption({
+				vaccineName: "pentavalent",
+				child: req.params.id,
+				date: new Date(),
+				organization: req.user._id,
+			}).save();
+		}
+		if (child.vaccination[0].pcv.noOfDoses !== newChild.vaccination[0].pcv.noOfDoses) {
+			await new dailyConsumption({
+				vaccineName: "pcv",
+				child: req.params.id,
+				date: new Date(),
+				organization: req.user._id,
+			}).save();
+		}
+
 		return res.json({
 			message: "Child updated successfully.",
 			data: {
@@ -93,6 +138,17 @@ let viewVaccines = async (req, res, next) => {
 		return res.json({
 			message: "Vaccines data",
 			data: await hospitalVaccines.find({ organization: req.user._id }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+let checkDailyConsumption = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Daily consumption",
+			data: await dailyConsumption.find({ organization: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -241,7 +297,6 @@ let childBornStats = async (req, res, next) => {
 		let d = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 		let dob = new Date(item.dateOfBirth);
 		let b = dob.getFullYear() + "-" + (dob.getMonth() + 1) + "-" + dob.getDate();
-		console.log("diff: ", today - dob);
 		if (b === d) {
 			bornToday += 1;
 		}
@@ -254,9 +309,6 @@ let childBornStats = async (req, res, next) => {
 			bornOneMonth += 1;
 		}
 	});
-
-	console.log("Satts", bornToday);
-
 	try {
 		return res.json({
 			message: "Child daily stats",
@@ -289,4 +341,5 @@ module.exports = {
 	requestVaccineStock,
 	vaccinatedNonVaccinated,
 	childBornStats,
+	checkDailyConsumption,
 };

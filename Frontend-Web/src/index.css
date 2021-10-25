@@ -1021,3 +1021,36 @@ toast-admin {
    text-decoration: none;
    color: black;
 }
+
+.checkbox {
+   /* height: 30px */
+   transform: scale(2);
+   margin-right: 20px;
+}
+
+/* Birth certificate */
+
+.birth {
+   width: 85%;
+   margin: 50px auto;
+   text-align: center;
+   border: 2px solid black;
+   background-color: var(--input-bg);
+}
+
+.heading {
+   font-size: 100px;
+   font-weight: 900;
+   margin-bottom: 100px;
+   margin-top: 100px;
+}
+
+.certificate-body {
+   line-height: 100px;
+   margin-bottom: 130px;
+}
+
+.sign {
+   margin-left: 50%;
+   margin-bottom: 100px;
+}

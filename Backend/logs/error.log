@@ -1611,3 +1611,53 @@ ValidationError: Children validation failed: gender: Path `gender` is required.
     at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
     at processTicksAndRejections (internal/process/task_queues.js:77:11)
 [2021-10-20 22:56:42] [31merror[39m:  mongoose connection disconnected 
+[2021-10-23 12:04:50] [31merror[39m:  Children is not defined 
+ReferenceError: Children is not defined
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:81:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-10-23 12:24:34] [31merror[39m:  Cannot read property 'noOfDoses' of undefined 
+TypeError: Cannot read property 'noOfDoses' of undefined
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:96:46
+    at Array.map (<anonymous>)
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:95:37)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-23 12:32:39] [31merror[39m:  Cannot read property 'noOfDoses' of undefined 
+TypeError: Cannot read property 'noOfDoses' of undefined
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:101:25
+    at Array.map (<anonymous>)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:100:22
+    at CoreDocumentArray.map (<anonymous>)
+    at CoreDocumentArray.map (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\types\documentarray.js:42:27)
+    at updateChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:98:21)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-23 14:20:12] [31merror[39m:  mongoose connection disconnected 
+[2021-10-23 18:55:01] [31merror[39m:  mongoose connection disconnected 
+[2021-10-25 12:58:14] [31merror[39m:  Performing an update on the path '_id' would modify the immutable field '_id' 
+MongoError: Performing an update on the path '_id' would modify the immutable field '_id'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2021-10-25 14:45:07] [31merror[39m:  mongoose connection disconnected 

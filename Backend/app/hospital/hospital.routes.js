@@ -98,4 +98,10 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.childBornStats
 	);
+	app.get(
+		version + "/hospital/dailysonsumption",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.checkDailyConsumption
+	);
 };

@@ -6,10 +6,9 @@ const mongoose = require("mongoose"),
 const schema = mongoose.Schema;
 
 const dailyConsumptionSchema = new schema({
-	vaccineName: { type: schema.Types.ObjectId, required: true, ref: "Vaccine" },
-	date: { type: Date, default: Date.now(), require: true },
-	gender: { type: String, default: "", enum: ["male", "female"] },
-	region: { type: String, default: "" },
+	vaccineName: { type: String, required: true },
+	child: { type: schema.Types.ObjectId, required: true, ref: "Children" },
+	date: { type: Date, default: new Date(), require: true },
 	organization: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 });
 

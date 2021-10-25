@@ -47,6 +47,7 @@ import AddWorkerPage from "./pages/vaccineCenter/polioWorker/AddWorkerPage";
 import VaccineRequestsPage from "./pages/admin/vaccineRequests/VaccineRequestsPage";
 import RequestVaccinePage from "./pages/subAdmin/vaccines/RequestVaccinePage";
 import SAVaccineRequestsPage from "./pages/subAdmin/vaccineRequests/VaccineRequestsPage";
+import BirthCertificate from "./pages/hospital/children/BirthCertificate";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -133,6 +134,7 @@ function App() {
 				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />
 				<PrivateRoute path="/hospital" exact component={HospitalChildrenPage} />
 				<PrivateRoute path="/hospital/children" exact component={HospitalChildrenPage} />
+				<PrivateRoute path="/hospital/children/printables" exact component={BirthCertificate} />
 				<PrivateRoute path="/hospital/children/:id" exact component={HospitalChildDataPage} />
 				<PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} />

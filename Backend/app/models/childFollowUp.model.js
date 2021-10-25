@@ -6,10 +6,9 @@ const mongoose = require("mongoose"),
 const schema = mongoose.Schema;
 
 const childFollowUpSchema = new schema({
-	child: { type: schema.Types.ObjectId, required: true, ref: "Child" },
+	child: { type: schema.Types.ObjectId, required: true, ref: "Children" },
 	date: { type: Date, default: Date.now() },
-	nextDate: { type: Date, default: Date.now() },
-	vaccineName: { type: schema.Types.ObjectId, required: true, ref: "Vaccine" },
+	vaccineName: { type: String, required: true },
 	organization: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 	confirmationCode: { type: String, default: "" },
 });
