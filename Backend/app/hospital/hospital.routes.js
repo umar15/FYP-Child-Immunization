@@ -8,12 +8,14 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.addChild
 	);
+
 	app.get(
 		version + "/hospital",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.hospital
 	);
+
 	app.get(
 		version + "/hospital/children",
 		passport.isAuthenticated,
@@ -104,4 +106,17 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.checkDailyConsumption
 	);
+
+	app.get(
+		version + "/hospital/vaccinereports",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.reports
+	);
+	// app.get(
+	// 	version + "/hospital/:id",
+	// 	passport.isAuthenticated,
+	// 	passport.isAuthorized("hospital"),
+	// 	hospitalController.viewHospital
+	// );
 };

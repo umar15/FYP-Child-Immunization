@@ -88,7 +88,12 @@ const AddChild = () => {
 				alert.show("Child added successfull!", {
 					type: "success",
 				});
-				history.push("/hospital/children");
+				history.push({
+					pathname: "/hospital/children/printables",
+					state: {
+						data,
+					},
+				});
 			})
 			.catch((err) =>
 				alert.show("Failed to add child!", {

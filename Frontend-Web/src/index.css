@@ -1054,3 +1054,20 @@ toast-admin {
    margin-left: 50%;
    margin-bottom: 100px;
 }
+
+.schedule {
+   margin-top: 200px;
+}
+
+.schedule-table {
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.thead-sch {
+   font-size: 30px;
+}
+
+.dob {
+   text-decoration: underline;
+}
