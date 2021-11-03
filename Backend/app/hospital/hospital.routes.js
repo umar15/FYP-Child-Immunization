@@ -28,6 +28,7 @@ module.exports = (app, version) => {
 		passport.isAuthorized("hospital"),
 		hospitalController.viewChild
 	);
+
 	app.put(
 		version + "/hospital/children/:id",
 		passport.isAuthenticated,
@@ -65,7 +66,7 @@ module.exports = (app, version) => {
 		hospitalController.requestVaccines
 	);
 	app.get(
-		version + "/hospital/reminders/:id",
+		version + "/hospital/reminders",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.reminders
@@ -112,6 +113,18 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.reports
+	);
+	app.get(
+		version + "/hospital/vaccineschedule",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.vaccineSchedule
+	);
+	app.get(
+		version + "/hospital/otp/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.oneTimePassword
 	);
 	// app.get(
 	// 	version + "/hospital/:id",

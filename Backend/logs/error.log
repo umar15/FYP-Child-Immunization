@@ -1891,3 +1891,60 @@ TypeError: nonVaccinatedChildren.append is not a function
     at Array.map (<anonymous>)
     at reports (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:643:20)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-28 14:31:51] [31merror[39m:  mongoose connection disconnected 
+[2021-10-30 11:59:16] [31merror[39m:  mongoose connection disconnected 
+[2021-10-30 13:15:38] [31merror[39m:  mongoose connection disconnected 
+[2021-10-30 14:03:34] [31merror[39m:  Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-30 14:04:22] [31merror[39m:  Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-30 14:04:47] [31merror[39m:  Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-30 14:06:06] [31merror[39m:  Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-30 14:06:51] [31merror[39m:  Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "vaccineschedule" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-10-30 15:22:03] [31merror[39m:  mongoose connection disconnected 
+[2021-10-30 22:10:42] [31merror[39m:  mongoose connection disconnected 
+[2021-11-02 10:42:30] [31merror[39m:  schdeule is not defined 
+ReferenceError: schdeule is not defined
+    at vaccineSchedule (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:713:3)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-02 10:51:50] [31merror[39m:  Children validation failed: dateOfBirth: Cast to date failed for value "2021-11-2T08:44:30.817Z" (type string) at path "dateOfBirth" 
+ValidationError: Children validation failed: dateOfBirth: Cast to date failed for value "2021-11-2T08:44:30.817Z" (type string) at path "dateOfBirth"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addChild (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\hospital\hospital.controller.js:60:26)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-11-02 12:36:21] [31merror[39m:  mongoose connection disconnected 
+[2021-11-02 13:39:28] [31merror[39m:  mongoose connection disconnected 
+[2021-11-02 21:23:04] [31merror[39m:  mongoose connection disconnected 
+[2021-11-02 21:24:42] [31merror[39m:  mongoose connection disconnected 
+[2021-11-02 21:26:36] [31merror[39m:  mongoose connection disconnected 

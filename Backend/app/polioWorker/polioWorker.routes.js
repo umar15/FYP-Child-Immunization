@@ -9,6 +9,12 @@ module.exports = (app, version) => {
 		polioWorkerController.polioWorker
 	);
 	app.put(
+		version + "/polioworker/children",
+		passport.isAuthenticated,
+		passport.isAuthorized("worker"),
+		polioWorkerController.viewChildren
+	);
+	app.put(
 		version + "/polioworker/children/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("worker"),
@@ -31,5 +37,11 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("worker"),
 		polioWorkerController.childGrowth
+	);
+	app.get(
+		version + "/polioworker/schedule/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("worker"),
+		polioWorkerController.vaccinationSchedule
 	);
 };

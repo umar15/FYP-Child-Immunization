@@ -10,6 +10,7 @@ const express = require("express"),
 	mongoStore = require("connect-mongo"),
 	expressListeners = require("./config/expressListeners"),
 	winston = require("./config/winston"),
+	schedular = require("./config/schedular"),
 	dotenv = require("dotenv"),
 	app = express();
 
@@ -161,5 +162,7 @@ require("./config/mongooseConnection")((err) => {
 			err.status = 404;
 			next(err);
 		});
+
+		// schedular.start();
 	}
 });

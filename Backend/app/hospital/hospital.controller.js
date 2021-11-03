@@ -5,7 +5,10 @@ const winston = require("../../config/winston"),
 	hospitalVaccines = mongoose.model("organizationVaccines"),
 	stockRequest = mongoose.model("subadminVaccineRequest"),
 	dailyConsumption = mongoose.model("dailyConsumption"),
-	childVaccinationSchedule = mongoose.model("childVaccinationSchedule");
+	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
+	otp = mongoose.model("otp"),
+	otpGenerator = require("otp-generator"),
+	Twilio = require("twilio");
 
 let hospital = (req, res, next) => {
 	try {
@@ -67,15 +70,16 @@ let addChild = async (req, res, next) => {
 		const forteenWeeks = new Date(dob.setDate(dob.getDate() + 28)).toDateString();
 		const nineMonths = new Date(dob.setDate(dob.getDate() + 172)).toDateString();
 		const fifteenMonths = new Date(dob.setDate(dob.getDate() + 180)).toDateString();
-		console.log("dob new: ", birth);
-		console.log("dob new: ", sixWeeks);
-		console.log("dob new: ", tenWeeks);
-		console.log("dob new: ", forteenWeeks);
-		console.log("dob new: ", nineMonths);
-		console.log("dob new: ", fifteenMonths);
+		// console.log("dob new: ", birth);
+		// console.log("dob new: ", sixWeeks);
+		// console.log("dob new: ", tenWeeks);
+		// console.log("dob new: ", forteenWeeks);
+		// console.log("dob new: ", nineMonths);
+		// console.log("dob new: ", fifteenMonths);
 
 		const schedule = {
 			child: newChild._id,
+			phoneNo: newChild.contactNo,
 			vaccines: {
 				opv0: {
 					date: birth,
@@ -147,15 +151,27 @@ let addChild = async (req, res, next) => {
 };
 
 let reminders = async (req, res, next) => {
-	const data = await children.find({ _id: req.params.id });
+	// const data = await children.find({ _id: req.params.id });
 	// console.log("Data", data);
-	const mobileNumber = data[0].contactNo;
+	// const mobileNumber = data[0].contactNo;
 	// console.log("Mobile Number: ", mobileNumber);
 	try {
+		const accountSid = process.env.TWILIO_ACCOUNT_SID;
+		const authToken = process.env.TWILIO_AUTH_TOKEN;
+		const client = require("twilio")(accountSid, authToken);
+
+		client.messages
+			.create({
+				body: "All in the game, yo",
+				from: "+13203372957",
+				to: "+923159499378",
+			})
+			.then((message) => console.log(message.sid));
+
 		res.json({
 			msg: "Message has been sent to parent's mobile number for vaccination reminder.",
 			data: {
-				mobileNumber,
+				// mobileNumber,
 			},
 		});
 	} catch (err) {
@@ -694,6 +710,58 @@ const reports = async (req, res, next) => {
 	}
 };
 
+let vaccineSchedule = async (req, res, next) => {
+	try {
+		let schedule = await childVaccinationSchedule.find({});
+		schedule.map((item) => {
+			Object.keys(item.vaccines).map((vacc) => {
+				console.log("item: ", item.vaccines[vacc]);
+			});
+		});
+		return res.json({
+			message: "Vaccine schedule",
+			data: schedule,
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let oneTimePassword = async (req, res, next) => {
+	try {
+		let oneTimePass = otpGenerator.generate(4, { upperCase: false, specialChars: false, alphabets: false });
+		let child = await children.findOne({ _id: req.params.id });
+		let contacts = [child.contactNo, child.emergencyContact];
+		console.log("Contacts: ", contacts);
+		// const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+		// contacts.forEach(function (contact) {
+		// 	const options = {
+		// 		to: `${contact}`,
+		// 		from: process.env.TWILIO_PHONE_NUMBER,
+		// 		body: `OTP for child vaccination is ${oneTimePass}`,
+		// 	};
+		// 	// Send the message!
+		// 	client.messages.create(options, function (err, response) {
+		// 		if (err) {
+		// 			console.error(err);
+		// 		} else {
+		// 			let masked = contact.substr(0, contact.length - 5);
+		// 			masked += "*****";
+		// 			winston.info(`Message sent to ${masked}`);
+		// 		}
+		// 	});
+		// });
+		return res.json({
+			message: "OTP",
+			data: { otp: oneTimePass },
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	hospital,
 	viewHospital,
@@ -714,4 +782,6 @@ module.exports = {
 	childBornStats,
 	checkDailyConsumption,
 	reports,
+	vaccineSchedule,
+	oneTimePassword,
 };
