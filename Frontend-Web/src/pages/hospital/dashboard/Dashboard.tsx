@@ -15,6 +15,7 @@ const Dashboard = () => {
 	const [bornToday, setBornToday] = useState(0);
 	const [bornSevenDays, setBornSevenDays] = useState(0);
 	const [bornThirtyDays, setBornThirtyDays] = useState(0);
+	const [vaccineReq, setVaccineReq] = useState<any>([]);
 	const alert = useAlert();
 
 	const getChildren = async () => {
@@ -78,11 +79,26 @@ const Dashboard = () => {
 			);
 	};
 
+	const getVaccineRequirements = async () => {
+		axios
+			.get("/hospital/vaccinerequirements")
+			.then((res) => {
+				console.log("Vaccines requirements: ", res.data.data);
+				setVaccineReq(res.data?.data.requirements);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch vaccine requirements", {
+					type: "error",
+				})
+			);
+	};
+
 	useEffect(() => {
 		getChildren();
 		getVaccines();
 		vaccinatedNonVaccinated();
 		bornStats();
+		getVaccineRequirements();
 	}, []);
 
 	return (
@@ -234,10 +250,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">OPV (Polio)</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>123</b>
+											7 days req: <b>{vaccineReq.opv.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>123</b>
+											30 days req: <b>{vaccineReq.opv.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -247,10 +263,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">Measles</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>123</b>
+											7 days req: <b>{vaccineReq.measles.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>123</b>
+											30 days req: <b>{vaccineReq.measles.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -260,10 +276,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">BCG</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>123</b>
+											7 days req: <b>{vaccineReq.bcg.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>123</b>
+											30 days req: <b>{vaccineReq.bcg.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -275,10 +291,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">Pentavalent</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>123</b>
+											7 days req: <b>{vaccineReq.pentavalent.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>123</b>
+											30 days req: <b>{vaccineReq.pentavalent.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -288,15 +304,15 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">PCV</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>123</b>
+											7 days req: <b>{vaccineReq.pcv.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>123</b>
+											30 days req: <b>{vaccineReq.pcv.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							{/* <Col lg="4">
 								<Card className="card blue">
 									<CardBody>
 										<CardTitle tag="h5">Total</CardTitle>
@@ -308,7 +324,7 @@ const Dashboard = () => {
 										</CardSubtitle>
 									</CardBody>
 								</Card>
-							</Col>
+							</Col> */}
 						</Row>
 					</Col>
 				</Row>

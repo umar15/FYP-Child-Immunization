@@ -6,7 +6,7 @@ const winston = require("../../config/winston"),
 	stockRequest = mongoose.model("subadminVaccineRequest"),
 	dailyConsumption = mongoose.model("dailyConsumption"),
 	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
-	otp = mongoose.model("otp"),
+	reportsSchema = mongoose.model("reportsSchema"),
 	otpGenerator = require("otp-generator"),
 	Twilio = require("twilio");
 
@@ -38,7 +38,7 @@ let viewChildren = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "View CHildren",
-			data: await children.find({ hospitalName: req.user._id }),
+			data: await children.find({}),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -62,6 +62,7 @@ let addChild = async (req, res, next) => {
 	try {
 		const newChild = await new children(req.body).save();
 		const dob = new Date(req.body.dateOfBirth);
+		const orgVacc = await hospitalVaccines.findOne({ organization: req.user._id });
 		console.log("dob: ", dob);
 		console.log("dob: ", new Date());
 		const birth = new Date(dob.setDate(dob.getDate())).toDateString();
@@ -136,6 +137,35 @@ let addChild = async (req, res, next) => {
 			},
 		};
 		const vcSchedule = await new childVaccinationSchedule(schedule).save();
+
+		await new dailyConsumption({
+			vaccineName: "opv",
+			child: newChild.id,
+			date: new Date(),
+			organization: req.user._id,
+		}).save();
+		await new dailyConsumption({
+			vaccineName: "bcg",
+			child: req.params.id,
+			date: new Date(),
+			organization: req.user._id,
+		}).save();
+
+		const remainingQuantity = {
+			...orgVacc.vaccines,
+			opv: {
+				quantity: orgVacc.vaccines.opv.quantity - 1,
+			},
+			bcg: {
+				quantity: orgVacc.vaccines.bcg.quantity - 1,
+			},
+		};
+		await hospitalVaccines.findByIdAndUpdate(
+			{ _id: orgVacc._id },
+			{ $set: { vaccines: remainingQuantity } },
+			{ new: true }
+		);
+
 		console.log("Schedule: ", schedule);
 		res.json({
 			message: "Child added sussessfully.",
@@ -320,7 +350,7 @@ let updateChild = async (req, res, next) => {
 				vaccines: {
 					...vaccineSchedule.vaccines,
 					bcg: {
-						date: vaccineSchedule.vaccines.pcg.date,
+						date: vaccineSchedule.vaccines.bcg.date,
 						done: true,
 					},
 				},
@@ -530,11 +560,92 @@ let requestVaccines = (req, res, next) => {
 	}
 };
 
-let vaccineRequirement = (req, res, next) => {
+let vaccineRequirement = async (req, res, next) => {
 	try {
+		let orgDailyConsumption = await dailyConsumption.find({ organization: req.user._id });
+		let pcv = [];
+		let bcg = [];
+		let pentavalent = [];
+		let opv = [];
+		let measles = [];
+		let pcvDaily = 0;
+		let bcgDaily = 0;
+		let pentavalentDaily = 0;
+		let opvDaily = 0;
+		let measlesDaily = 0;
+		orgDailyConsumption.map((item) => {
+			if (item.vaccineName === "pcv") {
+				pcv.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					pcvDaily += 1;
+				}
+			} else if (item.vaccineName === "bcg") {
+				bcg.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					bcgDaily += 1;
+				}
+			} else if (item.vaccineName === "opv") {
+				opv.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					opvDaily += 1;
+				}
+			} else if (item.vaccineName === "pentavalent") {
+				pentavalent.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					pentavalentDaily += 1;
+				}
+			} else if (item.vaccineName === "measles") {
+				measles.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					measlesDaily += 1;
+				}
+			}
+		});
+		// console.log(orgDailyConsumption);
+		console.log("opv: ", opvDaily);
+		console.log("bcg: ", bcgDaily);
+		console.log("pcv: ", pcvDaily);
+		console.log("pentavalent: ", pentavalentDaily);
+		console.log("measles: ", measlesDaily);
+
+		let requirements = {
+			opv: {
+				sevenDays: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
+			},
+			bcg: {
+				sevenDays: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
+			},
+			pcv: {
+				sevenDays: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
+			},
+			pentavalent: {
+				sevenDays: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
+			},
+			measles: {
+				sevenDays: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
+			},
+		};
+
 		return res.json({
-			message: "update sub admin",
-			data: {},
+			message: "Vaccine requirements",
+			data: {
+				requirements,
+			},
 		});
 	} catch (err) {
 		winston.error(err);
@@ -697,6 +808,11 @@ const reports = async (req, res, next) => {
 				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
 			}
 		});
+		// await new reportsSchema({
+		// 	org: req.user._id,
+		// 	chiildren: nonVaccinatedChildren,
+		// }).save();
+
 		// console.log(nonVaccinatedChildren);
 		return res.json({
 			message: "Non Vaccinated Children Reports",
@@ -762,6 +878,35 @@ let oneTimePassword = async (req, res, next) => {
 	}
 };
 
+let hospitalReports = async (req, res, next) => {
+	try {
+		let report = {
+			org: req.user._id,
+			children: req.body,
+		};
+		let reports = await new reportsSchema(report).save();
+		return res.json({
+			message: "Hospital Reports",
+			data: reports,
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let childVaccineSchedule = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Child Vaccination Schedule",
+			data: await childVaccinationSchedule.find({ child: req.params.id }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	hospital,
 	viewHospital,
@@ -784,4 +929,6 @@ module.exports = {
 	reports,
 	vaccineSchedule,
 	oneTimePassword,
+	hospitalReports,
+	childVaccineSchedule,
 };

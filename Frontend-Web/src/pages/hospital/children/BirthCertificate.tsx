@@ -12,6 +12,7 @@ const BirthCertificate = () => {
 	const child: any = location.state ? location.state : "";
 	const [dob, setDob] = useState(new Date(child.data.dateOfBirth));
 	const [hospital, setHospital] = useState<any>([]);
+	const [schedule, setSchedule] = useState(child.schedule);
 
 	const monthNames = [
 		"January",
@@ -27,8 +28,8 @@ const BirthCertificate = () => {
 		"November",
 		"December",
 	];
-	console.log("Child added: ", dob);
-	console.log("date: ", new Date(dob.setDate(dob.getDate())).toDateString());
+	console.log("Child added: ", child);
+	// console.log("date: ", new Date(dob.setDate(dob.getDate())).toDateString());
 
 	const getHospital = () => {
 		axios
@@ -53,6 +54,7 @@ const BirthCertificate = () => {
 			<button className="default-btn print" onClick={() => window.print()}>
 				Print
 			</button>
+			{console.log("Schedule: ", schedule)}
 			<div className="birth">
 				<h1 className="heading">Certificate of Brith</h1>
 				<h1 className="certificate-body">
@@ -90,42 +92,42 @@ const BirthCertificate = () => {
 							<td>BCG, OPV</td>
 							<td>Children TB, Polio</td>
 							<td>Soon After Birth</td>
-							<td>{new Date(dob.setDate(dob.getDate())).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.bcg.date).toDateString()}</td>
 						</tr>
 						<tr>
 							<td>2</td>
 							<td>Pentavalent, OPV, PCV</td>
 							<td>Hepatitus, Fever, Pneumonia</td>
 							<td>6 Weeks</td>
-							<td>{new Date(dob.setDate(dob.getDate() + 42)).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.opv1.date).toDateString()}</td>
 						</tr>
 						<tr>
 							<td>3</td>
 							<td>Pentavalent, OPV, PCV</td>
 							<td>Hepatitus, Fever, Pneumonia</td>
 							<td>10 Weeks</td>
-							<td>{new Date(dob.setDate(dob.getDate() + 28)).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.opv2.date).toDateString()}</td>
 						</tr>
 						<tr>
 							<td>4</td>
 							<td>Pentavalent, OPV, PCV</td>
 							<td>Hepatitus, Fever, Pneumonia</td>
 							<td>14 Weeks</td>
-							<td>{new Date(dob.setDate(dob.getDate() + 28)).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.opv3.date).toDateString()}</td>
 						</tr>
 						<tr>
 							<td>5</td>
 							<td>Measles</td>
 							<td>Measles</td>
 							<td>9 Months</td>
-							<td>{new Date(dob.setDate(dob.getDate() + 172)).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.measles0.date).toDateString()}</td>
 						</tr>
 						<tr>
 							<td>6</td>
 							<td>Measles</td>
 							<td>Measles</td>
 							<td>15 Months</td>
-							<td>{new Date(dob.setDate(dob.getDate() + 180)).toDateString()}</td>
+							<td>{new Date(schedule.vaccines.measles1.date).toDateString()}</td>
 						</tr>
 					</tbody>
 				</Table>

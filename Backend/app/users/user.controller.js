@@ -5,7 +5,8 @@ const winston = require("../../config/winston"),
 	orgVaccines = mongoose.model("organizationVaccines"),
 	userRequests = mongoose.model("userRequests"),
 	nodemailer = require("nodemailer"),
-	sgTransport = require("nodemailer-sendgrid-transport");
+	bcrypt = require("bcryptjs"),
+	SALT_WORK_FACTOR = 10;
 
 let getUsers = async (req, res, next) => {
 	try {
@@ -54,12 +55,17 @@ let getUser = async (req, res, next) => {
 let updateUser = async (req, res, next) => {
 	try {
 		const id = req.params.id;
-
-		await userAccountModel.updateOne({ _id: id }, { $set: req.body });
-
+		let newPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_WORK_FACTOR));
+		let user = {
+			...req.body,
+			password: newPassword,
+		};
+		await userAccountModel.findByIdAndUpdate({ _id: id }, user, { new: true });
 		return res.json({
 			message: "User updated successfully.",
-			data: {},
+			data: {
+				user,
+			},
 		});
 	} catch (err) {
 		winston.error(err);

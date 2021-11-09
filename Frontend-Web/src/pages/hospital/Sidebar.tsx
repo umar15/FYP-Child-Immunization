@@ -4,53 +4,23 @@ import "../../index.css";
 
 const Sidebar = (props) => {
 	return (
-		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
+		<div style={{ height: props.height ? props.height : "850px" }} className="sidebar">
 			<ul>
-				<li>
-					<Link className="link" to="/hospital/">
-						dashboard
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/hospital/children">
-						Children
-					</Link>
-				</li>
-				{/* <li>
-					<Link className="link" to="/hospital/children">
-						Children
-					</Link>
-				</li> */}
-				<li>
-					<Link className="link" to="/hospital/vaccines">
-						Vaccine Stock
-					</Link>
-				</li>
-				{/* <li>
-					<Link className="link" to="/admin/vaccinecenters">
-						Vaccine Centers
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/vaccines">
-						Vaccine Stock
-					</Link>
-				</li> */}
-				{/* <li>
-					<Link className="link" to="/admin/children">
-						Children
-					</Link>
-				</li> */}
-				<li>
-					<Link className="link" to="/admin/reports">
-						Reports
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/settings">
-						Settings
-					</Link>
-				</li>
+				<Link className="link" to="/hospital/">
+					<li>Dashboard</li>
+				</Link>
+				<Link className="link" to="/hospital/children">
+					<li>Children</li>
+				</Link>
+				<Link className="link" to="/hospital/vaccines">
+					<li>Vaccine Stock</li>
+				</Link>
+				<Link className="link" to="/hospital/reports">
+					<li>Reports</li>
+				</Link>
+				<Link className="link" to="/hospital/settings">
+					<li>Settings</li>
+				</Link>
 			</ul>
 		</div>
 	);

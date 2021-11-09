@@ -18,10 +18,25 @@ const ChildData = () => {
 	const [otpBackend, setOtpBackend] = useState("");
 	const [flag, setFlag] = useState(false);
 	const [otpResend, setOtpResend] = useState(false);
+	const [schedule, setSchedule] = useState([]);
 
 	const handleOTPChange = (otp) => {
 		setOtp(otp);
 		console.log(otp);
+	};
+
+	const getVaccineSchedule = () => {
+		axios
+			.get(`/hospital/vaccineschedule/${id}`)
+			.then((res) => {
+				console.log("Schedule: ", res.data.data[0]);
+				setSchedule(res.data.data[0]);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch vaccination schedule", {
+					type: "error",
+				})
+			);
 	};
 
 	const getHospital = async () => {
@@ -102,13 +117,30 @@ const ChildData = () => {
 
 	useEffect(() => {
 		getHospital();
+		getVaccineSchedule();
 	}, []);
 
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				<Col lg="12">
+				<Col lg="9">
 					<h3>Details of Child ID: {child.data.childID}</h3>
+				</Col>
+				<Col lg="3">
+					<button className="default-btn">
+						<Link
+							to={{
+								pathname: `/hospital/vaccineschedule/${id}`,
+								state: {
+									data: schedule,
+								},
+							}}
+							style={{ color: "#fff" }}
+						>
+							Vaccination Schedule
+						</Link>
+					</button>
+					{/* <h3>Details of Child ID: {child.data.childID}</h3> */}
 				</Col>
 			</Row>
 			<Row className="subadmin-table">

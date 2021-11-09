@@ -72,7 +72,7 @@ module.exports = (app, version) => {
 		hospitalController.reminders
 	);
 	app.get(
-		version + "/hospital/vaccinerequirement",
+		version + "/hospital/vaccinerequirements",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.vaccineRequirement
@@ -121,15 +121,27 @@ module.exports = (app, version) => {
 		hospitalController.vaccineSchedule
 	);
 	app.get(
+		version + "/hospital/vaccineschedule/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.childVaccineSchedule
+	);
+	app.get(
 		version + "/hospital/otp/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
 		hospitalController.oneTimePassword
 	);
-	// app.get(
-	// 	version + "/hospital/:id",
-	// 	passport.isAuthenticated,
-	// 	passport.isAuthorized("hospital"),
-	// 	hospitalController.viewHospital
-	// );
+	app.post(
+		version + "/hospital/reports",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.hospitalReports
+	);
+	app.get(
+		version + "/hospital/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("hospital"),
+		hospitalController.viewHospital
+	);
 };

@@ -20,6 +20,7 @@ const AddChild = () => {
 	}, []);
 
 	const [user, setUser] = useState<any>([]);
+	const [schedule, setSchedule] = useState<any>([]);
 	const [data, setdata] = useState<any>({
 		childID: makeChildID(),
 		parentName: "",
@@ -38,9 +39,9 @@ const AddChild = () => {
 		hospitalName: "",
 		vaccination: [
 			{
-				opv: { noOfDoses: 0 }, // polio
+				opv: { noOfDoses: 1 }, // polio
 				measles: { noOfDoses: 0 },
-				bcg: { noOfDoses: 0 }, // children TB
+				bcg: { noOfDoses: 1 }, // children TB
 				pentavalent: { noOfDoses: 0 },
 				pcv: { noOfDoses: 0 },
 			},
@@ -88,10 +89,14 @@ const AddChild = () => {
 				alert.show("Child added successfull!", {
 					type: "success",
 				});
+				console.log("response: ", res.data);
+				setSchedule(res.data?.data?.vaccineSchedule);
+
 				history.push({
 					pathname: "/hospital/children/printables",
 					state: {
 						data,
+						schedule: res.data?.data?.vaccineSchedule,
 					},
 				});
 			})

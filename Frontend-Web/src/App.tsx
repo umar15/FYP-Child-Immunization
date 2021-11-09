@@ -48,6 +48,11 @@ import VaccineRequestsPage from "./pages/admin/vaccineRequests/VaccineRequestsPa
 import RequestVaccinePage from "./pages/subAdmin/vaccines/RequestVaccinePage";
 import SAVaccineRequestsPage from "./pages/subAdmin/vaccineRequests/VaccineRequestsPage";
 import BirthCertificate from "./pages/hospital/children/BirthCertificate";
+import Reports from "./pages/hospital/Reports";
+import ReportsPage from "./pages/hospital/ReportsPage";
+import SettingsPage from "./pages/hospital/settings/SettingsPage";
+import ChildVaccinationSchedule from "./pages/hospital/children/ChildVaccinationSchedule";
+import ChildVaccinationSchedulePage from "./pages/hospital/children/ChildVaccinationSchedulePage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -139,6 +144,9 @@ function App() {
 				<PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} />
 				<PrivateRoute path="/hospital/requestvaccine" exact component={HospitalRequestVaccinePage} />
+				<PrivateRoute path="/hospital/reports" exact component={ReportsPage} />
+				<PrivateRoute path="/hospital/settings" exact component={SettingsPage} />
+				<PrivateRoute path="/hospital/vaccineschedule/:id" exact component={ChildVaccinationSchedulePage} />
 
 				{/* Vaccine Center */}
 				<PrivateRoute path="/vaccinecenter" exact component={VCChildren} />

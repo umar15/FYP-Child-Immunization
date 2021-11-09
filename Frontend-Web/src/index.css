@@ -1071,3 +1071,42 @@ toast-admin {
 .dob {
    text-decoration: underline;
 }
+
+/* Pagination */
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin-top: 20px;
+   padding: 0;
+}
+
+.pagination a {
+   cursor: default;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #0Cb8B6;
+   color: #0Cb8B6;
+   margin-left: 10px;
+}
+
+.pagination li:not(.disabled) a:hover {
+   background-color: rgb(196, 227, 255);
+   cursor: pointer;
+}
+
+.pagination li a {
+   font-weight: bold;
+}
+
+.pagination li.active a {
+   color: #fff;
+   background: #0Cb8B6;
+}
+
+.pagination li.disabled a {
+   pointer-events: none;
+   color: rgb(198, 197, 202);
+   border: 1px solid #0Cb8B6;
+}
