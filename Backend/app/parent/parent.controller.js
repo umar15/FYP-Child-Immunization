@@ -14,11 +14,23 @@ let parent = (req, res, next) => {
 	}
 };
 
-let viewChild = async (req, res, next) => {
+// let viewChildren = async (req, res, next) => {
+// 	try {
+// 		return res.json({
+// 			message: "View Children",
+// 			data: await children.find({}),
+// 		});
+// 	} catch (err) {
+// 		winston.error(err);
+// 		res.redirect("/error");
+// 	}
+// };
+let viewChildren = async (req, res, next) => {
 	try {
+		let child = await children.findOne({ parentCNIC: req.user.cnic });
 		return res.json({
-			message: "View CHild",
-			data: await children.find({}),
+			message: "View Child",
+			data: child,
 		});
 	} catch (err) {
 		winston.error(err);
@@ -64,7 +76,8 @@ let childGrowth = (req, res, next) => {
 
 module.exports = {
 	parent,
-	viewChild,
+	viewChildren,
+	// viewChild,
 	childGrowth,
 	reminders,
 	vaccinesInfo,

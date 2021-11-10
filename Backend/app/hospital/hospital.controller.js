@@ -138,18 +138,18 @@ let addChild = async (req, res, next) => {
 		};
 		const vcSchedule = await new childVaccinationSchedule(schedule).save();
 
-		await new dailyConsumption({
-			vaccineName: "opv",
-			child: newChild.id,
-			date: new Date(),
-			organization: req.user._id,
-		}).save();
-		await new dailyConsumption({
-			vaccineName: "bcg",
-			child: req.params.id,
-			date: new Date(),
-			organization: req.user._id,
-		}).save();
+		// await new dailyConsumption({
+		// 	vaccineName: "opv",
+		// 	child: newChild.id,
+		// 	date: new Date(),
+		// 	organization: req.user._id,
+		// }).save();
+		// await new dailyConsumption({
+		// 	vaccineName: "bcg",
+		// 	child: req.params.id,
+		// 	date: new Date(),
+		// 	organization: req.user._id,
+		// }).save();
 
 		const remainingQuantity = {
 			...orgVacc.vaccines,

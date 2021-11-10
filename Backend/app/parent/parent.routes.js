@@ -4,11 +4,17 @@ const passport = require("../../config/passport");
 module.exports = (app, version) => {
 	app.get(version + "/parent", passport.isAuthenticated, passport.isAuthorized("parent"), parentController.parent);
 	app.get(
-		version + "/parent/children/:id",
+		version + "/parent/children",
 		passport.isAuthenticated,
 		passport.isAuthorized("parent"),
-		parentController.viewChild
+		parentController.viewChildren
 	);
+	// app.get(
+	// 	version + "/parent/children/:id",
+	// 	passport.isAuthenticated,
+	// 	passport.isAuthorized("parent"),
+	// 	parentController.viewChild
+	// );
 	app.get(
 		version + "/parent/vaccines",
 		passport.isAuthenticated,
