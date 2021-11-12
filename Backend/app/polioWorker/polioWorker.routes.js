@@ -39,6 +39,12 @@ module.exports = (app, version) => {
 		polioWorkerController.childGrowth
 	);
 	app.get(
+		version + "/polioworker/otp/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("worker"),
+		polioWorkerController.oneTimePassword
+	);
+	app.get(
 		version + "/polioworker/schedule/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("worker"),
