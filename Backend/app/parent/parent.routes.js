@@ -33,4 +33,10 @@ module.exports = (app, version) => {
 		passport.isAuthorized("parent"),
 		parentController.childGrowth
 	);
+	app.get(
+		version + "/parent/vaccineschedule/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("parent"),
+		parentController.childVaccineSchedule
+	);
 };

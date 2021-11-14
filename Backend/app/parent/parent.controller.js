@@ -1,5 +1,6 @@
 const winston = require("../../config/winston"),
 	mongoose = require("mongoose"),
+	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
 	children = mongoose.model("Children");
 
 let parent = (req, res, next) => {
@@ -74,6 +75,18 @@ let childGrowth = (req, res, next) => {
 	}
 };
 
+let childVaccineSchedule = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Child Vaccination Schedule",
+			data: await childVaccinationSchedule.find({ child: req.params.id }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	parent,
 	viewChildren,
@@ -81,4 +94,5 @@ module.exports = {
 	childGrowth,
 	reminders,
 	vaccinesInfo,
+	childVaccineSchedule,
 };
