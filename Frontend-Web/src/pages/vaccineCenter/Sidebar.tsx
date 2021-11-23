@@ -4,53 +4,26 @@ import "../../index.css";
 
 const Sidebar = (props) => {
 	return (
-		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
+		<div style={{ height: props.height ? props.height : "900px" }} className="sidebar">
 			<ul>
-				<li>
-					<Link className="link" to="/vaccinecenter">
-						Children
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/vaccinecenter/vaccines">
-						Vaccine Stock
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/vaccinecenter/campaigns">
-						Campaigns
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/vaccinecenter/workers">
-						Polio Workers
-					</Link>
-				</li>
-				{/* <li>
-					<Link className="link" to="/admin/vaccinecenters">
-						Vaccine Centers
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/vaccines">
-						Vaccine Stock
-					</Link>
-				</li> */}
-				{/* <li>
-					<Link className="link" to="/admin/children">
-						Children
-					</Link>
-				</li> */}
-				<li>
-					<Link className="link" to="/vaccinecenter/reports">
-						Reports
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/vaccinecenter/settings">
-						Settings
-					</Link>
-				</li>
+				<Link className="link" to="/vaccinecenter">
+					<li>Children</li>
+				</Link>
+				<Link className="link" to="/vaccinecenter/vaccines">
+					<li>Vaccine Stock</li>
+				</Link>
+				<Link className="link" to="/vaccinecenter/campaigns">
+					<li>Campaigns</li>
+				</Link>
+				<Link className="link" to="/vaccinecenter/workers">
+					<li>Polio Workers</li>
+				</Link>
+				<Link className="link" to="/vaccinecenter/reports">
+					<li>Reports</li>
+				</Link>
+				<Link className="link" to="/vaccinecenter/settings">
+					<li>Settings</li>
+				</Link>
 			</ul>
 		</div>
 	);
