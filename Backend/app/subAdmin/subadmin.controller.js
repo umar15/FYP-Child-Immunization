@@ -139,36 +139,37 @@ let assignVaccine = async (req, res, next) => {
 			throw "No vaccines available for this subadmin.";
 		}
 
+		let Vaccine = req.body.vaccine;
 		const orgVacc = {
 			organization: org,
 			vaccines: {
 				opv: {
 					quantity:
-						Vaccine.name === "opv"
+						Vaccine === "opv"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.opv.quantity
 							: organizationVacc.vaccines.opv.quantity,
 				},
 				measles: {
 					quantity:
-						Vaccine.name === "measles"
+						Vaccine === "measles"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.measles.quantity
 							: organizationVacc.vaccines.measles.quantity,
 				},
 				bcg: {
 					quantity:
-						Vaccine.name === "bcg"
+						Vaccine === "bcg"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.bcg.quantity
 							: organizationVacc.vaccines.bcg.quantity,
 				},
 				pentavalent: {
 					quantity:
-						Vaccine.name === "pentavalent"
+						Vaccine === "pentavalent"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.pentavalent.quantity
 							: organizationVacc.vaccines.pentavalent.quantity,
 				},
 				pcv: {
 					quantity:
-						Vaccine.name === "pcv"
+						Vaccine === "pcv"
 							? parseInt(req.body.quantity) + organizationVacc.vaccines.pcv.quantity
 							: organizationVacc.vaccines.pcv.quantity,
 				},
@@ -211,6 +212,14 @@ let assignVaccine = async (req, res, next) => {
 			},
 		};
 
+		const assignedVaccine = await new assignVaccineTo({
+			vaccine: req.body.vaccine,
+			date: req.body.date,
+			quantity: req.body.quantity,
+			organization: org,
+			assignedBy: req.user,
+		}).save();
+
 		await orgVaccines.findOneAndUpdate({ _id: organizationVacc._id }, orgVacc, { new: true });
 		await orgVaccines.findOneAndUpdate({ _id: subadminVaccines._id }, remainingVaccines, { new: true });
 
@@ -219,6 +228,7 @@ let assignVaccine = async (req, res, next) => {
 			data: {
 				orgVaccineDetails: orgVacc,
 				subadminRemainingVaccines: remainingVaccines,
+				assignedVaccine,
 			},
 		});
 	} catch (err) {

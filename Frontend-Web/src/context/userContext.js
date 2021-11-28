@@ -58,7 +58,7 @@ function loginUser(event, login, password, dispatch, alert, history) {
 		})
 		.catch((err) => {
 			// console.log("Error in login function: ", err);
-			alert.show("Login Failed: " + err.response.data.message || "Error", { type: "error" });
+			alert.show("Login Failed" || "Error", { type: "error" });
 		});
 }
 

@@ -97,7 +97,7 @@ const Vaccines = () => {
 										<td>{vaccine.name}</td>
 										<td>{vaccine.manufacturer}</td>
 										<td>{vaccine.quantity}</td>
-										<td>{vaccine.expiryDate}</td>
+										<td>{new Date(vaccine.expiryDate).toDateString()}</td>
 										<td>
 											<Link
 												to={{

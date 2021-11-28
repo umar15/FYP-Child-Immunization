@@ -1,22 +1,40 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams, useLocation } from "react-router-dom";
-import { Container, Row, Col, Table, Spinner, Button } from "reactstrap";
+import { Container, Row, Col, Table, Spinner, Button, Input } from "reactstrap";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 
 const ChildData = () => {
-	const [hospitalName, setHospitalName] = useState([]);
+	const [hospitalName, setHospitalName] = useState<any>([]);
 	const alert = useAlert();
 	const location = useLocation();
-	const child: any = location.state ? location.state : "";
-	console.log("Child: ", child.data);
+	const { id } = useParams<{ id: string }>();
 
-	const getHospitals = async () => {
+	const child: any = location.state ? location.state : "";
+	// console.log("Child in vc: ", child.data.hospitalName);
+	const [data, setData] = useState<any>(child.data?.vaccination[0]);
+	const [schedule, setSchedule] = useState([]);
+
+	const getVaccineSchedule = () => {
 		axios
-			.get("/admin/hospitals")
+			.get(`/admin/childvaccineschedule/${id}`)
 			.then((res) => {
-				res.data.data.map((item) => setHospitalName(item._id === child.data.hospitalName ? item.name : ""));
-				console.log(res.data.data);
+				console.log("Schedule: ", res.data.data[0]);
+				setSchedule(res.data.data[0]);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch vaccination schedule", {
+					type: "error",
+				})
+			);
+	};
+
+	const getHospital = async () => {
+		axios
+			.get(`/admin/hospitals/${child.data?.hospitalName}`)
+			.then((res) => {
+				console.log("Hospital", res.data.data);
+				setHospitalName(res.data.data);
 			})
 			.catch((err) =>
 				alert.show("Failed to Fetch hospitals", {
@@ -25,15 +43,41 @@ const ChildData = () => {
 			);
 	};
 
+	const changeCheck: any = (name, i) => {
+		setData({
+			...data,
+			[name]: {
+				noOfDoses: i,
+			},
+		});
+	};
+
 	useEffect(() => {
-		getHospitals();
+		getHospital();
+		getVaccineSchedule();
 	}, []);
 
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				<Col lg="12">
+				<Col lg="9">
 					<h3>Details of Child ID: {child.data.childID}</h3>
+				</Col>
+				<Col lg="3">
+					<button className="default-btn">
+						<Link
+							to={{
+								pathname: `/admin/vaccineschedule/${id}`,
+								state: {
+									data: schedule,
+								},
+							}}
+							style={{ color: "#fff" }}
+						>
+							Vaccination Schedule
+						</Link>
+					</button>
+					{/* <h3>Details of Child ID: {child.data.childID}</h3> */}
 				</Col>
 			</Row>
 			<Row className="subadmin-table">
@@ -58,7 +102,7 @@ const ChildData = () => {
 							</tr>
 							<tr>
 								<th>Date of Birth</th>
-								<td>{child.data.dateOfBirth}</td>
+								<td>{new Date(child.data.dateOfBirth).toDateString()}</td>
 							</tr>
 							<tr>
 								<th>Gender</th>
@@ -78,7 +122,7 @@ const ChildData = () => {
 							</tr>
 							<tr>
 								<th>Hospital where born</th>
-								<td>{hospitalName}</td>
+								<td>{hospitalName?.name}</td>
 							</tr>
 						</thead>
 					</Table>
@@ -99,40 +143,103 @@ const ChildData = () => {
 								<th>Number of doses</th>
 							</tr>
 							<tr>
-								<th>Diphteria</th>
-								<td>{child.data.vaccination[0].diphtheria.noOfDoses}</td>
+								<th>OPV (Polio)</th>
+								<td>
+									{[...Array(4)].map((x, i) => {
+										if (data.opv.noOfDoses >= i + 1) {
+											return <input checked disabled className="checkbox" type="checkbox"></input>;
+										} else {
+											return (
+												<input
+													className="checkbox"
+													type="checkbox"
+													onChange={() => changeCheck("opv", i + 1)}
+												></input>
+											);
+										}
+									})}
+								</td>
 							</tr>
 							<tr>
-								<th>Polio</th>
-								<td>{child.data.vaccination[0].polio.noOfDoses}</td>
+								<th>Pentavalent</th>
+								<td>
+									{[...Array(3)].map((x, i) => {
+										if (data.pentavalent.noOfDoses >= i + 1) {
+											return (
+												<input
+													checked
+													disabled
+													style={{ backgroundColor: "green" }}
+													className="checkbox"
+													type="checkbox"
+												></input>
+											);
+										} else {
+											return (
+												<input
+													className="checkbox"
+													type="checkbox"
+													value={i + 1}
+													onChange={() => changeCheck("pentavalent", i + 1)}
+												></input>
+											);
+										}
+									})}
+								</td>
 							</tr>
 							<tr>
-								<th>Homophiles</th>
-								<td>{child.data.vaccination[0].homophiles.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Rota Virus</th>
-								<td>{child.data.vaccination[0].rotaVirus.noOfDoses}</td>
+								<th>PCV (Pneumonia)</th>
+								<td>
+									{[...Array(3)].map((x, i) => {
+										if (data.pcv.noOfDoses >= i + 1) {
+											return <input checked disabled className="checkbox" type="checkbox"></input>;
+										} else {
+											return (
+												<input
+													className="checkbox"
+													type="checkbox"
+													onChange={() => changeCheck("pcv", i + 1)}
+												></input>
+											);
+										}
+									})}
+								</td>
 							</tr>
 							<tr>
 								<th>Measles</th>
-								<td>{child.data.vaccination[0].measles.noOfDoses}</td>
+								<td>
+									{[...Array(2)].map((x, i) => {
+										if (data.measles.noOfDoses >= i + 1) {
+											return <input checked disabled className="checkbox" type="checkbox"></input>;
+										} else {
+											return (
+												<input
+													className="checkbox"
+													type="checkbox"
+													onChange={() => changeCheck("measles", i + 1)}
+												></input>
+											);
+										}
+									})}
+								</td>
 							</tr>
 							<tr>
-								<th>Hepatitus A</th>
-								<td>{child.data.vaccination[0].hepatitisA.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Hepatitus B</th>
-								<td>{child.data.vaccination[0].hepatitisB.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Papilloma Virus</th>
-								<td>{child.data.vaccination[0].papillomaVirus.noOfDoses}</td>
-							</tr>
-							<tr>
-								<th>Influenza</th>
-								<td>{child.data.vaccination[0].influenza.noOfDoses}</td>
+								<th>BCG (Children's TB)</th>
+								<td>
+									{[...Array(1)].map((x, i) => {
+										if (data.bcg.noOfDoses >= i + 1) {
+											return <input checked disabled className="checkbox" type="checkbox"></input>;
+										} else {
+											return (
+												<input
+													className="checkbox"
+													type="checkbox"
+													onChange={() => changeCheck("bcg", i + 1)}
+												></input>
+											);
+										}
+									})}
+								</td>
 							</tr>
 						</thead>
 					</Table>

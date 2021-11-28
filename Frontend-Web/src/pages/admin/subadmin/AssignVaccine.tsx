@@ -78,6 +78,7 @@ const AssignVaccine = () => {
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
+										<label>Vaccine name</label>
 										<select
 											value={data.vaccine}
 											onChange={(e) => setData({ ...data, vaccine: e.target.value })}
@@ -85,7 +86,7 @@ const AssignVaccine = () => {
 										>
 											<option>Select vaccine</option>
 											{vaccines.map((vaccine: any) => (
-												<option value={vaccine._id} key={vaccine._id}>
+												<option value={vaccine.name} key={vaccine._id}>
 													{vaccine.name}
 												</option>
 											))}
@@ -94,6 +95,7 @@ const AssignVaccine = () => {
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
+										<label>Quantity</label>
 										<input
 											type="number"
 											className="form-control"
@@ -106,6 +108,7 @@ const AssignVaccine = () => {
 								</Col>
 
 								<Col md="12" sm="12" lg="12">
+									<label>Date</label>
 									<div className="form-group">
 										<DatePicker className="form-control" selected={data.date} onChange={handleDateChange} />
 									</div>

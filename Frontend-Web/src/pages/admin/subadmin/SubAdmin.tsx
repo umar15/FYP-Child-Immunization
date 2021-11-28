@@ -74,11 +74,6 @@ const SubAdmin = () => {
 					</button>
 				</Col>
 			</Row>
-			{/* <Row>
-				<Col>
-					<h3>Sub Admins</h3>
-				</Col>
-			</Row> */}
 			<Row className="subadmin-table">
 				<Col lg="12">
 					<Table style={tableStyles} bordered hover>
@@ -89,6 +84,7 @@ const SubAdmin = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
+								<th>View Details</th>
 								<th>Edit</th>
 								<th>Delete</th>
 							</tr>
@@ -108,6 +104,18 @@ const SubAdmin = () => {
 												}}
 											>
 												assign
+											</Link>
+										</td>
+										<td>
+											<Link
+												to={{
+													pathname: `/admin/subadmins/details/${subadmin._id}`,
+													state: {
+														subadmin,
+													},
+												}}
+											>
+												view
 											</Link>
 										</td>
 										<td>

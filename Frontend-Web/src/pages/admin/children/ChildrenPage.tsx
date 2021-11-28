@@ -11,7 +11,6 @@ const ChildrenPage = () => {
 	return (
 		<>
 			<AdminHeader userType="Admin" />
-
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

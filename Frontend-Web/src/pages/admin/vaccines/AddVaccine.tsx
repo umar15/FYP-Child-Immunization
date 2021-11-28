@@ -96,6 +96,7 @@ const AddVaccine = (props) => {
 									<h3 style={headerStyles}>{vaccineID.id == "add" ? "Add Vaccine" : "Update Vaccine"}</h3>
 								</Col>
 								<Col md="12" sm="12">
+									<label>Name</label>
 									<div className="form-group">
 										<select
 											value={data.name}
@@ -103,19 +104,16 @@ const AddVaccine = (props) => {
 											className="form-control"
 										>
 											<option value="">Vaccine Name</option>
-											<option value="diphteria">Diphteria</option>
-											<option value="polio">Polio</option>
-											<option value="homophiles">Homophiles</option>
-											<option value="rotaVirus">Rota Virus</option>
+											<option value="opv">Polio</option>
+											<option value="bcg">BCG</option>
+											<option value="pentavalent">Pentavalent</option>
+											<option value="pcv">PCV</option>
 											<option value="measles">Measles</option>
-											<option value="hapatitusA">Hapititus A</option>
-											<option value="hapatitusB">Hapititus B</option>
-											<option value="papillomaVirus">Papilloma Virus</option>
-											<option value="influenza">Influenza</option>
 										</select>
 									</div>
 								</Col>
 								<Col md="12" sm="12">
+									<label>Manufacturer</label>
 									<div className="form-group">
 										<input
 											type="manufacturer"
@@ -128,6 +126,7 @@ const AddVaccine = (props) => {
 									</div>
 								</Col>
 								<Col md="12" sm="12">
+									<label>Quantity</label>
 									<div className="form-group">
 										<input
 											type="number"
@@ -141,6 +140,7 @@ const AddVaccine = (props) => {
 								</Col>
 
 								<Col md="12" sm="12" lg="12">
+									<label>Expiry Date</label>
 									<div className="form-group">
 										<DatePicker
 											className="form-control"

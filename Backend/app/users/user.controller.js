@@ -10,7 +10,9 @@ const winston = require("../../config/winston"),
 
 let getUsers = async (req, res, next) => {
 	try {
-		filters = {};
+		filters = {
+			"address.city": "Rawalpindi",
+		};
 		let users = await userAccountModel.find(filters);
 		let noOfUsers = await userAccountModel.countDocuments(filters);
 

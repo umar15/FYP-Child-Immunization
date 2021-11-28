@@ -6,51 +6,33 @@ const Sidebar = (props) => {
 	return (
 		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
 			<ul>
-				<li>
-					<Link className="link" to="/admin">
-						dashboard
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/subadmins">
-						Sub Admins
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/hospitals">
-						Hospitals
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/vaccinecenters">
-						Vaccine Centers
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/vaccines">
-						Vaccine Stock
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/vaccinesrequests">
-						Vaccine Stock Requests
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/children">
-						Children
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/reports">
-						Reports
-					</Link>
-				</li>
-				<li>
-					<Link className="link" to="/admin/settings">
-						Settings
-					</Link>
-				</li>
+				<Link className="link" to="/admin">
+					<li>Dashboard</li>
+				</Link>
+				<Link className="link" to="/admin/subadmins">
+					<li>Sub Admins</li>
+				</Link>
+				<Link className="link" to="/admin/hospitals">
+					<li>Hospitals</li>
+				</Link>
+				<Link className="link" to="/admin/vaccinecenters">
+					<li>Vaccine Centers</li>
+				</Link>
+				<Link className="link" to="/admin/vaccines">
+					<li>Vaccine Stock</li>
+				</Link>
+				<Link className="link" to="/admin/vaccinesrequests">
+					<li>Vaccine Stock Requests</li>
+				</Link>
+				<Link className="link" to="/admin/children">
+					<li>Children</li>
+				</Link>
+				<Link className="link" to="/admin/reports">
+					<li>Reports</li>
+				</Link>
+				<Link className="link" to="/admin/settings">
+					<li>Settings</li>
+				</Link>
 			</ul>
 		</div>
 	);

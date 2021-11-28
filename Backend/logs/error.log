@@ -2234,3 +2234,874 @@ MongoServerSelectionError: connection <monitor> to 54.87.63.107:27017 timed out
     at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
     at listOnTimeout (internal/timers.js:557:17)
     at processTimers (internal/timers.js:500:7)
+[2021-11-23 17:56:06] [31merror[39m:  E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "+923159499378" } 
+MongoError: E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "+923159499378" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-11-23 17:56:16] [31merror[39m:  E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "+923159499378" } 
+MongoError: E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "+923159499378" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-11-28 11:41:08] [31merror[39m:  mongoose connection disconnected 
+[2021-11-28 12:04:47] [31merror[39m:  dailyConsumption is not defined 
+ReferenceError: dailyConsumption is not defined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:362:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+    at SessionStrategy.strategy.pass (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\passport\lib\middleware\authenticate.js:343:9)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\passport\lib\strategies\session.js:69:12
+[2021-11-28 12:04:48] [31merror[39m:  childrenData.length is not a function 
+TypeError: childrenData.length is not a function
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:513:24)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 13:39:02] [31merror[39m:  orgDailyConsumption is not defined 
+ReferenceError: orgDailyConsumption is not defined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:380:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:15:51] [31merror[39m:  Cannot read property 'map' of undefined 
+TypeError: Cannot read property 'map' of undefined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:401:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:16:54] [31merror[39m:  Cannot read property 'map' of undefined 
+TypeError: Cannot read property 'map' of undefined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:401:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:17:43] [31merror[39m:  Cannot read property 'map' of undefined 
+TypeError: Cannot read property 'map' of undefined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:401:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:18:48] [31merror[39m:  Cannot read property 'map' of undefined 
+TypeError: Cannot read property 'map' of undefined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:401:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:20:20] [31merror[39m:  org is not defined 
+ReferenceError: org is not defined
+    at vaccineRequirement (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:378:70)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:50:04] [31merror[39m:  Cast to ObjectId failed for value "Islamabad" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "Islamabad" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:50:07] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:50:27] [31merror[39m:  Req is not defined 
+ReferenceError: Req is not defined
+    at viewChildren (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:30:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+    at SessionStrategy.strategy.pass (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\passport\lib\middleware\authenticate.js:343:9)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\passport\lib\strategies\session.js:69:12
+[2021-11-28 14:51:57] [31merror[39m:  Cast to ObjectId failed for value "Islamabad" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "Islamabad" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-28 14:52:00] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:53:46] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:54:52] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:55:20] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:57:39] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 14:57:58] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:29:44] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:32:06] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:32:46] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:33:33] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:34:14] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:35:26] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:35:44] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:35:48] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:36:11] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:36:17] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:36:43] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:36:57] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:37:14] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:37:22] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:37:37] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:37:45] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:37:54] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:38:01] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:38:07] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:38:25] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:40:04] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:40:12] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:40:52] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:47:09] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:49:46] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:51:31] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:51:51] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:54:07] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:55:38] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:518:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:57:52] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:519:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 15:59:40] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:519:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 16:01:29] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:519:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 16:03:48] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:519:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 16:04:21] [31merror[39m:  Cannot read property 'find' of undefined 
+TypeError: Cannot read property 'find' of undefined
+    at childrenStats (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\admin\admin.controller.js:519:17)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:281:22
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:410:3)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\index.js:275:10)
+[2021-11-28 17:01:01] [31merror[39m:  mongoose connection disconnected 
+[2021-11-28 19:27:57] [31merror[39m:  mongoose connection disconnected 
+[2021-11-28 20:57:42] [31merror[39m:  No vaccine available with this name. 
+[2021-11-28 21:02:44] [31merror[39m:  Vaccine is not defined 
+ReferenceError: Vaccine is not defined
+    at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:147:7)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)

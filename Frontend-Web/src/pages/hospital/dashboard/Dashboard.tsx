@@ -250,10 +250,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">OPV (Polio)</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.opv.sevenDays}</b>
+											7 days req: <b>{vaccineReq?.opv.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.opv.thirtyDays}</b>
+											30 days req: <b>{vaccineReq?.opv.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>

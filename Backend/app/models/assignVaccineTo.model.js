@@ -10,6 +10,7 @@ const assignVaccineToSchema = new schema({
 	date: { type: Date, default: Date.now(), require: true },
 	quantity: { type: Number, default: "" },
 	organization: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
+	assignedBy: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
 });
 
 assignVaccineToSchema.plugin(mongoose_timestamps);

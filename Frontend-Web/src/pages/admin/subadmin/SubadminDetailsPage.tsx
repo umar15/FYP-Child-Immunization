@@ -3,22 +3,21 @@ import { Container, Col, Row } from "reactstrap";
 import Footer from "../../../components/footer/Footer";
 import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
-// import "../../index.css";
+import "../../../index.css";
 import Sidebar from "../Sidebar";
-import Dashboard from "./Dashboard";
+import SubadminDetails from "./SubadminDetails";
 
-const AdminDashboard = () => {
+const SubAdminDetailsPage = () => {
 	return (
 		<>
 			<AdminHeader userType="Admin" />
-
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar height="1600px" />
+						<Sidebar height="1100px" />
 					</Col>
 					<Col lg="9">
-						<Dashboard />
+						<SubadminDetails />
 					</Col>
 				</Row>
 			</Container>
@@ -28,4 +27,4 @@ const AdminDashboard = () => {
 	);
 };
 
-export default AdminDashboard;
+export default SubAdminDetailsPage;

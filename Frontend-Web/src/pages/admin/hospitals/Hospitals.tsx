@@ -73,6 +73,7 @@ const Hospitals = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
+								<th>View Details</th>
 								{/* <th>Edit</th>
 								<th>Delete</th> */}
 							</tr>
@@ -88,25 +89,18 @@ const Hospitals = () => {
 										<td>
 											<Link to="/">assign</Link>
 										</td>
-										{/* <td>
+										<td>
 											<Link
 												to={{
-													pathname: `/admin/hospital/${hospital._id}`,
+													pathname: `/admin/hospitals/details/${hospital._id}`,
 													state: {
-														hospital: hospital,
+														hospital,
 													},
 												}}
 											>
-												<BiEdit style={editStyles} size="20" />
+												view
 											</Link>
 										</td>
-										<td>
-											<AiFillDelete
-												onClick={() => handleDelete(hospital._id)}
-												style={deleteStyles}
-												size="20"
-											/>
-										</td> */}
 									</tr>
 								))}
 						</tbody>

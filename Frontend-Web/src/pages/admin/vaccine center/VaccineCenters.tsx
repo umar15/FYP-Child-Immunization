@@ -73,6 +73,7 @@ const VaccineCenters = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
+								<th>View Details</th>
 								{/* <th>Edit</th>
 								<th>Delete</th> */}
 							</tr>
@@ -87,6 +88,18 @@ const VaccineCenters = () => {
 										<td>{vc.address.city}</td>
 										<td>
 											<Link to="/">assign</Link>
+										</td>
+										<td>
+											<Link
+												to={{
+													pathname: `/admin/vaccinecenters/details/${vc._id}`,
+													state: {
+														vc,
+													},
+												}}
+											>
+												view
+											</Link>
 										</td>
 										{/* <td>
 											<Link

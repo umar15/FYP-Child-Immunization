@@ -3,17 +3,17 @@ const passport = require("../../config/passport");
 
 module.exports = (app, version) => {
 	app.get(version + "/admin", passport.isAuthenticated, passport.isAuthorized("admin"), adminController.admin);
-	app.get(
-		version + "/admin/children",
-		passport.isAuthenticated,
-		passport.isAuthorized("admin"),
-		adminController.viewChildren
-	);
+	// app.get(
+	// 	version + "/admin/children",
+	// 	passport.isAuthenticated,
+	// 	passport.isAuthorized("admin"),
+	// 	adminController.viewChildren
+	// );
 	app.get(
 		version + "/admin/children/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
-		adminController.viewChild
+		adminController.viewChildren
 	);
 	app.get(
 		version + "/admin/vaccines",
@@ -46,10 +46,22 @@ module.exports = (app, version) => {
 		adminController.viewHospitals
 	);
 	app.get(
+		version + "/admin/hospitals/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.getHospital
+	);
+	app.get(
 		version + "/admin/vaccinecenters",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.viewVaccineCenters
+	);
+	app.get(
+		version + "/admin/vaccinecenters/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.getVaccineCenter
 	);
 	app.get(
 		version + "/admin/subadmins",
@@ -88,15 +100,45 @@ module.exports = (app, version) => {
 		adminController.futureCases
 	);
 	app.get(
-		version + "/admin/futurevaccineneeds",
+		version + "/admin/vaccinerequirements/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
-		adminController.futureVaccineNeeds
+		adminController.vaccineRequirement
 	);
 	app.get(
 		version + "/admin/vaccinerequests",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.vaccineStockRequests
+	);
+	app.get(
+		version + "/admin/childrenstatistics/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.childrenStats
+	);
+	app.get(
+		version + "/admin/vaccinatednonvaccinated/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.vaccinatedNonVaccinated
+	);
+	app.get(
+		version + "/admin/usersvaccines/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.userVaccinesInfo
+	);
+	app.get(
+		version + "/admin/childvaccineschedule/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.childVaccineSchedule
+	);
+	app.get(
+		version + "/admin/assignedvaccine/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.getUserAssignedVaccines
 	);
 };
