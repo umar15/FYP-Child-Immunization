@@ -5,19 +5,19 @@ import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 import "../../../index.css";
 import Sidebar from "./../Sidebar";
-import ChildData from "./ChildData";
+import UserRequestsDetails from "./UserRequestsDetails";
 
-const ChildDataPage = () => {
+const UserRequestsDetailsPage = () => {
 	return (
 		<>
-			<AdminHeader userType="Sub admin" />
+			<AdminHeader userType="Sub Admin" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar height="1300px" />
+						<Sidebar />
 					</Col>
 					<Col lg="9">
-						<ChildData />
+						<UserRequestsDetails />
 					</Col>
 				</Row>
 			</Container>
@@ -27,4 +27,4 @@ const ChildDataPage = () => {
 	);
 };
 
-export default ChildDataPage;
+export default UserRequestsDetailsPage;

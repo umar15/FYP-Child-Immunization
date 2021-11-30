@@ -110,7 +110,7 @@ let createUser = async (req, res, next) => {
 			const newRequest = {
 				...req.body,
 				address: a,
-				permit: "/permit/" + req.file.filename,
+				permit: req.file.filename,
 			};
 			// console.log("New Request: ", newRequest);
 

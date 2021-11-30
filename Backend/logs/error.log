@@ -3105,3 +3105,25 @@ ReferenceError: Vaccine is not defined
     at assignVaccine (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\subAdmin\subadmin.controller.js:147:7)
     at runMicrotasks (<anonymous>)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-11-29 11:43:27] [31merror[39m:  mongoose connection disconnected 
+[2021-11-29 13:00:33] [31merror[39m:  E11000 duplicate key error collection: CVS.userrequests index: phoneNo_1 dup key: { phoneNo: "03159499378" } 
+MongoError: E11000 duplicate key error collection: CVS.userrequests index: phoneNo_1 dup key: { phoneNo: "03159499378" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-11-29 14:27:31] [31merror[39m:  mongoose connection disconnected 
+[2021-11-29 17:07:23] [31merror[39m:  mongoose connection disconnected 
+[2021-11-29 20:01:25] [31merror[39m:  mongoose connection disconnected 

@@ -57,10 +57,18 @@ import ChildVaccinationSchedulePage from "./pages/hospital/children/ChildVaccina
 import SubAdminDetailsPage from "./pages/admin/subadmin/SubadminDetailsPage";
 import VaccineCenterDetails from "./pages/admin/vaccine center/VaccineCenterDetails";
 import VaccineCenterDetailsPage from "./pages/admin/vaccine center/VaccineCenterDetailsPage";
+import SubadminVaccineCenterDetailsPage from "./pages/subAdmin/vaccine center/VaccineCenterDetailsPage";
 import HospitalDetailsPage from "./pages/admin/hospitals/HospitalDetailsPage";
+import SubadminHospitalDetailsPage from "./pages/subAdmin/hospitals/HospitalDetailsPage";
 import AdminChildVaccinationSchedulePage from "./pages/admin/children/ChildVaccinationSchedulePage";
+import SubadminChildVaccinationSchedulePage from "./pages/subAdmin/children/ChildVaccinationSchedulePage";
 import AdminSettingsPage from "./pages/admin/settings/SettingsPage";
 import AdminReportsPage from "./pages/admin/reports/ReportsPage";
+import SubadminSettingsPage from "./pages/subAdmin/settings/SettingsPage";
+import SubadminReportsPage from "./pages/subAdmin/reports/ReportsPage";
+import UserRequests from "./pages/subAdmin/userRequests/UserRequests";
+import UserRequestsPage from "./pages/subAdmin/userRequests/UserRequestsPage";
+import UserRequestsDetailsPage from "./pages/subAdmin/userRequests/UserRequestsDetailsPage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -141,14 +149,24 @@ function App() {
 				{/* Sub admin */}
 				<PrivateRoute path="/subadmin" exact component={SubAdminDashboard} />
 				<PrivateRoute path="/subadmin/hospitals" exact component={SubAdminHospitalPage} />
-				<PrivateRoute path="/subadmin/hospitals" exact component={SubAdminHospitalPage} />
+				<PrivateRoute path="/subadmin/hospitals/details/:id" exact component={SubadminHospitalDetailsPage} />
 				<PrivateRoute path="/subadmin/assignvaccine/:id" exact component={SubAdminAssignVaccinePage} />
 				<PrivateRoute path="/subadmin/vaccinecenters" exact component={SubAdminVaccineCenterPage} />
+				<PrivateRoute
+					path="/subadmin/vaccinecenters/details/:id"
+					exact
+					component={SubadminVaccineCenterDetailsPage}
+				/>
 				<PrivateRoute path="/subadmin/vaccines" exact component={SubAdminVaccinesPage} />
 				<PrivateRoute path="/subadmin/children" exact component={SubAdminChildrenPage} />
 				<PrivateRoute path="/subadmin/children/:id" exact component={SubAdminChildDataPage} />
 				<PrivateRoute path="/subadmin/requestvaccine" exact component={RequestVaccinePage} />
 				<PrivateRoute path="/subadmin/vaccinerequests" exact component={SAVaccineRequestsPage} />
+				<PrivateRoute path="/subadmin/userrequests" exact component={UserRequestsPage} />
+				<PrivateRoute path="/subadmin/userrequests/:id" exact component={UserRequestsDetailsPage} />
+				<PrivateRoute path="/subadmin/vaccineschedule/:id" exact component={SubadminChildVaccinationSchedulePage} />
+				<PrivateRoute path="/subadmin/settings" exact component={SubadminSettingsPage} />
+				<PrivateRoute path="/subadmin/reports" exact component={SubadminReportsPage} />
 
 				{/* Hospital */}
 				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />

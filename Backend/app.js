@@ -43,7 +43,7 @@ let corsOptionsDelegate = (req, callback) => {
 
 // parse application/json
 app.use(express.json());
-
+app.use(express.static("public"));
 // parse application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 

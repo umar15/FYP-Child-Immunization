@@ -72,7 +72,6 @@ const VaccineCenters = () => {
 								<th>Name</th>
 								<th>Email</th>
 								<th>City</th>
-								<th>Assign vaccine</th>
 								<th>View Details</th>
 								{/* <th>Edit</th>
 								<th>Delete</th> */}
@@ -86,9 +85,7 @@ const VaccineCenters = () => {
 										<td>{vc.name}</td>
 										<td>{vc.email}</td>
 										<td>{vc.address.city}</td>
-										<td>
-											<Link to="/">assign</Link>
-										</td>
+
 										<td>
 											<Link
 												to={{

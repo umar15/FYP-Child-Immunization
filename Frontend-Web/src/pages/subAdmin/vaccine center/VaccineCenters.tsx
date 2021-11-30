@@ -67,6 +67,7 @@ const VaccineCenters = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
+								<th>View Details</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -86,6 +87,18 @@ const VaccineCenters = () => {
 														}}
 													>
 														assign
+													</Link>
+												</td>
+												<td>
+													<Link
+														to={{
+															pathname: `/subadmin/vaccinecenters/details/${vc._id}`,
+															state: {
+																vc,
+															},
+														}}
+													>
+														view
 													</Link>
 												</td>
 											</tr>

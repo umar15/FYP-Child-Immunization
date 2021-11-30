@@ -3,10 +3,8 @@ import { Container, Col, Row } from "reactstrap";
 import Footer from "../../../components/footer/Footer";
 import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
-// import "../../index.css";
 import Sidebar from "../Sidebar";
-import Statistics from "./Statistics";
-import axios from "../../../config/AxiosOptions";
+import Dashboard from "./Dashboard";
 
 const SubAdminDashboard = () => {
 	return (
@@ -16,10 +14,10 @@ const SubAdminDashboard = () => {
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar />
+						<Sidebar height="1500px" />
 					</Col>
 					<Col lg="9">
-						<Statistics />
+						<Dashboard />
 					</Col>
 				</Row>
 			</Container>

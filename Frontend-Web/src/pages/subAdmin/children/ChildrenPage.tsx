@@ -10,8 +10,7 @@ import Children from "./Children";
 const ChildrenPage = () => {
 	return (
 		<>
-			<AdminHeader userType="Sub Admin" />
-
+			<AdminHeader userType="Sub admin" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">

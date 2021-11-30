@@ -69,6 +69,8 @@ const Hospitals = () => {
 								<th>Email</th>
 								<th>City</th>
 								<th>Assign vaccine</th>
+								<th>View Details</th>
+
 								{/* <th>Edit</th>
 								<th>Delete</th> */}
 							</tr>
@@ -92,6 +94,18 @@ const Hospitals = () => {
 														assign
 													</Link>
 												</td>
+												<td>
+													<Link
+														to={{
+															pathname: `/subadmin/hospitals/details/${hospital._id}`,
+															state: {
+																hospital,
+															},
+														}}
+													>
+														view
+													</Link>
+												</td>
 											</tr>
 										);
 									}
@@ -102,20 +116,6 @@ const Hospitals = () => {
 			</Row>
 		</Container>
 	);
-};
-
-const editStyles = {
-	cursor: "pointer",
-	color: "green",
-};
-const deleteStyles = {
-	cursor: "pointer",
-	color: "red",
-};
-
-const linkStyles = {
-	color: "white",
-	listStyleType: "none",
 };
 
 const tableStyles = {

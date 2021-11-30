@@ -8,6 +8,8 @@ const winston = require("../../config/winston"),
 	vaccineRequest = mongoose.model("vaccineRequest"),
 	userRequestsModel = mongoose.model("userRequests"),
 	subadminVaccineRequest = mongoose.model("subadminVaccineRequest"),
+	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
+	dailyConsumption = mongoose.model("dailyConsumption"),
 	nodemailer = require("nodemailer");
 
 let subadmin = (req, res, next) => {
@@ -24,9 +26,13 @@ let subadmin = (req, res, next) => {
 
 let viewChildren = async (req, res, next) => {
 	try {
+		let childrenData = await children.find({ "address.city": req.user.address.city });
 		return res.json({
 			message: "Children",
-			data: await children.find({}),
+			data: {
+				children: childrenData,
+				numberOfChildren: childrenData.length,
+			},
 		});
 	} catch (err) {
 		winston.error(err);
@@ -36,9 +42,10 @@ let viewChildren = async (req, res, next) => {
 
 let viewChild = async (req, res, next) => {
 	try {
+		let childrenData = await children.findOne({ _id: req.params.id });
 		return res.json({
 			message: "Child",
-			data: await children.findOne({ _id: req.params.id }),
+			data: childrenData,
 		});
 	} catch (err) {
 		winston.error(err);
@@ -63,7 +70,18 @@ let getHospitals = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "Hospitals",
-			data: await users.find({ userType: "hospital" }),
+			data: await users.find({ $and: [{ userType: "hospital" }, { "address.city": req.user.address.city }] }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+let getHospital = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Hospital",
+			data: await users.find({ _id: req.params.id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -74,8 +92,19 @@ let getHospitals = async (req, res, next) => {
 let getVaccineCenters = async (req, res, next) => {
 	try {
 		return res.json({
+			message: "Vaccine centers",
+			data: await users.find({ $and: [{ userType: "vaccinecenter" }, { "address.city": req.user.address.city }] }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+let getVaccineCenter = async (req, res, next) => {
+	try {
+		return res.json({
 			message: "Vaccine center",
-			data: await users.find({ userType: "vaccine center" }),
+			data: await users.find({ _id: req.params.id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -342,6 +371,205 @@ let rejectRequest = async (req, res, next) => {
 	}
 };
 
+let vaccinatedNonVaccinated = async (req, res, next) => {
+	try {
+		let childrenData;
+		childrenData = await children.find({ "address.city": req.user.address.city });
+
+		let vaccinated = 0;
+		let nonVaccinated = 0;
+		childrenData.map((item) => {
+			if (
+				item.vaccination[0].opv.noOfDoses === 4 &&
+				item.vaccination[0].measles.noOfDoses === 2 &&
+				item.vaccination[0].bcg.noOfDoses === 1 &&
+				item.vaccination[0].pentavalent.noOfDoses === 3 &&
+				item.vaccination[0].pcv.noOfDoses === 3
+			) {
+				vaccinated += 1;
+			} else {
+				nonVaccinated += 1;
+			}
+		});
+
+		return res.json({
+			message: "Vaccinated non vaccinated stats",
+			data: {
+				vaccinated,
+				nonVaccinated,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let childrenStats = async (req, res, next) => {
+	try {
+		let childrenData = await children.find({ "address.city": req.user.address.city });
+
+		let bornToday = 0;
+		let bornSevenDays = 0;
+		let bornOneMonth = 0;
+		let today = new Date();
+		let sevenDaysInMs = 86400000 * 7;
+		let thirtyDaysInMs = 86400000 * 30;
+		childrenData.length > 0 &&
+			childrenData.map((item) => {
+				// console.log("child: ", item.address.city);
+				let d = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+				let dob = new Date(item.dateOfBirth);
+				let b = dob.getFullYear() + "-" + (dob.getMonth() + 1) + "-" + dob.getDate();
+				if (b === d) {
+					bornToday += 1;
+				}
+				dob.setHours(0, 0, 0, 0);
+				today.setHours(0, 0, 0, 0);
+				if (today - dob < sevenDaysInMs) {
+					bornSevenDays += 1;
+				}
+				if (today - dob < thirtyDaysInMs) {
+					bornOneMonth += 1;
+				}
+			});
+
+		return res.json({
+			message: "Child Stats",
+			data: {
+				bornToday,
+				bornSevenDays,
+				bornOneMonth,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let vaccineRequirement = async (req, res, next) => {
+	try {
+		let orgDailyConsumption = await dailyConsumption.find({}).populate({
+			path: "organization",
+			match: {
+				"address.city": req.user.address.city,
+			},
+		});
+
+		// console.log("Daily: ", orgDailyConsumption);
+
+		let pcv = [];
+		let bcg = [];
+		let pentavalent = [];
+		let opv = [];
+		let measles = [];
+		let pcvDaily = 0;
+		let bcgDaily = 0;
+		let pentavalentDaily = 0;
+		let opvDaily = 0;
+		let measlesDaily = 0;
+		orgDailyConsumption.map((item) => {
+			if (item.vaccineName === "pcv") {
+				pcv.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					pcvDaily += 1;
+				}
+			} else if (item.vaccineName === "bcg") {
+				bcg.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					bcgDaily += 1;
+				}
+			} else if (item.vaccineName === "opv") {
+				opv.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					opvDaily += 1;
+				}
+			} else if (item.vaccineName === "pentavalent") {
+				pentavalent.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					pentavalentDaily += 1;
+				}
+			} else if (item.vaccineName === "measles") {
+				measles.push(item);
+				let date = new Date(item.date);
+				let today = new Date();
+				if (date.toDateString() == today.toDateString()) {
+					measlesDaily += 1;
+				}
+			}
+		});
+
+		let requirements = {
+			opv: {
+				sevenDays: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
+			},
+			bcg: {
+				sevenDays: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
+			},
+			pcv: {
+				sevenDays: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
+			},
+			pentavalent: {
+				sevenDays: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
+			},
+			measles: {
+				sevenDays: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
+				thirtyDays: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
+			},
+		};
+
+		return res.json({
+			message: "Vaccine requirements",
+			data: {
+				requirements,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let childVaccineSchedule = async (req, res, next) => {
+	try {
+		return res.json({
+			message: "Child Vaccination Schedule",
+			data: await childVaccinationSchedule.find({ child: req.params.id }),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let userVaccinesInfo = async (req, res, next) => {
+	try {
+		const orgVacc = await orgVaccines.find({ organization: req.params.id });
+		return res.json({
+			message: "Organization vaccines.",
+			data: {
+				uservaccines: orgVacc,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	subadmin,
 	viewChildren,
@@ -351,7 +579,9 @@ module.exports = {
 	updateVaccine,
 	deleteVaccine,
 	getHospitals,
+	getHospital,
 	getVaccineCenters,
+	getVaccineCenter,
 	futureCases,
 	futureVaccineNeeds,
 	assignVaccine,
@@ -360,4 +590,9 @@ module.exports = {
 	userRequests,
 	approveRequest,
 	rejectRequest,
+	vaccinatedNonVaccinated,
+	childrenStats,
+	childVaccineSchedule,
+	vaccineRequirement,
+	userVaccinesInfo,
 };

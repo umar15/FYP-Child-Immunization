@@ -72,10 +72,7 @@ const Hospitals = () => {
 								<th>Name</th>
 								<th>Email</th>
 								<th>City</th>
-								<th>Assign vaccine</th>
 								<th>View Details</th>
-								{/* <th>Edit</th>
-								<th>Delete</th> */}
 							</tr>
 						</thead>
 						<tbody>
@@ -86,9 +83,6 @@ const Hospitals = () => {
 										<td>{hospital.name}</td>
 										<td>{hospital.email}</td>
 										<td>{hospital.address.city}</td>
-										<td>
-											<Link to="/">assign</Link>
-										</td>
 										<td>
 											<Link
 												to={{
@@ -109,20 +103,6 @@ const Hospitals = () => {
 			</Row>
 		</Container>
 	);
-};
-
-const editStyles = {
-	cursor: "pointer",
-	color: "green",
-};
-const deleteStyles = {
-	cursor: "pointer",
-	color: "red",
-};
-
-const linkStyles = {
-	color: "white",
-	listStyleType: "none",
 };
 
 const tableStyles = {

@@ -57,10 +57,22 @@ module.exports = (app, version) => {
 		subadminController.getHospitals
 	);
 	app.get(
+		version + "/subadmin/hospitals/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.getHospital
+	);
+	app.get(
 		version + "/subadmin/vaccinecenters",
 		passport.isAuthenticated,
 		passport.isAuthorized("subadmin"),
 		subadminController.getVaccineCenters
+	);
+	app.get(
+		version + "/subadmin/vaccinecenters/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.getVaccineCenter
 	);
 	app.get(
 		version + "/subadmin/futurecases",
@@ -103,5 +115,35 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("subadmin"),
 		subadminController.rejectRequest
+	);
+	app.get(
+		version + "/subadmin/childrenstatistics",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.childrenStats
+	);
+	app.get(
+		version + "/subadmin/vaccinatednonvaccinated",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.vaccinatedNonVaccinated
+	);
+	app.get(
+		version + "/subadmin/childvaccineschedule/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.childVaccineSchedule
+	);
+	app.get(
+		version + "/subadmin/vaccinerequirements",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.vaccineRequirement
+	);
+	app.get(
+		version + "/subadmin/usersvaccines/:id",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.userVaccinesInfo
 	);
 };
