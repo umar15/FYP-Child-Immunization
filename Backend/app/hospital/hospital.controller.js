@@ -38,7 +38,7 @@ let viewChildren = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "View CHildren",
-			data: await children.find({}),
+			data: await children.find({ hospitalName: req.user._id }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -760,7 +760,7 @@ let childBornStats = async (req, res, next) => {
 const reports = async (req, res, next) => {
 	try {
 		const childrenData = await children.find({ hospitalName: req.user._id });
-		let childrenVaccines = await childVaccinationSchedule.find({});
+		let childrenVaccines = await childVaccinationSchedule.find({}).populate("child");
 		let nonVaccinatedChildren = [];
 		const today = new Date();
 		let sevenDaysInMs = 86400000 * 7;

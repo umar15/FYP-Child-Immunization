@@ -5,19 +5,20 @@ import FooterBottom from "../../../components/footer/FooterBottom";
 import AdminHeader from "../../../components/header/AdminHeader";
 import "../../../index.css";
 import Sidebar from "./../Sidebar";
-import ChildData from "./ChildData";
+import CampaignDetails from "./CampaignDetails";
+import Campaigns from "./Campaigns";
 
-const ChildDataPage = () => {
+const CampaignDetailsPage = () => {
 	return (
 		<>
 			<AdminHeader userType="Vaccine center" />
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar height="1400px" />
+						<Sidebar />
 					</Col>
 					<Col lg="9">
-						<ChildData />
+						<CampaignDetails />
 					</Col>
 				</Row>
 			</Container>
@@ -27,4 +28,4 @@ const ChildDataPage = () => {
 	);
 };
 
-export default ChildDataPage;
+export default CampaignDetailsPage;

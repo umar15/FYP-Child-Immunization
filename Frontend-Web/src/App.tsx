@@ -52,6 +52,7 @@ import SAVaccineRequestsPage from "./pages/subAdmin/vaccineRequests/VaccineReque
 import BirthCertificate from "./pages/hospital/children/BirthCertificate";
 import Reports from "./pages/hospital/Reports";
 import ReportsPage from "./pages/hospital/ReportsPage";
+import VCReportsPage from "./pages/vaccineCenter/reports/ReportsPage";
 import SettingsPage from "./pages/hospital/settings/SettingsPage";
 import ChildVaccinationSchedulePage from "./pages/hospital/children/ChildVaccinationSchedulePage";
 import SubAdminDetailsPage from "./pages/admin/subadmin/SubadminDetailsPage";
@@ -69,6 +70,7 @@ import SubadminReportsPage from "./pages/subAdmin/reports/ReportsPage";
 import UserRequests from "./pages/subAdmin/userRequests/UserRequests";
 import UserRequestsPage from "./pages/subAdmin/userRequests/UserRequestsPage";
 import UserRequestsDetailsPage from "./pages/subAdmin/userRequests/UserRequestsDetailsPage";
+import CampaignDetailsPage from "./pages/vaccineCenter/campaigns/CampaignDetailsPage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -186,12 +188,14 @@ function App() {
 				<PrivateRoute path="/vaccinecenter/children/:id" exact component={VCChildData} />
 				<PrivateRoute path="/vaccinecenter/vaccineschedule/:id" exact component={VCChildVaccinationSchedulePage} />
 				<PrivateRoute path="/vaccinecenter/campaigns" exact component={CampaignsPage} />
+				<PrivateRoute path="/vaccinecenter/campaigns/details/:id" exact component={CampaignDetailsPage} />
 				<PrivateRoute path="/vaccinecenter/campaigns/:id" exact component={AddCampaignPage} />
 				<PrivateRoute path="/vaccinecenter/vaccines" exact component={VCVaccines} />
 				<PrivateRoute path="/vaccinecenter/workers" exact component={WorkersPage} />
 				<PrivateRoute path="/vaccinecenter/workers/:id" exact component={AddWorkerPage} />
 				<PrivateRoute path="/vaccinecenter/requestvaccine" exact component={VCRequestVaccinePage} />
 				<PrivateRoute path="/vaccinecenter/settings" exact component={VCSettingsPage} />
+				<PrivateRoute path="/vaccinecenter/reports" exact component={VCReportsPage} />
 
 				{/* <PrivateRoute path="/hospital/vaccines" exact component={HospitalVaccines} />
 				<PrivateRoute path="/hospital/child/:id" exact component={AddChildPage} /> */}

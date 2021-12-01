@@ -11,7 +11,7 @@ let userAccount = new schema({
 	name: { type: String, default: "", required: true },
 	cnic: { type: String, default: "" },
 	parentOrg: { type: schema.Types.ObjectId, ref: "userAccounts" },
-	phoneNo: { type: String, default: "" },
+	phoneNo: { type: String, default: "", unique: false },
 	userType: {
 		type: String,
 		default: "",

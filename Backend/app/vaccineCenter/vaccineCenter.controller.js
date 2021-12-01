@@ -379,7 +379,7 @@ let viewCampaigns = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "campaigns",
-			data: await campaign.find({ vaccineCenter: req.user._id }),
+			data: await campaign.find({ vaccineCenter: req.user._id }).populate("vaccineCenter").populate("workers"),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -447,7 +447,7 @@ let notifyPublic = async (req, res, next) => {
 		// const accountSid = process.env.TWILIO_ACCOUNT_SID;
 		// const authToken = process.env.TWILIO_AUTH_TOKEN;
 		// const client = require("twilio")(accountSid, authToken);
-		const publicUsers = await children.find({});
+		const publicUsers = await children.find({ "address.area": req.user.address.area });
 		const phoneNo = publicUsers.map((user) => user.contactNo);
 		// console.log(phoneNo);
 		// phoneNo.map((num) => {
@@ -502,15 +502,11 @@ let addWorker = async (req, res, next) => {
 		const orgVacc = {
 			organization: newUser._id,
 			vaccines: {
-				polio: { quantity: 0 },
-				diphtheria: { quantity: 0 },
-				homophiles: { quantity: 0 },
-				rotaVirus: { quantity: 0 },
+				opv: { quantity: 0 },
 				measles: { quantity: 0 },
-				hepatitisA: { quantity: 0 },
-				hepatitisB: { quantity: 0 },
-				papillomaVirus: { quantity: 0 },
-				influenza: { quantity: 0 },
+				bcg: { quantity: 0 },
+				pentavalent: { quantity: 0 },
+				pcv: { quantity: 0 },
 			},
 		};
 		const newVaccines = await new orgVaccines(orgVacc).save();

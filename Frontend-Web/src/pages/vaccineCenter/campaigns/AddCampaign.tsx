@@ -6,12 +6,14 @@ import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Select from "react-select";
 
 const AddCampaign = (props) => {
 	const campID: any = useParams();
 	const alert = useAlert();
 	const history = useHistory();
 	const location: any = useLocation();
+	const [workers, setWorkers] = useState([]);
 
 	const makeCampaignID = () => {
 		let campaignID = "CM-";
@@ -20,11 +22,35 @@ const AddCampaign = (props) => {
 		return campaignID;
 	};
 
+	const getWorkers = async () => {
+		axios
+			.get("/vaccinecenter/workers")
+			.then((res) => {
+				console.log(res.data.data);
+				setWorkers(res.data?.data);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch workers", {
+					type: "error",
+				})
+			);
+	};
+
+	let options = workers?.map((worker: any) => {
+		return {
+			value: worker._id,
+			label: worker.name,
+		};
+	});
+
+	console.log("options: ", options);
+
 	const [data, setData] = useState<any>({
 		campaignID: makeCampaignID(),
 		status: "inactive",
 		area: "",
-		noOfWorkers: 5,
+		workers: [],
+		vaccine: "",
 		startDate: new Date(),
 		endDate: new Date(),
 		vaccineCenter: "",
@@ -49,8 +75,20 @@ const AddCampaign = (props) => {
 			);
 	};
 
+	const handleMultiChange = (e) => {
+		const d = data;
+		console.log("value", options);
+		d["workers"] = e.map((o) => o.value);
+		console.log(
+			"options",
+			e.map((o) => o.value)
+		);
+		setData(d);
+	};
+
 	useEffect(() => {
 		getUser();
+		getWorkers();
 	}, []);
 
 	const handleSubmit = (e) => {
@@ -88,7 +126,7 @@ const AddCampaign = (props) => {
 					});
 				});
 		}
-		console.log(data);
+		console.log("Data in submit: ", data);
 	};
 
 	const handleStartDateChange = (date: any) => {
@@ -152,7 +190,24 @@ const AddCampaign = (props) => {
 										/>
 									</div>
 								</Col>
-								<Col lg="12">
+								<Col md="12" sm="12">
+									<label>Name</label>
+									<div className="form-group">
+										<select
+											value={data.vaccine}
+											onChange={(e) => setData({ ...data, vaccine: e.target.value })}
+											className="form-control"
+										>
+											<option value="">Vaccine Name</option>
+											<option value="opv">Polio</option>
+											<option value="bcg">BCG</option>
+											<option value="pentavalent">Pentavalent</option>
+											<option value="pcv">PCV</option>
+											<option value="measles">Measles</option>
+										</select>
+									</div>
+								</Col>
+								{/* <Col lg="12">
 									<div className="form-group">
 										<label>Number of workers</label>
 										<input
@@ -169,7 +224,7 @@ const AddCampaign = (props) => {
 											}
 										/>
 									</div>
-								</Col>
+								</Col> */}
 								{/* <Col lg="12">
 										<div className="form-group">
 											<input
@@ -201,6 +256,17 @@ const AddCampaign = (props) => {
 											// value={endDate}
 											selected={data.endDate}
 											onChange={handleEndDateChange}
+										/>
+									</div>
+								</Col>
+								<Col lg="12">
+									<div className="form-group">
+										<label>Allotte Workers</label>
+										<Select
+											isMulti
+											options={options}
+											placeholder={"Select workers..."}
+											onChange={(e: any) => handleMultiChange(e)}
 										/>
 									</div>
 								</Col>

@@ -250,10 +250,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">OPV (Polio)</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq?.opv.sevenDays}</b>
+											7 days req: <b>{vaccineReq?.opv?.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq?.opv.thirtyDays}</b>
+											30 days req: <b>{vaccineReq?.opv?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -263,10 +263,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">Measles</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.measles.sevenDays}</b>
+											7 days req: <b>{vaccineReq.measles?.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.measles.thirtyDays}</b>
+											30 days req: <b>{vaccineReq.measles?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -276,10 +276,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">BCG</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.bcg.sevenDays}</b>
+											7 days req: <b>{vaccineReq.bcg?.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.bcg.thirtyDays}</b>
+											30 days req: <b>{vaccineReq.bcg?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -291,10 +291,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">Pentavalent</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.pentavalent.sevenDays}</b>
+											7 days req: <b>{vaccineReq.pentavalent?.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.pentavalent.thirtyDays}</b>
+											30 days req: <b>{vaccineReq.pentavalent?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -304,10 +304,10 @@ const Dashboard = () => {
 									<CardBody>
 										<CardTitle tag="h5">PCV</CardTitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.pcv.sevenDays}</b>
+											7 days req: <b>{vaccineReq.pcv?.sevenDays}</b>
 										</CardSubtitle>
 										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.pcv.thirtyDays}</b>
+											30 days req: <b>{vaccineReq.pcv?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>

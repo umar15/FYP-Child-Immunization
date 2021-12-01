@@ -98,16 +98,11 @@ const Campaigns = () => {
 							<tr>
 								<th>#</th>
 								<th>Campaign ID</th>
-								{/* <th>Vaccine Center</th> */}
 								<th>Area</th>
-								<th>No. of Workers</th>
 								<th>Start Date</th>
-								<th>End Date</th>
-								<th>Campaign Status</th>
+								<th>Delete Campaign</th>
+								<th>View details</th>
 								<th>Notify Public</th>
-								{/* <th>Edit</th>
-								<th>Delete</th>
-								<th>Notify Public</th> */}
 							</tr>
 						</thead>
 						<tbody>
@@ -116,31 +111,40 @@ const Campaigns = () => {
 									<tr key={campaign._id}>
 										<th scope="row">{index + 1}</th>
 										<td>{campaign.campaignID}</td>
-										{/* <td>{campaign.vaccineCenter}</td> */}
 										<td>{campaign.area}</td>
-										<td>{campaign.noOfWorkers}</td>
-										<td>{campaign.startDate}</td>
-										<td>{campaign.endDate}</td>
-										<td>{campaign.status}</td>
+										<td>{new Date(campaign.startDate).toDateString()}</td>
 										{/* <td>
-											<Link
-												to={{
-													pathname: `/vaccinecenter/campaigns/${campaign._id}`,
-													state: {
-														campaign,
-													},
+											<span
+												style={{
+													color: "#fff",
+													padding: "2px",
+													borderRadius: "2px",
+													backgroundColor: campaign.status === "active" ? "green" : "red",
 												}}
 											>
-												<BiEdit style={editStyles} size="20" />
-											</Link>
-										</td>
+												{campaign.status}
+											</span>
+										</td> */}
 										<td>
 											<AiFillDelete
 												onClick={() => handleDelete(campaign._id)}
 												style={deleteStyles}
 												size="20"
 											/>
-										</td> */}
+										</td>
+										<td>
+											<Link
+												to={{
+													pathname: `/vaccinecenter/campaigns/details/${campaign._id}`,
+													state: {
+														campaign,
+													},
+												}}
+											>
+												view
+											</Link>
+										</td>
+
 										<td>
 											<button className="default-btn" onClick={() => notifyPublic(campaign._id)}>
 												notify

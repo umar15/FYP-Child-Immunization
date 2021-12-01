@@ -16,13 +16,13 @@ const Reports = () => {
 			.then((res) => {
 				console.log("reports: ", res.data.data);
 				setReports(res.data?.data?.nonVaccinatedChildren);
-				res.data?.data.nonVaccinatedChildren.map((child) => {
-					axios.get(`/hospital/children/${child}`).then((res) => {
-						console.log("res: ", res.data?.data);
-						setChildren([...children, res.data?.data]);
-					});
-				});
-				reports.map((item) => console.log("item: ", item));
+				// res.data?.data.nonVaccinatedChildren.map((child) => {
+				// 	axios.get(`/hospital/children/${child}`).then((res) => {
+				// 		console.log("res: ", res.data?.data);
+				// 		setChildren([...children, res.data?.data]);
+				// 	});
+				// });
+				// reports.map((item) => console.log("item: ", item));
 			})
 			.catch((err) => {
 				alert.show("Failed to Fetch reports", {
@@ -43,19 +43,12 @@ const Reports = () => {
 				</Col>
 			</Row>
 			<Row className="subadmin-admin">
-				<Col lg="9">
+				<Col lg="12">
 					<h5>List of non-vaccinated children</h5>
-				</Col>
-				<Col lg="3">
-					<button className="default-btn">
-						<a href="/hospital/child/add" style={linkStyles}>
-							Add Child
-						</a>
-					</button>
 				</Col>
 			</Row>
 			<Row className="subadmin-table">
-				<Col lg="12">
+				<Col lg="12" style={{ height: "600px", overflow: "scroll" }}>
 					<Table style={tableStyles} bordered hover>
 						<thead>
 							<tr>
@@ -69,8 +62,8 @@ const Reports = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{children &&
-								children.map((child: any, index) => (
+							{reports &&
+								reports.map((child: any, index) => (
 									<tr key={child._id}>
 										{/* {console.log(child.dateOfBirth.getTime())} */}
 										<th scope="row">{index + 1}</th>

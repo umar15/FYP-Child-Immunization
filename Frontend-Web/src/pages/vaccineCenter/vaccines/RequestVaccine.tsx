@@ -33,7 +33,6 @@ const RequestVaccine = (props) => {
 					type: "error",
 				});
 			});
-
 		console.log(data);
 	};
 
@@ -58,15 +57,11 @@ const RequestVaccine = (props) => {
 											required
 										>
 											<option value="">Vaccine Name</option>
-											<option value="diphteria">Diphteria</option>
-											<option value="polio">Polio</option>
-											<option value="homophiles">Homophiles</option>
-											<option value="rotaVirus">Rota Virus</option>
-											<option value="measles">Measles</option>
-											<option value="hapatitusA">Hapititus A</option>
-											<option value="hapatitusB">Hapititus B</option>
-											<option value="papillomaVirus">Papilloma Virus</option>
-											<option value="influenza">Influenza</option>
+											<option value="opv">opv</option>
+											<option value="bcg">bcg</option>
+											<option value="measles">measles</option>
+											<option value="pentavalent">pentavalent</option>
+											<option value="pcv">pcv</option>
 										</select>
 									</div>
 								</Col>
@@ -74,6 +69,7 @@ const RequestVaccine = (props) => {
 									<div className="form-group">
 										<label>Quantity</label>
 										<input
+											min={0}
 											required
 											type="number"
 											className="form-control"

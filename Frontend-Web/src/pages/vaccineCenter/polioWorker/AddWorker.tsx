@@ -18,6 +18,7 @@ const AddWorker = (props) => {
 		userType: "worker",
 		password: "",
 		parentOrg: "",
+		phoenNo: "",
 		address: {
 			addr: "",
 			area: "",
@@ -54,6 +55,7 @@ const AddWorker = (props) => {
 					email: worker ? worker.worker.email : "",
 					name: worker ? worker.worker.name : "",
 					cnic: worker ? worker.worker.cnic : "",
+					phoneNo: worker ? worker.worker.phoneNo : "",
 					userType: "worker",
 					parentOrd: worker ? worker.worker.parentOrg : "",
 					password: worker ? worker.worker.password : "",
@@ -167,6 +169,18 @@ const AddWorker = (props) => {
 											placeholder="Confirm Password"
 											value={confirmPass}
 											onChange={(e) => setConfirmPass(e.target.value)}
+										/>
+									</div>
+								</Col>
+								<Col md="12" sm="12">
+									<div className="form-group">
+										<input
+											type="text"
+											className="form-control"
+											name="phoneNumber"
+											placeholder="Contact Number"
+											value={data.phoneNo}
+											onChange={(e) => setData({ ...data, phoneNo: e.target.value })}
 										/>
 									</div>
 								</Col>

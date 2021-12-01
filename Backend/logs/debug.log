@@ -19457,3 +19457,493 @@ MongoError: E11000 duplicate key error collection: CVS.userrequests index: phone
 [2021-11-30 13:01:02] [32minfo[39m:  error messages are loading ... 
 [2021-11-30 13:01:05] [32minfo[39m:  Routes are loaded in system. 
 [2021-11-30 13:01:05] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-11-30 18:13:35] [32minfo[39m:  .env files are loading... 
+[2021-11-30 18:13:35] [32minfo[39m:  .env is loaded 
+[2021-11-30 18:13:35] [32minfo[39m:  [object Object] 
+[2021-11-30 18:13:35] [32minfo[39m:  Loaded config file: development 
+[2021-11-30 18:13:35] [32minfo[39m:  Try to connect mongodb. 
+[2021-11-30 18:13:39] [32minfo[39m:  mongoose connection open. 
+[2021-11-30 18:13:40] [32minfo[39m:  models are loading ... 
+[2021-11-30 18:13:40] [32minfo[39m:  Models loaded 
+[2021-11-30 18:13:40] [32minfo[39m:  error messages are loading ... 
+[2021-11-30 18:13:42] [32minfo[39m:  Routes are loaded in system. 
+[2021-11-30 18:13:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-11-30 18:38:20] [31merror[39m:  mongoose connection disconnected 
+[2021-11-30 18:38:38] [32minfo[39m:  mongoose connection open. 
+[2021-11-30 19:02:23] [32minfo[39m:  mongoose connection open. 
+[2021-11-30 21:02:28] [32minfo[39m:  mongoose connection open. 
+[2021-11-30 21:02:39] [32minfo[39m:  .env files are loading... 
+[2021-11-30 21:02:39] [32minfo[39m:  .env is loaded 
+[2021-11-30 21:02:39] [32minfo[39m:  [object Object] 
+[2021-11-30 21:02:39] [32minfo[39m:  Loaded config file: development 
+[2021-11-30 21:02:39] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 14:03:29] [32minfo[39m:  .env files are loading... 
+[2021-12-01 14:03:29] [32minfo[39m:  .env is loaded 
+[2021-12-01 14:03:29] [32minfo[39m:  [object Object] 
+[2021-12-01 14:03:29] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 14:03:29] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 14:03:38] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 14:03:38] [32minfo[39m:  models are loading ... 
+[2021-12-01 14:03:38] [32minfo[39m:  Models loaded 
+[2021-12-01 14:03:39] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 14:03:41] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 14:03:41] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 14:18:04] [32minfo[39m:  .env files are loading... 
+[2021-12-01 14:18:04] [32minfo[39m:  .env is loaded 
+[2021-12-01 14:18:04] [32minfo[39m:  [object Object] 
+[2021-12-01 14:18:04] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 14:18:04] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 14:18:07] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 14:18:07] [32minfo[39m:  models are loading ... 
+[2021-12-01 14:18:07] [32minfo[39m:  Models loaded 
+[2021-12-01 14:18:07] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 14:18:07] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 14:18:07] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 14:21:55] [32minfo[39m:  .env files are loading... 
+[2021-12-01 14:21:55] [32minfo[39m:  .env is loaded 
+[2021-12-01 14:21:55] [32minfo[39m:  [object Object] 
+[2021-12-01 14:21:55] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 14:21:55] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 14:21:58] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 14:21:59] [32minfo[39m:  models are loading ... 
+[2021-12-01 14:21:59] [32minfo[39m:  Models loaded 
+[2021-12-01 14:21:59] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 14:21:59] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 14:21:59] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 14:22:18] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:20] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at runNextTicks (internal/process/task_queues.js:64:3)
+    at processImmediate (internal/timers.js:437:9)
+[2021-12-01 14:22:22] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at runNextTicks (internal/process/task_queues.js:64:3)
+    at processImmediate (internal/timers.js:437:9)
+[2021-12-01 14:22:23] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:24] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:25] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at runNextTicks (internal/process/task_queues.js:64:3)
+    at processImmediate (internal/timers.js:437:9)
+[2021-12-01 14:22:25] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:26] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at runNextTicks (internal/process/task_queues.js:64:3)
+    at processImmediate (internal/timers.js:437:9)
+[2021-12-01 14:22:27] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:27] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:22:28] [31merror[39m:  Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children" 
+CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Children"
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4478:21)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-01 14:31:23] [31merror[39m:  E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "" } 
+MongoError: E11000 duplicate key error collection: CVS.useraccounts index: phoneNo_1 dup key: { phoneNo: "" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-12-01 14:44:38] [32minfo[39m:  .env files are loading... 
+[2021-12-01 14:44:38] [32minfo[39m:  .env is loaded 
+[2021-12-01 14:44:38] [32minfo[39m:  [object Object] 
+[2021-12-01 14:44:38] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 14:44:38] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 14:44:42] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 14:44:42] [32minfo[39m:  models are loading ... 
+[2021-12-01 14:44:42] [32minfo[39m:  Models loaded 
+[2021-12-01 14:44:43] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 14:44:44] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 14:44:44] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 15:12:29] [31merror[39m:  mongoose connection disconnected 
+[2021-12-01 15:12:40] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 15:54:29] [32minfo[39m:  .env files are loading... 
+[2021-12-01 15:54:29] [32minfo[39m:  .env is loaded 
+[2021-12-01 15:54:29] [32minfo[39m:  [object Object] 
+[2021-12-01 15:54:29] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 15:54:29] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 15:54:33] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 15:54:33] [32minfo[39m:  models are loading ... 
+[2021-12-01 15:54:33] [32minfo[39m:  Models loaded 
+[2021-12-01 15:54:33] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 15:54:34] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 15:54:34] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 15:57:49] [32minfo[39m:  .env files are loading... 
+[2021-12-01 15:57:49] [32minfo[39m:  .env is loaded 
+[2021-12-01 15:57:49] [32minfo[39m:  [object Object] 
+[2021-12-01 15:57:49] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 15:57:49] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 15:57:52] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 15:57:52] [32minfo[39m:  models are loading ... 
+[2021-12-01 15:57:52] [32minfo[39m:  Models loaded 
+[2021-12-01 15:57:52] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 15:57:52] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 15:57:52] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:14:52] [31merror[39m:  mongoose connection disconnected 
+[2021-12-01 18:15:14] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:17:55] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:17:55] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:17:55] [32minfo[39m:  [object Object] 
+[2021-12-01 18:17:55] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:17:55] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:17:59] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:17:59] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:17:59] [32minfo[39m:  Models loaded 
+[2021-12-01 18:17:59] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:17:59] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:17:59] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:18:17] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:18:17] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:18:17] [32minfo[39m:  [object Object] 
+[2021-12-01 18:18:17] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:18:17] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:18:20] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:18:20] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:18:20] [32minfo[39m:  Models loaded 
+[2021-12-01 18:18:20] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:18:20] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:18:20] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:19:13] [31merror[39m:  Campaign validation failed: workers: Cast to ObjectId failed for value "[]" (type Array) at path "workers" 
+ValidationError: Campaign validation failed: workers: Cast to ObjectId failed for value "[]" (type Array) at path "workers"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-12-01 18:20:01] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:20:01] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:20:01] [32minfo[39m:  [object Object] 
+[2021-12-01 18:20:01] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:20:01] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:20:05] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:20:05] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:20:05] [32minfo[39m:  Models loaded 
+[2021-12-01 18:20:05] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:20:05] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:20:05] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:20:22] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:20:22] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:20:22] [32minfo[39m:  [object Object] 
+[2021-12-01 18:20:22] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:20:22] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:20:25] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:20:25] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:20:25] [32minfo[39m:  Models loaded 
+[2021-12-01 18:20:25] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:20:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:20:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:22:44] [31merror[39m:  Campaign validation failed: workers: Cast to string failed for value "[]" (type Array) at path "workers" 
+ValidationError: Campaign validation failed: workers: Cast to string failed for value "[]" (type Array) at path "workers"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at $__applyDefaults (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:440:17)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:138:7)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+[2021-12-01 18:23:08] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:23:08] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:23:08] [32minfo[39m:  [object Object] 
+[2021-12-01 18:23:08] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:23:08] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:23:18] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:23:18] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:24:04] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:24:04] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:24:04] [32minfo[39m:  [object Object] 
+[2021-12-01 18:24:04] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:24:04] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:24:08] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:24:08] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:24:08] [32minfo[39m:  Models loaded 
+[2021-12-01 18:24:08] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:24:08] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:24:08] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:28:43] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:28:43] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:28:43] [32minfo[39m:  [object Object] 
+[2021-12-01 18:28:43] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:28:43] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:28:50] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:28:50] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:28:50] [32minfo[39m:  Models loaded 
+[2021-12-01 18:28:50] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:28:50] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:28:50] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:31:03] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:31:03] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:31:03] [32minfo[39m:  [object Object] 
+[2021-12-01 18:31:03] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:31:03] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:31:08] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:31:08] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:35:37] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:35:37] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:35:37] [32minfo[39m:  [object Object] 
+[2021-12-01 18:35:37] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:35:37] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:35:41] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:35:42] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:37:56] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:37:56] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:37:56] [32minfo[39m:  [object Object] 
+[2021-12-01 18:37:56] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:37:56] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:37:59] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:37:59] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:38:08] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:38:08] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:38:08] [32minfo[39m:  [object Object] 
+[2021-12-01 18:38:08] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:38:08] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:38:12] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:38:12] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:38:12] [32minfo[39m:  Models loaded 
+[2021-12-01 18:38:12] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:38:12] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:38:12] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 18:53:04] [32minfo[39m:  .env files are loading... 
+[2021-12-01 18:53:04] [32minfo[39m:  .env is loaded 
+[2021-12-01 18:53:04] [32minfo[39m:  [object Object] 
+[2021-12-01 18:53:04] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 18:53:04] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 18:53:08] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 18:53:08] [32minfo[39m:  models are loading ... 
+[2021-12-01 18:53:08] [32minfo[39m:  Models loaded 
+[2021-12-01 18:53:08] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 18:53:08] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 18:53:08] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:24:50] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:24:50] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:24:50] [32minfo[39m:  [object Object] 
+[2021-12-01 19:24:50] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:24:50] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:24:54] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:24:54] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:24:54] [32minfo[39m:  Models loaded 
+[2021-12-01 19:24:54] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:24:56] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:24:56] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:25:37] [31merror[39m:  Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0" 
+ValidationError: Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-12-01 19:26:37] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:26:37] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:26:37] [32minfo[39m:  [object Object] 
+[2021-12-01 19:26:37] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:26:37] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:26:41] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:26:41] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:26:41] [32minfo[39m:  Models loaded 
+[2021-12-01 19:26:41] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:26:41] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:26:41] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:26:53] [31merror[39m:  Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0" 
+ValidationError: Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-12-01 19:27:27] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:27:27] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:27:27] [32minfo[39m:  [object Object] 
+[2021-12-01 19:27:27] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:27:27] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:27:30] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:27:30] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:27:30] [32minfo[39m:  Models loaded 
+[2021-12-01 19:27:30] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:27:30] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:27:30] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:27:34] [31merror[39m:  Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0" 
+ValidationError: Campaign validation failed: workers.0: Cast to [ObjectId] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-12-01 19:30:43] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:30:43] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:30:43] [32minfo[39m:  [object Object] 
+[2021-12-01 19:30:43] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:30:43] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:30:47] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:30:47] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:30:47] [32minfo[39m:  Models loaded 
+[2021-12-01 19:30:47] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:30:47] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:30:47] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:30:48] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:30:48] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:30:48] [32minfo[39m:  [object Object] 
+[2021-12-01 19:30:48] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:30:48] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:30:51] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:30:51] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:30:51] [32minfo[39m:  Models loaded 
+[2021-12-01 19:30:51] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:30:51] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:30:51] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:30:57] [31merror[39m:  Campaign validation failed: workers.0: Cast to [string] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0" 
+ValidationError: Campaign validation failed: workers.0: Cast to [string] failed for value "[{"value":"61a78071543c410734d9481e","label":"Worker3"},{"value":"61a78031543c410734d94816","label":"Worker2"}]" (type string) at path "workers.0"
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1319:12)
+    at model.$set (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:1023:16)
+    at model.Document (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:148:12)
+    at model.Model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:105:12)
+    at new model (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4707:15)
+    at addCampaigns (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:392:29)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:63:11
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at passport.isAuthenticated (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\config\passport.js:55:10)
+    at Layer.handle [as handle_request] (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\express\lib\router\route.js:112:3)
+[2021-12-01 19:32:23] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:32:23] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:32:23] [32minfo[39m:  [object Object] 
+[2021-12-01 19:32:23] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:32:23] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:32:26] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:32:26] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:32:26] [32minfo[39m:  [object Object] 
+[2021-12-01 19:32:26] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:32:26] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:32:29] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:32:30] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:32:30] [32minfo[39m:  Models loaded 
+[2021-12-01 19:32:30] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:32:30] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:32:30] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:35:30] [31merror[39m:  Campaign validation failed: area: Path `area` is required. 
+ValidationError: Campaign validation failed: area: Path `area` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-12-01 19:39:28] [32minfo[39m:  .env files are loading... 
+[2021-12-01 19:39:28] [32minfo[39m:  .env is loaded 
+[2021-12-01 19:39:28] [32minfo[39m:  [object Object] 
+[2021-12-01 19:39:28] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 19:39:28] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-01 19:39:31] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 19:39:31] [32minfo[39m:  models are loading ... 
+[2021-12-01 19:39:32] [32minfo[39m:  Models loaded 
+[2021-12-01 19:39:32] [32minfo[39m:  error messages are loading ... 
+[2021-12-01 19:39:32] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-01 19:39:32] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-01 19:53:12] [31merror[39m:  mongoose connection disconnected 
+[2021-12-01 19:53:23] [32minfo[39m:  mongoose connection open. 
+[2021-12-01 20:46:26] [32minfo[39m:  .env files are loading... 
+[2021-12-01 20:46:26] [32minfo[39m:  .env is loaded 
+[2021-12-01 20:46:26] [32minfo[39m:  [object Object] 
+[2021-12-01 20:46:26] [32minfo[39m:  Loaded config file: development 
+[2021-12-01 20:46:26] [32minfo[39m:  Try to connect mongodb. 
