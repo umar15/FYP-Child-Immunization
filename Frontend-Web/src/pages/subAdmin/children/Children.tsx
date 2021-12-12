@@ -70,6 +70,9 @@ const Children = () => {
 				</Row>
 
 				<Row className="subadmin-table">
+					<Row style={{ marginLeft: "17px", marginBottom: "10px" }}>
+						<h4>Children born : {children.length}</h4>
+					</Row>
 					<Col lg="12">
 						<Table style={tableStyles} bordered hover>
 							<thead>

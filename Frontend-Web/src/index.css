@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
+
 :root {
    --blue: #007bff;
    --indigo: #6610f2;
@@ -54,6 +55,13 @@ body {
    color: --var(textColor);
    text-align: left;
    background-color: #fff
+}
+
+.err {
+   color: var(--danger);
+   font-size: 14px;
+   font-weight: 400;
+   margin-top: -7px;
 }
 
 hr {
@@ -183,7 +191,7 @@ textarea {
 }
 
 [hidden] {
-   display: none!important
+   display: none !important
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -271,9 +279,11 @@ Welcome banner Styles
    0% {
       opacity: 0;
    }
+
    50% {
       opacity: 1;
    }
+
    100% {
       opacity: 0;
    }
@@ -293,9 +303,11 @@ Welcome banner Styles
    0% {
       margin-top: -90%;
    }
+
    50% {
       margin-top: -95%;
    }
+
    100% {
       margin-top: -90%;
    }
@@ -606,8 +618,8 @@ Home page footer Styles
 ========================================= */
 
 .footer-top-area {
-   height: 500px;
-   padding-top: 100px;
+   height: 300px;
+   padding-top: 50px;
    background: url("./assets//images/footer-bg.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -636,7 +648,7 @@ Home page footer Styles
 
 .single-widget ul {
    list-style-type: none;
-   line-height: 35px;
+   line-height: 25px;
 }
 
 .single-widget p {
@@ -684,8 +696,15 @@ Home page footer bottom area Styles
 ========================================= */
 
 .footer-bottom-area {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   top: 100%;
+   width: 100%;
+   color: white;
+   text-align: center;
    background-color: #05224c;
-   padding: 20px 0
+   padding: 20px 0;
 }
 
 .footer-bottom-area .copy-right {
@@ -720,7 +739,7 @@ SIgn up form styles
 }
 
 .signup-form {
-   height: 775px;
+   height: 875px;
    width: 540px;
    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05);
    padding: 50px;
@@ -736,12 +755,12 @@ SIgn up form styles
 
 .form-group input[type=text], .form-group select, .form-group input[type=password], .form-group input[type=date], .form-group input[type=number] {
    height: 50px;
-   margin: 10px 0;
+   margin: 5px 0;
 }
 
 .form-group input[type=email] {
    height: 50px;
-   margin: 10px 0;
+   margin: 5px 0;
 }
 
 .agree-label input[type=select] {
@@ -783,7 +802,7 @@ SIgn up form styles
 }
 
 .signup-img img {
-   height: 775px;
+   height: 875px;
    width: 540px;
 }
 
@@ -857,7 +876,10 @@ dashboard styles
 
 .admin-container {
    margin: 0% !important;
-   width: 100% !important;
+   margin-right: 0% !important;
+   max-width: 100% !important;
+   padding: 0% !important;
+   /* overflow: scroll; */
 }
 
 .vc-header {
@@ -876,12 +898,37 @@ dashboard styles
 }
 
 .sidebar {
-   height: 800px;
+   /* position: fixed; */
+   height: 1200px;
    width: 250px;
    background-color: #001027;
    padding: 10px;
    /* position: fixed; */
-   margin-left: -20px;
+   /* margin-left: -20px; */
+}
+
+.sidebar-row {
+   max-width: 20% !important;
+}
+
+.sidebarIcon {
+   display: none;
+}
+
+@media screen and (max-width: 728px) {
+   .sidebar {
+      /* display: none; */
+      width: 100%;
+      height: 600px !important;
+   }
+
+   .sidebar-row {
+      max-width: 100% !important;
+   }
+
+   .sidebarIcon {
+      display: block;
+   }
 }
 
 .sidebar ul {

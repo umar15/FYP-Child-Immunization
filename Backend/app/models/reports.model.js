@@ -7,7 +7,7 @@ const schema = mongoose.Schema;
 
 const reportsSchema = new schema({
 	org: { type: schema.Types.ObjectId, required: true, ref: "userAccounts" },
-	children: { type: String, required: true },
+	children: { type: [schema.Types.ObjectId], ref: "Children" },
 });
 
 reportsSchema.plugin(mongoose_timestamps);

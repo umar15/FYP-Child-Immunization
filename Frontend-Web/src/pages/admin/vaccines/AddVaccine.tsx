@@ -34,7 +34,7 @@ const AddVaccine = (props) => {
 					name: vaccine ? vaccine.vaccine.name : "",
 					manufacturer: vaccine ? vaccine.vaccine.manufacturer : "",
 					quantity: vaccine ? vaccine.vaccine.quantity : 0,
-					// expiryDate: vaccine ? vaccine.vaccine.expiryDate : new Date(),
+					expiryDate: new Date(),
 				});
 		}
 	}, []);
@@ -42,37 +42,49 @@ const AddVaccine = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (vaccineID.id == "add") {
-			axios
-				.post("/admin/vaccines/add", data)
-				.then((res) => {
-					console.log("add: ", res);
-					alert.show("Vaccine added successfully!", {
-						type: "success",
+			if (data.quantity > 0) {
+				axios
+					.post("/admin/vaccines/add", data)
+					.then((res) => {
+						console.log("add: ", res);
+						alert.show("Vaccine added successfully!", {
+							type: "success",
+						});
+						history.push("/admin/vaccines");
+					})
+					.catch((err) => {
+						console.log(err);
+						alert.show("Failed to add vaccine.", {
+							type: "error",
+						});
 					});
-					history.push("/admin/vaccines");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to add vaccine.", {
-						type: "error",
-					});
+			} else {
+				alert.show("Quanitity must be greater then 0.", {
+					type: "error",
 				});
+			}
 		} else {
-			axios
-				.put(`/admin/vaccines/${vaccineID.id}`, data)
-				.then((res) => {
-					console.log("update", res);
-					alert.show("Vaccine updated successfully!", {
-						type: "success",
+			if (data.quantity > 0) {
+				axios
+					.put(`/admin/vaccines/${vaccineID.id}`, data)
+					.then((res) => {
+						console.log("update", res);
+						alert.show("Vaccine updated successfully!", {
+							type: "success",
+						});
+						history.push("/admin/vaccines");
+					})
+					.catch((err) => {
+						console.log(err);
+						alert.show("Failed to update vaccine", {
+							type: "error",
+						});
 					});
-					history.push("/admin/vaccines");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to update vaccine", {
-						type: "error",
-					});
+			} else {
+				alert.show("Quantity must be greater then 0..", {
+					type: "error",
 				});
+			}
 		}
 		console.log(data);
 	};
@@ -99,6 +111,7 @@ const AddVaccine = (props) => {
 									<label>Name</label>
 									<div className="form-group">
 										<select
+											required
 											value={data.name}
 											onChange={(e) => setData({ ...data, name: e.target.value })}
 											className="form-control"
@@ -140,7 +153,7 @@ const AddVaccine = (props) => {
 								</Col>
 
 								<Col md="12" sm="12" lg="12">
-									<label>Expiry Date</label>
+									<label>Date</label>
 									<div className="form-group">
 										<DatePicker
 											className="form-control"

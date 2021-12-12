@@ -71,6 +71,8 @@ import UserRequests from "./pages/subAdmin/userRequests/UserRequests";
 import UserRequestsPage from "./pages/subAdmin/userRequests/UserRequestsPage";
 import UserRequestsDetailsPage from "./pages/subAdmin/userRequests/UserRequestsDetailsPage";
 import CampaignDetailsPage from "./pages/vaccineCenter/campaigns/CampaignDetailsPage";
+import ReportDetailsPage from "./pages/subAdmin/reports/ReportDetailsPage";
+import AdminReportDetailsPage from "./pages/admin/reports/ReportDetailsPage";
 
 function App() {
 	var { isAuthenticated } = useUserState();
@@ -147,6 +149,7 @@ function App() {
 				<PrivateRoute path="/admin/vaccinesrequests" exact component={VaccineRequestsPage} />
 				<PrivateRoute path="/admin/settings" exact component={AdminSettingsPage} />
 				<PrivateRoute path="/admin/reports" exact component={AdminReportsPage} />
+				<PrivateRoute path="/admin/reports/:id" exact component={AdminReportDetailsPage} />
 
 				{/* Sub admin */}
 				<PrivateRoute path="/subadmin" exact component={SubAdminDashboard} />
@@ -169,6 +172,7 @@ function App() {
 				<PrivateRoute path="/subadmin/vaccineschedule/:id" exact component={SubadminChildVaccinationSchedulePage} />
 				<PrivateRoute path="/subadmin/settings" exact component={SubadminSettingsPage} />
 				<PrivateRoute path="/subadmin/reports" exact component={SubadminReportsPage} />
+				<PrivateRoute path="/subadmin/reports/:id" exact component={ReportDetailsPage} />
 
 				{/* Hospital */}
 				<PrivateRoute path="/hospital" exact component={HospitalDashboard} />

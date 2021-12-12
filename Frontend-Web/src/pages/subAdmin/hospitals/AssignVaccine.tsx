@@ -89,7 +89,9 @@ const AssignVaccine = () => {
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
+										<label>Vaccine</label>
 										<select
+											required
 											value={data.vaccine}
 											onChange={(e) => setData({ ...data, vaccine: e.target.value })}
 											className="form-control"
@@ -109,6 +111,7 @@ const AssignVaccine = () => {
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
+										<label>Quantity</label>
 										<input
 											type="number"
 											className="form-control"
@@ -122,6 +125,7 @@ const AssignVaccine = () => {
 
 								<Col md="12" sm="12" lg="12">
 									<div className="form-group">
+										<label>Date</label>
 										<DatePicker className="form-control" selected={data.date} onChange={handleDateChange} />
 									</div>
 								</Col>

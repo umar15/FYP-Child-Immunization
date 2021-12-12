@@ -16,10 +16,12 @@ passport.use(
 
 			userAccounts.findOne(filter, function (err, user) {
 				if (err) {
-					return done(err);
+					return done({ message: "Error with db" });
 				}
 				if (!user) {
-					return done(null, false, { message: "User Not Found" });
+					return done(null, false, {
+						message: "User Not Found. Please signup to use this application",
+					});
 				}
 				user.comparePassword(password, function (err, isMatch) {
 					if (err) {

@@ -53,7 +53,7 @@ const SubadminDetails = () => {
 		getAssignedVaccines();
 	}, []);
 
-	const { name, email, address, phoneNo, cnic } = subadmin.subadmin;
+	const { name, email, address, phoneNo, cnic } = subadmin?.subadmin;
 	return (
 		<Container>
 			<Row className="subadmin-admin">
@@ -77,10 +77,10 @@ const SubadminDetails = () => {
 								<th>Phone Number</th>
 								<td>{phoneNo}</td>
 							</tr>
-							<tr>
+							{/* <tr>
 								<th>CNIC</th>
 								<td>{cnic}</td>
-							</tr>
+							</tr> */}
 							<tr>
 								<th>Address</th>
 								<td>

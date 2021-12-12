@@ -50,15 +50,15 @@ function loginUser(event, login, password, dispatch, alert, history) {
 	axios
 		.post("/users/login", { username: login, password: password })
 		.then((res) => {
-			// console.log("Login function: ", JSON.stringify(res));
+			console.log("Login function: ", JSON.stringify(res));
 			localStorage.setItem("user", JSON.stringify(res.data.data.user));
 			dispatch({ type: "LOGIN_SUCCESS" });
 			history.push(`/${res.data.data.user.userType}`);
 			alert.show("Login Successful", { type: "success" });
 		})
 		.catch((err) => {
-			// console.log("Error in login function: ", err);
-			alert.show("Login Failed" || "Error", { type: "error" });
+			// console.log("Error in login function: " + err.response.data.message + "\n");
+			alert.show(err.response.data.message || "Login Failed. Please try again later!", { type: "error" });
 		});
 }
 

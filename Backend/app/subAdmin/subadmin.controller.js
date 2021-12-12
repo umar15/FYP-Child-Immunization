@@ -10,6 +10,7 @@ const winston = require("../../config/winston"),
 	subadminVaccineRequest = mongoose.model("subadminVaccineRequest"),
 	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
 	dailyConsumption = mongoose.model("dailyConsumption"),
+	reportsSchema = mongoose.model("reportsSchema"),
 	nodemailer = require("nodemailer");
 
 let subadmin = (req, res, next) => {
@@ -325,7 +326,7 @@ let userRequests = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "User signup requests",
-			data: await userRequestsModel.find({}),
+			data: await userRequestsModel.find({ "address.city": req.user.address.city }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -456,7 +457,7 @@ let vaccineRequirement = async (req, res, next) => {
 				"address.city": req.user.address.city,
 			},
 		});
-
+		let childrenData = await children.find({ "address.city": req.user.address.city });
 		// console.log("Daily: ", orgDailyConsumption);
 
 		let pcv = [];
@@ -510,24 +511,54 @@ let vaccineRequirement = async (req, res, next) => {
 
 		let requirements = {
 			opv: {
-				sevenDays: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
+				sevenDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
+				thirtyDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 4 + (childrenData.length * 4 * 20) / 100)
+						: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
 			},
 			bcg: {
-				sevenDays: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
+				sevenDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
+				thirtyDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
 			},
 			pcv: {
-				sevenDays: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
+				sevenDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
+				thirtyDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 30) / 100)
+						: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
 			},
 			pentavalent: {
-				sevenDays: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
+				sevenDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
+				thirtyDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 35) / 100)
+						: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
 			},
 			measles: {
-				sevenDays: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
+				sevenDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length + (childrenData.length * 10) / 100)
+						: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
+				thirtyDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
 			},
 		};
 
@@ -570,6 +601,42 @@ let userVaccinesInfo = async (req, res, next) => {
 	}
 };
 
+let sendReport = async (req, res, next) => {
+	console.log("Request.body: ", req.body);
+	let report = {
+		children: req.body,
+		org: req.user,
+	};
+	try {
+		return res.json({
+			message: "Non vaccinated children report.",
+			data: await new reportsSchema(report).save(),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+let getChildReports = async (req, res, next) => {
+	let reports = await reportsSchema.find().populate("org").populate("children");
+	reports = reports.filter((item) => {
+		return (
+			item.org.address.city === req.user.address.city &&
+			(item.org.userType === "hospital" || item.org.userType === "vaccinecenter")
+		);
+	});
+	try {
+		return res.json({
+			message: "Child Reports Sub admin",
+			data: reports,
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	subadmin,
 	viewChildren,
@@ -595,4 +662,6 @@ module.exports = {
 	childVaccineSchedule,
 	vaccineRequirement,
 	userVaccinesInfo,
+	getChildReports,
+	sendReport,
 };

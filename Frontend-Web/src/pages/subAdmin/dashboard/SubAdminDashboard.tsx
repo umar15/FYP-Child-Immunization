@@ -10,10 +10,9 @@ const SubAdminDashboard = () => {
 	return (
 		<>
 			<AdminHeader userType="Sub Admin" />
-
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
+					<Col className="sidebar-row" lg="3">
 						<Sidebar height="1500px" />
 					</Col>
 					<Col lg="9">

@@ -6,6 +6,8 @@ import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
+import { validMobileNumber, validString, validCNIC } from "../../../config/regex";
+import { selectCity } from "../../../config/cities";
 
 const AddChild = () => {
 	const makeChildID = () => {
@@ -21,6 +23,7 @@ const AddChild = () => {
 
 	const [user, setUser] = useState<any>([]);
 	const [schedule, setSchedule] = useState<any>([]);
+
 	const [data, setdata] = useState<any>({
 		childID: makeChildID(),
 		parentName: "",
@@ -35,7 +38,7 @@ const AddChild = () => {
 		dateOfBirth: new Date(),
 		gender: "",
 		birthPlace: "",
-		siblingNo: "",
+		siblingNo: 1,
 		hospitalName: "",
 		vaccination: [
 			{
@@ -47,6 +50,67 @@ const AddChild = () => {
 			},
 		],
 	});
+
+	const [error, setError] = useState<any>({
+		parentName: false,
+		parentCNIC: false,
+		contactNo: false,
+		emergencyContact: false,
+		address: {
+			addr: false,
+			area: false,
+			city: false,
+		},
+		gender: false,
+		birthPlace: false,
+		siblingNo: false,
+	});
+
+	const handleChange = (name, value, regex) => {
+		if (name === "addr" || name === "area" || name === "city") {
+			setdata({
+				...data,
+				address: {
+					...data.address,
+					[name]: value,
+				},
+			});
+			if (!regex.test(data.address[name])) {
+				setError({
+					...error,
+					address: {
+						...error.address,
+						[name]: true,
+					},
+				});
+			} else {
+				setError({
+					...error,
+					address: {
+						...error.address,
+						[name]: false,
+					},
+				});
+			}
+		} else {
+			setdata({
+				...data,
+				[name]: value,
+			});
+			if (!regex.test(data[name])) {
+				setError({
+					...error,
+					[name]: true,
+				});
+			} else {
+				setError({
+					...error,
+					[name]: false,
+				});
+			}
+		}
+	};
+
 	const alert = useAlert();
 	const history = useHistory();
 
@@ -125,6 +189,7 @@ const AddChild = () => {
 												value={data.gender}
 												onChange={(e) => setdata({ ...data, gender: e.target.value })}
 												className="form-control"
+												required
 											>
 												<option value="0">Gender</option>
 												<option value="male">Male</option>
@@ -149,11 +214,13 @@ const AddChild = () => {
 											<input
 												type="text"
 												className="form-control"
-												name="name"
+												name="parentName"
 												placeholder="Parent Name"
 												value={data.parentName}
-												onChange={(e) => setdata({ ...data, parentName: e.target.value })}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												// onChange={(e) => setdata({ ...data, parentName: e.target.value })}
 											/>
+											{error.parentName && <p className="err">Invalid string!</p>}
 										</div>
 									</Col>
 									<Col md="12" sm="12">
@@ -162,115 +229,116 @@ const AddChild = () => {
 											<input
 												type="text"
 												className="form-control"
-												name="cnic"
-												placeholder="Parent CNIC"
+												name="parentCNIC"
+												placeholder="Parent CNIC i.e 12345-1234567-1"
 												value={data.parentCNIC}
-												onChange={(e) => setdata({ ...data, parentCNIC: e.target.value })}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validCNIC)}
+												// onChange={(e) => setdata({ ...data, parentCNIC: e.target.value })}
 											/>
 										</div>
+										{error.parentCNIC && <p className="err">Invalid CNIC!</p>}
 									</Col>
 
 									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Contact Number</label>
 											<input
+												required
 												type="text"
 												className="form-control"
-												name="contact"
-												placeholder="Contact Number"
+												name="contactNo"
+												placeholder="Contact Number i.e +923159489878"
 												value={data.contactNo}
-												onChange={(e) => setdata({ ...data, contactNo: e.target.value })}
+												// onChange={(e) => setdata({ ...data, contactNo: e.target.value })}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validMobileNumber)}
 											/>
+											{error.contactNo && <p className="err">Invalid phone number!</p>}
 										</div>
 									</Col>
 									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Emergency Contact</label>
 											<input
+												required
 												type="text"
 												className="form-control"
-												name="contact"
-												placeholder="Contact Number"
+												name="emergencyContact"
+												placeholder="Emergency Contact i.e +923159999371"
 												value={data.emergencyContact}
-												onChange={(e) => setdata({ ...data, emergencyContact: e.target.value })}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validMobileNumber)}
+												// onChange={(e) => setdata({ ...data, emergencyContact: e.target.value })}
 											/>
+											{error.emergencyContact && <p className="err">Invalid phone number!</p>}
 										</div>
 									</Col>
 									<Col md="12" sm="12">
 										<div className="form-group">
-											<label>Address</label>
+											<label>City</label>
 											<input
+												required
 												type="text"
 												className="form-control"
-												name="name"
+												name="addr"
 												placeholder="Address"
 												value={data.address.addr}
-												onChange={(e) =>
-													setdata({
-														...data,
-														address: {
-															...data.address,
-															addr: e.target.value,
-														},
-													})
-												}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												// onChange={(e) =>
+												// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
+												// }
 											/>
-										</div>
-									</Col>
-									<Col md="6" sm="12">
-										<div className="form-group">
-											<label>Area</label>
-											<input
-												type="text"
-												className="form-control"
-												name="name"
-												placeholder="Area"
-												value={data.address.area}
-												onChange={(e) =>
-													setdata({
-														...data,
-														address: {
-															...data.address,
-															area: e.target.value,
-														},
-													})
-												}
-											/>
+											{error.address.addr && <p className="err">Invalid address!</p>}
 										</div>
 									</Col>
 									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>City</label>
+
 											<input
+												required
 												type="text"
 												className="form-control"
-												name="name"
-												placeholder="Address"
-												value={data.address.city}
-												onChange={(e) =>
-													setdata({
-														...data,
-														address: {
-															...data.address,
-															city: e.target.value,
-														},
-													})
-												}
+												name="area"
+												placeholder="Area"
+												value={data.address.area}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												// onChange={(e) =>
+												// 	setData({ ...data, address: { ...data.address, area: e.target.value } })
+												// }
 											/>
+											{error.address.area && <p className="err">Invalid address!</p>}
+										</div>
+									</Col>
+									<Col md="6" sm="12">
+										<div className="form-group">
+											<label>City</label>
+											<select
+												required
+												className="form-control"
+												name="city"
+												placeholder="City"
+												value={data.address.city}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											>
+												<option value="">City</option>
+												{selectCity()}
+											</select>
 										</div>
 									</Col>
 
 									<Col md="6" sm="12">
 										<div className="form-group">
 											<label>Place of Birth</label>
-											<input
-												type="text"
+											<select
+												required
 												className="form-control"
-												name="dob"
+												name="birthPlace"
 												placeholder="Birth Place"
 												value={data.birthPlace}
-												onChange={(e) => setdata({ ...data, birthPlace: e.target.value })}
-											/>
+												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											>
+												<option value="">Birth Place</option>
+												{selectCity()}
+											</select>
 										</div>
 									</Col>
 									<Col md="6" sm="12">

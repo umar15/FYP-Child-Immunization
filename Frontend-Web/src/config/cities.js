@@ -88,6 +88,8 @@ export const cities = [
 	"PindiBhattian",
 	"PindDadanKhan",
 	"PirMahal",
+	"Peshawar",
+	"Quetta",
 	"Qaimpur",
 	"QilaDidarSingh",
 	"Raiwind",

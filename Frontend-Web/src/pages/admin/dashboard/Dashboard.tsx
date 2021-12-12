@@ -6,10 +6,13 @@ import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { selectCity } from "../../../config/cities";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import { isTerminatorless } from "@babel/types";
 
 const Dashboard = () => {
 	const [children, setChildren] = useState([]);
+	const [allChildren, setAllChildren] = useState([]);
 	const [hospitals, setHospitals] = useState([]);
+	const [subadmins, setSubadmins] = useState([]);
 	const [vaccineCenters, setVaccineCenters] = useState([]);
 	const [vaccines, setVaccines] = useState<any>([]);
 	const [noOfChildren, setNoOfChildren] = useState(0);
@@ -20,6 +23,8 @@ const Dashboard = () => {
 	const [bornThirtyDays, setBornThirtyDays] = useState(0);
 	const [vaccineReq, setVaccineReq] = useState<any>([]);
 	const [city, setCity] = useState<string>("Country");
+	const [area, setArea] = useState<string>("Area");
+	const [uniqueAreas, setUniqueAreas] = useState<any[]>([]);
 	const alert = useAlert();
 
 	const data = [
@@ -62,7 +67,7 @@ const Dashboard = () => {
 
 	const getHospitals = async () => {
 		axios
-			.get("/admin/hospitals")
+			.get(`/admin/gethospitals/${city}`)
 			.then((res) => {
 				console.log("Hospitals: ", res.data.data);
 				setHospitals(res.data?.data);
@@ -75,7 +80,7 @@ const Dashboard = () => {
 	};
 	const getVaccineCenters = async () => {
 		axios
-			.get("/admin/vaccinecenters")
+			.get(`/admin/getvaccinecenters/${city}`)
 			.then((res) => {
 				console.log("Vaccine centers: ", res.data.data);
 				setVaccineCenters(res.data?.data);
@@ -87,9 +92,22 @@ const Dashboard = () => {
 			);
 	};
 
+	const getAllChildren = async () => {
+		axios
+			.get(`/admin/children/Country/Area`)
+			.then((res) => {
+				console.log("Children: ", res.data.data);
+				setAllChildren(res.data?.data.children);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch children", {
+					type: "error",
+				})
+			);
+	};
 	const getChildren = async () => {
 		axios
-			.get(`/admin/children/${city}`)
+			.get(`/admin/children/${city}/${area}`)
 			.then((res) => {
 				console.log("Children: ", res.data.data);
 				setChildren(res.data?.data.children);
@@ -104,7 +122,7 @@ const Dashboard = () => {
 
 	const vaccinatedNonVaccinated = async () => {
 		axios
-			.get(`/admin/vaccinatednonvaccinated/${city}`)
+			.get(`/admin/vaccinatednonvaccinated/${city}/${area}`)
 			.then((res) => {
 				console.log("vaccinated: ", res.data.data);
 
@@ -112,14 +130,14 @@ const Dashboard = () => {
 				setNonVaccinated(res.data?.data.nonVaccinated);
 			})
 			.catch((err) =>
-				alert.show("Failed to Fetch children", {
+				alert.show("Failed to Fetch vaccinated non vaccinated stats", {
 					type: "error",
 				})
 			);
 	};
 	const bornStats = async () => {
 		axios
-			.get(`/admin/childrenstatistics/${city}`)
+			.get(`/admin/childrenstatistics/${city}/${area}`)
 			.then((res) => {
 				console.log("Children stats: ", res.data.data);
 				setBornToday(res.data?.data.bornToday);
@@ -127,7 +145,7 @@ const Dashboard = () => {
 				setBornThirtyDays(res.data?.data.bornOneMonth);
 			})
 			.catch((err) =>
-				alert.show("Failed to Fetch children stats", {
+				alert.show("Failed to Fetch children born stats", {
 					type: "error",
 				})
 			);
@@ -149,13 +167,27 @@ const Dashboard = () => {
 
 	const getVaccineRequirements = async () => {
 		axios
-			.get(`/admin/vaccinerequirements/${city}`)
+			.get(`/admin/vaccinerequirements/${city}/${area}`)
 			.then((res) => {
 				console.log("Vaccines requirements: ", res.data.data);
 				setVaccineReq(res.data?.data.requirements);
 			})
 			.catch((err) =>
 				alert.show("Failed to Fetch vaccine requirements", {
+					type: "error",
+				})
+			);
+	};
+
+	const getSubadmins = async () => {
+		axios
+			.get("/admin/subadmins")
+			.then((res) => {
+				console.log(res.data.data);
+				setSubadmins(res.data?.data);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch subadmins", {
 					type: "error",
 				})
 			);
@@ -169,17 +201,58 @@ const Dashboard = () => {
 		vaccinatedNonVaccinated();
 		bornStats();
 		getVaccineRequirements();
-	}, [city]);
+		getSubadmins();
+		getAllChildren();
+
+		var flags = {};
+		var uniqueChildrenAreas: any = [];
+		allChildren?.filter((child: any) => {
+			if (!flags[child.address.area]) {
+				flags[child.address.area] = true;
+				uniqueChildrenAreas.push(child);
+			}
+		});
+		setUniqueAreas(uniqueChildrenAreas);
+		console.log("Uniques:", uniqueChildrenAreas);
+	}, [city, area]);
 
 	return (
 		<>
-			<Container style={{ width: "1080px", marginLeft: "-50px", marginTop: "10px", marginBottom: "10px" }}>
+			<Container style={{ maxWidth: "1080px", marginTop: "10px", marginBottom: "10px" }}>
 				<Row>
-					<Col lg="12">
+					<Col lg="6" md="12" style={{ width: "100%" }}>
 						<div className="form-group">
 							<select className="form-control" value={city} onChange={(e) => setCity(e.target.value)}>
 								<option value="Country">Country</option>
-								{selectCity()}
+								{subadmins?.map((item: any) => {
+									return (
+										<option value={item.address.city} key={item._id}>
+											{item.address.city}
+										</option>
+									);
+								})}
+								{/* {selectCity()} */}
+							</select>
+						</div>
+					</Col>
+					<Col lg="6" md="12">
+						<div className="form-group">
+							<select
+								disabled={city === "Country"}
+								className="form-control"
+								value={area}
+								onChange={(e) => setArea(e.target.value)}
+							>
+								<option value="">Area</option>
+								{uniqueAreas?.map((item: any) => {
+									if (item.address.city === city) {
+										return (
+											<option value={item.address.area} key={item._id}>
+												{item.address.area}
+											</option>
+										);
+									}
+								})}
 							</select>
 						</div>
 					</Col>
@@ -187,12 +260,12 @@ const Dashboard = () => {
 			</Container>
 			<Container style={boxStyles}>
 				<Row>
-					<Col lg="6">
+					<Col lg="6" xl="6" md="12">
 						<Row style={{ marginBottom: "10px" }}>
 							<h4>Children</h4>
 						</Row>
 						<Row>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card green">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -202,7 +275,7 @@ const Dashboard = () => {
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card green">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -212,7 +285,7 @@ const Dashboard = () => {
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card green">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -222,9 +295,9 @@ const Dashboard = () => {
 									</CardBody>
 								</Card>
 							</Col>
-						</Row>
-						<Row>
-							<Col lg="4">
+							{/* </Row>
+						<Row> */}
+							<Col sm="6" md="4" xl="4">
 								<Card className="card red">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -234,7 +307,7 @@ const Dashboard = () => {
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card red">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -244,7 +317,7 @@ const Dashboard = () => {
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card red">
 									<CardBody>
 										<CardSubtitle tag="h6" className="mb-2">
@@ -256,28 +329,30 @@ const Dashboard = () => {
 							</Col>
 						</Row>
 					</Col>
-					<Col lg="6">
-						<BarChart
-							width={500}
-							height={280}
-							data={data}
-							margin={{
-								top: 20,
-								right: 0,
-								left: 20,
-								bottom: 0,
-							}}
-							style={{ backgroundColor: "#f2f9fc" }}
-						>
-							{/* <CartesianGrid strokeDasharray="3 3" /> */}
-							<XAxis dataKey="name" />
-							<YAxis />
-							<Tooltip />
-							<Legend />
-							<Bar dataKey="born" fill="blue" />
-							<Bar dataKey="vaccinated" fill="green" />
-							<Bar dataKey="nonVaccinated" fill="red" />
-						</BarChart>
+					<Col lg="6" xl="6" md="12">
+						<div>
+							<BarChart
+								width={450}
+								height={280}
+								data={data}
+								margin={{
+									top: 20,
+									right: 0,
+									left: -20,
+									bottom: 0,
+								}}
+								style={{ backgroundColor: "#f2f9fc" }}
+							>
+								{/* <CartesianGrid strokeDasharray="3 3" /> */}
+								<XAxis dataKey="name" />
+								<YAxis />
+								<Tooltip />
+								{/* <Legend style={{ paddingTop: "20px" }} /> */}
+								<Bar dataKey="born" fill="blue" />
+								<Bar dataKey="vaccinated" fill="green" />
+								<Bar dataKey="nonVaccinated" fill="red" />
+							</BarChart>
+						</div>
 					</Col>
 				</Row>
 			</Container>
@@ -287,91 +362,93 @@ const Dashboard = () => {
 				</Row>
 				<Row>
 					<Col lg="6">
-						<BarChart
-							width={450}
-							height={280}
-							data={vaccineData}
-							margin={{
-								top: 20,
-								right: 20,
-								left: 0,
-								bottom: 20,
-							}}
-							style={{ backgroundColor: "#f2f9fc" }}
-						>
-							<XAxis dataKey="name" />
-							<YAxis />
-							<Tooltip />
-							<Legend />
-							<Bar dataKey="required7days" fill="#ff00cc" />
-							<Bar dataKey="required30days" fill="#0d526b" />
-						</BarChart>
+						<div>
+							<BarChart
+								width={450}
+								height={280}
+								data={vaccineData}
+								margin={{
+									top: 20,
+									right: 20,
+									left: -20,
+									bottom: 20,
+								}}
+								style={{ backgroundColor: "#f2f9fc" }}
+							>
+								<XAxis dataKey="name" />
+								<YAxis />
+								<Tooltip />
+								{/* <Legend /> */}
+								<Bar dataKey="required7days" fill="#ff00cc" />
+								<Bar dataKey="required30days" fill="#0d526b" />
+							</BarChart>
+						</div>
 					</Col>
 					<Col lg="6">
 						<Row>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card yellow">
 									<CardBody>
-										<CardTitle tag="h5">OPV (Polio)</CardTitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq?.opv?.sevenDays}</b>
+										<CardTitle tag="h6">OPV (Polio)</CardTitle>
+										<CardSubtitle tag="p" className="mb-2">
+											7days req: <b>{vaccineReq?.opv?.sevenDays}</b>
 										</CardSubtitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq?.opv?.thirtyDays}</b>
+										<CardSubtitle tag="p" className="mb-2">
+											30days req: <b>{vaccineReq?.opv?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card yellow">
 									<CardBody>
-										<CardTitle tag="h5">Measles</CardTitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.measles?.sevenDays}</b>
+										<CardTitle tag="h6">Measles</CardTitle>
+										<CardSubtitle tag="p" className="mb-2">
+											7days req: <b>{vaccineReq.measles?.sevenDays}</b>
 										</CardSubtitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.measles?.thirtyDays}</b>
+										<CardSubtitle tag="p" className="mb-2">
+											30days req: <b>{vaccineReq.measles?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card yellow">
 									<CardBody>
-										<CardTitle tag="h5">BCG</CardTitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.bcg?.sevenDays}</b>
+										<CardTitle tag="h6">BCG</CardTitle>
+										<CardSubtitle tag="p" className="mb-2">
+											7days req: <b>{vaccineReq.bcg?.sevenDays}</b>
 										</CardSubtitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.bcg?.thirtyDays}</b>
+										<CardSubtitle tag="p" className="mb-2">
+											30days req: <b>{vaccineReq.bcg?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
 							</Col>
-						</Row>
-						<Row>
-							<Col lg="4">
+							{/* </Row>
+						<Row> */}
+							<Col sm="6" md="4" xl="4">
 								<Card className="card blue">
 									<CardBody>
-										<CardTitle tag="h5">Pentavalent</CardTitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.pentavalent?.sevenDays}</b>
+										<CardTitle tag="h6">Pentavalent</CardTitle>
+										<CardSubtitle tag="p" className="mb-2">
+											7days req: <b>{vaccineReq.pentavalent?.sevenDays}</b>
 										</CardSubtitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.pentavalent?.thirtyDays}</b>
+										<CardSubtitle tag="p" className="mb-2">
+											30days req: <b>{vaccineReq.pentavalent?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
 							</Col>
-							<Col lg="4">
+							<Col sm="6" md="4" xl="4">
 								<Card className="card blue">
 									<CardBody>
-										<CardTitle tag="h5">PCV</CardTitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											7 days req: <b>{vaccineReq.pcv?.sevenDays}</b>
+										<CardTitle tag="h6">PCV</CardTitle>
+										<CardSubtitle tag="p" className="mb-2">
+											7days req: <b>{vaccineReq.pcv?.sevenDays}</b>
 										</CardSubtitle>
-										<CardSubtitle tag="h6" className="mb-2">
-											30 days req: <b>{vaccineReq.pcv?.thirtyDays}</b>
+										<CardSubtitle tag="p" className="mb-2">
+											30days req: <b>{vaccineReq.pcv?.thirtyDays}</b>
 										</CardSubtitle>
 									</CardBody>
 								</Card>
@@ -384,7 +461,7 @@ const Dashboard = () => {
 				<Row>
 					<Col lg="6">
 						<h4> Last Children born</h4>
-						<Table bordered size="sm">
+						<Table bordered size="sm" responsive>
 							<thead>
 								<tr>
 									<th>Child ID</th>
@@ -413,8 +490,8 @@ const Dashboard = () => {
 						</Table>
 					</Col>
 					<Col lg="6">
-						<h4>Admin Available Vaccines</h4>
-						<Table bordered size="sm">
+						<h4>Admin Available Vaccine Stock</h4>
+						<Table bordered responsive size="sm">
 							<thead>
 								<tr>
 									<th>Name</th>
@@ -437,7 +514,7 @@ const Dashboard = () => {
 				<Row>
 					<Col lg="6">
 						<h4>Hospitals</h4>
-						<Table bordered size="sm">
+						<Table responsive bordered size="sm">
 							<thead>
 								<tr>
 									<th>Name</th>
@@ -448,7 +525,7 @@ const Dashboard = () => {
 							<tbody>
 								{hospitals &&
 									hospitals
-										// .slice(Math.max(hospitals.length - 4, 1))
+										?.slice(Math.max(hospitals.length - 4, 1))
 										.reverse()
 										.map((hospital: any, index) => (
 											<tr key={hospital._id}>
@@ -467,7 +544,7 @@ const Dashboard = () => {
 					</Col>
 					<Col lg="6">
 						<h4>Vaccine Centers</h4>
-						<Table bordered size="sm">
+						<Table responsive bordered size="sm">
 							<thead>
 								<tr>
 									<th>Name</th>
@@ -478,7 +555,7 @@ const Dashboard = () => {
 							<tbody>
 								{vaccineCenters &&
 									vaccineCenters
-										// .slice(Math.max(vaccineCenters.length - 4, 1))
+										?.slice(Math.max(vaccineCenters.length - 4, 1))
 										.reverse()
 										.map((vc: any) => (
 											<tr key={vc._id}>
@@ -502,14 +579,17 @@ const Dashboard = () => {
 };
 
 const boxStyles = {
-	width: "1050px",
-	marginLeft: "-35px",
+	// width: "1050px",
+	// marginLeft: "-35px",
 	boxShadow: "0 0 5px #c9c9c9",
 	// marginTop: "20px",
+	margin: "auto",
 	marginBottom: "20px",
-	paddingLeft: "25px",
+	paddingLeft: "15px",
 	paddingTop: "10px",
 	paddingBottom: "20px",
+	// textAlign: "center",
+	// alignItem: "center",
 };
 
 export default Dashboard;

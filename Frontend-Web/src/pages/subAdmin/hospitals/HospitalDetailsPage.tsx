@@ -13,7 +13,7 @@ const HospitalDetailsPage = () => {
 			<AdminHeader userType="Sub admin" />
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
+					<Col className="sidebar-row" lg="3">
 						<Sidebar height="900px" />
 					</Col>
 					<Col lg="9">

@@ -9,10 +9,12 @@ const OurMission = () => {
 		<div className="about-area">
 			<Container>
 				<Row>
-					<Col lg="6">
+					<Col lg="6" md="12">
 						<div className="about-content mission-content ml-auto mt-0">
 							<span className="topic">Our Mission</span>
-							<h2 className="main-heading heading">Our Aim to Provide:</h2>
+							<h2 className="" style={{ fontWeight: "bold" }}>
+								Our Aim to Provide:
+							</h2>
 							<p className="topic-text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 								labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
@@ -81,7 +83,7 @@ const OurMission = () => {
 							</a>
 						</div>
 					</Col>
-					<Col className="col-lg-6 pr-0">
+					<Col className="col-lg-6" md="12" pr-0>
 						<img src={homepageimg2} alt="homepage img" className="mission-img" />
 					</Col>
 				</Row>

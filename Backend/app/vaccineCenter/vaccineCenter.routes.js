@@ -123,6 +123,12 @@ module.exports = (app, version) => {
 		passport.isAuthorized("vaccinecenter"),
 		vaccineCenterController.requestVaccineStock
 	);
+	app.post(
+		version + "/vaccinecenter/sendreport",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccinecenter"),
+		vaccineCenterController.sendReport
+	);
 	app.get(
 		version + "/vaccinecenter/childvaccineschedule/:id",
 		passport.isAuthenticated,
@@ -140,5 +146,11 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("vaccinecenter"),
 		vaccineCenterController.oneTimePassword
+	);
+	app.get(
+		version + "/vaccinecenter/vaccinereports",
+		passport.isAuthenticated,
+		passport.isAuthorized("vaccinecenter"),
+		vaccineCenterController.reports
 	);
 };

@@ -8,7 +8,7 @@ const OurDoctors = () => {
 		<div className="doctors-area">
 			<Container className="doctors-container">
 				<Row>
-					<Col lg="6">
+					<Col lg="6" md="12">
 						<div className="doctors-content">
 							<span className="topic">Our Doctors</span>
 							<h2 className="main-heading doctor-heading">
@@ -45,7 +45,7 @@ const OurDoctors = () => {
 						</div>
 					</Col>
 					<div className="col-lg-6 pr-0">
-						<Col lg="6" pl="0">
+						<Col lg="6" md="12" pl="0">
 							<img src={doctorsImg} alt="homepage img" className="doctors-img" />
 						</Col>
 					</div>

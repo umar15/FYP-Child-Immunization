@@ -187,6 +187,12 @@ const ChildData = () => {
 								<th>Hospital where born</th>
 								<td>{hospitalName.user?.name}</td>
 							</tr>
+							<tr>
+								<th>Address</th>
+								<td>
+									{child.data.address.addr}, {child.data.address.area}, {child.data.address.city}
+								</td>
+							</tr>
 						</thead>
 					</Table>
 				</Col>

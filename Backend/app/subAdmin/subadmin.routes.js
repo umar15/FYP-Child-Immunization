@@ -146,4 +146,16 @@ module.exports = (app, version) => {
 		passport.isAuthorized("subadmin"),
 		subadminController.userVaccinesInfo
 	);
+	app.post(
+		version + "/subadmin/sendreport",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.sendReport
+	);
+	app.get(
+		version + "/subadmin/childreports",
+		passport.isAuthenticated,
+		passport.isAuthorized("subadmin"),
+		subadminController.getChildReports
+	);
 };

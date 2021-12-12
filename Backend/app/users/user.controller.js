@@ -182,6 +182,7 @@ let createUser = async (req, res, next) => {
 		}
 	} catch (err) {
 		winston.error(err);
+		next(err);
 		res.redirect("/error");
 	}
 };

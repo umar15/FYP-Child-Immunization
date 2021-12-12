@@ -496,6 +496,7 @@ let viewVaccines = async (req, res, next) => {
 		res.redirect("/error");
 	}
 };
+
 let checkDailyConsumption = async (req, res, next) => {
 	try {
 		return res.json({
@@ -563,6 +564,7 @@ let requestVaccines = (req, res, next) => {
 let vaccineRequirement = async (req, res, next) => {
 	try {
 		let orgDailyConsumption = await dailyConsumption.find({ organization: req.user._id });
+		let childrenData = await children.find({ hospitalName: req.user._id });
 		let pcv = [];
 		let bcg = [];
 		let pentavalent = [];
@@ -620,24 +622,54 @@ let vaccineRequirement = async (req, res, next) => {
 
 		let requirements = {
 			opv: {
-				sevenDays: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
+				sevenDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
+				thirtyDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 4 + (childrenData.length * 4 * 20) / 100)
+						: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
 			},
 			bcg: {
-				sevenDays: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
+				sevenDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
+				thirtyDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
 			},
 			pcv: {
-				sevenDays: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
+				sevenDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
+				thirtyDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 30) / 100)
+						: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
 			},
 			pentavalent: {
-				sevenDays: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
+				sevenDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
+				thirtyDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 35) / 100)
+						: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
 			},
 			measles: {
-				sevenDays: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
+				sevenDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length + (childrenData.length * 10) / 100)
+						: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
+				thirtyDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
 			},
 		};
 
@@ -760,54 +792,79 @@ let childBornStats = async (req, res, next) => {
 const reports = async (req, res, next) => {
 	try {
 		const childrenData = await children.find({ hospitalName: req.user._id });
-		let childrenVaccines = await childVaccinationSchedule.find({}).populate("child");
+		let childrenVaccines = await childVaccinationSchedule.find().populate({
+			path: "child",
+			match: {
+				hospitalName: req.user._id,
+			},
+		});
+		childrenVaccines = childrenVaccines.filter((item) => item.child != null);
+
+		// childrenVaccines.length > 0 &&
+		// 	childrenVaccines.map((item, i) => {
+		// 		console.log("Iteration: ", i);
+		// 		if (item.child.hospitalName === req.user._id) {
+		// 			vc.push(item);
+		// 		}
+		// 	});
+		console.log("Children vaccines: ", childrenVaccines[0].child.hospitalName === req.user._id);
+		console.log("Hospital name: ", childrenVaccines.length);
+
 		let nonVaccinatedChildren = [];
 		const today = new Date();
 		let sevenDaysInMs = 86400000 * 7;
 		let threeDaysInMs = 86400000 * 3;
 		let thirtyDaysInMs = 86400000 * 30;
 
-		childrenVaccines.map((item, index) => {
-			console.log("Iteration: ", index + 1);
-			today.setHours(0, 0, 0, 0);
-			let d1 = new Date(item.vaccines.opv1.date);
-			console.log(d1);
-			let d1Done = item.vaccines.opv1.done;
-			console.log(d1Done);
-			let d2 = new Date(item.vaccines.opv2.date);
-			console.log(d2);
-			let d2Done = item.vaccines.opv2.done;
-			console.log(d2Done);
-			let d3 = new Date(item.vaccines.opv3.date);
-			console.log(d3);
-			let d3Done = item.vaccines.opv3.done;
-			console.log(d3Done);
-			let d4 = new Date(item.vaccines.measles0.date);
-			console.log(d4);
-			let d4Done = item.vaccines.measles0.done;
-			console.log(d4Done);
-			let d5 = new Date(item.vaccines.measles1.date);
-			console.log(d5);
-			let d5Done = item.vaccines.measles1.done;
-			console.log(d5Done);
+		childrenVaccines.length > 0 &&
+			childrenVaccines.map((item, index) => {
+				// console.log("Children vaccines: ", item.child.hospitalName == req.user._id);
+				if (item !== null) {
+					today.setHours(0, 0, 0, 0);
+					let d1 = new Date(item.vaccines.opv1.date);
+					// console.log(d1);
+					let d1Done = item.vaccines.opv1.done;
+					// console.log(d1Done);
+					let d2 = new Date(item.vaccines.opv2.date);
+					// console.log(d2);
+					let d2Done = item.vaccines.opv2.done;
+					// console.log(d2Done);
+					let d3 = new Date(item.vaccines.opv3.date);
+					// console.log(d3);
+					let d3Done = item.vaccines.opv3.done;
+					// console.log(d3Done);
+					let d4 = new Date(item.vaccines.measles0.date);
+					// console.log(d4);
+					let d4Done = item.vaccines.measles0.done;
+					// console.log(d4Done);
+					let d5 = new Date(item.vaccines.measles1.date);
+					// console.log(d5);
+					let d5Done = item.vaccines.measles1.done;
+					// console.log(d5Done);
 
-			if (d1.setHours(0, 0, 0, 0) + threeDaysInMs < today && d1Done === false) {
-				console.log("If d1");
-				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
-			}
-			if (d2.setHours(0, 0, 0, 0) + threeDaysInMs < today && d2Done === false) {
-				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
-			}
-			if (d3.setHours(0, 0, 0, 0) + threeDaysInMs < today && d3Done === false) {
-				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
-			}
-			if (d4.setHours(0, 0, 0, 0) + threeDaysInMs < today && d4Done === false) {
-				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
-			}
-			if (d5.setHours(0, 0, 0, 0) + threeDaysInMs < today && d5Done === false) {
-				nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
-			}
-		});
+					if (
+						(d1.setHours(0, 0, 0, 0) + threeDaysInMs < today && d1Done === false) ||
+						(d2.setHours(0, 0, 0, 0) + threeDaysInMs < today && d2Done === false) ||
+						(d3.setHours(0, 0, 0, 0) + threeDaysInMs < today && d3Done === false) ||
+						(d4.setHours(0, 0, 0, 0) + threeDaysInMs < today && d4Done === false) ||
+						(d5.setHours(0, 0, 0, 0) + threeDaysInMs < today && d5Done === false)
+					) {
+						nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					}
+					// if (d2.setHours(0, 0, 0, 0) + threeDaysInMs < today && d2Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d3.setHours(0, 0, 0, 0) + threeDaysInMs < today && d3Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d4.setHours(0, 0, 0, 0) + threeDaysInMs < today && d4Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d5.setHours(0, 0, 0, 0) + threeDaysInMs < today && d5Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+				}
+			});
 		// await new reportsSchema({
 		// 	org: req.user._id,
 		// 	chiildren: nonVaccinatedChildren,
@@ -907,6 +964,23 @@ let childVaccineSchedule = async (req, res, next) => {
 	}
 };
 
+let sendReport = async (req, res, next) => {
+	console.log("Request.body: ", req.body);
+	let report = {
+		children: req.body,
+		org: req.user,
+	};
+	try {
+		return res.json({
+			message: "Non vaccinated children report.",
+			data: await new reportsSchema(report).save(),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	hospital,
 	viewHospital,
@@ -931,4 +1005,5 @@ module.exports = {
 	oneTimePassword,
 	hospitalReports,
 	childVaccineSchedule,
+	sendReport,
 };

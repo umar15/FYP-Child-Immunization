@@ -13,8 +13,8 @@ const ChildDataPage = () => {
 			<AdminHeader userType="Hospital" />
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
-						<Sidebar height="1300px" />
+					<Col className="sidebar-row" lg="3">
+						<Sidebar height="1400px" />
 					</Col>
 					<Col lg="9">
 						<ChildData />

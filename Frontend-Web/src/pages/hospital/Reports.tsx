@@ -8,6 +8,7 @@ import "../../index.css";
 const Reports = () => {
 	const [reports, setReports] = useState([]);
 	const [children, setChildren] = useState<any>([]);
+	const [loading, setLoading] = useState(true);
 	const alert = useAlert();
 
 	const getReports = () => {
@@ -16,16 +17,29 @@ const Reports = () => {
 			.then((res) => {
 				console.log("reports: ", res.data.data);
 				setReports(res.data?.data?.nonVaccinatedChildren);
-				// res.data?.data.nonVaccinatedChildren.map((child) => {
-				// 	axios.get(`/hospital/children/${child}`).then((res) => {
-				// 		console.log("res: ", res.data?.data);
-				// 		setChildren([...children, res.data?.data]);
-				// 	});
-				// });
-				// reports.map((item) => console.log("item: ", item));
+				setLoading(false);
+				let ch = res.data?.data?.nonVaccinatedChildren.map((item) => item._id);
+				console.log("ch: ", ch);
+				setChildren(ch);
 			})
 			.catch((err) => {
 				alert.show("Failed to Fetch reports", {
+					type: "error",
+				});
+			});
+	};
+	const sendReportToSubamdin = () => {
+		// reports?.map((item: any) => return setChildren([...children, item._id]));
+		console.log("Children reports: ", children);
+		axios
+			.post("/hospital/sendreport", children)
+			.then((res) => {
+				alert.show("Report successfully sent to subadmin!", {
+					type: "success",
+				});
+			})
+			.catch((err) => {
+				alert.show("Failed to send report.", {
 					type: "error",
 				});
 			});
@@ -35,11 +49,24 @@ const Reports = () => {
 		getReports();
 	}, []);
 
+	if (loading) {
+		return (
+			<div style={{ margin: "10% 50%" }}>
+				<Spinner color="primary" />
+			</div>
+		);
+	}
+
 	return (
 		<Container>
 			<Row className="subadmin-admin">
-				<Col lg="12">
+				<Col lg="9">
 					<h3>Reports</h3>
+				</Col>
+				<Col lg="3">
+					<button onClick={() => sendReportToSubamdin()} className="default-btn">
+						Send to sub admin
+					</button>
 				</Col>
 			</Row>
 			<Row className="subadmin-admin">
@@ -62,20 +89,20 @@ const Reports = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{reports &&
-								reports.map((child: any, index) => (
-									<tr key={child._id}>
+							{reports?.length > 0 &&
+								reports?.map((child: any, index) => (
+									<tr key={child?._id}>
 										{/* {console.log(child.dateOfBirth.getTime())} */}
 										<th scope="row">{index + 1}</th>
-										<td>{child.childID}</td>
-										<td>{child.parentName}</td>
-										<td>{child.parentCNIC}</td>
-										<td>{child.contactNo}</td>
-										<td>{child.gender}</td>
+										<td>{child?.childID}</td>
+										<td>{child?.parentName}</td>
+										<td>{child?.parentCNIC}</td>
+										<td>{child?.contactNo}</td>
+										<td>{child?.gender}</td>
 										<td>
 											<Link
 												to={{
-													pathname: `/hospital/children/${child._id}`,
+													pathname: `/hospital/children/${child?._id}`,
 													state: {
 														data: child,
 													},

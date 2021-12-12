@@ -17,7 +17,7 @@ const VaccineRequests = () => {
 		axios
 			.get("/admin/vaccinerequests")
 			.then((res) => {
-				console.log(res.data.data);
+				console.log("Vaccine requests admin: ", res.data.data);
 				setRequests(res.data?.data);
 				setLoading(false);
 			})
@@ -73,6 +73,9 @@ const VaccineRequests = () => {
 									className="notification"
 									to={{
 										pathname: `/admin/subadmins/assignvaccine/${request.organization}`,
+										state: {
+											data: request,
+										},
 									}}
 								>
 									<ListGroupItem className="notification-item">

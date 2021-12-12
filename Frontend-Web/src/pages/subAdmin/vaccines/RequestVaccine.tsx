@@ -18,21 +18,27 @@ const RequestVaccine = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		axios
-			.post("/subadmin/requestvaccinestock", data)
-			.then((res) => {
-				console.log("add: ", res);
-				alert.show("Vaccine stock request sent successfully!", {
-					type: "success",
+		if (data.quantity > 0) {
+			axios
+				.post("/subadmin/requestvaccinestock", data)
+				.then((res) => {
+					console.log("add: ", res);
+					alert.show("Vaccine stock request sent successfully!", {
+						type: "success",
+					});
+					history.push("/subadmin/vaccines");
+				})
+				.catch((err) => {
+					console.log(err);
+					alert.show("Failed to sent vaccine request.", {
+						type: "error",
+					});
 				});
-				history.push("/subadmin/vaccines");
-			})
-			.catch((err) => {
-				console.log(err);
-				alert.show("Failed to sent vaccine request.", {
-					type: "error",
-				});
+		} else {
+			alert.show("Quantity must be greater then 0.", {
+				type: "error",
 			});
+		}
 
 		console.log(data);
 	};

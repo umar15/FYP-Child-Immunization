@@ -4,6 +4,8 @@ import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
+import { validEmail, validPassword, validString, validMobileNumber } from "../../../config/regex";
+import { selectCity } from "../../../config/cities";
 
 const AddSubadmin = (props) => {
 	const subadminID: any = useParams();
@@ -11,11 +13,26 @@ const AddSubadmin = (props) => {
 	const history = useHistory();
 	const location: any = useLocation();
 
+	const [error, setError] = useState<any>({
+		email: false,
+		name: false,
+		cnic: false,
+		userType: false,
+		password: false,
+		phoneNo: false,
+		address: {
+			addr: false,
+			area: false,
+			city: false,
+		},
+	});
+
 	const [data, setData] = useState<any>({
 		email: "",
 		name: "",
 		cnic: "",
 		userType: "subadmin",
+		phoneNo: "",
 		password: "",
 		address: {
 			addr: "",
@@ -30,6 +47,51 @@ const AddSubadmin = (props) => {
 	console.log("object", subadmin.subadmin);
 	console.log("id", subadminID.id);
 
+	const handleChange = (name, value, regex) => {
+		if (name === "addr" || name === "area" || name === "city") {
+			setData({
+				...data,
+				address: {
+					...data.address,
+					[name]: value,
+				},
+			});
+			if (!regex.test(data.address[name])) {
+				setError({
+					...error,
+					address: {
+						...error.address,
+						[name]: true,
+					},
+				});
+			} else {
+				setError({
+					...error,
+					address: {
+						...error.address,
+						[name]: false,
+					},
+				});
+			}
+		} else {
+			setData({
+				...data,
+				[name]: value,
+			});
+			if (!regex.test(data[name])) {
+				setError({
+					...error,
+					[name]: true,
+				});
+			} else {
+				setError({
+					...error,
+					[name]: false,
+				});
+			}
+		}
+	};
+
 	React.useEffect(() => {
 		if (subadminID.id === "add") {
 			return;
@@ -39,6 +101,7 @@ const AddSubadmin = (props) => {
 					email: subadmin ? subadmin.subadmin.email : "",
 					name: subadmin ? subadmin.subadmin.name : "",
 					cnic: subadmin ? subadmin.subadmin.cnic : "",
+					phoneNo: subadmin ? subadmin.subadmin.phoneNo : "",
 					userType: "subadmin",
 					password: subadmin ? subadmin.subadmin.password : "",
 					address: {
@@ -109,45 +172,56 @@ const AddSubadmin = (props) => {
 								<Col md="12" sm="12">
 									<div className="form-group">
 										<input
+											required
 											type="text"
 											className="form-control"
 											name="name"
 											placeholder="Name"
 											value={data.name}
-											onChange={(e) => setData({ ...data, name: e.target.value })}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											// onChange={(e) => setData({ ...data, name: e.target.value })}
+											// pattern="[a-zA-Z]+"
+											// title="Enter alphabets only."
 										/>
+										{error.name && <p className="err">Invalid Name!</p>}
 									</div>
 								</Col>
 								<Col md="12" sm="12">
 									<div className="form-group">
 										<input
+											required
 											type="email"
+											title="i.e abc@mail.com"
 											className="form-control"
 											name="email"
 											placeholder="Email Address"
 											value={data.email}
-											onChange={(e) => setData({ ...data, email: e.target.value })}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validEmail)}
 										/>
+										{error.email && <p className="err">Your email is invalid</p>}
 									</div>
 								</Col>
-								<Col md="12" sm="12">
+								<Col md="6" sm="12">
 									<div className="form-group">
 										<input
+											required
 											type="password"
 											className="form-control"
 											name="password"
 											placeholder="Password"
 											value={data.password}
-											onChange={(e) => setData({ ...data, password: e.target.value })}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validPassword)}
+											title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
 										/>
+										{error.password && <p className="err">Invalid password!</p>}
 									</div>
 								</Col>
-								<Col md="12" sm="12">
+								<Col md="6" sm="12">
 									<div className="form-group">
 										<input
 											type="password"
 											className="form-control"
-											name="password"
+											name="confirnPassword"
 											placeholder="Confirm Password"
 											value={confirmPass}
 											onChange={(e) => setConfirmPass(e.target.value)}
@@ -157,43 +231,64 @@ const AddSubadmin = (props) => {
 								<Col md="12" sm="12">
 									<div className="form-group">
 										<input
+											required
 											type="text"
 											className="form-control"
-											name="name"
+											name="phoneNo"
+											placeholder="Phone Number +923151234569"
+											value={data.phoneNo}
+											title="e.g +923151234567"
+											onChange={(e) => handleChange(e.target.name, e.target.value, validMobileNumber)}
+											// onChange={(e) => setData({ ...data, phoneNo: e.target.value })}
+										/>
+										{error.phoneNo && <p className="err">Invalid phone number!</p>}
+									</div>
+								</Col>
+								<Col md="12" sm="12">
+									<div className="form-group">
+										<input
+											type="text"
+											className="form-control"
+											name="addr"
 											placeholder="Address"
 											value={data.address.addr}
-											onChange={(e) =>
-												setData({ ...data, address: { ...data.address, addr: e.target.value } })
-											}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											// onChange={(e) =>
+											// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
+											// }
 										/>
+										{error.address.addr && <p className="err">Invalid address!</p>}
 									</div>
 								</Col>
-								<Col md="12" sm="12">
+								<Col md="6" sm="12">
 									<div className="form-group">
 										<input
 											type="text"
 											className="form-control"
-											name="name"
+											name="area"
 											placeholder="Area"
 											value={data.address.area}
-											onChange={(e) =>
-												setData({ ...data, address: { ...data.address, area: e.target.value } })
-											}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											// onChange={(e) =>
+											// 	setData({ ...data, address: { ...data.address, area: e.target.value } })
+											// }
 										/>
+										{error.address.area && <p className="err">Invalid address!</p>}
 									</div>
 								</Col>
-								<Col md="12" sm="12">
+								<Col md="6" sm="12">
 									<div className="form-group">
-										<input
-											type="text"
+										<select
+											required
 											className="form-control"
-											name="name"
+											name="city"
 											placeholder="City"
 											value={data.address.city}
-											onChange={(e) =>
-												setData({ ...data, address: { ...data.address, city: e.target.value } })
-											}
-										/>
+											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+										>
+											<option value="">City</option>
+											{selectCity()}
+										</select>
 									</div>
 								</Col>
 								<Col md="12" sm="12">

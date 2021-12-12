@@ -12,7 +12,7 @@ const Footer = () => {
 		<footer className="footer-top-area">
 			<Container>
 				<Row>
-					<Col lg="3" md="6">
+					<Col lg="6" md="6" sm="12">
 						<div className="single-widget">
 							<a href="/">
 								<img src={logo} width="70px" alt="logo" />
@@ -63,20 +63,19 @@ const Footer = () => {
 							</div>
 						</div>
 					</Col>
-					<Col lg="3" md="6">
+					<Col lg="6" md="6" sm="12">
 						<div className="single-widget">
 							<h3>Vaccinations</h3>
 							<ul>
-								<li>Hapititus A</li>
-								<li>Influenza</li>
 								<li>Polio</li>
+								<li>BCG</li>
+								<li>PCV</li>
 								<li>Measles</li>
-								<li>Hapititus B</li>
-								<li>Homophiles</li>
+								<li>Pentavalent</li>
 							</ul>
 						</div>
 					</Col>
-					<Col lg="3" md="6">
+					{/* <Col lg="3" md="12">
 						<div className="single-widget open-time">
 							<h3>Opening Hours</h3>
 							<ul>
@@ -98,8 +97,8 @@ const Footer = () => {
 								</li>
 							</ul>
 						</div>
-					</Col>
-					<Col lg="3" md="6">
+					</Col> */}
+					{/* <Col lg="4" md="12">
 						<div className="single-widget contact">
 							<h3>Get In Touch</h3>
 							<ul>
@@ -134,7 +133,7 @@ const Footer = () => {
 								</li>
 							</ul>
 						</div>
-					</Col>
+					</Col> */}
 				</Row>
 			</Container>
 		</footer>

@@ -59,14 +59,11 @@ const RequestVaccine = (props) => {
 										>
 											<option value="">Vaccine Name</option>
 											<option value="diphteria">Diphteria</option>
-											<option value="polio">Polio</option>
-											<option value="homophiles">Homophiles</option>
-											<option value="rotaVirus">Rota Virus</option>
+											<option value="opv">OPV (Polio)</option>
+											<option value="bcg">BCG</option>
+											<option value="pcv">PCV</option>
 											<option value="measles">Measles</option>
-											<option value="hapatitusA">Hapititus A</option>
-											<option value="hapatitusB">Hapititus B</option>
-											<option value="papillomaVirus">Papilloma Virus</option>
-											<option value="influenza">Influenza</option>
+											<option value="pentavalent">Pentavalent</option>
 										</select>
 									</div>
 								</Col>
@@ -75,6 +72,7 @@ const RequestVaccine = (props) => {
 										<label>Quantity</label>
 										<input
 											required
+											min={1}
 											type="number"
 											className="form-control"
 											name="quantity"

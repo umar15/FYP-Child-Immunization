@@ -4,6 +4,7 @@ const winston = require("../../config/winston"),
 	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
 	dailyConsumption = mongoose.model("dailyConsumption"),
 	workerVaccines = mongoose.model("organizationVaccines"),
+	reportsSchema = mongoose.model("reportsSchema"),
 	otpGenerator = require("otp-generator"),
 	Twilio = require("twilio");
 
@@ -23,7 +24,7 @@ let viewChildren = async (req, res, next) => {
 	try {
 		return res.json({
 			message: "View CHildren",
-			data: await children.find({}),
+			data: await children.find({ "address.area": req.user.address.area }),
 		});
 	} catch (err) {
 		winston.error(err);
@@ -387,6 +388,108 @@ let oneTimePassword = async (req, res, next) => {
 	}
 };
 
+let sendReport = async (req, res, next) => {
+	let report = {
+		...req.body,
+		org: req.user,
+	};
+	try {
+		return res.json({
+			message: "Non vaccinated children report.",
+			data: await new reportsSchema(report).save(),
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
+const reports = async (req, res, next) => {
+	try {
+		// const childrenData = await children.find({ hospitalName: req.user._id });
+		let childrenVaccines = await childVaccinationSchedule.find().populate({
+			path: "child",
+			match: {
+				"address.area": req.user.address.area,
+			},
+		});
+		childrenVaccines = childrenVaccines.filter((item) => item.child != null);
+		console.log("Children vaccines: ", childrenVaccines);
+		console.log("user: ", req.user.address.area);
+
+		let nonVaccinatedChildren = [];
+		const today = new Date();
+		let sevenDaysInMs = 86400000 * 7;
+		let threeDaysInMs = 86400000 * 3;
+		let thirtyDaysInMs = 86400000 * 30;
+
+		childrenVaccines.length > 0 &&
+			childrenVaccines.map((item, index) => {
+				// console.log("Children vaccines: ", item.child.hospitalName == req.user._id);
+				if (item !== null) {
+					today.setHours(0, 0, 0, 0);
+					let d1 = new Date(item.vaccines.opv1.date);
+					// console.log(d1);
+					let d1Done = item.vaccines.opv1.done;
+					// console.log(d1Done);
+					let d2 = new Date(item.vaccines.opv2.date);
+					// console.log(d2);
+					let d2Done = item.vaccines.opv2.done;
+					// console.log(d2Done);
+					let d3 = new Date(item.vaccines.opv3.date);
+					// console.log(d3);
+					let d3Done = item.vaccines.opv3.done;
+					// console.log(d3Done);
+					let d4 = new Date(item.vaccines.measles0.date);
+					// console.log(d4);
+					let d4Done = item.vaccines.measles0.done;
+					// console.log(d4Done);
+					let d5 = new Date(item.vaccines.measles1.date);
+					// console.log(d5);
+					let d5Done = item.vaccines.measles1.done;
+					// console.log(d5Done);
+
+					if (
+						(d1.setHours(0, 0, 0, 0) + threeDaysInMs < today && d1Done === false) ||
+						(d2.setHours(0, 0, 0, 0) + threeDaysInMs < today && d2Done === false) ||
+						(d3.setHours(0, 0, 0, 0) + threeDaysInMs < today && d3Done === false) ||
+						(d4.setHours(0, 0, 0, 0) + threeDaysInMs < today && d4Done === false) ||
+						(d5.setHours(0, 0, 0, 0) + threeDaysInMs < today && d5Done === false)
+					) {
+						nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					}
+					// if (d2.setHours(0, 0, 0, 0) + threeDaysInMs < today && d2Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d3.setHours(0, 0, 0, 0) + threeDaysInMs < today && d3Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d4.setHours(0, 0, 0, 0) + threeDaysInMs < today && d4Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+					// if (d5.setHours(0, 0, 0, 0) + threeDaysInMs < today && d5Done === false) {
+					// 	nonVaccinatedChildren = [...nonVaccinatedChildren, item.child];
+					// }
+				}
+			});
+		// await new reportsSchema({
+		// 	org: req.user._id,
+		// 	chiildren: nonVaccinatedChildren,
+		// }).save();
+
+		// console.log(nonVaccinatedChildren);
+		return res.json({
+			message: "Non Vaccinated Children Reports",
+			data: {
+				nonVaccinatedChildren,
+			},
+		});
+	} catch (err) {
+		winston.error(err);
+		res.redirect("/error");
+	}
+};
+
 module.exports = {
 	polioWorker,
 	updateChild,
@@ -396,4 +499,6 @@ module.exports = {
 	viewChildren,
 	vaccinationSchedule,
 	oneTimePassword,
+	sendReport,
+	reports,
 };

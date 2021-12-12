@@ -10,12 +10,14 @@ import "../../../index.css";
 const VaccineCenters = () => {
 	const [vaccineCenters, setVaccineCenters] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [subadmins, setSubadmins] = useState([]);
+	const [city, setCity] = useState<string>("Country");
 	const alert = useAlert();
 	const history = useHistory();
 
 	const getVaccineCenters = async () => {
 		axios
-			.get("/admin/vaccinecenters")
+			.get(`/admin/getvaccinecenters/${city}`)
 			.then((res) => {
 				console.log(res.data.data);
 				setVaccineCenters(res.data?.data);
@@ -23,6 +25,20 @@ const VaccineCenters = () => {
 			})
 			.catch((err) =>
 				alert.show("Failed to Fetch vaccine centers", {
+					type: "error",
+				})
+			);
+	};
+
+	const getSubadmins = async () => {
+		axios
+			.get("/admin/subadmins")
+			.then((res) => {
+				console.log(res.data.data);
+				setSubadmins(res.data?.data);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch subadmins", {
 					type: "error",
 				})
 			);
@@ -46,7 +62,8 @@ const VaccineCenters = () => {
 
 	useEffect(() => {
 		getVaccineCenters();
-	}, []);
+		getSubadmins();
+	}, [city]);
 
 	if (loading) {
 		return (
@@ -63,9 +80,26 @@ const VaccineCenters = () => {
 					<h3>Vaccine Centers</h3>
 				</Col>
 			</Row>
+			<Row>
+				<Col lg="12" md="12" style={{ width: "100%" }}>
+					<div className="form-group">
+						<select className="form-control" value={city} onChange={(e) => setCity(e.target.value)}>
+							<option value="Country">Country</option>
+							{subadmins?.map((item: any) => {
+								return (
+									<option value={item.address.city} key={item._id}>
+										{item.address.city}
+									</option>
+								);
+							})}
+							{/* {selectCity()} */}
+						</select>
+					</div>
+				</Col>
+			</Row>
 			<Row className="subadmin-table">
-				<Col lg="12">
-					<Table style={tableStyles} bordered hover>
+				<Col lg="12" style={{ height: "600px", overflow: "scroll" }}>
+					<Table style={tableStyles} bordered hover responsive>
 						<thead>
 							<tr>
 								<th>#</th>

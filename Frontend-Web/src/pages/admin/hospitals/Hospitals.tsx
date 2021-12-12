@@ -10,12 +10,14 @@ import "../../../index.css";
 const Hospitals = () => {
 	const [hospitals, setHospitals] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [subadmins, setSubadmins] = useState([]);
+	const [city, setCity] = useState<string>("Country");
 	const alert = useAlert();
 	const history = useHistory();
 
 	const getHospitals = async () => {
 		axios
-			.get("/admin/hospitals")
+			.get(`/admin/gethospitals/${city}`)
 			.then((res) => {
 				console.log(res.data.data);
 				setHospitals(res.data?.data);
@@ -23,6 +25,20 @@ const Hospitals = () => {
 			})
 			.catch((err) =>
 				alert.show("Failed to Fetch hospitals", {
+					type: "error",
+				})
+			);
+	};
+
+	const getSubadmins = async () => {
+		axios
+			.get("/admin/subadmins")
+			.then((res) => {
+				console.log(res.data.data);
+				setSubadmins(res.data?.data);
+			})
+			.catch((err) =>
+				alert.show("Failed to Fetch subadmins", {
 					type: "error",
 				})
 			);
@@ -46,7 +62,8 @@ const Hospitals = () => {
 
 	useEffect(() => {
 		getHospitals();
-	}, []);
+		getSubadmins();
+	}, [city]);
 
 	if (loading) {
 		return (
@@ -63,9 +80,26 @@ const Hospitals = () => {
 					<h3>Hospitals</h3>
 				</Col>
 			</Row>
+			<Row>
+				<Col lg="12" md="12" style={{ width: "100%" }}>
+					<div className="form-group">
+						<select className="form-control" value={city} onChange={(e) => setCity(e.target.value)}>
+							<option value="Country">Country</option>
+							{subadmins?.map((item: any) => {
+								return (
+									<option value={item.address.city} key={item._id}>
+										{item.address.city}
+									</option>
+								);
+							})}
+							{/* {selectCity()} */}
+						</select>
+					</div>
+				</Col>
+			</Row>
 			<Row className="subadmin-table">
-				<Col lg="12">
-					<Table style={tableStyles} bordered hover>
+				<Col lg="12" style={{ height: "600px", overflow: "scroll" }}>
+					<Table style={tableStyles} bordered hover responsive>
 						<thead>
 							<tr>
 								<th>#</th>

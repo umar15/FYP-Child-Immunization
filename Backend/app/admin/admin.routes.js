@@ -10,7 +10,7 @@ module.exports = (app, version) => {
 	// 	adminController.viewChildren
 	// );
 	app.get(
-		version + "/admin/children/:id",
+		version + "/admin/children/:id/:areaid",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.viewChildren
@@ -40,7 +40,7 @@ module.exports = (app, version) => {
 		adminController.updateVaccine
 	);
 	app.get(
-		version + "/admin/hospitals",
+		version + "/admin/gethospitals/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.viewHospitals
@@ -52,7 +52,7 @@ module.exports = (app, version) => {
 		adminController.getHospital
 	);
 	app.get(
-		version + "/admin/vaccinecenters",
+		version + "/admin/getvaccinecenters/:id",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.viewVaccineCenters
@@ -100,7 +100,7 @@ module.exports = (app, version) => {
 		adminController.futureCases
 	);
 	app.get(
-		version + "/admin/vaccinerequirements/:id",
+		version + "/admin/vaccinerequirements/:id/:areaid",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.vaccineRequirement
@@ -112,13 +112,13 @@ module.exports = (app, version) => {
 		adminController.vaccineStockRequests
 	);
 	app.get(
-		version + "/admin/childrenstatistics/:id",
+		version + "/admin/childrenstatistics/:id/:areaid",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.childrenStats
 	);
 	app.get(
-		version + "/admin/vaccinatednonvaccinated/:id",
+		version + "/admin/vaccinatednonvaccinated/:id/:areaid",
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.vaccinatedNonVaccinated
@@ -140,5 +140,11 @@ module.exports = (app, version) => {
 		passport.isAuthenticated,
 		passport.isAuthorized("admin"),
 		adminController.getUserAssignedVaccines
+	);
+	app.get(
+		version + "/admin/nonvaccinatedreports",
+		passport.isAuthenticated,
+		passport.isAuthorized("admin"),
+		adminController.nonVaccinatedChildrenReports
 	);
 };

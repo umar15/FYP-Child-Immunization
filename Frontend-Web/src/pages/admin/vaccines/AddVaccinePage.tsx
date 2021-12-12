@@ -15,7 +15,7 @@ const AddVaccinePage = () => {
 			<Container className="admin-container">
 				<Row>
 					<Col lg="3">
-						<Sidebar />
+						<Sidebar className="sidebar-row" />
 					</Col>
 					<Col lg="9" style={addSubadminStyles}>
 						<AddVaccine />

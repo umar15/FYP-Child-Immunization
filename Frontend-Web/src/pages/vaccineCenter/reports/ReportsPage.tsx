@@ -13,7 +13,7 @@ const ReportsPage = () => {
 			<AdminHeader userType="Vaccine center" />
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
+					<Col className="sidebar-row" lg="3">
 						<Sidebar />
 					</Col>
 					<Col lg="9">

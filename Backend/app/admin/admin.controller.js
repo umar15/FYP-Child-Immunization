@@ -10,6 +10,7 @@ const winston = require("../../config/winston"),
 	vaccineRequest = mongoose.model("vaccineRequest"),
 	childVaccinationSchedule = mongoose.model("childVaccinationSchedule"),
 	dailyConsumption = mongoose.model("dailyConsumption"),
+	reportsSchema = mongoose.model("reportsSchema"),
 	nodemailer = require("nodemailer");
 
 let admin = (req, res, next) => {
@@ -27,11 +28,14 @@ let admin = (req, res, next) => {
 let viewChildren = async (req, res, next) => {
 	try {
 		let childrenData;
-		// console.log("Req id: ", req.params.id);
-		if (req.params.id === "Country") {
+		console.log("Req id: ", req.params.id);
+		console.log("area id: ", req.params.areaid);
+		if (req.params.id === "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({});
-		} else {
+		} else if (req.params.id != "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({ "address.city": req.params.id });
+		} else {
+			childrenData = await children.find({ "address.area": req.params.areaid });
 		}
 		return res.json({
 			message: "Children data",
@@ -112,9 +116,16 @@ let deleteVaccine = async (req, res, next) => {
 
 let viewHospitals = async (req, res, next) => {
 	try {
+		let hospitals;
+		// console.log("Req id: ", req.params.id);
+		if (req.params.id === "Country") {
+			hospitals = await users.find({ userType: "hospital" });
+		} else {
+			hospitals = await users.find({ $and: [{ "address.city": req.params.id }, { userType: "hospital" }] });
+		}
 		return res.json({
 			message: "hospitals",
-			data: await users.find({ userType: "hospital" }),
+			data: hospitals,
 		});
 	} catch (err) {
 		winston.error(err);
@@ -135,9 +146,16 @@ let getHospital = async (req, res, next) => {
 
 let viewVaccineCenters = async (req, res, next) => {
 	try {
+		let vc;
+		// console.log("Req id: ", req.params.id);
+		if (req.params.id === "Country") {
+			vc = await users.find({ userType: "vaccinecenter" });
+		} else {
+			vc = await users.find({ $and: [{ "address.city": req.params.id }, { userType: "vaccinecenter" }] });
+		}
 		return res.json({
 			message: "vaccine centers",
-			data: await users.find({ userType: "vaccinecenter" }),
+			data: vc,
 		});
 	} catch (err) {
 		winston.error(err);
@@ -426,17 +444,24 @@ let vaccineStockRequests = async (req, res, next) => {
 
 let vaccineRequirement = async (req, res, next) => {
 	try {
-		let orgDailyConsumption;
-		if (req.params.id === "Country") {
-			orgDailyConsumption = await dailyConsumption.find({});
+		let childrenData;
+		if (req.params.id === "Country" && req.params.areaid === "Area") {
+			childrenData = await children.find({});
+		} else if (req.params.id != "Country" && req.params.areaid === "Area") {
+			childrenData = await children.find({ "address.city": req.params.id });
 		} else {
-			orgDailyConsumption = await dailyConsumption.find({}).populate({
-				path: "organization",
-				match: {
-					"address.city": req.params.id,
-				},
-			});
+			childrenData = await children.find({ "address.area": req.params.areaid });
 		}
+
+		let orgDailyConsumption;
+		if (req.params.id === "Country" && req.params.areaid === "Area") {
+			orgDailyConsumption = await dailyConsumption.find({});
+		} else if (req.params.id != "Country" && req.params.areaid === "Area") {
+			orgDailyConsumption = await dailyConsumption.find().populate("organization");
+		} else {
+			orgDailyConsumption = await dailyConsumption.find().populate("organization");
+		}
+		// console.log("COuntry: ", req.params.id);
 		// console.log("Daily: ", orgDailyConsumption);
 
 		let pcv = [];
@@ -449,65 +474,96 @@ let vaccineRequirement = async (req, res, next) => {
 		let pentavalentDaily = 0;
 		let opvDaily = 0;
 		let measlesDaily = 0;
-		orgDailyConsumption.map((item) => {
-			if (item.vaccineName === "pcv") {
-				pcv.push(item);
-				let date = new Date(item.date);
-				let today = new Date();
-				if (date.toDateString() == today.toDateString()) {
-					pcvDaily += 1;
+		orgDailyConsumption.length > 0 &&
+			orgDailyConsumption.map((item) => {
+				if (item.vaccineName === "pcv") {
+					pcv.push(item);
+					let date = new Date(item.date);
+					let today = new Date();
+					if (date.toDateString() == today.toDateString()) {
+						pcvDaily += 1;
+					}
+				} else if (item.vaccineName === "bcg") {
+					bcg.push(item);
+					let date = new Date(item.date);
+					let today = new Date();
+					if (date.toDateString() == today.toDateString()) {
+						bcgDaily += 1;
+					}
+				} else if (item.vaccineName === "opv") {
+					opv.push(item);
+					let date = new Date(item.date);
+					let today = new Date();
+					if (date.toDateString() == today.toDateString()) {
+						opvDaily += 1;
+					}
+				} else if (item.vaccineName === "pentavalent") {
+					pentavalent.push(item);
+					let date = new Date(item.date);
+					let today = new Date();
+					if (date.toDateString() == today.toDateString()) {
+						pentavalentDaily += 1;
+					}
+				} else if (item.vaccineName === "measles") {
+					measles.push(item);
+					let date = new Date(item.date);
+					let today = new Date();
+					if (date.toDateString() == today.toDateString()) {
+						measlesDaily += 1;
+					}
 				}
-			} else if (item.vaccineName === "bcg") {
-				bcg.push(item);
-				let date = new Date(item.date);
-				let today = new Date();
-				if (date.toDateString() == today.toDateString()) {
-					bcgDaily += 1;
-				}
-			} else if (item.vaccineName === "opv") {
-				opv.push(item);
-				let date = new Date(item.date);
-				let today = new Date();
-				if (date.toDateString() == today.toDateString()) {
-					opvDaily += 1;
-				}
-			} else if (item.vaccineName === "pentavalent") {
-				pentavalent.push(item);
-				let date = new Date(item.date);
-				let today = new Date();
-				if (date.toDateString() == today.toDateString()) {
-					pentavalentDaily += 1;
-				}
-			} else if (item.vaccineName === "measles") {
-				measles.push(item);
-				let date = new Date(item.date);
-				let today = new Date();
-				if (date.toDateString() == today.toDateString()) {
-					measlesDaily += 1;
-				}
-			}
-		});
+			});
 
 		let requirements = {
 			opv: {
-				sevenDays: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
+				sevenDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(opvDaily * 7 + (opvDaily * 7 * 10) / 100),
+				thirtyDays:
+					opvDaily === 0
+						? Math.ceil(childrenData.length * 4 + (childrenData.length * 4 * 20) / 100)
+						: Math.ceil(opvDaily * 30 + (opvDaily * 30 * 10) / 100),
 			},
 			bcg: {
-				sevenDays: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
+				sevenDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 10) / 100)
+						: Math.ceil(bcgDaily * 7 + (bcgDaily * 7 * 10) / 100),
+				thirtyDays:
+					bcgDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(bcgDaily * 30 + (bcgDaily * 30 * 10) / 100),
 			},
 			pcv: {
-				sevenDays: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
+				sevenDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pcvDaily * 7 + (pcvDaily * 7 * 10) / 100),
+				thirtyDays:
+					pcvDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 30) / 100)
+						: Math.ceil(pcvDaily * 30 + (pcvDaily * 30 * 10) / 100),
 			},
 			pentavalent: {
-				sevenDays: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
+				sevenDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 1.5 + (childrenData.length * 1.5 * 10) / 100)
+						: Math.ceil(pentavalentDaily * 7 + (pentavalentDaily * 7 * 10) / 100),
+				thirtyDays:
+					pentavalentDaily === 0
+						? Math.ceil(childrenData.length * 3 + (childrenData.length * 1.5 * 35) / 100)
+						: Math.ceil(pentavalentDaily * 30 + (pentavalentDaily * 30 * 10) / 100),
 			},
 			measles: {
-				sevenDays: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
-				thirtyDays: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
+				sevenDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length + (childrenData.length * 10) / 100)
+						: Math.ceil(measlesDaily * 7 + (measlesDaily * 7 * 10) / 100),
+				thirtyDays:
+					measlesDaily === 0
+						? Math.ceil(childrenData.length * 2 + (childrenData.length * 2 * 20) / 100)
+						: Math.ceil(measlesDaily * 30 + (measlesDaily * 30 * 10) / 100),
 			},
 		};
 
@@ -526,26 +582,30 @@ let vaccineRequirement = async (req, res, next) => {
 let vaccinatedNonVaccinated = async (req, res, next) => {
 	try {
 		let childrenData;
-		if (req.params.id === "Country") {
+		if (req.params.id === "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({});
-		} else {
+		} else if (req.params.id != "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({ "address.city": req.params.id });
+		} else {
+			childrenData = await children.find({ "address.area": req.params.areaid });
 		}
+
 		let vaccinated = 0;
 		let nonVaccinated = 0;
-		childrenData.map((item) => {
-			if (
-				item.vaccination[0].opv.noOfDoses === 4 &&
-				item.vaccination[0].measles.noOfDoses === 2 &&
-				item.vaccination[0].bcg.noOfDoses === 1 &&
-				item.vaccination[0].pentavalent.noOfDoses === 3 &&
-				item.vaccination[0].pcv.noOfDoses === 3
-			) {
-				vaccinated += 1;
-			} else {
-				nonVaccinated += 1;
-			}
-		});
+		childrenData.length > 0 &&
+			childrenData.map((item) => {
+				if (
+					item.vaccination[0].opv.noOfDoses === 4 &&
+					item.vaccination[0].measles.noOfDoses === 2 &&
+					item.vaccination[0].bcg.noOfDoses === 1 &&
+					item.vaccination[0].pentavalent.noOfDoses === 3 &&
+					item.vaccination[0].pcv.noOfDoses === 3
+				) {
+					vaccinated += 1;
+				} else {
+					nonVaccinated += 1;
+				}
+			});
 
 		return res.json({
 			message: "Vaccinated non vaccinated stats",
@@ -563,10 +623,12 @@ let vaccinatedNonVaccinated = async (req, res, next) => {
 let childrenStats = async (req, res, next) => {
 	try {
 		let childrenData;
-		if (req.params.id === "Country") {
+		if (req.params.id === "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({});
-		} else {
+		} else if (req.params.id != "Country" && req.params.areaid === "Area") {
 			childrenData = await children.find({ "address.city": req.params.id });
+		} else {
+			childrenData = await children.find({ "address.area": req.params.areaid });
 		}
 
 		let bornToday = 0;
@@ -616,6 +678,23 @@ let childVaccineSchedule = async (req, res, next) => {
 		});
 	} catch (err) {
 		winston.error(err);
+		return next(err);
+		res.redirect("/error");
+	}
+};
+
+let nonVaccinatedChildrenReports = async (req, res, next) => {
+	let reports = await reportsSchema.find().populate("org").populate("children");
+	reports = reports.filter((item) => {
+		return item.org.userType === "subadmin";
+	});
+	try {
+		return res.json({
+			message: "Child Reports admin",
+			data: reports,
+		});
+	} catch (err) {
+		winston.error(err);
 		res.redirect("/error");
 	}
 };
@@ -646,4 +725,5 @@ module.exports = {
 	userVaccinesInfo,
 	getUserAssignedVaccines,
 	childVaccineSchedule,
+	nonVaccinatedChildrenReports,
 };

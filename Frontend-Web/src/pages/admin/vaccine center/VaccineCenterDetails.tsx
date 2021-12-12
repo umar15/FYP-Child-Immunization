@@ -59,10 +59,10 @@ const VaccineCenterDetails = () => {
 								<th>Phone Number</th>
 								<td>{phoneNo}</td>
 							</tr>
-							<tr>
+							{/* <tr>
 								<th>CNIC</th>
 								<td>{cnic}</td>
-							</tr>
+							</tr> */}
 							<tr>
 								<th>Address</th>
 								<td>

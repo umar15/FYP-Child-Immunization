@@ -76,7 +76,7 @@ const SubAdmin = () => {
 			</Row>
 			<Row className="subadmin-table">
 				<Col lg="12">
-					<Table style={tableStyles} bordered hover>
+					<Table style={tableStyles} bordered hover responsive>
 						<thead>
 							<tr>
 								<th>#</th>

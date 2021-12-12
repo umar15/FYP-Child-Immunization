@@ -14,8 +14,8 @@ const VaccineRequestsPage = () => {
 
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
-						<Sidebar />
+					<Col className="sidebar-row" lg="3">
+						<Sidebar className="sidebar-row" />
 					</Col>
 					<Col lg="9">
 						<VaccineRequests />

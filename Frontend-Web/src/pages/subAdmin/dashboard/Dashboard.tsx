@@ -173,7 +173,7 @@ const Dashboard = () => {
 
 	return (
 		<>
-			<Container style={{ width: "1080px", marginLeft: "-50px", marginTop: "10px", marginBottom: "10px" }}>
+			<Container style={{ width: "1080px", marginLeft: "-15px", marginTop: "10px", marginBottom: "10px" }}>
 				<Row>
 					<Col lg="12">
 						<h3>Subadmin Statistics</h3>
@@ -408,7 +408,7 @@ const Dashboard = () => {
 						</Table>
 					</Col>
 					<Col lg="6">
-						<h4>Admin Available Vaccines</h4>
+						<h4>Sub admin Available Vaccines</h4>
 						<Table bordered size="sm">
 							<thead>
 								<tr>
@@ -497,13 +497,24 @@ const Dashboard = () => {
 };
 
 const boxStyles = {
-	width: "1050px",
-	marginLeft: "-35px",
-	boxShadow: "0 0 5px #c9c9c9",
+	// width: "1050px",
+	// marginLeft: "-35px",
+	// boxShadow: "0 0 5px #c9c9c9",
+	// marginBottom: "20px",
+	// paddingLeft: "25px",
+	// paddingTop: "10px",
+	// paddingBottom: "20px",
+	// width: "1050px",
+	// marginLeft: "-35px",
+	// boxShadow: "0 0 5px #c9c9c9",
+	// marginTop: "20px",
+	margin: "auto",
 	marginBottom: "20px",
-	paddingLeft: "25px",
+	// paddingLeft: "25px",
 	paddingTop: "10px",
 	paddingBottom: "20px",
+	// textAlign: "center",
+	alignItem: "center",
 };
 
 export default Dashboard;

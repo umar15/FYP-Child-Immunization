@@ -133,11 +133,17 @@ module.exports = (app, version) => {
 		hospitalController.oneTimePassword
 	);
 	app.post(
-		version + "/hospital/reports",
+		version + "/hospital/sendreport",
 		passport.isAuthenticated,
 		passport.isAuthorized("hospital"),
-		hospitalController.hospitalReports
+		hospitalController.sendReport
 	);
+	// app.post(
+	// 	version + "/hospital/reports",
+	// 	passport.isAuthenticated,
+	// 	passport.isAuthorized("hospital"),
+	// 	hospitalController.hospitalReports
+	// );
 	app.get(
 		version + "/hospital/:id",
 		passport.isAuthenticated,

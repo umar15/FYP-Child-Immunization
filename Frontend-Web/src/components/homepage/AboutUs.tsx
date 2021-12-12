@@ -8,13 +8,15 @@ const AboutUs = () => {
 		<div className="about-area">
 			<Container>
 				<Row>
-					<Col lg="6" pl="0">
+					<Col lg="6" md="12" pl="0">
 						<img src={homepageimg1} alt="homepage img" className="about-img" />
 					</Col>
-					<Col lg="6">
+					<Col lg="6" md="12">
 						<div className="about-content">
 							<span className="topic">About Us</span>
-							<h2 className="main-heading heading">Routine Vaccines Provided for Babies and Children</h2>
+							<h2 className="" style={{ fontWeight: "bold" }}>
+								Routine Vaccines Provided for Babies and Children
+							</h2>
 							<p className="topic-text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 								labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra

@@ -174,8 +174,8 @@ const AddCampaign = (props) => {
 								<Col lg="12">
 									<div className="form-group">
 										<label>Campaign area</label>
-
 										<input
+											required
 											type="text"
 											className="form-control"
 											name="area"
@@ -241,6 +241,7 @@ const AddCampaign = (props) => {
 									<div className="form-group">
 										<label>Start date</label>
 										<DatePicker
+											required
 											className="form-control"
 											// value={startDate}
 											selected={data.startDate}
@@ -252,6 +253,7 @@ const AddCampaign = (props) => {
 									<div className="form-group">
 										<label>End Date</label>
 										<DatePicker
+											required
 											className="form-control"
 											// value={endDate}
 											selected={data.endDate}

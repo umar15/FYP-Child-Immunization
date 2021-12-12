@@ -84,7 +84,7 @@ const Vaccines = () => {
 								<th>Name</th>
 								<th>Manufacturer</th>
 								<th>Quantity</th>
-								<th>Expiry Date vaccine</th>
+								<th>Date</th>
 								<th>Edit</th>
 								<th>Delete</th>
 							</tr>

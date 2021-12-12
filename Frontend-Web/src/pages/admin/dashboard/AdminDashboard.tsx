@@ -11,18 +11,17 @@ const AdminDashboard = () => {
 	return (
 		<>
 			<AdminHeader userType="Admin" />
-
 			<Container className="admin-container">
 				<Row>
-					<Col lg="3">
-						<Sidebar height="1600px" />
+					<Col className="sidebar-row" xl="3" md="12">
+						<Sidebar height="1500px" />
 					</Col>
-					<Col lg="9">
+					<Col xl="9" md="12">
 						<Dashboard />
 					</Col>
 				</Row>
 			</Container>
-			<Footer />
+			{/* <Footer /> */}
 			<FooterBottom />
 		</>
 	);

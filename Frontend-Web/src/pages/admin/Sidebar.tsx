@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../index.css";
+import { Collapse, NavbarToggler, Nav } from "reactstrap";
 
 const Sidebar = (props) => {
+	const [isOpen, setIsOpen] = React.useState(false);
+	const toggle = () => setIsOpen(!isOpen);
 	return (
+		// <Collapse isOpen={isOpen} navbar>
+		// <NavbarToggler onClick={toggle} />
 		<div style={{ height: props.height ? props.height : "800px" }} className="sidebar">
 			<ul>
 				<Link className="link" to="/admin">
@@ -35,6 +40,7 @@ const Sidebar = (props) => {
 				</Link>
 			</ul>
 		</div>
+		// </Collapse>
 	);
 };
 
