@@ -73,7 +73,7 @@ const Children = () => {
 					<Row style={{ marginLeft: "17px", marginBottom: "10px" }}>
 						<h4>Children born : {children.length}</h4>
 					</Row>
-					<Col lg="12">
+					<Col lg="12" style={{ height: "600px", overflow: "scroll" }}>
 						<Table style={tableStyles} bordered hover>
 							<thead>
 								<tr>
@@ -89,7 +89,7 @@ const Children = () => {
 							<tbody>
 								{children.length > 0 &&
 									allChildren
-										.slice(Math.max(allChildren.length - 7, 1))
+										// .slice(Math.max(allChildren.length - 7, 1))
 										.reverse()
 										.map((child: any, index) => (
 											<tr key={child._id}>

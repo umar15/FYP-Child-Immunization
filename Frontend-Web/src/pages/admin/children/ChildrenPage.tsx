@@ -14,7 +14,7 @@ const ChildrenPage = () => {
 			<Container className="admin-container">
 				<Row>
 					<Col className="sidebar-row" lg="3">
-						<Sidebar />
+						<Sidebar height="1000px" />
 					</Col>
 					<Col lg="9">
 						<Children />

@@ -3874,3 +3874,5 @@ TypeError: Cannot read property 'address' of undefined
 TypeError: Cannot read property 'area' of undefined
     at reports (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\app\vaccineCenter\vaccineCenter.controller.js:655:66)
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-13 00:26:05] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 00:02:18] [31merror[39m:  mongoose connection disconnected 

@@ -22597,3 +22597,29 @@ TypeError: Cannot read property 'area' of undefined
 [2021-12-12 21:14:41] [32minfo[39m:  error messages are loading ... 
 [2021-12-12 21:14:42] [32minfo[39m:  Routes are loaded in system. 
 [2021-12-12 21:14:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-13 00:26:05] [31merror[39m:  mongoose connection disconnected 
+[2021-12-13 00:26:17] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 03:52:04] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 07:09:02] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 10:25:58] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 11:18:07] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 11:38:52] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 12:23:04] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 12:27:57] [32minfo[39m:  .env files are loading... 
+[2021-12-13 12:27:57] [32minfo[39m:  .env is loaded 
+[2021-12-13 12:27:57] [32minfo[39m:  [object Object] 
+[2021-12-13 12:27:57] [32minfo[39m:  Loaded config file: development 
+[2021-12-13 12:27:57] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-13 22:54:14] [32minfo[39m:  .env files are loading... 
+[2021-12-13 22:54:14] [32minfo[39m:  .env is loaded 
+[2021-12-13 22:54:15] [32minfo[39m:  [object Object] 
+[2021-12-13 22:54:15] [32minfo[39m:  Loaded config file: development 
+[2021-12-13 22:54:15] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-13 22:54:20] [32minfo[39m:  mongoose connection open. 
+[2021-12-13 22:54:20] [32minfo[39m:  models are loading ... 
+[2021-12-13 22:54:21] [32minfo[39m:  Models loaded 
+[2021-12-13 22:54:21] [32minfo[39m:  error messages are loading ... 
+[2021-12-13 22:54:24] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-13 22:54:24] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-14 00:02:18] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 00:02:29] [32minfo[39m:  mongoose connection open. 

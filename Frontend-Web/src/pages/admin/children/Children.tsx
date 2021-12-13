@@ -159,7 +159,7 @@ const Children = () => {
 				</Row>
 
 				<Row className="subadmin-table">
-					<Col lg="12">
+					<Col lg="12" style={{ height: "600px", overflow: "scroll" }}>
 						<Table style={tableStyles} bordered hover responsive>
 							<thead>
 								<tr>
@@ -175,7 +175,7 @@ const Children = () => {
 							<tbody>
 								{children.length > 0 &&
 									allChildren
-										.slice(Math.max(allChildren.length - 7, 1))
+										// .slice(Math.max(allChildren.length - 7, 1))
 										.reverse()
 										.map((child: any, index) => (
 											<tr key={child._id}>
