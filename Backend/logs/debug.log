@@ -22777,3 +22777,24 @@ Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
 [2021-12-14 13:00:54] [32minfo[39m:  mongoose connection open. 
 [2021-12-14 13:03:59] [32minfo[39m:  mongoose connection open. 
 [2021-12-14 13:22:37] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 13:31:50] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-14 13:42:21] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 13:52:02] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 13:54:14] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 14:07:42] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 14:08:46] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 17:26:15] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 20:43:17] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 22:37:56] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 22:39:48] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 22:49:33] [32minfo[39m:  .env files are loading... 
+[2021-12-14 22:49:33] [32minfo[39m:  .env is loaded 
+[2021-12-14 22:49:33] [32minfo[39m:  [object Object] 
+[2021-12-14 22:49:33] [32minfo[39m:  Loaded config file: development 
+[2021-12-14 22:49:33] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-14 22:49:42] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 22:49:42] [32minfo[39m:  models are loading ... 
+[2021-12-14 22:49:42] [32minfo[39m:  Models loaded 
+[2021-12-14 22:49:42] [32minfo[39m:  error messages are loading ... 
+[2021-12-14 22:49:42] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-14 22:49:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
