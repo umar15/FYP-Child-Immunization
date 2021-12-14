@@ -3876,3 +3876,36 @@ TypeError: Cannot read property 'area' of undefined
     at processTicksAndRejections (internal/process/task_queues.js:95:5)
 [2021-12-13 00:26:05] [31merror[39m:  mongoose connection disconnected 
 [2021-12-14 00:02:18] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 09:26:29] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-00.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-14 09:26:58] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:08:39] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:10:21] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:15:14] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:15:24] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:18:03] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:18:38] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-14 12:18:40] [31merror[39m:  [object Object] 
+[2021-12-14 12:31:03] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:36:32] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:39:27] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:69:26)
+[2021-12-14 12:39:27] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:69:26)
+[2021-12-14 12:39:37] [31merror[39m:  mongoose connection disconnected 
+[2021-12-14 12:40:31] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:69:26)
+[2021-12-14 12:40:31] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:69:26)
+[2021-12-14 12:52:00] [31merror[39m:  mongoose connection disconnected 

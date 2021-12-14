@@ -66,7 +66,7 @@ let addChild = async (req, res, next) => {
 		console.log("dob: ", dob);
 		console.log("dob: ", new Date());
 		const birth = new Date(dob.setDate(dob.getDate())).toDateString();
-		const sixWeeks = new Date(dob.setDate(dob.getDate() + 2)).toDateString();
+		const sixWeeks = new Date(dob.setDate(dob.getDate() + 1)).toDateString();
 		const tenWeeks = new Date(dob.setDate(dob.getDate() + 28)).toDateString();
 		const forteenWeeks = new Date(dob.setDate(dob.getDate() + 28)).toDateString();
 		const nineMonths = new Date(dob.setDate(dob.getDate() + 172)).toDateString();
@@ -907,24 +907,24 @@ let oneTimePassword = async (req, res, next) => {
 		let child = await children.findOne({ _id: req.params.id });
 		let contacts = [child.contactNo, child.emergencyContact];
 		console.log("Contacts: ", contacts);
-		// const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-		// contacts.forEach(function (contact) {
-		// 	const options = {
-		// 		to: `${contact}`,
-		// 		from: process.env.TWILIO_PHONE_NUMBER,
-		// 		body: `OTP for child vaccination is ${oneTimePass}`,
-		// 	};
-		// 	// Send the message!
-		// 	client.messages.create(options, function (err, response) {
-		// 		if (err) {
-		// 			console.error(err);
-		// 		} else {
-		// 			let masked = contact.substr(0, contact.length - 5);
-		// 			masked += "*****";
-		// 			winston.info(`Message sent to ${masked}`);
-		// 		}
-		// 	});
-		// });
+		const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+		contacts.forEach(function (contact) {
+			const options = {
+				to: `${contact}`,
+				from: process.env.TWILIO_PHONE_NUMBER,
+				body: `OTP for child vaccination is ${oneTimePass}`,
+			};
+			// Send the message!
+			client.messages.create(options, function (err, response) {
+				if (err) {
+					console.error(err);
+				} else {
+					let masked = contact.substr(0, contact.length - 5);
+					masked += "*****";
+					winston.info(`Message sent to ${masked}`);
+				}
+			});
+		});
 		return res.json({
 			message: "OTP",
 			data: { otp: oneTimePass },

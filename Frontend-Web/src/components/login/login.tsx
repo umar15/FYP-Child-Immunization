@@ -75,7 +75,7 @@ const Login = () => {
 												/>
 											</div>
 										</Col>
-										<Col lg="6" sm="12" className="form-condition">
+										{/* <Col lg="6" sm="12" className="form-condition">
 											<div className="agree-label">
 												<input type="checkbox" id="chb1" />
 												<label htmlFor="chb1">Remember me</label>
@@ -85,7 +85,7 @@ const Login = () => {
 											<a className="forget" href="/recover-password">
 												Forgot my password?
 											</a>
-										</Col>
+										</Col> */}
 										<Col md="12" sm="12">
 											<a
 												href={role == "hospital" ? "/hospital" : "/vaccinecenter"}

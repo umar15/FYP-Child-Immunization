@@ -110,7 +110,7 @@ const Signup = () => {
 					alert.show("User request sent successfully!", {
 						type: "success",
 					});
-					// history.push("/login");
+					history.push("/login");
 				})
 				.catch((err) => {
 					console.log(err);

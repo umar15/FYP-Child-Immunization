@@ -58,7 +58,6 @@ const RequestVaccine = (props) => {
 											required
 										>
 											<option value="">Vaccine Name</option>
-											<option value="diphteria">Diphteria</option>
 											<option value="opv">OPV (Polio)</option>
 											<option value="bcg">BCG</option>
 											<option value="pcv">PCV</option>
