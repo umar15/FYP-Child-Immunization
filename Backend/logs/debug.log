@@ -22798,3 +22798,14 @@ Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
 [2021-12-14 22:49:42] [32minfo[39m:  error messages are loading ... 
 [2021-12-14 22:49:42] [32minfo[39m:  Routes are loaded in system. 
 [2021-12-14 22:49:42] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-14 23:36:14] [32minfo[39m:  .env files are loading... 
+[2021-12-14 23:36:14] [32minfo[39m:  .env is loaded 
+[2021-12-14 23:36:14] [32minfo[39m:  [object Object] 
+[2021-12-14 23:36:14] [32minfo[39m:  Loaded config file: development 
+[2021-12-14 23:36:14] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-14 23:36:17] [32minfo[39m:  mongoose connection open. 
+[2021-12-14 23:36:17] [32minfo[39m:  models are loading ... 
+[2021-12-14 23:36:17] [32minfo[39m:  Models loaded 
+[2021-12-14 23:36:17] [32minfo[39m:  error messages are loading ... 
+[2021-12-14 23:36:19] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-14 23:36:19] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
