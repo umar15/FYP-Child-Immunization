@@ -54,6 +54,9 @@ const BirthCertificate = () => {
 			<button className="default-btn print" onClick={() => window.print()}>
 				Print
 			</button>
+			<button className="default-btn print">
+				<a href="/hospital/children">Back to dashboard</a>
+			</button>
 			{console.log("Schedule: ", schedule)}
 			<div className="birth">
 				<h1 className="heading">Certificate of Brith</h1>

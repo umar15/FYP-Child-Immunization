@@ -187,7 +187,7 @@ const VaccinationTable = () => {
 									<span>4th dose</span>
 								</td>
 								<td className="tb-color-5">
-									<span>4yh dose</span>
+									<span>4th dose</span>
 								</td>
 								<td>
 									<span>------</span>

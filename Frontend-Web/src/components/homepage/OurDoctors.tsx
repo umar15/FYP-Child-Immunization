@@ -14,11 +14,7 @@ const OurDoctors = () => {
 							<h2 className="main-heading doctor-heading">
 								Help your kids understand the importance of vaccines
 							</h2>
-							<p className="topic-text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-								maecenas accumsan lacus vel facilisis.
-							</p>
+							<p className="topic-text">Our doctors recommended us these vaccinations</p>
 							<ul className="vaccine-list">
 								<li>
 									<i className="flaticon-tick tick">

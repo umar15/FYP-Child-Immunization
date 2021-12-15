@@ -273,7 +273,7 @@ const AddChild = () => {
 									</Col>
 									<Col md="12" sm="12">
 										<div className="form-group">
-											<label>City</label>
+											<label>Address</label>
 											<input
 												required
 												type="text"
@@ -291,7 +291,7 @@ const AddChild = () => {
 									</Col>
 									<Col md="6" sm="12">
 										<div className="form-group">
-											<label>City</label>
+											<label>Area</label>
 
 											<input
 												required

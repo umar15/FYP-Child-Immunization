@@ -18,9 +18,7 @@ const AboutUs = () => {
 								Routine Vaccines Provided for Babies and Children
 							</h2>
 							<p className="topic-text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-								maecenas accumsan lacus vel facilisis.
+								We are here to vaccinate children from all Pakistan. The vaccination includes
 							</p>
 							<ul className="vaccine-list">
 								<li>

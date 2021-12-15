@@ -22809,3 +22809,161 @@ Error: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
 [2021-12-14 23:36:17] [32minfo[39m:  error messages are loading ... 
 [2021-12-14 23:36:19] [32minfo[39m:  Routes are loaded in system. 
 [2021-12-14 23:36:19] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-15 03:58:15] [31merror[39m:  mongoose connection disconnected 
+[2021-12-15 03:58:27] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 07:14:46] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 11:02:15] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 11:04:58] [32minfo[39m:  .env files are loading... 
+[2021-12-15 11:04:58] [32minfo[39m:  .env is loaded 
+[2021-12-15 11:04:58] [32minfo[39m:  [object Object] 
+[2021-12-15 11:04:58] [32minfo[39m:  Loaded config file: development 
+[2021-12-15 11:04:58] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-15 11:04:58] [31merror[39m:  mongoose connection disconnected 
+[2021-12-15 11:57:06] [32minfo[39m:  .env files are loading... 
+[2021-12-15 11:57:06] [32minfo[39m:  .env is loaded 
+[2021-12-15 11:57:07] [32minfo[39m:  [object Object] 
+[2021-12-15 11:57:07] [32minfo[39m:  Loaded config file: development 
+[2021-12-15 11:57:07] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-15 11:57:10] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 11:57:10] [32minfo[39m:  models are loading ... 
+[2021-12-15 11:57:10] [32minfo[39m:  Models loaded 
+[2021-12-15 11:57:11] [32minfo[39m:  error messages are loading ... 
+[2021-12-15 11:57:12] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-15 11:57:12] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-15 12:05:23] [31merror[39m:  mongoose connection disconnected 
+[2021-12-15 12:05:36] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:06:03] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:15:21] [32minfo[39m:  Message sent to +9234060***** 
+[2021-12-15 12:15:35] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-15 12:19:44] [32minfo[39m:  .env files are loading... 
+[2021-12-15 12:19:44] [32minfo[39m:  .env is loaded 
+[2021-12-15 12:19:44] [32minfo[39m:  [object Object] 
+[2021-12-15 12:19:44] [32minfo[39m:  Loaded config file: development 
+[2021-12-15 12:19:44] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-15 12:19:54] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:19:54] [32minfo[39m:  models are loading ... 
+[2021-12-15 12:19:54] [32minfo[39m:  Models loaded 
+[2021-12-15 12:19:54] [32minfo[39m:  error messages are loading ... 
+[2021-12-15 12:19:54] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-15 12:19:54] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-15 12:20:00] [32minfo[39m:  Running Send Notifications Worker. 
+[2021-12-15 12:20:19] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-15 12:21:00] [32minfo[39m:  Running Send Notifications Worker. 
+[2021-12-15 12:21:16] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-15 12:22:00] [32minfo[39m:  Running Send Notifications Worker. 
+[2021-12-15 12:22:21] [32minfo[39m:  .env files are loading... 
+[2021-12-15 12:22:21] [32minfo[39m:  .env is loaded 
+[2021-12-15 12:22:21] [32minfo[39m:  [object Object] 
+[2021-12-15 12:22:21] [32minfo[39m:  Loaded config file: development 
+[2021-12-15 12:22:21] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-15 12:22:26] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:22:26] [32minfo[39m:  models are loading ... 
+[2021-12-15 12:22:26] [32minfo[39m:  Models loaded 
+[2021-12-15 12:22:26] [32minfo[39m:  error messages are loading ... 
+[2021-12-15 12:22:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-15 12:22:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-15 12:29:24] [31merror[39m:  mongoose connection disconnected 
+[2021-12-15 12:29:39] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:34:47] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:38:44] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 12:41:37] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 13:02:19] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 13:07:47] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 13:09:09] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-15 13:09:26] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 13:14:52] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-00.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-00.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-15 13:20:16] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 13:25:39] [31merror[39m:  E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" } 
+MongoError: E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-12-15 13:25:39] [31merror[39m:  E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" } 
+MongoError: E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-12-15 13:25:52] [31merror[39m:  E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" } 
+MongoError: E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-12-15 13:25:52] [31merror[39m:  E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" } 
+MongoError: E11000 duplicate key error collection: CVS.userrequests index: email_1 dup key: { email: "demo24@mail.com" }
+    at Function.create (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\error.js:57:12)
+    at toError (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\utils.js:130:22)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\operations\common_functions.js:258:39
+    at handler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\topology.js:943:24)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection_pool.js:350:13
+    at handleOperationResult (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\core\sdam\server.js:558:5)
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:281:5)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+[2021-12-15 13:30:42] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-15 13:30:48] [31merror[39m:  getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net 
+MongoServerSelectionError: getaddrinfo ENOTFOUND cluster0-shard-00-01.c4buh.mongodb.net
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-15 13:31:41] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 14:08:12] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 14:08:44] [32minfo[39m:  mongoose connection open. 
+[2021-12-15 14:10:30] [32minfo[39m:  mongoose connection open. 

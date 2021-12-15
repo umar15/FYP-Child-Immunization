@@ -27,10 +27,7 @@ const Login = () => {
 				<Container>
 					<div className="section-title">
 						<h2>Sign In Your Account!</h2>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quas cumque iste veniam id
-							dolorem deserunt ratione error voluptas rem ullam possimus placeat, ut, odio
-						</p>
+						<p>Sign in to child vaccination and growth tracking system.</p>
 					</div>
 					<Row>
 						<Col lg="6">

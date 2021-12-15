@@ -124,7 +124,7 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/" component={Homepage} render={() => <Redirect to="/login" />} />
+				<Route exact path="/" component={Login} render={() => <Redirect to="/login" />} />
 				<Route exact path="/login" component={Login} render={() => <Redirect to="/login" />} />
 				<Route exact path="/signup" component={Signup} render={() => <Redirect to="/login" />} />
 				{/* <PublicRoute path="/" exact component={Homepage} />

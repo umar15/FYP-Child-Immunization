@@ -15,11 +15,7 @@ const OurMission = () => {
 							<h2 className="" style={{ fontWeight: "bold" }}>
 								Our Aim to Provide:
 							</h2>
-							<p className="topic-text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-								maecenas accumsan lacus vel facilisis.
-							</p>
+							<p className="topic-text">Our aim is to provide vaccination to all Pakistan areas.</p>
 							<ul className="vaccine-list">
 								<li>
 									<i className="flaticon-tick">

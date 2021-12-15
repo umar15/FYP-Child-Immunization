@@ -123,7 +123,6 @@ const Signup = () => {
 				type: "error",
 			});
 		}
-
 		console.log("signup form: ", formData);
 	};
 	return (
@@ -133,10 +132,7 @@ const Signup = () => {
 				<Container>
 					<div className="section-title">
 						<h2>Create an account!</h2>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium quas cumque iste veniam id
-							dolorem deserunt ratione error voluptas rem ullam possimus placeat, ut, odio
-						</p>
+						<p>Create account for Child vaccination and growth tracking system.</p>
 					</div>
 					<Row>
 						<Col lg="6">
