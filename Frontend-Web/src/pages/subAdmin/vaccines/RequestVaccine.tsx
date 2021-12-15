@@ -23,7 +23,7 @@ const RequestVaccine = (props) => {
 				.post("/subadmin/requestvaccinestock", data)
 				.then((res) => {
 					console.log("add: ", res);
-					alert.show("Vaccine stock request sent successfully!", {
+					alert.show("Vaccine stock request successfully sent to admin!", {
 						type: "success",
 					});
 					history.push("/subadmin/vaccines");

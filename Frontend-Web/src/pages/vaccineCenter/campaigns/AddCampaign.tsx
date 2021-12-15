@@ -7,6 +7,7 @@ import { useHistory, useLocation, useParams } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
+import { validAddress } from "../../../config/regex";
 
 const AddCampaign = (props) => {
 	const campID: any = useParams();
@@ -21,6 +22,8 @@ const AddCampaign = (props) => {
 		for (let i = 0; i <= 5; i++) campaignID += possible.charAt(Math.floor(Math.random() * possible.length));
 		return campaignID;
 	};
+
+	const [error, setError] = useState(false);
 
 	const getWorkers = async () => {
 		axios
@@ -50,7 +53,7 @@ const AddCampaign = (props) => {
 		status: "inactive",
 		area: "",
 		workers: [],
-		vaccine: "",
+		vaccine: "opv",
 		startDate: new Date(),
 		endDate: new Date(),
 		vaccineCenter: "",
@@ -75,6 +78,18 @@ const AddCampaign = (props) => {
 			);
 	};
 
+	const handleChange = (name, value, regex) => {
+		setData({
+			...data,
+			[name]: value,
+		});
+		if (!regex.test(data[name])) {
+			setError(true);
+		} else {
+			setError(false);
+		}
+	};
+
 	const handleMultiChange = (e) => {
 		const d = data;
 		console.log("value", options);
@@ -93,39 +108,52 @@ const AddCampaign = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (campID.id == "add") {
-			axios
-				.post("/vaccinecenter/campaigns/add", data)
-				.then((res) => {
-					console.log("add: ", res);
-					alert.show("Campaign added successfully!", {
-						type: "success",
-					});
-					history.push("/vaccinecenter/campaigns");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to add campaign.", {
-						type: "error",
-					});
-				});
+		if (error) {
+			alert.show("Please solve the error in the form.", {
+				type: "error",
+			});
 		} else {
-			axios
-				.put(`/vaccinecenter/campaigns/${campID.id}`, data)
-				.then((res) => {
-					console.log("update", res);
-					alert.show("Campaign updated successfully!", {
-						type: "success",
-					});
-					history.push("/vaccinecenter/campaigns");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to update campaign", {
-						type: "error",
-					});
+			if (!data.workers) {
+				alert.show("Please allotte workers to the campaign.", {
+					type: "error",
 				});
+			} else {
+				if (campID.id == "add") {
+					axios
+						.post("/vaccinecenter/campaigns/add", data)
+						.then((res) => {
+							console.log("add: ", res);
+							alert.show("Campaign added successfully!", {
+								type: "success",
+							});
+							history.push("/vaccinecenter/campaigns");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to add campaign.", {
+								type: "error",
+							});
+						});
+				} else {
+					axios
+						.put(`/vaccinecenter/campaigns/${campID.id}`, data)
+						.then((res) => {
+							console.log("update", res);
+							alert.show("Campaign updated successfully!", {
+								type: "success",
+							});
+							history.push("/vaccinecenter/campaigns");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to update campaign", {
+								type: "error",
+							});
+						});
+				}
+			}
 		}
+
 		console.log("Data in submit: ", data);
 	};
 
@@ -181,22 +209,25 @@ const AddCampaign = (props) => {
 											name="area"
 											placeholder="Campaign Area"
 											value={data.area}
-											onChange={(e) =>
-												setData({
-													...data,
-													area: e.target.value,
-												})
-											}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
+											// onChange={(e) =>
+											// 	setData({
+											// 		...data,
+											// 		area: e.target.value,
+											// 	})
+											// }
 										/>
+										{error && <p className="err">Invalid area</p>}
 									</div>
 								</Col>
 								<Col md="12" sm="12">
-									<label>Name</label>
+									<label>Vaccine Name</label>
 									<div className="form-group">
 										<select
 											value={data.vaccine}
 											onChange={(e) => setData({ ...data, vaccine: e.target.value })}
 											className="form-control"
+											disabled
 										>
 											<option value="">Vaccine Name</option>
 											<option value="opv">Polio</option>

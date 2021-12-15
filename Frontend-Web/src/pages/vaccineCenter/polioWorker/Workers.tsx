@@ -84,7 +84,7 @@ const Workers = () => {
 								<th>Name</th>
 								<th>Email</th>
 								<th>City</th>
-								<th>Assign vaccine</th>
+								{/* <th>Assign vaccine</th> */}
 								<th>Edit</th>
 								<th>Delete</th>
 							</tr>
@@ -97,7 +97,7 @@ const Workers = () => {
 										<td>{worker.name}</td>
 										<td>{worker.email}</td>
 										<td>{worker.address.city}</td>
-										<td>
+										{/* <td>
 											<Link
 												to={{
 													pathname: `/vaccinecenter/assignvaccine/${worker._id}`,
@@ -105,7 +105,7 @@ const Workers = () => {
 											>
 												assign
 											</Link>
-										</td>
+										</td> */}
 										<td>
 											<Link
 												to={{

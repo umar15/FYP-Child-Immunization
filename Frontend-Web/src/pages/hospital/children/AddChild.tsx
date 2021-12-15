@@ -6,7 +6,7 @@ import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
-import { validMobileNumber, validString, validCNIC } from "../../../config/regex";
+import { validMobileNumber, validString, validCNIC, validAddress } from "../../../config/regex";
 import { selectCity } from "../../../config/cities";
 
 const AddChild = () => {
@@ -146,29 +146,42 @@ const AddChild = () => {
 
 	const handleFormSubmit = async (e: any) => {
 		e.preventDefault();
-		console.log("data: ", data);
-		axios
-			.post("/hospital/children/add", data)
-			.then((res) => {
-				alert.show("Child added successfull!", {
-					type: "success",
-				});
-				console.log("response: ", res.data);
-				setSchedule(res.data?.data?.vaccineSchedule);
+		if (
+			error.parentName === true ||
+			error.parentCNIC === true ||
+			error.contactNo === true ||
+			error.emergencyContact === true ||
+			error.address.addr === true ||
+			error.address.area === true
+		) {
+			alert.show("Please solve the above errors in the form!", {
+				type: "error",
+			});
+		} else {
+			console.log("data: ", data);
+			axios
+				.post("/hospital/children/add", data)
+				.then((res) => {
+					alert.show("Child added successfull!", {
+						type: "success",
+					});
+					console.log("response: ", res.data);
+					setSchedule(res.data?.data?.vaccineSchedule);
 
-				history.push({
-					pathname: "/hospital/children/printables",
-					state: {
-						data,
-						schedule: res.data?.data?.vaccineSchedule,
-					},
-				});
-			})
-			.catch((err) =>
-				alert.show("Failed to add child!", {
-					type: "error",
+					history.push({
+						pathname: "/hospital/children/printables",
+						state: {
+							data,
+							schedule: res.data?.data?.vaccineSchedule,
+						},
+					});
 				})
-			);
+				.catch((err) =>
+					alert.show("Failed to add child!", {
+						type: "error",
+					})
+				);
+		}
 	};
 
 	return (
@@ -230,7 +243,7 @@ const AddChild = () => {
 												type="text"
 												className="form-control"
 												name="parentCNIC"
-												placeholder="Parent CNIC i.e 12345-1234567-1"
+												placeholder="i.e 12345-1234567-1"
 												value={data.parentCNIC}
 												onChange={(e) => handleChange(e.target.name, e.target.value, validCNIC)}
 												// onChange={(e) => setdata({ ...data, parentCNIC: e.target.value })}
@@ -247,7 +260,7 @@ const AddChild = () => {
 												type="text"
 												className="form-control"
 												name="contactNo"
-												placeholder="Contact Number i.e +923159489878"
+												placeholder="i.e +923159489878"
 												value={data.contactNo}
 												// onChange={(e) => setdata({ ...data, contactNo: e.target.value })}
 												onChange={(e) => handleChange(e.target.name, e.target.value, validMobileNumber)}
@@ -263,7 +276,7 @@ const AddChild = () => {
 												type="text"
 												className="form-control"
 												name="emergencyContact"
-												placeholder="Emergency Contact i.e +923159999371"
+												placeholder="i.e +923159999371"
 												value={data.emergencyContact}
 												onChange={(e) => handleChange(e.target.name, e.target.value, validMobileNumber)}
 												// onChange={(e) => setdata({ ...data, emergencyContact: e.target.value })}
@@ -281,7 +294,7 @@ const AddChild = () => {
 												name="addr"
 												placeholder="Address"
 												value={data.address.addr}
-												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 												// onChange={(e) =>
 												// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
 												// }
@@ -300,12 +313,12 @@ const AddChild = () => {
 												name="area"
 												placeholder="Area"
 												value={data.address.area}
-												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 												// onChange={(e) =>
 												// 	setData({ ...data, address: { ...data.address, area: e.target.value } })
 												// }
 											/>
-											{error.address.area && <p className="err">Invalid address!</p>}
+											{error.address.area && <p className="err">Invalid area!</p>}
 										</div>
 									</Col>
 									<Col md="6" sm="12">
@@ -317,7 +330,7 @@ const AddChild = () => {
 												name="city"
 												placeholder="City"
 												value={data.address.city}
-												onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+												onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 											>
 												<option value="">City</option>
 												{selectCity()}
@@ -325,7 +338,7 @@ const AddChild = () => {
 										</div>
 									</Col>
 
-									<Col md="6" sm="12">
+									<Col md="12" sm="12">
 										<div className="form-group">
 											<label>Place of Birth</label>
 											<select
@@ -341,7 +354,7 @@ const AddChild = () => {
 											</select>
 										</div>
 									</Col>
-									<Col md="6" sm="12">
+									{/* <Col md="6" sm="12">
 										<div className="form-group">
 											<label>Sibling No.</label>
 											<input
@@ -353,8 +366,7 @@ const AddChild = () => {
 												onChange={(e) => setdata({ ...data, siblingNo: e.target.value })}
 											/>
 										</div>
-									</Col>
-
+									</Col> */}
 									<Col md="12" sm="12">
 										<button className="default-btn signup-btn" type="submit">
 											Add child

@@ -20,7 +20,7 @@ passport.use(
 				}
 				if (!user) {
 					return done(null, false, {
-						message: "User Not Found. Please signup to use this application",
+						message: "User Not Found. Please signup first to use this application",
 					});
 				}
 				user.comparePassword(password, function (err, isMatch) {

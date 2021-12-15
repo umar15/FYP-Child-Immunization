@@ -18,21 +18,27 @@ const RequestVaccine = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		axios
-			.post("/vaccinecenter/requestvaccinestock", data)
-			.then((res) => {
-				console.log("add: ", res);
-				alert.show("Vaccine stock request sent successfully!", {
-					type: "success",
+		if (data.quantity > 0) {
+			axios
+				.post("/vaccinecenter/requestvaccinestock", data)
+				.then((res) => {
+					console.log("add: ", res);
+					alert.show("Vaccine stock request sent successfully!", {
+						type: "success",
+					});
+					history.push("/vaccinecenter/vaccines");
+				})
+				.catch((err) => {
+					console.log(err);
+					alert.show("Failed to sent vaccine request.", {
+						type: "error",
+					});
 				});
-				history.push("/vaccinecenter/vaccines");
-			})
-			.catch((err) => {
-				console.log(err);
-				alert.show("Failed to sent vaccine request.", {
-					type: "error",
-				});
+		} else {
+			alert.show("Quantity must be greater then zero.", {
+				type: "error",
 			});
+		}
 		console.log(data);
 	};
 
@@ -69,7 +75,6 @@ const RequestVaccine = (props) => {
 									<div className="form-group">
 										<label>Quantity</label>
 										<input
-											min={0}
 											required
 											type="number"
 											className="form-control"

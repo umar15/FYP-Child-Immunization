@@ -4,7 +4,7 @@ import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
-import { validEmail, validPassword, validString, validMobileNumber } from "../../../config/regex";
+import { validEmail, validPassword, validString, validMobileNumber, validAddress } from "../../../config/regex";
 import { selectCity } from "../../../config/cities";
 
 const AddWorker = (props) => {
@@ -132,45 +132,56 @@ const AddWorker = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(data);
-
-		if (workerID.id === "add") {
-			if (data.password === confirmPass) {
-				axios
-					.post("/vaccinecenter/workers/add", data)
-					.then((res) => {
-						console.log(res);
-						alert.show("worker added successfully!", {
-							type: "success",
-						});
-						history.push("/vaccinecenter/workers");
-					})
-					.catch((err) => {
-						console.log(err);
-						alert.show("Failed to add worker", {
-							type: "error",
-						});
-					});
-			} else {
-				alert.show("Password donot match with confirm password", {
-					type: "error",
-				});
-			}
+		if (error.name === true || error.email === true || error.password === true || error.phoneNo === true) {
+			alert.show("Please solve the above errors in the form!", {
+				type: "error",
+			});
 		} else {
-			axios
-				.put(`/vaccinecenter/workers/${workerID.id}`, data)
-				.then((res) => {
-					console.log(res);
-					alert.show("worker updated successfully!", {
-						type: "success",
-					});
-					history.push("/vaccinecenter/workers");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to update worker", {
+			if (workerID.id === "add") {
+				if (data.password === confirmPass) {
+					axios
+						.post("/vaccinecenter/workers/add", data)
+						.then((res) => {
+							console.log(res);
+							alert.show("worker added successfully!", {
+								type: "success",
+							});
+							history.push("/vaccinecenter/workers");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to add worker", {
+								type: "error",
+							});
+						});
+				} else {
+					alert.show("Password donot match with confirm password", {
 						type: "error",
 					});
-				});
+				}
+			} else {
+				if (data.password === confirmPass) {
+					axios
+						.put(`/vaccinecenter/workers/${workerID.id}`, data)
+						.then((res) => {
+							console.log(res);
+							alert.show("worker updated successfully!", {
+								type: "success",
+							});
+							history.push("/vaccinecenter/workers");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to update worker", {
+								type: "error",
+							});
+						});
+				} else {
+					alert.show("Password donot match with confirm password", {
+						type: "error",
+					});
+				}
+			}
 		}
 	};
 
@@ -227,7 +238,7 @@ const AddWorker = (props) => {
 											placeholder="Password"
 											value={data.password}
 											onChange={(e) => handleChange(e.target.name, e.target.value, validPassword)}
-											title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
+											title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 2 number"
 										/>
 										{error.password && <p className="err">Invalid password!</p>}
 									</div>
@@ -269,7 +280,7 @@ const AddWorker = (props) => {
 											name="addr"
 											placeholder="Address"
 											value={data.address.addr}
-											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 											// onChange={(e) =>
 											// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
 											// }

@@ -4,7 +4,7 @@ import "../../../index.css";
 import axios from "../../../config/AxiosOptions";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
-import { validEmail, validPassword, validString, validMobileNumber } from "../../../config/regex";
+import { validEmail, validPassword, validString, validMobileNumber, validAddress } from "../../../config/regex";
 import { selectCity } from "../../../config/cities";
 
 const AddSubadmin = (props) => {
@@ -115,44 +115,56 @@ const AddSubadmin = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (subadminID.id === "add") {
-			if (data.password === confirmPass) {
-				axios
-					.post("/admin/subadmins/add", data)
-					.then((res) => {
-						console.log(res);
-						alert.show("Subadmin added successfully!", {
-							type: "success",
-						});
-						history.push("/admin/subadmins");
-					})
-					.catch((err) => {
-						console.log(err);
-						alert.show("Failed to add subadmin", {
-							type: "error",
-						});
-					});
-			} else {
-				alert.show("Password donot match with confirm password", {
-					type: "error",
-				});
-			}
+		if (error.name === true || error.email === true || error.password === true || error.phoneNo === true) {
+			alert.show("Please solve the above errors in the form!", {
+				type: "error",
+			});
 		} else {
-			axios
-				.put(`/admin/subadmins/${subadminID.id}`, data)
-				.then((res) => {
-					console.log(res);
-					alert.show("Subadmin updated successfully!", {
-						type: "success",
-					});
-					history.push("/admin/subadmins");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to update subadmin", {
+			if (subadminID.id === "add") {
+				if (data.password === confirmPass) {
+					axios
+						.post("/admin/subadmins/add", data)
+						.then((res) => {
+							console.log(res);
+							alert.show("Subadmin added successfully!", {
+								type: "success",
+							});
+							history.push("/admin/subadmins");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to add subadmin", {
+								type: "error",
+							});
+						});
+				} else {
+					alert.show("Password donot match with confirm password", {
 						type: "error",
 					});
-				});
+				}
+			} else {
+				if (data.password === confirmPass) {
+					axios
+						.put(`/admin/subadmins/${subadminID.id}`, data)
+						.then((res) => {
+							console.log(res);
+							alert.show("Subadmin updated successfully!", {
+								type: "success",
+							});
+							history.push("/admin/subadmins");
+						})
+						.catch((err) => {
+							console.log(err);
+							alert.show("Failed to update subadmin", {
+								type: "error",
+							});
+						});
+				} else {
+					alert.show("Password donot match with confirm password", {
+						type: "error",
+					});
+				}
+			}
 		}
 
 		console.log(data);
@@ -252,7 +264,7 @@ const AddSubadmin = (props) => {
 											name="addr"
 											placeholder="Address"
 											value={data.address.addr}
-											onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+											onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 											// onChange={(e) =>
 											// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
 											// }

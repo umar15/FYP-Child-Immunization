@@ -18,6 +18,7 @@ const ChildData = () => {
 	const [otpBackend, setOtpBackend] = useState("");
 	const [flag, setFlag] = useState(false);
 	const [otpResend, setOtpResend] = useState(false);
+	const [changed, setChanged] = useState(false);
 	const [schedule, setSchedule] = useState([]);
 
 	const handleOTPChange = (otp) => {
@@ -54,6 +55,7 @@ const ChildData = () => {
 	};
 
 	const changeCheck: any = (name, i) => {
+		setChanged(true);
 		setData({
 			...data,
 			[name]: {

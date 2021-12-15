@@ -125,7 +125,7 @@ const AssignVaccine = () => {
 
 								<Col md="12" sm="12" lg="12">
 									<div className="form-group">
-										<label>Date</label>
+										<label>Date</label> <br />
 										<DatePicker className="form-control" selected={data.date} onChange={handleDateChange} />
 									</div>
 								</Col>

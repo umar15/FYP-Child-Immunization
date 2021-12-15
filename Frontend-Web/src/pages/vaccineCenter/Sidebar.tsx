@@ -22,7 +22,7 @@ const Sidebar = (props) => {
 					<li>Reports</li>
 				</Link>
 				<Link className="link" to="/vaccinecenter/settings">
-					<li>Settings</li>
+					<li>Profile</li>
 				</Link>
 			</ul>
 		</div>

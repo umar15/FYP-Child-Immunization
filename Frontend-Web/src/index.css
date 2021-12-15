@@ -980,7 +980,7 @@ add form styles
    /* box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05); */
    width: 100%;
    padding: 30px 10%;
-   margin-left: 10%;
+   /* margin-left: 10%; */
 }
 
 .add-campaign {

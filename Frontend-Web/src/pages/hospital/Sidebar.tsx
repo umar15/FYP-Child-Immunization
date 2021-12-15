@@ -19,7 +19,7 @@ const Sidebar = (props) => {
 					<li>Reports</li>
 				</Link>
 				<Link className="link" to="/hospital/settings">
-					<li>Settings</li>
+					<li>Profile</li>
 				</Link>
 			</ul>
 		</div>

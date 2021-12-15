@@ -63,32 +63,37 @@ const AssignVaccine = () => {
 		e.preventDefault();
 		console.log("data: ", data);
 		console.log("subadmin id: ", subadminID);
-
-		vaccines?.map((vaccine: any) => {
-			if (vaccine.name === data.vaccine) {
-				if (vaccine.quantity > data.quantity) {
-					axios
-						.post(`/admin/subadmins/assignvaccine/${subadminID.id}`, data)
-						.then((res) => {
-							console.log("add: ", res);
-							alert.show("Vaccine assigned successfully!", {
-								type: "success",
+		if (data.quantity > 0) {
+			vaccines?.map((vaccine: any) => {
+				if (vaccine.name === data.vaccine) {
+					if (vaccine.quantity > data.quantity) {
+						axios
+							.post(`/admin/subadmins/assignvaccine/${subadminID.id}`, data)
+							.then((res) => {
+								console.log("add: ", res);
+								alert.show("Vaccine assigned successfully!", {
+									type: "success",
+								});
+								history.push(`/admin/subadmins/`);
+							})
+							.catch((err) => {
+								console.log(err);
+								alert.show("Failed to assign vaccine. Please try again later.", {
+									type: "error",
+								});
 							});
-							history.push(`/admin/subadmins/`);
-						})
-						.catch((err) => {
-							console.log(err);
-							alert.show("Failed to assign vaccine. Please try again later.", {
-								type: "error",
-							});
+					} else {
+						alert.show("Vaccine not available. Please try again later or reduce your quantity.", {
+							type: "error",
 						});
-				} else {
-					alert.show("Vaccine not available. Please try again later or reduce your quantity.", {
-						type: "error",
-					});
+					}
 				}
-			}
-		});
+			});
+		} else {
+			alert.show("Quantity must be greater than zero.", {
+				type: "error",
+			});
+		}
 	};
 
 	useEffect(() => {
@@ -182,7 +187,6 @@ const AssignVaccine = () => {
 											<label>Quantity</label>
 											<input
 												required
-												min={1}
 												type="number"
 												className="form-control"
 												name="quantity"

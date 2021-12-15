@@ -93,37 +93,43 @@ const Signup = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const formData = new FormData();
-		formData.append("permit", file);
-		// console.log("Address: ", JSON.stringify(data.address));
-		Object.keys(data).map((key) => {
-			console.log("key: " + key + "\nData: " + data[key]);
-			formData.append(key, data[key]);
-		});
-		formData.append("address", JSON.stringify(data.address));
-
-		if (data.password === confirmPass) {
-			axios
-				.post("/users/create", formData)
-				.then((res) => {
-					console.log(res);
-					alert.show("User request sent successfully!", {
-						type: "success",
-					});
-					history.push("/login");
-				})
-				.catch((err) => {
-					console.log(err);
-					alert.show("Failed to send request. please try again!", {
-						type: "error",
-					});
-				});
-		} else {
-			alert.show("Password donot match with confirm password", {
+		if (error.name === true || error.email === true || error.password === true || error.phoneNo === true) {
+			alert.show("Please solve the above errors in the form!", {
 				type: "error",
 			});
+		} else {
+			const formData = new FormData();
+			formData.append("permit", file);
+			// console.log("Address: ", JSON.stringify(data.address));
+			Object.keys(data).map((key) => {
+				console.log("key: " + key + "\nData: " + data[key]);
+				formData.append(key, data[key]);
+			});
+			formData.append("address", JSON.stringify(data.address));
+
+			if (data.password === confirmPass) {
+				axios
+					.post("/users/create", formData)
+					.then((res) => {
+						console.log(res);
+						alert.show("User request sent successfully!", {
+							type: "success",
+						});
+						history.push("/login");
+					})
+					.catch((err) => {
+						console.log(err);
+						alert.show(err.response.data.message || "Failed to send request. please try again!", {
+							type: "error",
+						});
+					});
+			} else {
+				alert.show("Password donot match with confirm password", {
+					type: "error",
+				});
+			}
+			console.log("signup form: ", formData);
 		}
-		console.log("signup form: ", formData);
 	};
 	return (
 		<>
@@ -194,7 +200,7 @@ const Signup = () => {
 													onChange={(e) => handleChange(e.target.name, e.target.value, validPassword)}
 													// onChange={(e) => setData({ ...data, password: e.target.value })}
 													// pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-													title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
+													title="Mininmum 6 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 2 numbers"
 												/>
 												{error.password && <p className="err">Invalid password!</p>}
 											</div>
@@ -209,8 +215,8 @@ const Signup = () => {
 													placeholder="Confirm Password"
 													value={confirmPass}
 													onChange={(e) => setConfirmPass(e.target.value)}
-													pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-													title="Mininmum 8 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 1 number"
+													// pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+													title="Mininmum 7 characters, Atleast 1 small letter, Alteast 1 capital letter, Atleast 2 numbers"
 												/>
 											</div>
 										</Col>
@@ -240,11 +246,8 @@ const Signup = () => {
 													placeholder="Address"
 													value={data.address.addr}
 													onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
-													// onChange={(e) =>
-													// 	setData({ ...data, address: { ...data.address, addr: e.target.value } })
-													// }
 												/>
-												{error.address.addr && <p className="err">Invalid address!</p>}
+												{/* {error.address.addr && <p className="err">Invalid address!</p>} */}
 											</div>
 										</Col>
 										<Col md="6" sm="12">
@@ -257,11 +260,8 @@ const Signup = () => {
 													placeholder="Area"
 													value={data.address.area}
 													onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
-													// onChange={(e) =>
-													// 	setData({ ...data, address: { ...data.address, area: e.target.value } })
-													// }
 												/>
-												{error.address.area && <p className="err">Invalid address!</p>}
+												{/* {error.address.area && <p className="err">Invalid area!</p>} */}
 											</div>
 										</Col>
 										<Col md="6" sm="12">
@@ -280,6 +280,7 @@ const Signup = () => {
 											</div>
 										</Col>
 										<Col md="12" sm="12">
+											<label>Hospital/Vaccine center Permit</label>
 											<div className="form-group">
 												<input
 													required
