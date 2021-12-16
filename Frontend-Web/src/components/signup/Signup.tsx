@@ -8,7 +8,7 @@ import Header from "../header/Header";
 import { useAlert } from "react-alert";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import axios from "../../config/AxiosOptions";
-import { validEmail, validPassword, validString, validMobileNumber } from "../../config/regex";
+import { validEmail, validPassword, validString, validMobileNumber, validAddress } from "../../config/regex";
 import { selectCity } from "../../config/cities";
 
 const Signup = () => {
@@ -93,7 +93,14 @@ const Signup = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (error.name === true || error.email === true || error.password === true || error.phoneNo === true) {
+		if (
+			error.name === true ||
+			error.email === true ||
+			error.password === true ||
+			error.phoneNo === true ||
+			error.address.addr === true ||
+			error.address.area
+		) {
 			alert.show("Please solve the above errors in the form!", {
 				type: "error",
 			});
@@ -245,9 +252,9 @@ const Signup = () => {
 													name="addr"
 													placeholder="Address"
 													value={data.address.addr}
-													onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
+													onChange={(e) => handleChange(e.target.name, e.target.value, validAddress)}
 												/>
-												{/* {error.address.addr && <p className="err">Invalid address!</p>} */}
+												{error.address.addr && <p className="err">Invalid address!</p>}
 											</div>
 										</Col>
 										<Col md="6" sm="12">
@@ -261,7 +268,7 @@ const Signup = () => {
 													value={data.address.area}
 													onChange={(e) => handleChange(e.target.name, e.target.value, validString)}
 												/>
-												{/* {error.address.area && <p className="err">Invalid area!</p>} */}
+												{error.address.area && <p className="err">Invalid area!</p>}
 											</div>
 										</Col>
 										<Col md="6" sm="12">

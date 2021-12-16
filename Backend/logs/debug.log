@@ -23033,3 +23033,30 @@ MongoError: E11000 duplicate key error collection: CVS.userrequests index: phone
 [2021-12-15 23:46:04] [32minfo[39m:  error messages are loading ... 
 [2021-12-15 23:46:06] [32minfo[39m:  Routes are loaded in system. 
 [2021-12-15 23:46:06] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-16 02:50:38] [31merror[39m:  mongoose connection disconnected 
+[2021-12-16 02:50:58] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 02:51:31] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 06:08:21] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 09:25:16] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:22:53] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:25:32] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:30:37] [31merror[39m:  [object Object] 
+[2021-12-16 11:30:38] [31merror[39m:  Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/ 
+MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+    at Function.Model.$wrapCallback (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\model.js:4883:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4490:21
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+    at new Promise (<anonymous>)
+    at promiseOrCallback (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+    at model.Query.exec (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4489:10)
+    at model.Query.Query.then (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\query.js:4572:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2021-12-16 11:30:42] [31merror[39m:  [object Object] 
+[2021-12-16 11:32:22] [31merror[39m:  connection timed out 
+MongoServerSelectionError: connection timed out
+    at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[2021-12-16 11:33:29] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:35:13] [32minfo[39m:  mongoose connection open. 

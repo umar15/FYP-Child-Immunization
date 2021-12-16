@@ -85,7 +85,7 @@ const SubAdmin = () => {
 								<th>City</th>
 								<th>Assign vaccine</th>
 								<th>View Details</th>
-								<th>Edit</th>
+								{/* <th>Edit</th> */}
 								<th>Delete</th>
 							</tr>
 						</thead>
@@ -118,7 +118,7 @@ const SubAdmin = () => {
 												view
 											</Link>
 										</td>
-										<td>
+										{/* <td>
 											<Link
 												to={{
 													pathname: `/admin/subadmins/${subadmin._id}`,
@@ -129,7 +129,7 @@ const SubAdmin = () => {
 											>
 												<BiEdit style={editStyles} size="20" />
 											</Link>
-										</td>
+										</td> */}
 										<td>
 											<AiFillDelete
 												onClick={() => handleDelete(subadmin._id)}
