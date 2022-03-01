@@ -360,24 +360,24 @@ let oneTimePassword = async (req, res, next) => {
 		let child = await children.findOne({ _id: req.params.id });
 		let contacts = [child.contactNo, child.emergencyContact];
 		console.log("Contacts: ", contacts);
-		// const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-		// contacts.forEach(function (contact) {
-		// 	const options = {
-		// 		to: `${contact}`,
-		// 		from: process.env.TWILIO_PHONE_NUMBER,
-		// 		body: `OTP for child vaccination is ${oneTimePass}`,
-		// 	};
-		// 	// Send the message!
-		// 	client.messages.create(options, function (err, response) {
-		// 		if (err) {
-		// 			console.error(err);
-		// 		} else {
-		// 			let masked = contact.substr(0, contact.length - 5);
-		// 			masked += "*****";
-		// 			winston.info(`Message sent to ${masked}`);
-		// 		}
-		// 	});
-		// });
+		const client = new Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+		contacts.forEach(function (contact) {
+			const options = {
+				to: `${contact}`,
+				from: process.env.TWILIO_PHONE_NUMBER,
+				body: `OTP for child vaccination is ${oneTimePass}`,
+			};
+			// Send the message!
+			client.messages.create(options, function (err, response) {
+				if (err) {
+					console.error(err);
+				} else {
+					let masked = contact.substr(0, contact.length - 5);
+					masked += "*****";
+					winston.info(`Message sent to ${masked}`);
+				}
+			});
+		});
 		return res.json({
 			message: "OTP",
 			data: { otp: oneTimePass },

@@ -23060,3 +23060,195 @@ MongoServerSelectionError: connection timed out
     at processTimers (internal/timers.js:500:7)
 [2021-12-16 11:33:29] [32minfo[39m:  mongoose connection open. 
 [2021-12-16 11:35:13] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:39:10] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:41:08] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:42:31] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:44:55] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 11:46:43] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:06:39] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:09:42] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:12:55] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:13:27] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:18:49] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:27:28] [31merror[39m:  Invalid Password 
+[2021-12-16 12:27:40] [31merror[39m:  Invalid Password 
+[2021-12-16 12:27:54] [31merror[39m:  Invalid Password 
+[2021-12-16 12:32:42] [32minfo[39m:  .env files are loading... 
+[2021-12-16 12:32:42] [32minfo[39m:  .env is loaded 
+[2021-12-16 12:32:42] [32minfo[39m:  [object Object] 
+[2021-12-16 12:32:42] [32minfo[39m:  Loaded config file: development 
+[2021-12-16 12:32:42] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-16 12:32:45] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:32:45] [32minfo[39m:  models are loading ... 
+[2021-12-16 12:32:46] [32minfo[39m:  Models loaded 
+[2021-12-16 12:32:46] [32minfo[39m:  error messages are loading ... 
+[2021-12-16 12:32:47] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-16 12:32:47] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-16 12:33:00] [32minfo[39m:  Running Send Notifications Worker. 
+[2021-12-16 12:33:15] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-16 12:33:15] [32minfo[39m:  Message sent to +9231594***** 
+[2021-12-16 12:34:00] [32minfo[39m:  Running Send Notifications Worker. 
+[2021-12-16 12:34:15] [32minfo[39m:  .env files are loading... 
+[2021-12-16 12:34:15] [32minfo[39m:  .env is loaded 
+[2021-12-16 12:34:15] [32minfo[39m:  [object Object] 
+[2021-12-16 12:34:15] [32minfo[39m:  Loaded config file: development 
+[2021-12-16 12:34:15] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-16 12:35:31] [31merror[39m:  mongoose connection disconnected 
+[2021-12-16 12:45:23] [32minfo[39m:  .env files are loading... 
+[2021-12-16 12:45:23] [32minfo[39m:  .env is loaded 
+[2021-12-16 12:45:23] [32minfo[39m:  [object Object] 
+[2021-12-16 12:45:23] [32minfo[39m:  Loaded config file: development 
+[2021-12-16 12:45:23] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-16 12:45:26] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 12:45:26] [32minfo[39m:  models are loading ... 
+[2021-12-16 12:45:26] [32minfo[39m:  Models loaded 
+[2021-12-16 12:45:26] [32minfo[39m:  error messages are loading ... 
+[2021-12-16 12:45:26] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-16 12:45:26] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2021-12-16 13:12:08] [31merror[39m:  mongoose connection disconnected 
+[2021-12-16 13:12:19] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 13:15:20] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 13:16:19] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 13:17:10] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 13:19:03] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 13:20:55] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 14:06:37] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 14:07:30] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 15:09:15] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 15:43:32] [31merror[39m:  User Not Found. Please signup first to use this application 
+[2021-12-16 15:45:31] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 15:58:37] [31merror[39m:  Children validation failed: gender: Path `gender` is required. 
+ValidationError: Children validation failed: gender: Path `gender` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-12-16 16:02:38] [32minfo[39m:  Message sent to +9233453***** 
+[2021-12-16 16:02:38] [32minfo[39m:  Message sent to +9233453***** 
+[2021-12-16 16:03:50] [31merror[39m:  Updating the path 'createdAt' would create a conflict at 'createdAt' 
+MongoError: Updating the path 'createdAt' would create a conflict at 'createdAt'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2021-12-16 16:11:52] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:11:55] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:16] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:16] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:18] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:18] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:25] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:26] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:30] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:48:00] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 20:03:10] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 20:19:26] [32minfo[39m:  .env files are loading... 
+[2021-12-16 20:19:26] [32minfo[39m:  .env is loaded 
+[2021-12-16 20:19:26] [32minfo[39m:  [object Object] 
+[2021-12-16 20:19:26] [32minfo[39m:  Loaded config file: development 
+[2021-12-16 20:19:26] [32minfo[39m:  Try to connect mongodb. 
+[2021-12-16 20:19:29] [32minfo[39m:  mongoose connection open. 
+[2021-12-16 20:19:29] [32minfo[39m:  models are loading ... 
+[2021-12-16 20:19:29] [32minfo[39m:  Models loaded 
+[2021-12-16 20:19:29] [32minfo[39m:  error messages are loading ... 
+[2021-12-16 20:19:29] [32minfo[39m:  Routes are loaded in system. 
+[2021-12-16 20:19:29] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2022-01-10 20:20:39] [32minfo[39m:  .env files are loading... 
+[2022-01-10 20:20:39] [32minfo[39m:  .env is loaded 
+[2022-01-10 20:20:39] [32minfo[39m:  [object Object] 
+[2022-01-10 20:20:39] [32minfo[39m:  Loaded config file: development 
+[2022-01-10 20:20:39] [32minfo[39m:  Try to connect mongodb. 
+[2022-01-10 20:20:43] [32minfo[39m:  mongoose connection open. 
+[2022-01-10 20:20:43] [32minfo[39m:  models are loading ... 
+[2022-01-10 20:20:43] [32minfo[39m:  Models loaded 
+[2022-01-10 20:20:43] [32minfo[39m:  error messages are loading ... 
+[2022-01-10 20:20:44] [32minfo[39m:  Routes are loaded in system. 
+[2022-01-10 20:20:44] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2022-01-10 23:34:08] [31merror[39m:  mongoose connection disconnected 
+[2022-01-10 23:34:21] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 02:51:09] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 06:07:56] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 10:44:54] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 10:50:31] [31merror[39m:  Invalid Password 
+[2022-01-11 10:54:01] [32minfo[39m:  .env files are loading... 
+[2022-01-11 10:54:01] [32minfo[39m:  .env is loaded 
+[2022-01-11 10:54:01] [32minfo[39m:  [object Object] 
+[2022-01-11 10:54:01] [32minfo[39m:  Loaded config file: development 
+[2022-01-11 10:54:01] [32minfo[39m:  Try to connect mongodb. 
+[2022-01-11 10:54:05] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 10:54:05] [32minfo[39m:  models are loading ... 
+[2022-01-11 10:54:06] [32minfo[39m:  Models loaded 
+[2022-01-11 10:54:06] [32minfo[39m:  error messages are loading ... 
+[2022-01-11 10:54:06] [32minfo[39m:  Routes are loaded in system. 
+[2022-01-11 10:54:06] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2022-01-11 10:54:44] [32minfo[39m:  Message sent to +9231594***** 
+[2022-01-11 10:54:46] [32minfo[39m:  Message sent to +9234060***** 
+[2022-01-11 10:55:02] [31merror[39m:  Updating the path 'createdAt' would create a conflict at 'createdAt' 
+MongoError: Updating the path 'createdAt' would create a conflict at 'createdAt'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2022-01-11 11:37:19] [31merror[39m:  mongoose connection disconnected 
+[2022-01-11 11:37:31] [32minfo[39m:  mongoose connection open. 
+[2022-01-11 15:25:34] [32minfo[39m:  mongoose connection open. 
+[2022-01-17 10:13:46] [32minfo[39m:  .env files are loading... 
+[2022-01-17 10:13:46] [32minfo[39m:  .env is loaded 
+[2022-01-17 10:13:46] [32minfo[39m:  [object Object] 
+[2022-01-17 10:13:46] [32minfo[39m:  Loaded config file: development 
+[2022-01-17 10:13:46] [32minfo[39m:  Try to connect mongodb. 
+[2022-01-17 10:14:01] [32minfo[39m:  mongoose connection open. 
+[2022-01-17 10:14:01] [32minfo[39m:  models are loading ... 
+[2022-01-17 10:14:01] [32minfo[39m:  Models loaded 
+[2022-01-17 10:14:01] [32minfo[39m:  error messages are loading ... 
+[2022-01-17 10:14:06] [32minfo[39m:  Routes are loaded in system. 
+[2022-01-17 10:14:06] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2022-01-17 11:05:25] [31merror[39m:  mongoose connection disconnected 
+[2022-01-17 11:05:38] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 11:11:53] [32minfo[39m:  .env files are loading... 
+[2022-01-20 11:11:53] [32minfo[39m:  .env is loaded 
+[2022-01-20 11:11:53] [32minfo[39m:  [object Object] 
+[2022-01-20 11:11:53] [32minfo[39m:  Loaded config file: development 
+[2022-01-20 11:11:53] [32minfo[39m:  Try to connect mongodb. 
+[2022-01-20 11:11:57] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 11:11:57] [32minfo[39m:  models are loading ... 
+[2022-01-20 11:11:58] [32minfo[39m:  Models loaded 
+[2022-01-20 11:11:58] [32minfo[39m:  error messages are loading ... 
+[2022-01-20 11:11:59] [32minfo[39m:  Routes are loaded in system. 
+[2022-01-20 11:11:59] [32minfo[39m:  [1m[32mServer is listening on  port 3001[39m[22m 
+[2022-01-20 11:44:16] [31merror[39m:  mongoose connection disconnected 
+[2022-01-20 11:44:27] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 13:17:22] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 13:25:06] [31merror[39m:  User Not Found. Please signup first to use this application 
+[2022-01-20 14:08:19] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 14:41:56] [32minfo[39m:  Message sent to +9231594***** 
+[2022-01-20 14:41:56] [32minfo[39m:  Message sent to +9234060***** 
+[2022-01-20 21:06:43] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 21:18:36] [32minfo[39m:  mongoose connection open. 
+[2022-01-20 21:20:19] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 00:23:39] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 03:40:46] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 06:57:32] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 11:28:32] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 14:45:08] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 18:02:06] [32minfo[39m:  mongoose connection open. 
+[2022-01-21 20:43:09] [32minfo[39m:  mongoose connection open. 

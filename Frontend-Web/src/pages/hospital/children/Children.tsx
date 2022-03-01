@@ -22,11 +22,11 @@ const Children = () => {
 			.get("/hospital/children")
 			.then((res) => {
 				console.log(res.data.data);
-				setChildren(res.data?.data);
+				setChildren(res.data?.data.reverse());
 				// setChildrenData(res.data?.data);
 				setPages(Math.ceil(res.data?.data.length / perPage));
 				let items = res.data?.data.slice(page * perPage, (page + 1) * perPage);
-				setAllChildren(items);
+				setAllChildren(items.reverse());
 				setLoading(false);
 			})
 			.catch((err) =>
@@ -106,7 +106,7 @@ const Children = () => {
 							</thead>
 							<tbody>
 								{children &&
-									allChildren.map((child: any, index) => (
+									allChildren.reverse().map((child: any, index) => (
 										<tr key={child._id}>
 											{/* {console.log(child.dateOfBirth.getTime())} */}
 											<th scope="row">{index + 1}</th>

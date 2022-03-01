@@ -4063,3 +4063,61 @@ MongoServerSelectionError: connection timed out
     at Timeout._onTimeout (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\connect-mongo\node_modules\mongodb\lib\sdam\topology.js:325:38)
     at listOnTimeout (internal/timers.js:557:17)
     at processTimers (internal/timers.js:500:7)
+[2021-12-16 12:27:28] [31merror[39m:  Invalid Password 
+[2021-12-16 12:27:40] [31merror[39m:  Invalid Password 
+[2021-12-16 12:27:54] [31merror[39m:  Invalid Password 
+[2021-12-16 12:35:31] [31merror[39m:  mongoose connection disconnected 
+[2021-12-16 13:12:08] [31merror[39m:  mongoose connection disconnected 
+[2021-12-16 15:43:32] [31merror[39m:  User Not Found. Please signup first to use this application 
+[2021-12-16 15:58:37] [31merror[39m:  Children validation failed: gender: Path `gender` is required. 
+ValidationError: Children validation failed: gender: Path `gender` is required.
+    at model.Document.invalidate (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2730:32)
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\document.js:2542:17
+    at E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongoose\lib\schematype.js:1273:9
+    at processTicksAndRejections (internal/process/task_queues.js:77:11)
+[2021-12-16 16:03:50] [31merror[39m:  Updating the path 'createdAt' would create a conflict at 'createdAt' 
+MongoError: Updating the path 'createdAt' would create a conflict at 'createdAt'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2021-12-16 16:11:52] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:11:55] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:16] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:16] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:18] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:18] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:20] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:25] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:26] [31merror[39m:  User is Not authorized to access this api. 
+[2021-12-16 16:13:30] [31merror[39m:  User is Not authorized to access this api. 
+[2022-01-10 23:34:08] [31merror[39m:  mongoose connection disconnected 
+[2022-01-11 10:50:31] [31merror[39m:  Invalid Password 
+[2022-01-11 10:55:02] [31merror[39m:  Updating the path 'createdAt' would create a conflict at 'createdAt' 
+MongoError: Updating the path 'createdAt' would create a conflict at 'createdAt'
+    at MessageStream.messageHandler (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\connection.js:272:20)
+    at MessageStream.emit (events.js:400:28)
+    at processIncomingData (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (E:\Comsats\FYP\Code\Frontend\child-immunization\Backend\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+    at TLSSocket.ondata (internal/streams/readable.js:726:22)
+    at TLSSocket.emit (events.js:400:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    at readableAddChunk (internal/streams/readable.js:265:9)
+    at TLSSocket.Readable.push (internal/streams/readable.js:204:10)
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:188:23)
+[2022-01-11 11:37:19] [31merror[39m:  mongoose connection disconnected 
+[2022-01-17 11:05:25] [31merror[39m:  mongoose connection disconnected 
+[2022-01-20 11:44:16] [31merror[39m:  mongoose connection disconnected 
+[2022-01-20 13:25:06] [31merror[39m:  User Not Found. Please signup first to use this application 
